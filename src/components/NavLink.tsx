@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import { NavLinkProps } from "../types"
+import { NavLinkProps } from "../utils"
 
 
 export default function NavLink(props: NavLinkProps) {

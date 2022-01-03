@@ -2,7 +2,6 @@ import { Disclosure, Transition } from "@headlessui/react"
 import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-
 export default function Navbar() {
     return (
         <Disclosure as="nav">
@@ -26,7 +25,7 @@ export default function Navbar() {
                                 Sign Ups
                             </NavLink>
                             <NavLink href="/about">
-                                Meet the Team
+                                About Us
                             </NavLink>
                             <NavLink href="/contact">
                                 Contact Us
@@ -45,17 +44,25 @@ export default function Navbar() {
                     <Disclosure.Panel className="sm:hidden">
                         {({ close }) => <div className="px-2 pt-2 pb-3 space-y-1">
                             <ul>
-                                <Disclosure.Button as={NavLink} href="/">
-                                    Home
+                                <Disclosure.Button className="block">
+                                    <NavLink href="/">
+                                        Home
+                                    </NavLink>
                                 </Disclosure.Button>
-                                <Disclosure.Button as={NavLink} href="/signup">
-                                    Sign Ups
+                                <Disclosure.Button className="block">
+                                    <NavLink href="/signup">
+                                        Sign Ups
+                                    </NavLink>
                                 </Disclosure.Button>
-                                <Disclosure.Button as={NavLink} href="/about">
-                                    Meet the Team
+                                <Disclosure.Button className="block">
+                                    <NavLink href="/about">
+                                        About Us
+                                    </NavLink>
                                 </Disclosure.Button>
-                                <Disclosure.Button as={NavLink} href="/contact">
-                                    Contact Us
+                                <Disclosure.Button className="block">
+                                    <NavLink href="/contact">
+                                        Contact Us
+                                    </NavLink>
                                 </Disclosure.Button>
                             </ul>
                         </div>}
