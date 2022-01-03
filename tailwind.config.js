@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      "sans": ["DM Sans"],
+      "display": ["Antic"],
+    }
   },
   plugins: [],
 }
