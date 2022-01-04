@@ -2,9 +2,9 @@ import { Disclosure, Transition } from "@headlessui/react"
 import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-export default function Navbar() {
+export default function Navbar({ className }: { className?: string }) {
     return (
-        <Disclosure as="nav">
+        <Disclosure as="nav" className={className}>
             {({ open }) => <>
                 <div className="flex justify-between py-3">
                     <div>
