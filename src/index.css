@@ -8,3 +8,15 @@
 .stick {
     @apply sticky;
 }
+
+::-webkit-scrollbar {
+    @apply w-3;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-zinc-500 border-0;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
