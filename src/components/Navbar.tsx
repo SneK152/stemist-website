@@ -1,4 +1,4 @@
-import { Disclosure, Transition } from "@headlessui/react"
+import { Disclosure } from "@headlessui/react"
 import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
