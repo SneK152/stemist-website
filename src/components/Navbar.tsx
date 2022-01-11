@@ -33,41 +33,32 @@ export default function Navbar({ className }: { className?: string }) {
                         </ul>
                     </div>
                 </div>
-                <Transition
-                    enter="transition duration-100 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-75 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                >
-                    <Disclosure.Panel className="sm:hidden">
-                        {({ close }) => <div className="px-2 pt-2 pb-3 space-y-1">
-                            <ul>
-                                <Disclosure.Button className="block">
-                                    <NavLink href="/">
-                                        Home
-                                    </NavLink>
-                                </Disclosure.Button>
-                                <Disclosure.Button className="block">
-                                    <NavLink href="/signup">
-                                        Sign Ups
-                                    </NavLink>
-                                </Disclosure.Button>
-                                <Disclosure.Button className="block">
-                                    <NavLink href="/about">
-                                        About Us
-                                    </NavLink>
-                                </Disclosure.Button>
-                                <Disclosure.Button className="block">
-                                    <NavLink href="/contact">
-                                        Contact Us
-                                    </NavLink>
-                                </Disclosure.Button>
-                            </ul>
-                        </div>}
-                    </Disclosure.Panel>
-                </Transition>
+                <Disclosure.Panel className="sm:hidden">
+                    {({ close }) => <div className="px-2 pt-2 bg-gradient-to-r -translate-x-2 from-slate-200 to-slate-300 w-full object-cover absolute pb-3 space-y-1">
+                        <ul>
+                            <Disclosure.Button className="block">
+                                <NavLink href="/">
+                                    Home
+                                </NavLink>
+                            </Disclosure.Button>
+                            <Disclosure.Button className="block">
+                                <NavLink href="/signup">
+                                    Sign Ups
+                                </NavLink>
+                            </Disclosure.Button>
+                            <Disclosure.Button className="block">
+                                <NavLink href="/about">
+                                    About Us
+                                </NavLink>
+                            </Disclosure.Button>
+                            <Disclosure.Button className="block">
+                                <NavLink href="/contact">
+                                    Contact Us
+                                </NavLink>
+                            </Disclosure.Button>
+                        </ul>
+                    </div>}
+                </Disclosure.Panel>
             </>}
         </Disclosure>
     )
