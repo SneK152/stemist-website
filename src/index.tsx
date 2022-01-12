@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import { render, hydrate } from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import "./index.css"
 import Index from "./routes/index"
@@ -22,12 +22,12 @@ const content =
 
 const rootElem = document.getElementById('root')
 if (rootElem?.hasChildNodes()) {
-  ReactDOM.hydrate(
+  hydrate(
     content,
     document.getElementById('root')
   )
 } else {
-  ReactDOM.render(
+  render(
     content,
     document.getElementById('root')
   )
