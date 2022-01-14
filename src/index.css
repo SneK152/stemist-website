@@ -10,7 +10,7 @@
 }
 
 .card {
-    @apply shadow-md rounded-xl border border-gray-300 z-50 p-3 m-3 transition-all duration-500 transform opacity-0 translate-y-5;
+    @apply shadow-md rounded-xl border border-gray-300 z-50 p-3 transition-all duration-500 transform opacity-0 translate-y-5;
 }
 
 .card-animate {
