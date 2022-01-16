@@ -17,7 +17,6 @@ export default function Card({ children, className, ...rest }: CardProps) {
             return observer.disconnect
         }
     }, [])
-    console.log(rest)
     return <div className={`card sm:w-9/12 w-full m-auto ${className} ${process.env.NODE_ENV === "development" && "card-animate"}`} {...rest}>
         {children}
     </div>
