@@ -12,8 +12,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      "sans": ["Libre Franklin", "sans"],
-      "display": ["DM Sans", "sans"],
+      "sans": ["DM Sans", "sans"],
+      "display": ["Libre Franklin", "sans"],
       "writing": ["Antic", "sans"],
       "mono": ["Source Code Pro", "monospace"],
     },

@@ -1,5 +1,4 @@
 import { Disclosure } from "@headlessui/react"
-import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 export default function Navbar({ className }: { className?: string }) {
@@ -8,9 +7,9 @@ export default function Navbar({ className }: { className?: string }) {
             {({ open }) => <>
                 <div className="flex justify-between py-3">
                     <div>
-                        <Link to="/">
+                        <a href="#home">
                             <h1 className="font-bold font-display text-2xl">STEMzyme Education</h1>
-                        </Link>
+                        </a>
                     </div>
                     <Disclosure.Button className="sm:hidden">
                         <span className="sr-only">Open main menu</span>
@@ -18,16 +17,16 @@ export default function Navbar({ className }: { className?: string }) {
                     </Disclosure.Button>
                     <div className="mt-auto mb-auto hidden sm:block">
                         <ul className="inline-flex gap-4">
-                            <NavLink href="/">
+                            <NavLink href="#home" className="underline">
                                 Home
                             </NavLink>
-                            <NavLink href="/signup">
+                            <NavLink href="#signup">
                                 Sign Ups
                             </NavLink>
-                            <NavLink href="/about">
+                            <NavLink href="#about">
                                 About Us
                             </NavLink>
-                            <NavLink href="/contact">
+                            <NavLink href="#contact">
                                 Contact Us
                             </NavLink>
                         </ul>

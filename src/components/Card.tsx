@@ -14,7 +14,9 @@ export default function Card({ children, className, ...rest }: CardProps) {
                 threshold: 0.5
             })
             observer.observe(document.querySelector(".card")!)
-            return observer.disconnect
+            return () => {
+                observer.unobserve(document.querySelector(".card")!)
+            }
         }
     }, [])
     return <div className={`card sm:w-9/12 w-full m-auto ${className} ${process.env.NODE_ENV === "development" && "card-animate"}`} {...rest}>

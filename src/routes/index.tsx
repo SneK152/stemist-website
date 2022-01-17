@@ -9,13 +9,13 @@ export default function Index() {
 }
 
 function Hero() {
-  return <div className="h-[calc(100vh-56px)] object-cover bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url("${image}")` }}>
+  return <div className="h-screen object-cover bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url("${image}")` }}>
     <div className="w-full h-full flex items-center justify-center">
       <div className="overflow-hidden break-words absolute p-4 h-2/5 sm:h-2/5 sm:w-1/2 w-3/4  text-center flex flex-col justify-center gap-3 bg-gray-300 backdrop-blur-md bg-opacity-75 rounded-3xl">
         <h1 className="font-bold font-display sm:text-7xl text-4xl">STEMzyme</h1>
-        <p className="font-sans sm:text-xl text-base">
-          <span className="italic">"Tell me, and I will listen; Teach me, and I'll remember; Involve me, and I will learn."</span>
-          -Benjamin Franklin
+        <p className="font-sans sm:text-xl text-base px-20">
+          <span className="italic block">"Tell me, and I will listen; Teach me, and I'll remember; Involve me, and I will learn."</span>
+          <span className="block text-base">-Benjamin Franklin</span>
         </p>
       </div>
     </div>
