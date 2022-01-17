@@ -12,8 +12,10 @@ module.exports = {
       },
     },
     fontFamily: {
-      "sans": ["DM Sans"],
-      "display": ["Antic"],
+      "sans": ["Libre Franklin", "sans"],
+      "display": ["DM Sans", "sans"],
+      "writing": ["Antic", "sans"],
+      "mono": ["Source Code Pro", "monospace"],
     },
   },
   plugins: [],

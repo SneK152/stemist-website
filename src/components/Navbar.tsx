@@ -9,7 +9,7 @@ export default function Navbar({ className }: { className?: string }) {
                 <div className="flex justify-between py-3">
                     <div>
                         <Link to="/">
-                            <h1 className="font-bold text-2xl">STEMzyme</h1>
+                            <h1 className="font-bold font-display text-2xl">STEMzyme Education</h1>
                         </Link>
                     </div>
                     <Disclosure.Button className="sm:hidden">
