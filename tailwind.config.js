@@ -9,14 +9,17 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.gray,
+        night: "#0c001c"
       },
     },
     fontFamily: {
-      "sans": ["DM Sans", "sans"],
-      "display": ["Libre Franklin", "sans"],
+      "sans": ["Libre Franklin", "sans"],
+      "display": ["DM Sans", "sans"],
       "writing": ["Antic", "sans"],
       "mono": ["Source Code Pro", "monospace"],
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")
+  ],
 }
