@@ -36,22 +36,22 @@ export default function Navbar({ className }: { className?: string }) {
                     {({ close }) => <div className="px-2 pt-2 bg-gradient-to-r -translate-x-2 from-slate-200 to-slate-300 w-full object-cover absolute pb-3 space-y-1">
                         <ul>
                             <Disclosure.Button className="block">
-                                <NavLink href="/">
+                                <NavLink href="#home">
                                     Home
                                 </NavLink>
                             </Disclosure.Button>
                             <Disclosure.Button className="block">
-                                <NavLink href="/signup">
+                                <NavLink href="#signup">
                                     Sign Ups
                                 </NavLink>
                             </Disclosure.Button>
                             <Disclosure.Button className="block">
-                                <NavLink href="/about">
+                                <NavLink href="#about">
                                     About Us
                                 </NavLink>
                             </Disclosure.Button>
                             <Disclosure.Button className="block">
-                                <NavLink href="/contact">
+                                <NavLink href="#contact">
                                     Contact Us
                                 </NavLink>
                             </Disclosure.Button>
