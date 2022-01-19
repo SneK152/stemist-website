@@ -15,17 +15,17 @@ const content =
     <section id="home">
       <Index />
     </section>
-    <section id="signup" className="pt-14">
+    <section id="signup" className="pt-14 mt-[2px]">
       <Suspense fallback={<Spinner color="white" />}>
         <Signup />
       </Suspense>
     </section>
-    <section id="about" className="pt-14">
+    <section id="about" className="pt-14 mt-[2px]">
       <Suspense fallback={<Spinner color="white" />}>
         <About />
       </Suspense>
     </section>
-    <section id="contact" className="pt-14">
+    <section id="contact" className="pt-14 mt-[2px]">
       <Suspense fallback={<Spinner color="white" />}>
         <Contact />
       </Suspense>
