@@ -9,7 +9,6 @@ export default function Container({ children }: { children: React.ReactNode }) {
     }, [])
     useEffect(() => {
         let mainNavLinks = document.querySelectorAll("nav ul li a")
-        mainNavLinks.forEach(a => console.log(a))
         const callback = () => {
             let fromTop = window.scrollY
 

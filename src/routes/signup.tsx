@@ -10,8 +10,8 @@ export default function Signup() {
         if (email.current && name.current && hearsay.current) {
             const formdata = new URLSearchParams()
             formdata.append("entry.187006080", email.current.value) // Email
-            formdata.append("entry.782191400", name.current.value) // How did you find out
-            formdata.append("entry.479709865", hearsay.current.value) // Name
+            formdata.append("entry.782191400", hearsay.current.value) // How did you find out
+            formdata.append("entry.479709865", name.current.value) // Name
             await fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSe4XsTBN_6-RJhl1DXkLdvu3dkaP3SjydLVslHD4nHRhKMUfA/formResponse", {
                 method: "POST",
                 headers: {
