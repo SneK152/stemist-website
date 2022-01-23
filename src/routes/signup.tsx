@@ -79,8 +79,8 @@ export default function Signup() {
     return <div>
         <h1 className="text-center text-3xl font-bold font-display">Signup</h1>
         <form onSubmit={formik.handleSubmit} className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 py-3 space-y-3">
-            <div className="flex w-full gap-3">
-                <div className="bg-gray-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
+            <div className="sm:flex w-full gap-3 sm:space-y-0 space-y-3">
+                <div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
                     <h2>Personal Information</h2>
                     <InputField labelName="Email address" name="email" type="email" formik={formik} errorClass={errorClass} />
                     <div className="flex w-full gap-2">
@@ -93,7 +93,7 @@ export default function Signup() {
                         ))}
                     </SelectInputField>
                 </div>
-                <div className="bg-gray-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
+                <div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
                     <h2>Course Information</h2>
                     <SelectInputField labelName="Computer Science Class Interest" name="csInterest" formik={formik} errorClass={errorClass}>
                         {csOptions.map((item, index) => (
