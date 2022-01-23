@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 export interface NavLinkProps extends React.HTMLAttributes<HTMLElement> {
     href: string
@@ -11,6 +11,24 @@ export interface CardProps extends React.HTMLAttributes<HTMLElement> {
 export interface SpinnerProps {
     color: string
     className?: string
+}
+
+export interface InputFieldProps extends React.HTMLAttributes<HTMLInputElement> {
+    labelName: string
+    name: string
+    type?: string
+    autoComplete?: string
+    className?: string
+    formik: any
+    errorClass: string
+}
+
+export interface SelectInputFieldProps extends React.HTMLAttributes<HTMLSelectElement> {
+    labelName: string
+    name: string
+    children: React.ReactNode
+    formik: any
+    errorClass: string
 }
 
 export function useLocalStorage(key: string, initialValue: any) {
