@@ -9,9 +9,9 @@ import InputField from "../components/InputField"
 import SelectInputField from "../components/SelectInputField"
 
 const gradeOptions = ["Grade", "Kindergarten", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"]
-const csOptions = ["Select an option", "Option 1", "Option 2", "Option 3"]
-const mathOptions = ["Select an option", "Option 1", "Option 2", "Option 3"]
-const scienceOptions = ["Select an option", "Option 1", "Option 2", "Option 3"]
+const csOptions = ["Computer Science Class Interest", "Option 1", "Option 2", "Option 3"]
+const mathOptions = ["Math Class Interest", "Option 1", "Option 2", "Option 3"]
+const scienceOptions = ["Science Class Interest", "Option 1", "Option 2", "Option 3"]
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2"
 
 export default function Signup() {
@@ -33,7 +33,6 @@ export default function Signup() {
             csInterest: ""
         },
         onSubmit: async (values) => {
-            console.log(formik.submitCount)
             setSubmit(<Spinner color="white" className="w-5 h-5 m-auto" />)
             if (localEmail !== values.email) {
                 const formdata = new URLSearchParams()
@@ -42,11 +41,10 @@ export default function Signup() {
                 formdata.append("entry.1473300010", values.email) // Email
                 formdata.append("entry.1047485006", values.questions) // Questions
                 formdata.append("entry.890098326", values.grade) // Grade
-                formdata.append("entry.1204481380", values.mathInterest) // Math
-                formdata.append("entry.818035415", values.scienceInterest) // Science
-                formdata.append("entry.2000892328", values.csInterest) // CS
+                if (!values.mathInterest.includes("Class Interest")) formdata.append("entry.1204481380", values.mathInterest) // Math
+                if (!values.scienceInterest.includes("Class Interest")) formdata.append("entry.818035415", values.scienceInterest) // Science
+                if (!values.csInterest.includes("Class Interest")) formdata.append("entry.2000892328", values.csInterest) // CS
                 setEmail(values.email)
-                console.log(values)
                 await fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgwo15SXKJ-izaP99awlZOGcXszjwBwmYwRnlg3hfhd6CyhA/formResponse", {
                     method: "POST",
                     headers: {
@@ -60,8 +58,8 @@ export default function Signup() {
                     setTimeout(() => setSubmit(<h1>Submit</h1>), 1200)
                 }, 500)
             } else if (localEmail === values.email) {
-                setSubmit(<div className="m-auto flex">
-                    <XIcon height={20} width={20} className="m-auto inline-block" />
+                setSubmit(<div className="flex items-center justify-center gap-1">
+                    <XIcon height={20} width={20} />
                     <p>Duplicate user.</p>
                 </div>)
                 setTimeout(() => setSubmit(<h1>Submit</h1>), 2000)
