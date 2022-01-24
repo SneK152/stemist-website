@@ -23,7 +23,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
 				},
 				{
 					threshold: 0.5,
-				}
+				},
 			)
 			document.querySelectorAll(".card").forEach(observer.observe)
 			return () => {
@@ -38,7 +38,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
 
 			mainNavLinks.forEach((link) => {
 				let section: HTMLElement = document.querySelector(
-					link.getAttribute("href")!
+					link.getAttribute("href")!,
 				)!
 				if (
 					section!.offsetTop - 1 <= fromTop &&

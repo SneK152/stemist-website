@@ -79,7 +79,7 @@ export default function Signup() {
 						},
 						mode: "no-cors",
 						body: formdata.toString(),
-					}
+					},
 				)
 				setTimeout(() => {
 					setSubmit(<CheckIcon height={20} width={20} className="m-auto" />)
@@ -90,7 +90,7 @@ export default function Signup() {
 					<div className="flex items-center justify-center gap-1">
 						<XIcon height={20} width={20} />
 						<p>Duplicate user.</p>
-					</div>
+					</div>,
 				)
 				setTimeout(() => setSubmit(<h1>Submit</h1>), 2000)
 			}
