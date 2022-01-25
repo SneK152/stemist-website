@@ -25,9 +25,13 @@ export default function Container({ children }: { children: React.ReactNode }) {
 					threshold: 0.5,
 				},
 			)
-			document.querySelectorAll(".card").forEach(observer.observe)
+			document
+				.querySelectorAll(".card")
+				.forEach((elem) => observer.observe(elem))
 			return () => {
-				document.querySelectorAll(".card").forEach(observer.unobserve)
+				document
+					.querySelectorAll(".card")
+					.forEach((elem) => observer.unobserve(elem))
 			}
 		}
 	}, [])
