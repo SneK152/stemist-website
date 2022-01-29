@@ -45,8 +45,8 @@ export default function Container({ children }: { children: React.ReactNode }) {
 					link.getAttribute("href")!,
 				)!
 				if (
-					section!.offsetTop - 1 <= fromTop &&
-					section.offsetTop + section.offsetHeight >= fromTop
+					section!.offsetTop <= fromTop + 56.286 &&
+					section.offsetTop + section.offsetHeight >= fromTop + 56.286
 				) {
 					link.parentElement?.classList.add("underline")
 				} else {

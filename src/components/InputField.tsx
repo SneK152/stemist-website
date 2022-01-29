@@ -8,6 +8,7 @@ export default function InputField({
 	className,
 	formik,
 	errorClass,
+	as: Elem = "input",
 	...rest
 }: InputFieldProps) {
 	return (
@@ -15,7 +16,7 @@ export default function InputField({
 			<label htmlFor={name} className="sr-only">
 				{labelName}
 			</label>
-			<input
+			<Elem
 				id={name}
 				name={name}
 				type={type ? type : "text"}

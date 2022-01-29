@@ -22,6 +22,7 @@ export interface InputFieldProps
 	className?: string
 	formik: any
 	errorClass: string
+	as?: "input" | "textarea"
 }
 
 export interface SelectInputFieldProps

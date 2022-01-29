@@ -154,7 +154,7 @@ export default function Signup() {
 						</SelectInputField>
 					</div>
 					<div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
-						<h2>Course Information</h2>
+						<h2>Class Information</h2>
 						<SelectInputField
 							labelName="Computer Science Class Interest"
 							name="csInterest"
