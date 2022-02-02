@@ -37,7 +37,7 @@ function Hero() {
 function Body() {
 	return (
 		<div className="m-3 p-3">
-			<Card className="sm:w-9/12 w-full m-auto space-y-3 shadow-lg rounded-xl border border-gray-200 z-50 p-3 ">
+			<Card className="sm:w-9/12 w-full m-auto space-y-3 shadow-lg rounded-xl border border-gray-200 z-50 p-3">
 				<h1 className="text-center font-semibold font-display text-xl">
 					Who We Are
 				</h1>
