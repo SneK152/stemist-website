@@ -6,7 +6,7 @@ export default function NavLink(props: NavLinkProps) {
 	}
 	return (
 		<li
-			className={`hover:underline font-writing underline-offset-1 ${props.className}`}
+			className={`font-writing underline-offset-1 hover:underline ${props.className}`}
 		>
 			<a
 				href={props.href}

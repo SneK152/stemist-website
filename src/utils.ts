@@ -34,34 +34,26 @@ export interface SelectInputFieldProps
 	errorClass: string
 }
 
+export interface PersonProps {
+	person: Person
+}
+
 export function useLocalStorage(key: string, initialValue: any) {
-	// State to store our value
-	// Pass initial state function to useState so logic is only executed once
 	const [storedValue, setStoredValue] = useState(() => {
 		try {
-			// Get from local storage by key
 			const item = window.localStorage.getItem(key)
-			// Parse stored json or if none return initialValue
 			return item ? JSON.parse(item) : initialValue
 		} catch (error) {
-			// If error also return initialValue
 			return initialValue
 		}
 	})
-	// Return a wrapped version of useState's setter function that ...
-	// ... persists the new value to localStorage.
 	const setValue = (value: any) => {
 		try {
-			// Allow value to be a function so we have same API as useState
 			const valueToStore =
 				value instanceof Function ? value(storedValue) : value
-			// Save state
 			setStoredValue(valueToStore)
-			// Save to local storage
 			window.localStorage.setItem(key, JSON.stringify(valueToStore))
-		} catch (error) {
-			// A more advanced implementation would handle the error case
-		}
+		} catch (error) {}
 	}
 	return [storedValue, setValue]
 }
@@ -73,41 +65,133 @@ interface Person {
 	image: string
 }
 
-console.log(require("./images/avatar.svg").default)
+const lorem =
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nisl blandit, pretium turpis rhoncus, accumsan enim. Etiam imperdiet nec orci non viverra. Suspendisse non sem felis."
+
 export const people: Person[] = [
 	{
 		name: "Steve Yang",
-		positions: ["position 1", "position 2"],
+		positions: ["Board", "Legal", "Teacher"],
 		image: require("./images/avatar.svg").default,
 		description:
 			"Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
 	},
 	{
+		name: "Johnathan Kao",
+		positions: ["Board", "Legal", "Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
 		name: "Justin Zhang",
-		positions: ["position 1", "position 2"],
+		positions: ["Board", "Operations", "HR", "Teacher"],
 		image: require("./images/avatar.svg").default,
 		description:
 			"Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
 	},
 	{
 		name: "Snehil Kakani",
-		positions: ["position 1"],
+		positions: ["Board", "Technology", "Teacher"],
 		image: require("./images/avatar.svg").default,
 		description:
 			"Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
 	},
 	{
+		name: "Jianyu Wang",
+		positions: ["Board", "Legal", "Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Selena Yang",
+		positions: ["Board", "Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
 		name: "Anish Bhethanabotla",
-		positions: ["position 1"],
+		positions: ["Tech", "HR", "Teacher"],
 		image: require("./images/avatar.svg").default,
 		description:
 			"Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
 	},
 	{
+		name: "Daniel Kim",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Harold Wang",
+		positions: ["Teacher", "HR"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Sanya Badhe",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Aryan Patnaik",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Krithik Mohan",
+		positions: ["Operations"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Thomas Wu",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Jishnu Balaji",
+		positions: ["Operations", "Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Yajat Nagaraj",
+		positions: ["Operations", "Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Joshua Li",
+		positions: ["Operations", "Outreach"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Nathan Ye",
+		positions: ["Outreach"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Jayadev Ghanta",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
+		name: "Isaac Sun",
+		positions: ["Teacher"],
+		image: require("./images/avatar.svg").default,
+		description: lorem,
+	},
+	{
 		name: "Shanker Ram",
-		positions: ["position 1"],
+		positions: ["Teacher"],
 		image: require("./images/avatar.svg").default,
 		description:
-			"Shanker Ram - Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
+			"Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
 	},
 ]

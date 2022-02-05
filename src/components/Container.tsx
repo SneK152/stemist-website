@@ -59,8 +59,8 @@ export default function Container({ children }: { children: React.ReactNode }) {
 	}, [])
 	return (
 		<div className="mx-auto h-[10000px]">
-			<Navbar className="sm:px-6 lg:px-6 px-2 w-full z-50 fixed bg-gradient-to-r from-slate-200 to-slate-300" />
-			<div className="sm:px-6 max-w-[100rem] mx-auto px-2 lg:px-6 overflow-hidden">
+			<Navbar className="fixed z-50 w-full bg-gradient-to-r from-slate-200 to-slate-300 px-2 sm:px-6 lg:px-6" />
+			<div className="mx-auto max-w-[100rem] overflow-hidden px-2 sm:px-6 lg:px-6">
 				{children}
 			</div>
 		</div>

@@ -3,7 +3,7 @@ import { SpinnerProps } from "../utils"
 export default function Spinner({ color, className }: SpinnerProps) {
 	return (
 		<svg
-			className={`${className} animate-spin h-6 w-6 text-${color}`}
+			className={`${className} h-6 w-6 animate-spin text-${color}`}
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
 			viewBox="0 0 24 24"

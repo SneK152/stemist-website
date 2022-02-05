@@ -55,7 +55,7 @@ export default function Signup() {
 			csInterest: "",
 		},
 		onSubmit: async (values) => {
-			setSubmit(<Spinner color="white" className="w-5 h-5 m-auto" />)
+			setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />)
 			if (localEmail !== values.email) {
 				const formdata = new URLSearchParams()
 				formdata.append("entry.1706588819", values.firstName) // First Name
@@ -111,13 +111,13 @@ export default function Signup() {
 	})
 	return (
 		<div>
-			<h1 className="text-center text-3xl font-bold font-display">Signup</h1>
+			<h1 className="text-center font-display text-3xl font-bold">Signup</h1>
 			<form
 				onSubmit={formik.handleSubmit}
-				className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 py-3 space-y-3"
+				className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
 			>
-				<div className="sm:flex w-full gap-3 sm:space-y-0 space-y-3">
-					<div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
+				<div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0">
+					<div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
 						<h2>Personal Information</h2>
 						<InputField
 							labelName="Email address"
@@ -153,7 +153,7 @@ export default function Signup() {
 							))}
 						</SelectInputField>
 					</div>
-					<div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
+					<div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
 						<h2>Class Information</h2>
 						<SelectInputField
 							labelName="Computer Science Class Interest"
@@ -201,7 +201,7 @@ export default function Signup() {
 				</div>
 				<button
 					type="submit"
-					className="relative w-full sm:w-1/2 md:w-1/4 m-auto block py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-night hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-night"
+					className="relative m-auto block w-full rounded-md border border-transparent bg-night py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-night focus:ring-offset-2 sm:w-1/2 md:w-1/4"
 				>
 					{submit}
 				</button>

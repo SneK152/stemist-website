@@ -9,7 +9,7 @@ export default function Navbar({ className }: { className?: string }) {
 					<div className="flex justify-between py-3">
 						<div>
 							<a href="#home">
-								<h1 className="font-bold font-display text-2xl">
+								<h1 className="font-display text-2xl font-bold">
 									STEMzyme Education
 								</h1>
 							</a>
@@ -17,7 +17,7 @@ export default function Navbar({ className }: { className?: string }) {
 						<Disclosure.Button className="sm:hidden">
 							<span className="sr-only">Open main menu</span>
 							{open ? (
-								<XIcon className="block w-6 h-6" aria-hidden="true" />
+								<XIcon className="block h-6 w-6" aria-hidden="true" />
 							) : (
 								<MenuIcon className="block h-6 w-6" />
 							)}
@@ -35,7 +35,7 @@ export default function Navbar({ className }: { className?: string }) {
 					</div>
 					<Disclosure.Panel className="sm:hidden">
 						{({ close }) => (
-							<div className="px-2 pt-2 bg-gradient-to-r -translate-x-2 from-slate-200 to-slate-300 w-full object-cover absolute pb-3 space-y-1">
+							<div className="absolute w-full -translate-x-2 space-y-1 bg-gradient-to-r from-slate-200 to-slate-300 object-cover px-2 pt-2 pb-3">
 								<ul>
 									<Disclosure.Button className="block">
 										<NavLink href="#home">Home</NavLink>

@@ -13,13 +13,13 @@ const content = (
 		<section id="home">
 			<Index />
 		</section>
-		<section id="signup" className="scroll-mt-14 mt-[2px]">
+		<section id="signup" className="mt-[2px] scroll-mt-14">
 			<Signup />
 		</section>
-		<section id="about" className="scroll-mt-14 mt-[2px]">
+		<section id="about" className="mt-[2px] scroll-mt-14">
 			<About />
 		</section>
-		<section id="contact" className="scroll-mt-14 mt-[2px]">
+		<section id="contact" className="mt-[2px] scroll-mt-14">
 			<Contact />
 		</section>
 	</Container>

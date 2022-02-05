@@ -23,7 +23,7 @@ export default function Contact() {
 			message: "",
 		},
 		onSubmit: async (values) => {
-			setSubmit(<Spinner color="white" className="w-5 h-5 m-auto" />)
+			setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />)
 			if (localEmail !== values.email) {
 				// const formdata = new URLSearchParams()
 				// formdata.append("entry.1706588819", values.firstName) // First Name
@@ -73,17 +73,17 @@ export default function Contact() {
 		}),
 	})
 	return (
-		<div className="sm:flex max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 py-3">
-			<div className="w-full flex flex-col gap-3 pt-8">
-				<h1 className="text-2xl font-display font-bold">Contact Us</h1>
-				<hr className="border-gray-400 w-1/3 border bg-gray-400 rounded-2xl opacity-50" />
+		<div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
+			<div className="flex w-full flex-col gap-3 pt-8">
+				<h1 className="font-display text-2xl font-bold">Contact Us</h1>
+				<hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
 				<p className="pr-5">
 					Fill out the form to get in touch with our team. We will get back to
 					you as soon as possible.
 				</p>
 			</div>
 			<form onSubmit={formik.handleSubmit} className="w-full space-y-3">
-				<div className="bg-stone-50 w-full space-y-3 p-4 border-gray-100 border rounded-lg shadow-lg">
+				<div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
 					<InputField
 						labelName="Email address"
 						name="email"
@@ -107,7 +107,7 @@ export default function Contact() {
 				</div>
 				<button
 					type="submit"
-					className="relative w-full sm:w-1/2 md:w-1/3 m-auto block py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-night hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-night"
+					className="relative m-auto block w-full rounded-md border border-transparent bg-night py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-night focus:ring-offset-2 sm:w-1/2 md:w-1/3"
 				>
 					{submit}
 				</button>
