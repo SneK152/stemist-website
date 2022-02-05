@@ -9,13 +9,13 @@ export default function About() {
 				{people.map((person, index) => (
 					<div
 						key={index}
-						className="w-full h-48 overflow-hidden bg-white shadow-lg rounded-xl p-3 flex-col"
+						className="w-full h-40 overflow-hidden bg-white shadow-lg rounded-xl p-3"
 					>
-						<div className="flex flex-row justify-center items-center gap-5">
-							<div>
+						<div className="flex flex-row h-full justify-center items-center gap-5">
+							<div className="">
 								<img
 									src={person.image}
-									className="w-16 h-16"
+									className="w-20 h-20 max-w-none"
 									alt="User profile"
 								/>
 							</div>
@@ -30,9 +30,9 @@ export default function About() {
 										{pos}
 									</span>
 								))}
+								<p className="text-sm">{person.description}</p>
 							</h1>
 						</div>
-						<div className="text-sm">{person.description}</div>
 					</div>
 				))}
 			</div>

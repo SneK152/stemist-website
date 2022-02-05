@@ -80,7 +80,7 @@ export const people: Person[] = [
 		positions: ["position 1", "position 2"],
 		image: require("./images/avatar.svg").default,
 		description:
-			"Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry, though somewhat knows Biology (this will be contested).  When not focusing on reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
+			"Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
 	},
 	{
 		name: "Justin Zhang",
@@ -94,7 +94,7 @@ export const people: Person[] = [
 		positions: ["position 1"],
 		image: require("./images/avatar.svg").default,
 		description:
-			"Snehil Kakani is an aspiring programmer. He loves working on solid, flexible UIs in the frontend, and creating APIs and server apps in the backend. He's also a professional graphic designer, drummer, actor, and more!",
+			"Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
 	},
 	{
 		name: "Anish Bhethanabotla",
