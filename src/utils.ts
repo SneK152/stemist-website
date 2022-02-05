@@ -45,7 +45,6 @@ export function useLocalStorage(key: string, initialValue: any) {
 			return item ? JSON.parse(item) : initialValue
 		} catch (error) {
 			// If error also return initialValue
-			console.log(error)
 			return initialValue
 		}
 	})
@@ -62,8 +61,53 @@ export function useLocalStorage(key: string, initialValue: any) {
 			window.localStorage.setItem(key, JSON.stringify(valueToStore))
 		} catch (error) {
 			// A more advanced implementation would handle the error case
-			console.log(error)
 		}
 	}
 	return [storedValue, setValue]
 }
+
+interface Person {
+	name: string
+	positions: string[]
+	description: string
+	image: string
+}
+
+console.log(require("./images/avatar.svg").default)
+export const people: Person[] = [
+	{
+		name: "Steve Yang",
+		positions: ["position 1", "position 2"],
+		image: require("./images/avatar.svg").default,
+		description:
+			"Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry, though somewhat knows Biology (this will be contested).  When not focusing on reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
+	},
+	{
+		name: "Justin Zhang",
+		positions: ["position 1", "position 2"],
+		image: require("./images/avatar.svg").default,
+		description:
+			"Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
+	},
+	{
+		name: "Snehil Kakani",
+		positions: ["position 1"],
+		image: require("./images/avatar.svg").default,
+		description:
+			"Snehil Kakani is an aspiring programmer. He loves working on solid, flexible UIs in the frontend, and creating APIs and server apps in the backend. He's also a professional graphic designer, drummer, actor, and more!",
+	},
+	{
+		name: "Anish Bhethanabotla",
+		positions: ["position 1"],
+		image: require("./images/avatar.svg").default,
+		description:
+			"Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
+	},
+	{
+		name: "Shanker Ram",
+		positions: ["position 1"],
+		image: require("./images/avatar.svg").default,
+		description:
+			"Shanker Ram - Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
+	},
+]

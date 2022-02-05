@@ -9,7 +9,7 @@ import InputField from "../components/InputField"
 
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2"
 
-export default function Signup() {
+export default function Contact() {
 	const [localEmail, setEmail] = useLocalStorage("email", null)
 	const [submit, setSubmit] = useState<ReactElement>(<h1>Submit</h1>)
 	useEffect(() => {
