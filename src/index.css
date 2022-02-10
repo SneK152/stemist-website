@@ -10,14 +10,6 @@
 	@apply sticky;
 }
 
-.card {
-	@apply translate-y-5 transform opacity-0 transition-all duration-500;
-}
-
-.card-animate {
-	@apply translate-y-0 opacity-100;
-}
-
 ::-webkit-scrollbar {
 	@apply w-1;
 }

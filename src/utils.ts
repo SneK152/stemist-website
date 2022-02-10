@@ -4,9 +4,6 @@ export interface NavLinkProps extends React.HTMLAttributes<HTMLElement> {
 	href: string
 	children: React.ReactNode
 }
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-	children?: React.ReactNode
-}
 
 export interface SpinnerProps {
 	color: string
@@ -58,7 +55,7 @@ export function useLocalStorage(key: string, initialValue: any) {
 	return [storedValue, setValue]
 }
 
-interface Person {
+type Person = {
 	name: string
 	positions: string[]
 	description: string
@@ -119,7 +116,8 @@ export const people: Person[] = [
 		name: "Daniel Kim",
 		positions: ["Teacher"],
 		image: require("./images/avatar.svg").default,
-		description: lorem,
+		description:
+			"Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
 	},
 	{
 		name: "Harold Wang",
@@ -161,7 +159,8 @@ export const people: Person[] = [
 		name: "Yajat Nagaraj",
 		positions: ["Operations", "Teacher"],
 		image: require("./images/avatar.svg").default,
-		description: lorem,
+		description:
+			"Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
 	},
 	{
 		name: "Joshua Li",

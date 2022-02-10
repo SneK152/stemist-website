@@ -10,7 +10,7 @@ export default function Navbar({ className }: { className?: string }) {
 						<div>
 							<a href="#home">
 								<h1 className="font-display text-2xl font-bold">
-									STEMzyme Education
+									Stemist Education
 								</h1>
 							</a>
 						</div>
