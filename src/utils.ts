@@ -87,14 +87,14 @@ export const people: Person[] = [
   },
   {
     name: "Snehil Kakani",
-    positions: ["Board", "Technology", "Website", "Teacher"],
+    positions: ["Board", "Operations", "Technology", "Website", "Teacher"],
     image: require("./images/avatar.svg").default,
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
   },
   {
     name: "Jianyu Wang",
-    positions: ["Board", "Legal", "Teacher"],
+    positions: ["Board", "HR", "Teacher"],
     image: require("./images/avatar.svg").default,
     description: lorem,
   },
@@ -107,7 +107,7 @@ export const people: Person[] = [
   },
   {
     name: "Anish Bhethanabotla",
-    positions: ["Tech", "HR", "Teacher"],
+    positions: ["Board", "Tech", "HR", "Teacher"],
     image: require("./images/avatar.svg").default,
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
@@ -120,6 +120,12 @@ export const people: Person[] = [
       "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
   },
   {
+    name: "Isaac Sun",
+    positions: ["Board", "Outreach", "Teacher"],
+    image: require("./images/avatar.svg").default,
+    description: lorem,
+  },
+  {
     name: "Harold Wang",
     positions: ["Teacher", "HR"],
     image: require("./images/avatar.svg").default,
@@ -128,13 +134,13 @@ export const people: Person[] = [
   },
   {
     name: "Sanya Badhe",
-    positions: ["Teacher"],
+    positions: ["Operations", "Teacher"],
     image: require("./images/avatar.svg").default,
     description: lorem,
   },
   {
     name: "Aryan Patnaik",
-    positions: ["Teacher"],
+    positions: ["Teacher", "Technology"],
     image: require("./images/avatar.svg").default,
     description: lorem,
   },
@@ -165,7 +171,7 @@ export const people: Person[] = [
   },
   {
     name: "Joshua Li",
-    positions: ["Operations", "Outreach"],
+    positions: ["Outreach"],
     image: require("./images/avatar.svg").default,
     description: lorem,
   },
@@ -182,12 +188,6 @@ export const people: Person[] = [
     description: lorem,
   },
   {
-    name: "Isaac Sun",
-    positions: ["Teacher"],
-    image: require("./images/avatar.svg").default,
-    description: lorem,
-  },
-  {
     name: "Shanker Ram",
     positions: ["Teacher"],
     image: require("./images/avatar.svg").default,
@@ -196,9 +196,15 @@ export const people: Person[] = [
   },
   {
     name: "Rohan Fernandes",
-    positions: ["Outreach", "Technology", "Website"],
+    positions: ["Intern", "Technology", "Website"],
     image: require("./images/avatar.svg").default,
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+  },
+  {
+    name: "Kiara Ha",
+    positions: ["Technology", "Teacher"],
+    image: require("./images/avatar.svg").default,
+    description: lorem,
   },
 ];

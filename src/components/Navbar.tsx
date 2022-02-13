@@ -1,12 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
-import {
-  BeakerIcon,
-  DesktopComputerIcon,
-  MenuIcon,
-  VariableIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../images/logo.svg";
 
 export default function Navbar({ className }: { className?: string }) {
@@ -24,9 +18,6 @@ export default function Navbar({ className }: { className?: string }) {
                       alt="STEMist Education"
                       className="aspect-[500/300] h-10"
                     />
-                    <BeakerIcon height={24} />
-                    <VariableIcon height={24} />
-                    <DesktopComputerIcon height={24} />
                   </div>
                 </h1>
               </a>
@@ -44,8 +35,9 @@ export default function Navbar({ className }: { className?: string }) {
                 <NavLink href="#home" className="underline">
                   Home
                 </NavLink>
-                <NavLink href="#signup">Sign Ups</NavLink>
                 <NavLink href="#about">About Us</NavLink>
+                <NavLink href="#signup">Sign Ups</NavLink>
+                <NavLink href="#team">Meet the Team</NavLink>
                 <NavLink href="#contact">Contact Us</NavLink>
               </ul>
             </div>
@@ -58,10 +50,13 @@ export default function Navbar({ className }: { className?: string }) {
                     <NavLink href="#home">Home</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
+                    <NavLink href="#about">About Us</NavLink>
+                  </Disclosure.Button>
+                  <Disclosure.Button className="block">
                     <NavLink href="#signup">Sign Ups</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="#about">About Us</NavLink>
+                    <NavLink href="#team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
                     <NavLink href="#contact">Contact Us</NavLink>
