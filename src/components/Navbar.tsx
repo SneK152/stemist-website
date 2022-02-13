@@ -1,6 +1,12 @@
 import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import {
+  BeakerIcon,
+  DesktopComputerIcon,
+  MenuIcon,
+  VariableIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 import logo from "../images/logo.svg";
 
 export default function Navbar({ className }: { className?: string }) {
@@ -12,11 +18,16 @@ export default function Navbar({ className }: { className?: string }) {
             <div>
               <a href="#home">
                 <h1 className="font-display text-2xl font-bold">
-                  <img
-                    src={logo}
-                    alt="Stemist Education"
-                    className="aspect-[500/300] h-10"
-                  />
+                  <div className="flex items-center gap-1">
+                    <img
+                      src={logo}
+                      alt="STEMist Education"
+                      className="aspect-[500/300] h-10"
+                    />
+                    <BeakerIcon height={24} />
+                    <VariableIcon height={24} />
+                    <DesktopComputerIcon height={24} />
+                  </div>
                 </h1>
               </a>
             </div>

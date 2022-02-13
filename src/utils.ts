@@ -102,7 +102,8 @@ export const people: Person[] = [
     name: "Selena Yang",
     positions: ["Board", "Teacher"],
     image: require("./images/avatar.svg").default,
-    description: lorem,
+    description:
+      "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology and animal development. Aside from going down wiki rabbit holes on who-knows-what disease, she also draws unnecessarily detailed anatomy diagrams, plays the piano, and struggles through math problems.",
   },
   {
     name: "Anish Bhethanabotla",
@@ -122,7 +123,8 @@ export const people: Person[] = [
     name: "Harold Wang",
     positions: ["Teacher", "HR"],
     image: require("./images/avatar.svg").default,
-    description: lorem,
+    description:
+      "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
   },
   {
     name: "Sanya Badhe",
