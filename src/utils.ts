@@ -87,7 +87,7 @@ export const people: Person[] = [
   },
   {
     name: "Snehil Kakani",
-    positions: ["Board", "Technology", "Teacher"],
+    positions: ["Board", "Technology", "Website", "Teacher"],
     image: require("./images/avatar.svg").default,
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
@@ -196,9 +196,9 @@ export const people: Person[] = [
   },
   {
     name: "Rohan Fernandes",
-    positions: ["Out Reach", "Technology"],
+    positions: ["Outreach", "Technology", "Website"],
     image: require("./images/avatar.svg").default,
-    description: 
+    description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
   },
 ];
