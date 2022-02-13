@@ -32,13 +32,11 @@ export default function Navbar({ className }: { className?: string }) {
             </Disclosure.Button>
             <div className="mt-auto mb-auto hidden sm:block">
               <ul className="inline-flex gap-4">
-                <NavLink href="#home" className="underline">
-                  Home
-                </NavLink>
-                <NavLink href="#about">About Us</NavLink>
-                <NavLink href="#signup">Sign Ups</NavLink>
-                <NavLink href="#team">Meet the Team</NavLink>
-                <NavLink href="#contact">Contact Us</NavLink>
+                <NavLink href="/">Home</NavLink>
+                <NavLink href="/about">About Us</NavLink>
+                <NavLink href="/signup">Sign Ups</NavLink>
+                <NavLink href="/team">Meet the Team</NavLink>
+                <NavLink href="/contact">Contact Us</NavLink>
               </ul>
             </div>
           </div>
@@ -47,19 +45,19 @@ export default function Navbar({ className }: { className?: string }) {
               <div className="absolute w-full -translate-x-2 space-y-1 bg-blue bg-opacity-95 object-cover px-2 pt-2 pb-3">
                 <ul>
                   <Disclosure.Button className="block">
-                    <NavLink href="#home">Home</NavLink>
+                    <NavLink href="/">Home</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="#about">About Us</NavLink>
+                    <NavLink href="/about">About Us</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="#signup">Sign Ups</NavLink>
+                    <NavLink href="/signup">Sign Ups</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="#team">Meet the Team</NavLink>
+                    <NavLink href="/team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="#contact">Contact Us</NavLink>
+                    <NavLink href="/contact">Contact Us</NavLink>
                   </Disclosure.Button>
                 </ul>
               </div>

@@ -76,7 +76,8 @@ export const people: Person[] = [
     name: "Johnathan Kao",
     positions: ["Board", "Legal", "Teacher"],
     image: require("./images/avatar.svg").default,
-    description: lorem,
+    description:
+      "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
   },
   {
     name: "Justin Zhang",
@@ -123,7 +124,8 @@ export const people: Person[] = [
     name: "Isaac Sun",
     positions: ["Board", "Outreach", "Teacher"],
     image: require("./images/avatar.svg").default,
-    description: lorem,
+    description:
+      "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
   },
   {
     name: "Harold Wang",
