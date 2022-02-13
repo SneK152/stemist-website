@@ -27,8 +27,8 @@ const content = (
 
 const rootElem = document.getElementById("root");
 if (rootElem?.hasChildNodes()) {
-  hydrate(content, document.getElementById("root"));
+  hydrate(content, rootElem);
 } else {
-  render(content, document.getElementById("root"));
+  render(content, rootElemen);
 }
 smoothscroll.polyfill();
