@@ -6,7 +6,6 @@ module.exports = {
         gray: {
           DEFAULT: "#464F51",
         },
-        night: "#0c001c",
         white: "#FFFCFF",
         blue: {
           DEFAULT: "#5386E4",
