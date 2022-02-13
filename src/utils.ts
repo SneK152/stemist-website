@@ -194,4 +194,11 @@ export const people: Person[] = [
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
   },
+  {
+    name: "Rohan Fernandes",
+    positions: ["Out Reach", "Technology"],
+    image: require("./images/avatar.svg").default,
+    description: 
+      "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+  },
 ];
