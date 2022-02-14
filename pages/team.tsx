@@ -1,5 +1,5 @@
 import Person from "../components/Person";
-import { people } from "../utils";
+import { people } from "../lib/utils";
 
 export default function Team() {
   return (
@@ -7,7 +7,7 @@ export default function Team() {
       <h1 className="mb-3 text-center font-display text-3xl font-bold">
         Meet the Team
       </h1>
-      <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">
+      <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
         {people.map((person, index) => (
           <div
             key={index}

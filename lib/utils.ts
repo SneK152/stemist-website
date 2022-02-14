@@ -68,145 +68,145 @@ export const people: Person[] = [
   {
     name: "Steve Yang",
     positions: ["Board", "Legal", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
   },
   {
     name: "Johnathan Kao",
     positions: ["Board", "Legal", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
   },
   {
     name: "Justin Zhang",
     positions: ["Board", "Operations", "HR", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
   },
   {
     name: "Snehil Kakani",
     positions: ["Board", "Operations", "Technology", "Website", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
   },
   {
     name: "Jianyu Wang",
     positions: ["Board", "HR", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Selena Yang",
     positions: ["Board", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology and animal development. Aside from going down wiki rabbit holes on who-knows-what disease, she also draws unnecessarily detailed anatomy diagrams, plays the piano, and struggles through math problems.",
   },
   {
     name: "Anish Bhethanabotla",
     positions: ["Board", "Tech", "HR", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
   },
   {
     name: "Daniel Kim",
     positions: ["Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
   },
   {
     name: "Isaac Sun",
     positions: ["Board", "Outreach", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
   },
   {
     name: "Harold Wang",
     positions: ["Teacher", "HR"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
   },
   {
     name: "Sanya Badhe",
     positions: ["Operations", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Aryan Patnaik",
     positions: ["Teacher", "Technology"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Krithik Mohan",
     positions: ["Operations"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Thomas Wu",
     positions: ["Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Jishnu Balaji",
     positions: ["Operations", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Yajat Nagaraj",
     positions: ["Operations", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
   },
   {
     name: "Joshua Li",
     positions: ["Outreach"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Nathan Ye",
     positions: ["Outreach"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Jayadev Ghanta",
     positions: ["Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
   {
     name: "Shanker Ram",
     positions: ["Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
   },
   {
     name: "Rohan Fernandes",
     positions: ["Intern", "Technology", "Website"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
   },
   {
     name: "Kiara Ha",
     positions: ["Technology", "Teacher"],
-    image: require("./images/avatar.svg").default,
+    image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
 ];
