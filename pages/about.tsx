@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import FeedBackForm from "../components/FeedbackForm";
 
 export default function About() {
   return (
@@ -35,6 +36,7 @@ export default function About() {
           those topics.
         </BodyCard>
       </div>
+      <FeedBackForm />
     </div>
   );
 }
