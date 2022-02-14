@@ -1,7 +1,8 @@
 import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import logo from "../images/logo.svg";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar({ className }: { className?: string }) {
   return (
@@ -10,17 +11,20 @@ export default function Navbar({ className }: { className?: string }) {
         <>
           <div className="flex justify-between py-3">
             <div>
-              <a href="#home">
-                <h1 className="font-display text-2xl font-bold">
-                  <div className="flex items-center gap-1">
-                    <img
-                      src={logo}
-                      alt="STEMist Education"
-                      className="aspect-[500/300] h-10"
-                    />
-                  </div>
-                </h1>
-              </a>
+              <Link href="/">
+                <a>
+                  <h1 className="font-display text-2xl font-bold">
+                    <div className="flex items-center gap-1">
+                      <Image
+                        src="/logo.svg"
+                        alt="STEMist Education"
+                        height={40}
+                        width={66.6666}
+                      />
+                    </div>
+                  </h1>
+                </a>
+              </Link>
             </div>
             <Disclosure.Button className="sm:hidden">
               <span className="sr-only">Open main menu</span>

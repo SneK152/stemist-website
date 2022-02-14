@@ -1,4 +1,4 @@
-import { PersonProps } from "../utils";
+import { PersonProps } from "../lib/utils";
 
 export default function Person(props: PersonProps) {
   return (
