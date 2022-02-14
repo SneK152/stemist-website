@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export interface NavLinkProps extends React.HTMLAttributes<HTMLElement> {
   href: string;
   children: React.ReactNode;
+  main?: boolean;
 }
 
 export interface SpinnerProps {

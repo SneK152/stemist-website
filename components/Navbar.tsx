@@ -38,9 +38,9 @@ export default function Navbar({ className }: { className?: string }) {
               <ul className="inline-flex gap-4">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
-                <NavLink href="/signup">Sign Ups</NavLink>
                 <NavLink href="/team">Meet the Team</NavLink>
                 <NavLink href="/contact">Contact Us</NavLink>
+                <NavLink main href="/signup">Sign Ups</NavLink>
               </ul>
             </div>
           </div>
@@ -55,13 +55,13 @@ export default function Navbar({ className }: { className?: string }) {
                     <NavLink href="/about">About Us</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="/signup">Sign Ups</NavLink>
-                  </Disclosure.Button>
-                  <Disclosure.Button className="block">
                     <NavLink href="/team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
                     <NavLink href="/contact">Contact Us</NavLink>
+                  </Disclosure.Button>
+                  <Disclosure.Button className="block">
+                    <NavLink main href="/signup">Sign Ups</NavLink>
                   </Disclosure.Button>
                 </ul>
               </div>
