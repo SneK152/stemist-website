@@ -19,8 +19,8 @@ function Hero() {
           </h1>
           <p className="px-5 font-writing text-base sm:px-10 sm:text-xl md:px-20">
             <span className="block italic">
-              "Tell me, and I will listen Teach me, and I'll remember Involve
-              me, and I will learn."
+              &quot;Tell me, and I will listen Teach me, and I&apos;ll remember
+              Involve me, and I will learn.&quot;
             </span>
             <span className="block text-base">-Benjamin Franklin</span>
           </p>
