@@ -209,4 +209,16 @@ export const people: Person[] = [
     image: require("../public/avatar.svg").default.src,
     description: lorem,
   },
+  {
+    name: "Kasturi Kirubaharan",
+    positions: ["Teacher"],
+    image: require("../public/avatar.svg").default.src,
+    description: lorem,
+  },
+  {
+    name: "Sophie Mak",
+    positions: ["Outreach"],
+    image: require("../public/avatar.svg").default.src,
+    description: lorem,
+  },
 ];

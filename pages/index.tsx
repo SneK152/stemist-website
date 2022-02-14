@@ -1,8 +1,4 @@
 export default function Index() {
-  return <Hero />;
-}
-
-function Hero() {
   return (
     <div
       className="h-screen bg-cover bg-center bg-no-repeat object-cover"
