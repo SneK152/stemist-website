@@ -60,6 +60,7 @@ type Person = {
   positions: string[];
   description: string;
   image: string;
+  focalPoint?: string;
 };
 
 const lorem = "";
@@ -89,7 +90,8 @@ export const people: Person[] = [
   {
     name: "Snehil Kakani",
     positions: ["Board", "Operations", "Technology", "Website", "Teacher"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Snehil Kakani.jpg").default.src,
+    focalPoint: "100%_0",
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
   },

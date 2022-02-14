@@ -7,10 +7,10 @@ export default function Person(props: PersonProps) {
       <div className={`${props.person.description && "group-hover:hidden"}`}>
         <Image
           src={props.person.image}
-          height={80}
-          width={80}
+          height={90}
+          width={90}
           layout="fixed"
-          className="h-20 w-20 max-w-none"
+          className={`object-cover max-w-none rounded-full`}
           alt="User profile"
         />
       </div>
