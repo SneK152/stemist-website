@@ -9,10 +9,8 @@ export default function Container({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Free STEM Education for kids" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <link rel="manifest" href="/manifest.json" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/icon-192.png" />
+        <meta property="og:image" content="/homepage.webp" />
         <meta name="og:title" property="og:title" content="STEMist Education" />
         <meta
           name="og:description"
@@ -38,7 +36,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
         <meta name="theme-color" content="#000000" />
         <title>STEMist Education</title>
       </Head>
-      <Navbar className="fixed z-50 w-full bg-blue bg-opacity-95 px-2 sm:px-6 lg:px-6" />
+      <Navbar />
       <div className="mx-auto h-[10000px]">
         <div className="mx-auto overflow-hidden pt-16">{children}</div>
       </div>

@@ -138,7 +138,7 @@ export const people: Person[] = [
   {
     name: "Sanya Badhe",
     positions: ["Operations", "Teacher"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Sanya Badhe.png").default.src,
     description: lorem,
   },
   {
@@ -149,7 +149,7 @@ export const people: Person[] = [
   },
   {
     name: "Krithik Mohan",
-    positions: ["Operations", "Intern"],
+    positions: ["Operations"],
     image: require("../public/team/Krithik Mohan.jpg").default.src,
     description: lorem,
   },
@@ -290,7 +290,7 @@ export const teachers: Person[] = [
   {
     name: "Sanya Badhe",
     positions: ["Math", "Physical Science"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Sanya Badhe.png").default.src,
     description: lorem,
   },
   {

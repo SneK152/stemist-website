@@ -4,9 +4,12 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar({ className }: { className?: string }) {
+export default function Navbar() {
   return (
-    <Disclosure as="nav" className={className}>
+    <Disclosure
+      as="nav"
+      className="fixed z-50 w-full bg-blue bg-opacity-95 px-2 sm:px-6 lg:px-6"
+    >
       {({ open }) => (
         <>
           <div className="flex justify-between py-3">
@@ -39,7 +42,7 @@ export default function Navbar({ className }: { className?: string }) {
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
                 <NavLink href="/team">Meet the Team</NavLink>
-                <NavLink href="/contact">Contact Us</NavLink>
+                <NavLink href="/contact">Reach Out</NavLink>
                 <NavLink main href="/signup">
                   Sign Ups
                 </NavLink>
@@ -60,7 +63,7 @@ export default function Navbar({ className }: { className?: string }) {
                     <NavLink href="/team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="/contact">Contact Us</NavLink>
+                    <NavLink href="/contact">Reach Out</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
                     <NavLink main href="/signup">

@@ -2,11 +2,12 @@ import { ReactElement, useState } from "react";
 import { useLocalStorage } from "../lib/utils";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
-import Spinner from "../components/Spinner";
+import Spinner from "@/components/Spinner";
 import { useEffect } from "react";
 import { useFormik } from "formik";
-import InputField from "../components/InputField";
-import SelectInputField from "../components/SelectInputField";
+import InputField from "@/components/InputField";
+import SelectInputField from "@/components/SelectInputField";
+import Banner from "@/components/Banner";
 
 const gradeOptions = [
   "Grade",
@@ -23,16 +24,26 @@ const gradeOptions = [
 ];
 const csOptions = [
   "Computer Science Class Interest",
-  "Option 1",
-  "Option 2",
-  "Option 3",
+  "Machine Learning",
+  "Web Development",
+  "Object Oriented Programming",
+  "C++",
+  "Java",
+  "Python",
 ];
-const mathOptions = ["Math Class Interest", "Option 1", "Option 2", "Option 3"];
+const mathOptions = [
+  "Math Class Interest",
+  "Combinatorics",
+  "Number Theory",
+  "Probability",
+  "Gauss",
+];
 const scienceOptions = [
   "Science Class Interest",
-  "Option 1",
-  "Option 2",
-  "Option 3",
+  "Biology",
+  "Physics",
+  "Chemistry",
+  "Ecology",
 ];
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
@@ -54,7 +65,7 @@ export default function Signup() {
       scienceInterest: "",
       csInterest: "",
     },
-    onSubmit: async (values) => {
+    onSubmit: async (values, helpers) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
       if (localEmail !== values.email) {
         const formdata = new URLSearchParams();
@@ -83,7 +94,10 @@ export default function Signup() {
         );
         setTimeout(() => {
           setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
-          setTimeout(() => setSubmit(<h1>Submit</h1>), 1200);
+          setTimeout(() => {
+            setSubmit(<h1>Submit</h1>);
+            helpers.resetForm();
+          }, 1200);
         }, 500);
       } else if (localEmail === values.email) {
         setSubmit(
@@ -110,102 +124,107 @@ export default function Signup() {
     }),
   });
   return (
-    <div>
-      <h1 className="text-center font-display text-3xl font-bold">Signup</h1>
-      <form
-        onSubmit={formik.handleSubmit}
-        className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
-      >
-        <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0">
-          <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-            <h2>Personal Information</h2>
-            <InputField
-              labelName="Email address"
-              name="email"
-              type="email"
-              formik={formik}
-              errorClass={errorClass}
-            />
-            <div className="flex w-full gap-2">
+    <>
+      <Banner image="/homepage.webp" className="h-72">
+        <h1 className="font-sans text-7xl font-bold">Join Our Classes</h1>
+      </Banner>
+      <div>
+        <h1 className="text-center font-display text-3xl font-bold">Signup</h1>
+        <form
+          onSubmit={formik.handleSubmit}
+          className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
+        >
+          <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0">
+            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
+              <h2>Personal Information</h2>
               <InputField
-                labelName="First name"
-                name="firstName"
+                labelName="Email address"
+                name="email"
+                type="email"
                 formik={formik}
                 errorClass={errorClass}
               />
+              <div className="flex w-full gap-2">
+                <InputField
+                  labelName="First name"
+                  name="firstName"
+                  formik={formik}
+                  errorClass={errorClass}
+                />
+                <InputField
+                  labelName="Last name"
+                  name="lastName"
+                  formik={formik}
+                  errorClass={errorClass}
+                />
+              </div>
+              <SelectInputField
+                labelName="Grade"
+                name="grade"
+                formik={formik}
+                errorClass={errorClass}
+              >
+                {gradeOptions.map((item, index) => (
+                  <option value={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </SelectInputField>
+            </div>
+            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
+              <h2>Class Information</h2>
+              <SelectInputField
+                labelName="Computer Science Class Interest"
+                name="csInterest"
+                formik={formik}
+                errorClass={errorClass}
+              >
+                {csOptions.map((item, index) => (
+                  <option value={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </SelectInputField>
+              <SelectInputField
+                labelName="Math Class Interest"
+                name="mathInterest"
+                formik={formik}
+                errorClass={errorClass}
+              >
+                {mathOptions.map((item, index) => (
+                  <option value={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </SelectInputField>
+              <SelectInputField
+                labelName="Science Class Interest"
+                name="scienceInterest"
+                formik={formik}
+                errorClass={errorClass}
+              >
+                {scienceOptions.map((item, index) => (
+                  <option value={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </SelectInputField>
               <InputField
-                labelName="Last name"
-                name="lastName"
+                labelName="Questions?"
+                name="questions"
                 formik={formik}
                 errorClass={errorClass}
               />
             </div>
-            <SelectInputField
-              labelName="Grade"
-              name="grade"
-              formik={formik}
-              errorClass={errorClass}
-            >
-              {gradeOptions.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              ))}
-            </SelectInputField>
           </div>
-          <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-            <h2>Class Information</h2>
-            <SelectInputField
-              labelName="Computer Science Class Interest"
-              name="csInterest"
-              formik={formik}
-              errorClass={errorClass}
-            >
-              {csOptions.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              ))}
-            </SelectInputField>
-            <SelectInputField
-              labelName="Math Class Interest"
-              name="mathInterest"
-              formik={formik}
-              errorClass={errorClass}
-            >
-              {mathOptions.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              ))}
-            </SelectInputField>
-            <SelectInputField
-              labelName="Science Class Interest"
-              name="scienceInterest"
-              formik={formik}
-              errorClass={errorClass}
-            >
-              {scienceOptions.map((item, index) => (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              ))}
-            </SelectInputField>
-            <InputField
-              labelName="Questions?"
-              name="questions"
-              formik={formik}
-              errorClass={errorClass}
-            />
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/4"
-        >
-          {submit}
-        </button>
-      </form>
-    </div>
+          <button
+            type="submit"
+            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/4"
+          >
+            {submit}
+          </button>
+        </form>
+      </div>
+    </>
   );
 }

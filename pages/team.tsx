@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Person from "../components/Person";
+import Person from "@/components/Person";
 import { people, teachers } from "../lib/utils";
-import Banner from "../components/Banner";
+import Banner from "@/components/Banner";
 
 let roles: string[] = [];
 people.forEach((person) => {

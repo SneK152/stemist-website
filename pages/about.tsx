@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
-import Banner from "../components/Banner";
-import FeedBackForm from "../components/FeedbackForm";
+import Banner from "@/components/Banner";
+import FeedBackForm from "@/components/FeedbackForm";
 
 export default function About() {
   return (
     <>
-      <Banner image="/homepage.webp" className="h-72">
-        <h1 className="font-sans text-7xl font-bold">About our Organization</h1>
+      <Banner image="/homepage.webp" className="sm:h-72">
+        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+          About our Organization
+        </h1>
       </Banner>
       <div className="m-3 p-3">
         <BodyCard title="Who We Are" className="sm:w-9/12 m-auto">
@@ -59,6 +61,7 @@ function BodyCard({
   return (
     <div
       className={`z-40 w-full space-y-3 rounded-xl border relative border-gray-200 bg-white p-3 shadow-lg ${className} `}
+      data-aos="fade-up"
     >
       <h1 className="text-center font-display text-xl font-semibold z-20">
         {title}
