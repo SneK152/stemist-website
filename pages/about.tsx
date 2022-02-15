@@ -6,12 +6,12 @@ export default function About() {
   return (
     <>
       <Banner image="/homepage.webp" className="sm:h-64">
-        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           About our Organization
         </h1>
       </Banner>
       <div className="m-3 p-3">
-        <BodyCard title="Who We Are" className="sm:w-9/12 m-auto">
+        <BodyCard title="Who We Are" className="m-auto sm:w-9/12">
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
           qualified instructors whom are skilled in areas such as Algebra,
@@ -19,7 +19,7 @@ export default function About() {
           has been teaching kids STEM since 2020 and hopes to continue for much
           longer.
         </BodyCard>
-        <div className="flex sm:flex-row flex-col mt-4 gap-4">
+        <div className="mt-4 flex flex-col gap-4 sm:flex-row">
           <BodyCard title="Our Mission">
             We founded STEMist originally because we believed that learning was
             a gift that all students should have access to. We believe that kids
@@ -60,13 +60,13 @@ function BodyCard({
 }) {
   return (
     <div
-      className={`z-40 w-full space-y-3 rounded-xl border relative border-gray-200 bg-white p-3 shadow-lg ${className} `}
+      className={`relative z-40 w-full space-y-3 rounded-xl border border-gray-200 bg-white p-3 shadow-lg ${className} `}
       data-aos="fade-up"
     >
-      <h1 className="text-center font-display text-xl font-semibold z-20">
+      <h1 className="font-display z-20 text-center text-xl font-semibold">
         {title}
       </h1>
-      <p className="text-center font-light z-20">{desc}</p>
+      <p className="z-20 text-center font-light">{desc}</p>
     </div>
   );
 }

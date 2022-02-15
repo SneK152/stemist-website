@@ -11,8 +11,8 @@ export default function NavLink({
   const router = useRouter();
   return (
     <li
-      className={`font-writing underline-offset-1 text-lg m-auto ${
-        main ? `text-black bg-white rounded-md px-3 py-1` : `text-white`
+      className={`font-writing m-auto text-lg underline-offset-1 ${
+        main ? `rounded-md bg-white px-3 py-1 text-black` : `text-white`
       } ${className || ""} ${router.pathname === href ? "underline" : ""}`}
     >
       <Link href={href}>

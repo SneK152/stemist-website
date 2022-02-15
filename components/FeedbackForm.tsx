@@ -49,7 +49,7 @@ export default function FeedBackForm() {
   });
 
   return (
-    <div>
+    <div className="text-white">
       <p>Please leave your feedback here</p>
       <form onSubmit={formik.handleSubmit}>
         <div>
@@ -77,11 +77,7 @@ export default function FeedBackForm() {
             errorClass={errorClass}
           />
         </div>
-        <button type="submit">
-          {formik.isSubmitting
-            ? "Submitting your feedback"
-            : "Submit your feedback"}
-        </button>
+        <button type="submit">{submit}</button>
       </form>
     </div>
   );

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth bg-gray bg-opacity-10;
+  background-image: url("/homepage.webp");
+  @apply scroll-smooth bg-contain;
 }
 body {
   @apply overflow-scroll overflow-x-hidden;

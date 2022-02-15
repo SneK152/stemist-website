@@ -126,12 +126,12 @@ export default function Signup() {
   return (
     <>
       <Banner image="/homepage.webp" className="sm:h-64">
-        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           Sign Up
         </h1>
       </Banner>
       <div>
-        <h1 className="text-center font-display text-3xl font-bold">Signup</h1>
+        <h1 className="font-display text-center text-3xl font-bold">Signup</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"

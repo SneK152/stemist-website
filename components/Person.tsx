@@ -3,18 +3,18 @@ import PersonProps from "@/lib/types/PersonProps";
 
 export default function Person(props: PersonProps) {
   return (
-    <div className="flex h-full flex-row items-center justify-center gap-5 group">
+    <div className="group flex h-full flex-row items-center justify-center gap-5">
       <div className={`${props.person.description && "group-hover:hidden"}`}>
         <Image
           src={props.person.image}
           height={90}
           width={90}
           layout="fixed"
-          className={`object-cover max-w-none rounded-full`}
+          className={`max-w-none rounded-full object-cover`}
           alt="User profile"
         />
       </div>
-      <h1 className="space-y-1 font-display text-lg font-normal">
+      <h1 className="font-display space-y-1 text-lg font-normal">
         <span
           className={`${
             props.person.description && "group-hover:hidden"
@@ -22,10 +22,10 @@ export default function Person(props: PersonProps) {
         >
           {props.person.name}
           <br />
-          <div className="flex flex-wrap gap-1 font-writing">
+          <div className="font-writing flex flex-wrap gap-1">
             {props.person.positions.map((pos, index) => (
               <span
-                className="m-0.5 rounded-xl w-min bg-gray-200 py-1 px-2 text-xs whitespace-nowrap"
+                className="m-0.5 w-min whitespace-nowrap rounded-xl bg-gray-200 py-1 px-2 text-xs"
                 key={index}
               >
                 {pos}
@@ -34,7 +34,7 @@ export default function Person(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="text-sm hidden group-hover:block transition-all font-sans max-w-[40ch]">
+          <p className="hidden max-w-[40ch] font-sans text-sm transition-all group-hover:block">
             {props.person.description}
           </p>
         )}

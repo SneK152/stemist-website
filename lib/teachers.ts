@@ -38,7 +38,7 @@ const teachers: Person[] = [
   {
     name: "Anish Bhethanabotla",
     positions: ["Computer Science", "Math", "Physical Science"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Anish Bhethanabotla.jpeg").default.src,
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
   },

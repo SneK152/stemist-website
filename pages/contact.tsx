@@ -73,7 +73,7 @@ export default function Contact() {
   return (
     <>
       <Banner image="/homepage.webp" className="sm:h-64">
-        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           Get Involved
         </h1>
       </Banner>

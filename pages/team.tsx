@@ -15,15 +15,15 @@ export default function Team() {
   return (
     <>
       <Banner image="/homepage.webp" className="sm:h-64">
-        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           Meet the Team
         </h1>
       </Banner>
-      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
-        <h1 className="mb-3 text-center font-display text-3xl font-bold">
+      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6">
+        <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
           Executive Team
         </h1>
-        <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
+        <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {people.map((person, index) => (
             <div
               key={index}
@@ -34,12 +34,12 @@ export default function Team() {
           ))}
         </div>
       </div>
-      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
-        <h1 className="mb-3 text-center font-display text-3xl font-bold">
+      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6">
+        <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
           Instructor Team
         </h1>
         <div className="m-auto flex justify-center">
-          <div className="pb-3 inline-block">
+          <div className="inline-block pb-3">
             {teacherRoles.map((role, index) => (
               <FilterButton
                 key={index}
@@ -50,7 +50,7 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
+        <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {teachers
             .filter(
               (person) =>
@@ -84,7 +84,7 @@ function FilterButton({
     <button
       className={`${
         active ? "bg-blue-200" : "bg-gray-200"
-      } rounded-2xl shadow-lg py-1 px-3 font-writing text-lg m-1`}
+      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg`}
       onClick={onClick}
     >
       {name}

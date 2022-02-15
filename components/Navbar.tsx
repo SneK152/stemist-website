@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed z-50 w-full bg-black bg-opacity-95 px-2 sm:px-6 lg:px-6"
+      className="fixed z-50 w-full bg-[#0d021f] bg-opacity-100 px-2 sm:px-6 lg:px-6"
     >
       {({ open }) => (
         <>
@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
           <Disclosure.Panel className="sm:hidden">
             {({ close }) => (
-              <div className="absolute w-full -translate-x-2 space-y-1 bg-black bg-opacity-95 object-cover px-2 pt-2 pb-3">
+              <div className="absolute w-full -translate-x-2 space-y-1 bg-[#0d021f] bg-opacity-100 object-cover px-2 pt-2 pb-3">
                 <ul>
                   <Disclosure.Button className="block">
                     <NavLink href="/">Home</NavLink>
