@@ -111,7 +111,7 @@ export const people: Person[] = [
   },
   {
     name: "Anish Bhethanabotla",
-    positions: ["Board", "Tech", "HR", "Teacher"],
+    positions: ["Board", "Technology", "HR", "Teacher"],
     image: require("../public/avatar.svg").default.src,
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
