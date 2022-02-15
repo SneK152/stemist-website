@@ -1,74 +1,88 @@
-import {FormikHelpers, useFormik} from 'formik'
-import FeedbackValidator from '../lib/feedback.validator';
-
+import { CheckIcon } from "@heroicons/react/outline";
+import { FormikHelpers, useFormik } from "formik";
+import { ReactElement, useEffect, useState } from "react";
+import * as Yup from "yup";
+import InputField from "./InputField";
+import Spinner from "./Spinner";
 interface InputField {
-    name: string;
-    email: string;
-    feedback: string;
+  name: string;
+  email: string;
+  feedback: string;
 }
+const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
 export default function FeedBackForm() {
+  const [submit, setSubmit] = useState<ReactElement>(<h1>Submit</h1>);
+  useEffect(() => {
+    return clearTimeout;
+  }, []);
 
-    let {handleChange, handleSubmit, values, errors, isSubmitting} = useFormik({
-        initialValues: {
-            name: '',
-            email: '',
-            feedback: ''
-        },
-        onSubmit: ({name, email, feedback}: InputField, {resetForm, setErrors, setSubmitting}: FormikHelpers<InputField>) => {
-            setSubmitting(true)
-            
-            let errors = FeedbackValidator(name, email, feedback)
-            
-            if(Object.keys(errors).length != 0) {
-                console.log(name, email, feedback, errors)
-                setErrors(errors)
-            } else {
-                console.log(name, email, feedback, errors)
-                resetForm()
-            }
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      feedback: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
+      email: Yup.string().required("Required").email("Invalid email"),
+      feedback: Yup.string()
+        .min(4, "Must be greater than 4 characters")
+        .max(200, "Must be less than 200 characters")
+        .required("Required"),
+    }),
+    onSubmit: (
+      { name, email, feedback },
+      { resetForm }: FormikHelpers<InputField>
+    ) => {
+      setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
+      console.log(name, email, feedback);
 
-            setSubmitting(false)
-        }
-    })
-    
-    return (
+      setTimeout(() => {
+        setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
+        setTimeout(() => {
+          setSubmit(<h1>Submit</h1>);
+          resetForm();
+        }, 1200);
+      }, 500);
+    },
+  });
+
+  return (
+    <div>
+      <p>Please leave your feedback here</p>
+      <form onSubmit={formik.handleSubmit}>
         <div>
-            <p>Please leave your feedback here</p>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor='name'>Enter your name:</label>
-                    <input 
-                        name='name'
-                        type='text'
-                        onChange={handleChange}
-                        value={values.name}
-                    />
-                    <p>{errors.name}</p>
-                </div>
-                <div>
-                    <label htmlFor='email'>Enter your email:</label>
-                    <input 
-                        name='email'
-                        type='email'
-                        onChange={handleChange}
-                        value={values.email}
-                    />
-                    <p>{errors.email}</p>
-                </div>
-                <div>
-                    <label htmlFor='feedback'>Enter you feedback</label>
-                    <textarea
-                        onChange={handleChange}
-                        value={values.feedback}
-                        name='feedback'
-                    />
-                    <p>{errors.feedback}</p>
-                </div>
-                <button type='submit'>
-                    {isSubmitting ? 'Submitting your feedback' : 'Submit your feedback'}
-                </button>
-            </form>
+          <InputField
+            labelName="Name"
+            name="name"
+            formik={formik}
+            errorClass={errorClass}
+          />
         </div>
-    )
+        <div>
+          <InputField
+            labelName="Email"
+            name="email"
+            formik={formik}
+            errorClass={errorClass}
+          />
+        </div>
+        <div>
+          <InputField
+            labelName="Feedback"
+            name="feedback"
+            as="textarea"
+            formik={formik}
+            errorClass={errorClass}
+          />
+        </div>
+        <button type="submit">
+          {formik.isSubmitting
+            ? "Submitting your feedback"
+            : "Submit your feedback"}
+        </button>
+      </form>
+    </div>
+  );
 }

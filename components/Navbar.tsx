@@ -40,7 +40,9 @@ export default function Navbar({ className }: { className?: string }) {
                 <NavLink href="/about">About Us</NavLink>
                 <NavLink href="/team">Meet the Team</NavLink>
                 <NavLink href="/contact">Contact Us</NavLink>
-                <NavLink main href="/signup">Sign Ups</NavLink>
+                <NavLink main href="/signup">
+                  Sign Ups
+                </NavLink>
               </ul>
             </div>
           </div>
@@ -61,7 +63,9 @@ export default function Navbar({ className }: { className?: string }) {
                     <NavLink href="/contact">Contact Us</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink main href="/signup">Sign Ups</NavLink>
+                    <NavLink main href="/signup">
+                      Sign Ups
+                    </NavLink>
                   </Disclosure.Button>
                 </ul>
               </div>
