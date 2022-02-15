@@ -25,7 +25,7 @@ export default function Person(props: PersonProps) {
           <div className="flex flex-wrap gap-1 font-writing">
             {props.person.positions.map((pos, index) => (
               <span
-                className="m-0.5 rounded-xl w-min bg-gray-200 py-1 px-2 text-sm"
+                className="m-0.5 rounded-xl w-min bg-gray-200 py-1 px-2 text-xs"
                 key={index}
               >
                 {pos}
@@ -34,7 +34,7 @@ export default function Person(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="text-xs hidden group-hover:block transition-all font-sans max-w-[40ch]">
+          <p className="text-sm hidden group-hover:block transition-all font-sans max-w-[40ch]">
             {props.person.description}
           </p>
         )}

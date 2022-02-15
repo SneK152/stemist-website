@@ -77,7 +77,7 @@ export const people: Person[] = [
   {
     name: "Johnathan Kao",
     positions: ["Board", "Legal", "Teacher"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Johnathan Kao.jpg").default.src,
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
   },
@@ -126,7 +126,7 @@ export const people: Person[] = [
   {
     name: "Isaac Sun",
     positions: ["Board", "Outreach", "Teacher"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Isaac Sun.png").default.src,
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
   },
@@ -152,7 +152,7 @@ export const people: Person[] = [
   {
     name: "Krithik Mohan",
     positions: ["Operations"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Krithik Mohan.jpg").default.src,
     description: lorem,
   },
   {
@@ -183,7 +183,7 @@ export const people: Person[] = [
   {
     name: "Nathan Ye",
     positions: ["Outreach"],
-    image: require("../public/avatar.svg").default.src,
+    image: require("../public/team/Nathan Ye.png").default.src,
     description: lorem,
   },
   {
