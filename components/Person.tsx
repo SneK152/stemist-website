@@ -25,7 +25,7 @@ export default function Person(props: PersonProps) {
           <div className="flex flex-wrap gap-1 font-writing">
             {props.person.positions.map((pos, index) => (
               <span
-                className="m-0.5 rounded-xl w-min bg-gray-200 py-1 px-2 text-xs"
+                className="m-0.5 rounded-xl w-min bg-gray-200 py-1 px-2 text-xs whitespace-nowrap"
                 key={index}
               >
                 {pos}

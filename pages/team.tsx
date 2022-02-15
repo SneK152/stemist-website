@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Person from "../components/Person";
-import { people } from "../lib/utils";
+import { people, teachers } from "../lib/utils";
+import Banner from "../components/Banner";
 
 let roles: string[] = [];
 people.forEach((person) => {
@@ -8,40 +9,85 @@ people.forEach((person) => {
 });
 roles = ["All", ...new Set(roles)];
 
+let teacherRoles: string[] = [];
+teachers.forEach((person) => {
+  teacherRoles = [...teacherRoles, ...person.positions];
+});
+teacherRoles = ["All", ...new Set(teacherRoles)];
+
 export default function Team() {
   const [active, setActive] = useState("All");
+  const [activeTeacher, setActiveTeacher] = useState("All");
   return (
-    <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
-      <h1 className="mb-3 text-center font-display text-3xl font-bold">
-        Meet the Team
-      </h1>
-      <div className="m-auto flex justify-center">
-        <div className="pb-3 inline-block">
-          {roles.map((role, index) => (
-            <FilterButton
-              key={index}
-              name={role}
-              active={active === role}
-              onClick={() => setActive(role)}
-            />
-          ))}
+    <>
+      <Banner image="/homepage.webp" className="h-72">
+        <h1 className="font-sans text-7xl font-bold">Meet the Team</h1>
+      </Banner>
+      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <h1 className="mb-3 text-center font-display text-3xl font-bold">
+          Executive Team
+        </h1>
+        <div className="m-auto flex justify-center">
+          <div className="pb-3 inline-block">
+            {roles.map((role, index) => (
+              <FilterButton
+                key={index}
+                name={role}
+                active={active === role}
+                onClick={() => setActive(role)}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
+          {people
+            .filter(
+              (person) => person.positions.includes(active) || active === "All"
+            )
+            .map((person, index) => (
+              <div
+                key={index}
+                className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+              >
+                <Person person={person} />
+              </div>
+            ))}
         </div>
       </div>
-      <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
-        {people
-          .filter(
-            (person) => person.positions.includes(active) || active === "All"
-          )
-          .map((person, index) => (
-            <div
-              key={index}
-              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
-            >
-              <Person person={person} />
-            </div>
-          ))}
+      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <h1 className="mb-3 text-center font-display text-3xl font-bold">
+          Instructor Team
+        </h1>
+        <div className="m-auto flex justify-center">
+          <div className="pb-3 inline-block">
+            {teacherRoles.map((role, index) => (
+              <FilterButton
+                key={index}
+                name={role}
+                active={activeTeacher === role}
+                onClick={() => setActiveTeacher(role)}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="grid gap-2 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 pb-10">
+          {teachers
+            .filter(
+              (person) =>
+                person.positions.includes(activeTeacher) ||
+                activeTeacher === "All"
+            )
+            .map((person, index) => (
+              <div
+                key={index}
+                className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+              >
+                <Person person={person} />
+              </div>
+            ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
