@@ -38,7 +38,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
       </Head>
       <Navbar />
       <div className="mx-auto h-[10000px]">
-        <div className="mx-auto overflow-hidden pt-16">{children}</div>
+        <div className="mx-auto overflow-hidden pt-14">{children}</div>
       </div>
     </>
   );

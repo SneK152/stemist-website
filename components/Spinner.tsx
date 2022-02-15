@@ -1,4 +1,4 @@
-import { SpinnerProps } from "@/lib/utils";
+import SpinnerProps from "@/lib/types/SpinnerProps";
 
 export default function Spinner({ color, className }: SpinnerProps) {
   return (

@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed z-50 w-full bg-blue bg-opacity-95 px-2 sm:px-6 lg:px-6"
+      className="fixed z-50 w-full bg-black bg-opacity-95 px-2 sm:px-6 lg:px-6"
     >
       {({ open }) => (
         <>

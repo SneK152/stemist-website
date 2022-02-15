@@ -20,8 +20,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Libre Franklin", "sans"],
-      display: ["DM Sans", "sans"],
+      sans: ["Open Sans", "sans"],
+      display: ["Exo", "sans"],
       writing: ["Antic", "sans"],
       mono: ["Source Code Pro", "monospace"],
     },

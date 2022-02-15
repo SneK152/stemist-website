@@ -1,5 +1,5 @@
 import { ReactElement, useState } from "react";
-import { useLocalStorage } from "@/lib/utils";
+import useLocalStorage from "@/lib/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import Spinner from "@/components/Spinner";

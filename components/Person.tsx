@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PersonProps } from "@/lib/utils";
+import PersonProps from "@/lib/types/PersonProps";
 
 export default function Person(props: PersonProps) {
   return (
