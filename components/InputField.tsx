@@ -1,4 +1,4 @@
-import { InputFieldProps } from "../lib/utils";
+import { InputFieldProps } from "@/lib/utils";
 
 export default function InputField({
   labelName,

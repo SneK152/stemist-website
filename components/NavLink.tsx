@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { NavLinkProps } from "../lib/utils";
+import { NavLinkProps } from "@/lib/utils";
 
 export default function NavLink({
   children,

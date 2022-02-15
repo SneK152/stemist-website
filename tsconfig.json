@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/public/*": ["public/*"]
     }
   },
   "exclude": ["node_modules"],
