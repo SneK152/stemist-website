@@ -14,8 +14,10 @@ export default function Team() {
   const [activeTeacher, setActiveTeacher] = useState("All");
   return (
     <>
-      <Banner image="/homepage.webp" className="h-72">
-        <h1 className="font-sans text-7xl font-bold">Meet the Team</h1>
+      <Banner image="/homepage.webp" className="sm:h-64">
+        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+          Meet the Team
+        </h1>
       </Banner>
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <h1 className="mb-3 text-center font-display text-3xl font-bold">

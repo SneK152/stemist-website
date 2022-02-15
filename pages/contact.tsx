@@ -72,8 +72,10 @@ export default function Contact() {
   });
   return (
     <>
-      <Banner image="/homepage.webp" className="h-72">
-        <h1 className="font-sans text-7xl font-bold">Reach Out</h1>
+      <Banner image="/homepage.webp" className="sm:h-64">
+        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+          Get Involved
+        </h1>
       </Banner>
       <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
         <div className="flex w-full flex-col gap-3 pt-8">

@@ -32,9 +32,12 @@ export default function Navbar() {
             <Disclosure.Button className="sm:hidden">
               <span className="sr-only">Open main menu</span>
               {open ? (
-                <XIcon className="block h-6 w-6" aria-hidden="true" />
+                <XIcon
+                  className="block h-6 w-6 text-white"
+                  aria-hidden="true"
+                />
               ) : (
-                <MenuIcon className="block h-6 w-6" />
+                <MenuIcon className="block h-6 w-6 text-white" />
               )}
             </Disclosure.Button>
             <div className="mt-auto mb-auto hidden sm:block">
@@ -51,7 +54,7 @@ export default function Navbar() {
           </div>
           <Disclosure.Panel className="sm:hidden">
             {({ close }) => (
-              <div className="absolute w-full -translate-x-2 space-y-1 bg-blue bg-opacity-95 object-cover px-2 pt-2 pb-3">
+              <div className="absolute w-full -translate-x-2 space-y-1 bg-black bg-opacity-95 object-cover px-2 pt-2 pb-3">
                 <ul>
                   <Disclosure.Button className="block">
                     <NavLink href="/">Home</NavLink>
@@ -65,6 +68,7 @@ export default function Navbar() {
                   <Disclosure.Button className="block">
                     <NavLink href="/contact">Reach Out</NavLink>
                   </Disclosure.Button>
+                  <div className="h-2"></div>
                   <Disclosure.Button className="block">
                     <NavLink main href="/signup">
                       Sign Ups

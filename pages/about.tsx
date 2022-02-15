@@ -5,7 +5,7 @@ import FeedBackForm from "@/components/FeedbackForm";
 export default function About() {
   return (
     <>
-      <Banner image="/homepage.webp" className="sm:h-72">
+      <Banner image="/homepage.webp" className="sm:h-64">
         <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
           About our Organization
         </h1>

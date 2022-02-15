@@ -125,8 +125,10 @@ export default function Signup() {
   });
   return (
     <>
-      <Banner image="/homepage.webp" className="h-72">
-        <h1 className="font-sans text-7xl font-bold">Join Our Classes</h1>
+      <Banner image="/homepage.webp" className="sm:h-64">
+        <h1 className="font-sans md:text-5xl lg:text-7xl text-3xl font-bold">
+          Sign Up
+        </h1>
       </Banner>
       <div>
         <h1 className="text-center font-display text-3xl font-bold">Signup</h1>

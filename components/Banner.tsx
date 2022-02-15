@@ -20,7 +20,7 @@ export default function Banner({
     >
       <div className="flex h-full w-full items-center justify-center">
         <div
-          className={`absolute flex min-h-2/5 h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl bg-green border-2 border-white text-white bg-opacity-60 p-4 text-center backdrop-blur-md sm:w-1/2 ${
+          className={`absolute flex min-h-2/5 h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl bg-green border-2 border-white text-white bg-opacity-60 p-4 text-center backdrop-blur-md sm:w-3/4 ${
             className || ""
           }`}
         >
