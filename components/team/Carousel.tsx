@@ -14,7 +14,7 @@ export default function Carousel() {
       })),
     });
   return (
-    <div className="bg-white relative">
+    <div className="bg-white relative text-black">
       <button
         className="absolute h-full top-0 bottom-0 left-0 z-[1] flex items-center justify-center w-[5%] p-0 text-black text-center bg-none border-0"
         onClick={slideToPrevItem}

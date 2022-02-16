@@ -10,7 +10,7 @@ export default function About() {
           About our Organization
         </h1>
       </Banner>
-      <div className="m-3 p-3">
+      <div className="m-3 p-3 text-black">
         <BodyCard title="Who We Are" className="m-auto sm:w-9/12">
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of

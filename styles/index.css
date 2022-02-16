@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html {
-  background-image: url("/homepage.webp");
-  @apply scroll-smooth bg-contain;
+  background-image: url("/loop.webp");
+  @apply scroll-smooth bg-contain text-white;
 }
 body {
   @apply overflow-scroll overflow-x-hidden;

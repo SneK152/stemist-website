@@ -139,7 +139,7 @@ export default function Signup() {
           onSubmit={formik.handleSubmit}
           className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
         >
-          <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0">
+          <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
             <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
               <h2>Personal Information</h2>
               <MemoedInputField

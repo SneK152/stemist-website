@@ -90,7 +90,7 @@ const teachers: Person[] = [
   {
     name: "Yajat Nagaraj",
     positions: ["Math"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Yajat Kiran.png").default.src,
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
   },
@@ -123,7 +123,7 @@ const teachers: Person[] = [
   {
     name: "Kasturi Kirubaharan",
     positions: ["Math", "Biology"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Kasturi Kirubaharan.jpg").default.src,
     description: "",
   },
 ];

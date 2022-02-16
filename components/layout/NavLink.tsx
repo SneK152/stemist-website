@@ -13,7 +13,7 @@ export default function NavLink({
     <li
       className={`font-writing m-auto text-lg underline-offset-1 ${
         main ? `rounded-md bg-white px-3 py-1 text-black` : `text-white`
-      } ${className || ""} ${router.pathname === href ? "underline" : ""}`}
+      } ${className || ""} ${router.pathname === href ? "font-extrabold" : ""}`}
     >
       <Link href={href}>
         <a>{children}</a>

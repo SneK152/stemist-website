@@ -91,14 +91,14 @@ const people: Person[] = [
   {
     name: "Yajat Nagaraj",
     positions: ["Operations", "Teacher"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Yajat Kiran.png").default.src,
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
   },
   {
     name: "Joshua Li",
     positions: ["Outreach"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Joshua Li.jpg").default.src,
     description:
       "Joshua is a freshman at Lynbrook who enjoys all behind the curtain roles. He also likes exercising and gaming in his free time.",
   },

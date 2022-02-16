@@ -22,7 +22,7 @@ export default function Team() {
         </h1>
       </Banner>
       <Carousel />
-      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6">
+      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
           Executive Team
         </h1>
@@ -37,7 +37,7 @@ export default function Team() {
           ))}
         </div>
       </div>
-      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6">
+      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
           Instructor Team
         </h1>
@@ -87,7 +87,7 @@ function FilterButton({
     <button
       className={`${
         active ? "bg-blue-200" : "bg-gray-200"
-      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg`}
+      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg text-black`}
       onClick={onClick}
     >
       {name}

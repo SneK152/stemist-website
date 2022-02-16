@@ -22,7 +22,7 @@ module.exports = {
     fontFamily: {
       sans: ["Open Sans", "sans"],
       display: ["Exo", "sans"],
-      writing: ["Antic", "sans"],
+      writing: ["Raleway", "sans"],
       mono: ["Source Code Pro", "monospace"],
     },
   },
