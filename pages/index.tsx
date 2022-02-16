@@ -1,4 +1,4 @@
-import Banner from "@/components/Banner";
+import Banner from "@/components/layout/Banner";
 
 export default function Index() {
   return (

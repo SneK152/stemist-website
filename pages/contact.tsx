@@ -5,8 +5,8 @@ import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import Spinner from "@/components/Spinner";
 import { useEffect } from "react";
 import { useFormik } from "formik";
-import InputField from "@/components/InputField";
-import Banner from "@/components/Banner";
+import InputField from "@/components/forms/InputField";
+import Banner from "@/components/layout/Banner";
 
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 

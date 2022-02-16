@@ -1,9 +1,9 @@
 import { memo, useState } from "react";
-import Person from "@/components/Person";
+import Person from "@/components/team/Person";
 import people from "@/lib/team";
 import teachers from "@/lib/teachers";
-import Banner from "@/components/Banner";
-import Carousel from "@/components/Carousel";
+import Banner from "@/components/layout/Banner";
+import Carousel from "@/components/team/Carousel";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {

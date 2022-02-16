@@ -3,7 +3,7 @@ import { FormikHelpers, useFormik } from "formik";
 import { memo, ReactElement, useEffect, useState } from "react";
 import * as Yup from "yup";
 import InputField from "./InputField";
-import Spinner from "./Spinner";
+import Spinner from "../Spinner";
 interface InputField {
   name: string;
   email: string;

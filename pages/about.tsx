@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Banner from "@/components/Banner";
-import FeedBackForm from "@/components/FeedbackForm";
+import Banner from "@/components/layout/Banner";
+import FeedBackForm from "@/components/forms/FeedbackForm";
 
 export default function About() {
   return (
