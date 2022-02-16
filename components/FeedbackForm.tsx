@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/outline";
 import { FormikHelpers, useFormik } from "formik";
-import { ReactElement, useEffect, useState } from "react";
+import { memo, ReactElement, useEffect, useState } from "react";
 import * as Yup from "yup";
 import InputField from "./InputField";
 import Spinner from "./Spinner";
@@ -10,6 +10,7 @@ interface InputField {
   feedback: string;
 }
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
+const MemoedInputField = memo(InputField);
 
 export default function FeedBackForm() {
   const [submit, setSubmit] = useState<ReactElement>(<h1>Submit</h1>);
@@ -53,7 +54,7 @@ export default function FeedBackForm() {
       <p>Please leave your feedback here</p>
       <form onSubmit={formik.handleSubmit}>
         <div>
-          <InputField
+          <MemoedInputField
             labelName="Name"
             name="name"
             formik={formik}
@@ -61,7 +62,7 @@ export default function FeedBackForm() {
           />
         </div>
         <div>
-          <InputField
+          <MemoedInputField
             labelName="Email"
             name="email"
             formik={formik}
@@ -69,7 +70,7 @@ export default function FeedBackForm() {
           />
         </div>
         <div>
-          <InputField
+          <MemoedInputField
             labelName="Feedback"
             name="feedback"
             as="textarea"

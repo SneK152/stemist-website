@@ -3,8 +3,10 @@ import PersonProps from "@/lib/types/PersonProps";
 
 export default function Person(props: PersonProps) {
   return (
-    <div className="group flex h-full flex-row items-center justify-center gap-5">
-      <div className={`${props.person.description && "group-hover:hidden"}`}>
+    <div className="group first:flex h-full flex-row items-center justify-center gap-5">
+      <div
+        className={`${props.person.description ? "group-hover:hidden" : ""}`}
+      >
         <Image
           src={props.person.image}
           height={90}
@@ -17,7 +19,7 @@ export default function Person(props: PersonProps) {
       <h1 className="font-display space-y-1 text-lg font-normal">
         <span
           className={`${
-            props.person.description && "group-hover:hidden"
+            props.person.description ? "group-hover:hidden" : ""
           } transition-all`}
         >
           {props.person.name}

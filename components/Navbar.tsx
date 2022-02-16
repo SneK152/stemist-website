@@ -23,6 +23,7 @@ export default function Navbar() {
                         alt="STEMist Education"
                         height={40}
                         width={66.6666}
+                        priority
                       />
                     </div>
                   </h1>

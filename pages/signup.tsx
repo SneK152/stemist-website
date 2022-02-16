@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { memo, ReactElement, useState } from "react";
 import useLocalStorage from "@/lib/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
@@ -46,6 +46,9 @@ const scienceOptions = [
   "Ecology",
 ];
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
+
+const MemoedInputField = memo(InputField);
+const MemoedSelectField = memo(SelectInputField);
 
 export default function Signup() {
   const [localEmail, setEmail] = useLocalStorage("email", null);
@@ -139,7 +142,7 @@ export default function Signup() {
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0">
             <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
               <h2>Personal Information</h2>
-              <InputField
+              <MemoedInputField
                 labelName="Email address"
                 name="email"
                 type="email"
@@ -147,20 +150,20 @@ export default function Signup() {
                 errorClass={errorClass}
               />
               <div className="flex w-full gap-2">
-                <InputField
+                <MemoedInputField
                   labelName="First name"
                   name="firstName"
                   formik={formik}
                   errorClass={errorClass}
                 />
-                <InputField
+                <MemoedInputField
                   labelName="Last name"
                   name="lastName"
                   formik={formik}
                   errorClass={errorClass}
                 />
               </div>
-              <SelectInputField
+              <MemoedSelectField
                 labelName="Grade"
                 name="grade"
                 formik={formik}
@@ -171,11 +174,11 @@ export default function Signup() {
                     {item}
                   </option>
                 ))}
-              </SelectInputField>
+              </MemoedSelectField>
             </div>
             <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
               <h2>Class Information</h2>
-              <SelectInputField
+              <MemoedSelectField
                 labelName="Computer Science Class Interest"
                 name="csInterest"
                 formik={formik}
@@ -186,8 +189,8 @@ export default function Signup() {
                     {item}
                   </option>
                 ))}
-              </SelectInputField>
-              <SelectInputField
+              </MemoedSelectField>
+              <MemoedSelectField
                 labelName="Math Class Interest"
                 name="mathInterest"
                 formik={formik}
@@ -198,8 +201,8 @@ export default function Signup() {
                     {item}
                   </option>
                 ))}
-              </SelectInputField>
-              <SelectInputField
+              </MemoedSelectField>
+              <MemoedSelectField
                 labelName="Science Class Interest"
                 name="scienceInterest"
                 formik={formik}
@@ -210,8 +213,8 @@ export default function Signup() {
                     {item}
                   </option>
                 ))}
-              </SelectInputField>
-              <InputField
+              </MemoedSelectField>
+              <MemoedInputField
                 labelName="Questions?"
                 name="questions"
                 formik={formik}

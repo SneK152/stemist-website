@@ -38,9 +38,9 @@ const people: Person[] = [
   {
     name: "Selena Yang",
     positions: ["Board", "Teacher"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Selena Yang.jpg").default.src,
     description:
-      "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology and animal development. Aside from going down wiki rabbit holes on who-knows-what disease, she also draws unnecessarily detailed anatomy diagrams, plays the piano, and struggles through math problems.",
+      "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
   },
   {
     name: "Anish Bhethanabotla",

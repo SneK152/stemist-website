@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import Person from "@/components/Person";
 import people from "@/lib/team";
 import teachers from "@/lib/teachers";
@@ -9,6 +9,7 @@ teachers.forEach((person) => {
   teacherRoles = [...teacherRoles, ...person.positions];
 });
 teacherRoles = ["All", ...new Set(teacherRoles)];
+const MemoedPerson = memo(Person);
 
 export default function Team() {
   const [activeTeacher, setActiveTeacher] = useState("All");
@@ -29,7 +30,7 @@ export default function Team() {
               key={index}
               className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
             >
-              <Person person={person} />
+              <MemoedPerson person={person} />
             </div>
           ))}
         </div>
@@ -62,7 +63,7 @@ export default function Team() {
                 key={index}
                 className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
               >
-                <Person person={person} />
+                <MemoedPerson person={person} />
               </div>
             ))}
         </div>

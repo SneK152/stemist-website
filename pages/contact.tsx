@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { memo, ReactElement, useState } from "react";
 import useLocalStorage from "@/lib/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
@@ -9,6 +9,8 @@ import InputField from "@/components/InputField";
 import Banner from "@/components/Banner";
 
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
+
+const MemoedInputField = memo(InputField);
 
 export default function Contact() {
   const [localEmail, setEmail] = useLocalStorage("contactEmail", null);
@@ -88,20 +90,20 @@ export default function Contact() {
         </div>
         <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
           <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-            <InputField
+            <MemoedInputField
               labelName="Email address"
               name="email"
               type="email"
               formik={formik}
               errorClass={errorClass}
             />
-            <InputField
+            <MemoedInputField
               labelName="Full name"
               name="name"
               formik={formik}
               errorClass={errorClass}
             />
-            <InputField
+            <MemoedInputField
               labelName="Message"
               as="textarea"
               formik={formik}
