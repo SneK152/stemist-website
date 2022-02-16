@@ -3,6 +3,7 @@ import Person from "@/components/Person";
 import people from "@/lib/team";
 import teachers from "@/lib/teachers";
 import Banner from "@/components/Banner";
+import Carousel from "@/components/Carousel";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {
@@ -20,6 +21,7 @@ export default function Team() {
           Meet the Team
         </h1>
       </Banner>
+      <Carousel />
       <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6">
         <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
           Executive Team
