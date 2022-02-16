@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import { ReactNode } from "react";
 
 export default function Banner({
@@ -18,12 +18,10 @@ export default function Banner({
         full ? "h-screen" : "h-[50vh]"
       } mb-10 object-cover relative`}
     >
-      <Image
+      <img
         src={image}
         alt="Background for page"
-        layout="fill"
-        className="-z-10 pointer-events-none select-none absolute object-cover"
-        priority
+        className="-z-10 pointer-events-none select-none absolute object-cover h-full w-full"
       />
       <div className="flex h-full w-full items-center justify-center">
         <div
