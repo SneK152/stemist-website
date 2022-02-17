@@ -1,12 +1,12 @@
-import { memo, ReactElement, useState } from "react";
+import { memo, ReactElement, useState, useEffect } from "react";
 import useLocalStorage from "@/lib/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import Spinner from "@/components/Spinner";
-import { useEffect } from "react";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import Banner from "@/components/layout/Banner";
+import FeedBackForm from "@/components/forms/FeedbackForm";
 
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
@@ -119,6 +119,7 @@ export default function Contact() {
           </button>
         </form>
       </div>
+      <FeedBackForm />
     </>
   );
 }

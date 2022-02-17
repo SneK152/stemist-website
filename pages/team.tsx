@@ -10,6 +10,8 @@ teachers.forEach((person) => {
   teacherRoles = [...teacherRoles, ...person.positions];
 });
 teacherRoles = ["All", ...new Set(teacherRoles)];
+teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
+console.log(teacherRoles);
 const MemoedPerson = memo(Person);
 
 export default function Team() {

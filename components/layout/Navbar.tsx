@@ -46,7 +46,7 @@ export default function Navbar() {
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
                 <NavLink href="/team">Meet the Team</NavLink>
-                <NavLink href="/contact">Reach Out</NavLink>
+                <NavLink href="/contact">Get Involved</NavLink>
                 <NavLink main href="/signup">
                   Sign Ups
                 </NavLink>
@@ -67,7 +67,7 @@ export default function Navbar() {
                     <NavLink href="/team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="/contact">Reach Out</NavLink>
+                    <NavLink href="/contact">Get Involved</NavLink>
                   </Disclosure.Button>
                   <div className="h-2"></div>
                   <Disclosure.Button className="block">

@@ -25,14 +25,17 @@ export default function Person(props: PersonProps) {
           {props.person.name}
           <br />
           <div className="font-writing flex flex-wrap gap-1">
-            {props.person.positions.map((pos, index) => (
-              <span
-                className="m-0.5 w-min whitespace-nowrap rounded-xl bg-gray-200 py-1 px-2 text-xs"
-                key={index}
-              >
-                {pos}
-              </span>
-            ))}
+            {props.person.positions.map(
+              (pos, index) =>
+                !props.person.positions.includes(pos + " Lead") && (
+                  <span
+                    className="m-0.5 w-min whitespace-nowrap rounded-xl bg-gray-200 py-1 px-2 text-xs"
+                    key={index}
+                  >
+                    {pos}
+                  </span>
+                )
+            )}
           </div>
         </span>
         {props.person.description && (

@@ -11,6 +11,7 @@ export default function CarouselPerson({ person }: { person: Person }) {
           width={100}
           height={100}
           layout="responsive"
+          loading="eager"
           className="rounded-full object-cover"
         />
       </div>

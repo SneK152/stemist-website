@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import Banner from "@/components/layout/Banner";
-import FeedBackForm from "@/components/forms/FeedbackForm";
 
 export default function About() {
   return (
@@ -43,7 +42,6 @@ export default function About() {
             join an in-depth exploration of those topics.
           </BodyCard>
         </div>
-        <FeedBackForm />
       </div>
     </>
   );

@@ -128,6 +128,13 @@ const people: Person[] = [
     image: require("@/public/avatar.svg").default.src,
     description: "",
   },
+  {
+    name: "Richard Yuan",
+    positions: ["Outreach"],
+    image: require("@/public/team/Richard Yuan.png"),
+    description:
+      "Richard is a dejected but content adolescent that aspires to be a business executive in the not-too-distant future.",
+  },
 ];
 
 export default people;
