@@ -1,13 +1,13 @@
 import Banner from "@/components/layout/Banner";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import Typed from "typed.js";
+import Typed, { TypedOptions } from "typed.js";
 
 export default function Index() {
   const el = useRef(null);
   const typed = useRef<any>(null);
   useEffect(() => {
-    const options = {
+    const options: TypedOptions = {
       strings: [
         "a place for kids to grow",
         "a positive learning environment",
@@ -15,8 +15,10 @@ export default function Index() {
       ],
       typeSpeed: 50,
       backSpeed: 50,
+      smartBackspace: true,
+      loop: true,
     };
-    if (process.env.NODE_ENV !== "development") {
+    if (process.env.NODE_ENV === "development") {
       typed.current = new Typed(el.current!, options);
       return () => typed.current.destroy();
     }
@@ -39,13 +41,13 @@ export default function Index() {
           <span className="block text-sm sm:text-base">-Benjamin Franklin</span>
         </p>
       </Banner>
-      <div className="flex my-5">
+      <div className="flex flex-col sm:flex-row my-5">
         <div className="w-full grid place-items-center">
           <div className="w-full text-center">
-            <h1 className="text-7xl font-bold font-display">
+            <h1 className="sm:text-7xl text-4xl font-bold font-display">
               What is STEMist?
             </h1>
-            <h1 className="text-5xl m-3">
+            <h1 className="sm:text-5xl m-3 text-3xl">
               STEMist is <span ref={el}></span>
             </h1>
             <p className="font-writing text-xl mb-5">

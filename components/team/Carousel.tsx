@@ -1,6 +1,6 @@
 import { useSpringCarousel } from "react-spring-carousel-js";
 import data from "@/lib/spotlight.json";
-import Person from "@/lib/types/Person";
+import type Person from "@/lib/types/Person";
 import CarouselPerson from "./CarouselPerson";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 

@@ -1,4 +1,4 @@
-import Person from "./types/Person";
+import type Person from "./types/Person";
 
 const teachers: Person[] = [
   {
