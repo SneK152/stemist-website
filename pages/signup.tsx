@@ -224,7 +224,7 @@ export default function Signup() {
           </div>
           <button
             type="submit"
-            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/4"
+            className="relative m-auto block w-full rounded-md border border-transparent bg-white py-2 px-4 text-sm font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/4"
           >
             {submit}
           </button>

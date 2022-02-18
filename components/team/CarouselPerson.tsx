@@ -15,8 +15,9 @@ export default function CarouselPerson({ person }: { person: Person }) {
           className="rounded-full object-cover"
         />
       </div>
-      <div className="py-5 pl-10">
+      <div className="py-5 pl-10 pt-10">
         <h1 className="text-5xl font-display">{person.name}</h1>
+        <br />
         <p className="max-w-[80ch]">{person.description}</p>
       </div>
     </div>

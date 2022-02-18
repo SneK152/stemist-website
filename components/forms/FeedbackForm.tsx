@@ -50,26 +50,21 @@ export default function FeedBackForm() {
   });
 
   return (
-    <div className="text-white">
-      <p>Please leave your feedback here</p>
-      <form onSubmit={formik.handleSubmit}>
-        <div>
+    <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
+      <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
+        <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
           <MemoedInputField
             labelName="Name"
             name="name"
             formik={formik}
             errorClass={errorClass}
           />
-        </div>
-        <div>
           <MemoedInputField
             labelName="Email"
             name="email"
             formik={formik}
             errorClass={errorClass}
           />
-        </div>
-        <div>
           <MemoedInputField
             labelName="Feedback"
             name="feedback"
@@ -77,9 +72,23 @@ export default function FeedBackForm() {
             formik={formik}
             errorClass={errorClass}
           />
+          <button
+            type="submit"
+            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+          >
+            {submit}
+          </button>
         </div>
-        <button type="submit">{submit}</button>
       </form>
+      <div className="flex w-full flex-col gap-3 pt-8 pl-5">
+        <h1 className="font-display text-2xl font-bold">Session Feedback</h1>
+        <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
+        <p>
+          If you are a student who attended one of our classes, please fill out
+          this feedback form to let us know what went well and what we could
+          improve on!
+        </p>
+      </div>
     </div>
   );
 }

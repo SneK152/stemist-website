@@ -110,16 +110,25 @@ export default function Contact() {
               name="message"
               errorClass={errorClass}
             />
+            <button
+              type="submit"
+              className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+            >
+              {submit}
+            </button>
           </div>
-          <button
-            type="submit"
-            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
-          >
-            {submit}
-          </button>
         </form>
       </div>
       <FeedBackForm />
+      <div className="text-center mt-10">
+        <h1 className="text-3xl font-display">
+          Looking to make a difference and educate kids in what you love?
+        </h1>
+        <p>
+          STEMist is looking to open applications for company positions and
+          teacher roles in the future, so stay tuned!
+        </p>
+      </div>
     </>
   );
 }

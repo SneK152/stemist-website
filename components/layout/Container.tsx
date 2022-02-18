@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 export default function Container({ children }: { children: React.ReactNode }) {
@@ -37,9 +38,10 @@ export default function Container({ children }: { children: React.ReactNode }) {
         <title>STEMist Education</title>
       </Head>
       <Navbar />
-      <div className="mx-auto h-[10000px]">
+      <div className="mx-auto h-full">
         <div className="mx-auto overflow-hidden pt-14">{children}</div>
       </div>
+      <Footer />
     </>
   );
 }

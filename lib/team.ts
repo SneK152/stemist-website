@@ -67,7 +67,8 @@ const people: Person[] = [
     name: "Sanya Badhe",
     positions: ["Operations", "Teacher"],
     image: require("@/public/team/Sanya Badhe.png").default.src,
-    description: "",
+    description:
+      "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
   },
   {
     name: "Aryan Patnaik",
@@ -86,7 +87,8 @@ const people: Person[] = [
     name: "Jishnu Balaji",
     positions: ["Operations", "Teacher"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
+    description:
+      "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
   },
   {
     name: "Yajat Nagaraj",
@@ -126,7 +128,8 @@ const people: Person[] = [
     name: "Sophie Mak",
     positions: ["Outreach"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
+    description:
+      "Sophie Mak is a freshman at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
   },
   {
     name: "Richard Yuan",

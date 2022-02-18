@@ -5,7 +5,8 @@ const teachers: Person[] = [
     name: "Sanya Badhe",
     positions: ["Math Lead", "Physical Science", "Math"],
     image: require("@/public/team/Sanya Badhe.png").default.src,
-    description: "",
+    description:
+      "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
   },
   {
     name: "Selena Yang",
@@ -13,13 +14,6 @@ const teachers: Person[] = [
     image: require("@/public/team/Selena Yang.jpg").default.src,
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
-  },
-  {
-    name: "Shanker Ram",
-    positions: ["Computer Science Lead", "Computer Science"],
-    image: require("@/public/avatar.svg").default.src,
-    description:
-      "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
   },
   {
     name: "Anish Bhethanabotla",
@@ -32,6 +26,13 @@ const teachers: Person[] = [
     image: require("@/public/team/Anish Bhethanabotla.jpeg").default.src,
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
+  },
+  {
+    name: "Shanker Ram",
+    positions: ["Computer Science Lead", "Computer Science"],
+    image: require("@/public/avatar.svg").default.src,
+    description:
+      "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
   },
   {
     name: "Snehil Kakani",
@@ -88,16 +89,11 @@ const teachers: Person[] = [
     description: "",
   },
   {
-    name: "Thomas Wu",
-    positions: ["Reserve"],
-    image: require("@/public/avatar.svg").default.src,
-    description: "",
-  },
-  {
     name: "Jishnu Balaji",
     positions: ["Biology"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
+    description:
+      "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
   },
   {
     name: "Yajat Nagaraj",
@@ -129,7 +125,8 @@ const teachers: Person[] = [
     name: "Kasturi Kirubaharan",
     positions: ["Math", "Biology"],
     image: require("@/public/team/Kasturi Kirubaharan.jpg").default.src,
-    description: "",
+    description:
+      "Kasturi Kirubaharan is a freshman at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
   },
 ];
 

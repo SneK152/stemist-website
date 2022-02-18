@@ -11,7 +11,6 @@ teachers.forEach((person) => {
 });
 teacherRoles = ["All", ...new Set(teacherRoles)];
 teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
-console.log(teacherRoles);
 const MemoedPerson = memo(Person);
 
 export default function Team() {
@@ -23,9 +22,14 @@ export default function Team() {
           Meet the Team
         </h1>
       </Banner>
-      <Carousel />
-      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6 text-black">
-        <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
+      <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+        Weekly Mentor Spotlight
+      </h1>
+      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <Carousel />
+      </div>
+      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+        <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Executive Team
         </h1>
         <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -39,8 +43,8 @@ export default function Team() {
           ))}
         </div>
       </div>
-      <div className="m-auto max-w-[100rem] px-2 sm:px-6 lg:px-6 text-black">
-        <h1 className="font-display mb-3 text-center text-3xl font-bold text-white">
+      <div className="m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
+        <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructor Team
         </h1>
         <div className="m-auto flex justify-center">
@@ -61,6 +65,13 @@ export default function Team() {
               (person) =>
                 person.positions.includes(activeTeacher) ||
                 activeTeacher === "All"
+            )
+            .sort((a, b) =>
+              a.positions[0].includes(`${activeTeacher} Lead`)
+                ? -1
+                : b.positions[0].includes("Lead")
+                ? 1
+                : 0
             )
             .map((person, index) => (
               <div
