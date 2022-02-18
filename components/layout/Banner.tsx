@@ -16,8 +16,8 @@ export default function Banner({
   return (
     <div
       className={`${
-        full ? "h-screen" : "h-[50vh]"
-      } mb-10 object-cover relative`}
+        full ? "h-[70vh]" : "h-[50vh] mb-10"
+      } object-cover relative`}
     >
       <img
         src={image}
