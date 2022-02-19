@@ -1,6 +1,7 @@
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  swcMinify: true,
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({

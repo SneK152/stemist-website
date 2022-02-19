@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-// import Image from "next/image";
+import Image from "next/image";
 import { ReactNode } from "react";
 
 export default function Banner({
@@ -19,12 +18,12 @@ export default function Banner({
         full ? "h-[70vh]" : "h-[50vh] mb-10"
       } object-cover relative`}
     >
-      <img
+      <Image
         src={image}
         alt="Background for page"
-        // layout="fill"
+        layout="fill"
         className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover"
-        // priority
+        priority
       />
       <div className="flex h-full w-full items-center justify-center">
         <div

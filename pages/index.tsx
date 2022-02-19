@@ -18,7 +18,7 @@ export default function Index() {
       smartBackspace: true,
       loop: true,
     };
-    if (process.env.NODE_ENV === "development") {
+    if (true) {
       typed.current = new Typed(el.current!, options);
       return () => typed.current.destroy();
     }
