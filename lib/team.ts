@@ -52,7 +52,7 @@ const people: Person[] = [
   {
     name: "Isaac Sun",
     positions: ["Board", "Outreach", "Teacher"],
-    image: require("@/public/team/Isaac Sun.png").default.src,
+    image: require("@/public/team/Isaac Sun.jpeg").default.src,
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
   },
@@ -127,7 +127,7 @@ const people: Person[] = [
   {
     name: "Sophie Mak",
     positions: ["Outreach"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Sophie Mak.jpeg").default.src,
     description:
       "Sophie Mak is a freshman at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
   },

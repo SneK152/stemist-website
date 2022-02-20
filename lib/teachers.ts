@@ -71,7 +71,7 @@ const teachers: Person[] = [
   {
     name: "Isaac Sun",
     positions: ["Math"],
-    image: require("@/public/team/Isaac Sun.png").default.src,
+    image: require("@/public/team/Isaac Sun.jpeg").default.src,
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
   },
