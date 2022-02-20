@@ -71,7 +71,7 @@ const teachers: Person[] = [
   {
     name: "Daniel Kim",
     positions: ["Computer Science", "Math"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Daniel Kim.png").default.src,
     description:
       "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
   },
@@ -98,7 +98,7 @@ const teachers: Person[] = [
   {
     name: "Jishnu Balaji",
     positions: ["Biology"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Jishnu Balaji.jpg").default.src,
     description:
       "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
   },

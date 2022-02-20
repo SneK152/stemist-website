@@ -86,7 +86,7 @@ const people: Person[] = [
   {
     name: "Jishnu Balaji",
     positions: ["Operations", "Teacher"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Jishnu Balaji.jpg").default.src,
     description:
       "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
   },
