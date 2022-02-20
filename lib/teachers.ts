@@ -42,6 +42,13 @@ const teachers: Person[] = [
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
   },
   {
+    name: "Steve Yang",
+    positions: ["Biology", "Physical Science"],
+    image: require("@/public/team/Steve Yang.jpeg").default.src,
+    description:
+      "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
+  },
+  {
     name: "Johnathan Kao",
     positions: ["Physical Science", "Biology"],
     image: require("@/public/team/Johnathan Kao.jpg").default.src,
@@ -51,7 +58,7 @@ const teachers: Person[] = [
   {
     name: "Justin Zhang",
     positions: ["Computer Science", "Math"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Justin Zhang.jpg").default.src,
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
   },

@@ -10,7 +10,7 @@ const people: Person[] = [
   },
   {
     name: "Johnathan Kao",
-    positions: ["Board", "Teacher"],
+    positions: ["Board", "Teacher", "Outreach"],
     image: require("@/public/team/Johnathan Kao.jpg").default.src,
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
@@ -18,7 +18,7 @@ const people: Person[] = [
   {
     name: "Justin Zhang",
     positions: ["Board", "Operations", "HR", "Teacher"],
-    image: require("@/public/avatar.svg").default.src,
+    image: require("@/public/team/Justin Zhang.jpg").default.src,
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
   },
