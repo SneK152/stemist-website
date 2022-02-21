@@ -4,7 +4,7 @@ import Banner from "@/components/layout/Banner";
 export default function About() {
   return (
     <>
-      <Banner image="/homepage.webp" className="sm:h-64">
+      <Banner image="/homepage.webp" className="sm:w-auto">
         <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           About our Organization
         </h1>

@@ -15,7 +15,7 @@ export default function Banner({
   return (
     <div
       className={`${
-        full ? "h-[70vh]" : "h-[50vh] mb-10"
+        full ? "h-screen" : "h-[50vh] mb-10"
       } object-cover relative`}
     >
       <Image
@@ -27,7 +27,7 @@ export default function Banner({
       />
       <div className="flex h-full w-full items-center justify-center">
         <div
-          className={`min-h-2/5 bg-green absolute flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 ${
+          className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 ${
             className || ""
           }`}
         >
