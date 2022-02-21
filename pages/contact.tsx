@@ -13,7 +13,7 @@ const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 const MemoedInputField = memo(InputField);
 
 export default function Contact() {
-  const [localEmail, setEmail] = useLocalStorage("contactEmail", null);
+  const [localEmail, setEmail] = useLocalStorage("contactEmailUsage", null);
   const [submit, setSubmit] = useState<ReactElement>(<h1>Submit</h1>);
   useEffect(() => {
     return clearTimeout;
@@ -21,20 +21,20 @@ export default function Contact() {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      email: "",
+      contactName: "",
+      contactEmail: "",
       message: "",
     },
     onSubmit: async (values, helpers) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
-      if (localEmail !== values.email) {
+      if (localEmail !== values.contactEmail) {
         // const formdata = new URLSearchParams()
         // formdata.append("entry.1706588819", values.firstName) // First Name
         // formdata.append("entry.1968315359", values.lastName) // Last Name
         // formdata.append("entry.1473300010", values.email) // Email
         // formdata.append("entry.1047485006", values.questions) // Questions
         // formdata.append("entry.890098326", values.grade) // Grade
-        setEmail(values.email);
+        setEmail(values.contactEmail);
         // await fetch(
         // 	"https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgwo15SXKJ-izaP99awlZOGcXszjwBwmYwRnlg3hfhd6CyhA/formResponse",
         // 	{
@@ -53,7 +53,7 @@ export default function Contact() {
             helpers.resetForm();
           }, 1200);
         }, 500);
-      } else if (localEmail === values.email) {
+      } else {
         setSubmit(
           <div className="flex items-center justify-center gap-1">
             <XIcon height={20} width={20} />
@@ -64,8 +64,10 @@ export default function Contact() {
       }
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
+      contactName: Yup.string().required("Required"),
+      contactEmail: Yup.string()
+        .email("Invalid email address")
+        .required("Required"),
       message: Yup.string()
         .min(3, "Must be more than 3 characters")
         .max(500, "Cannot be longer than 500 characters")
@@ -92,14 +94,14 @@ export default function Contact() {
           <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
             <MemoedInputField
               labelName="Email address"
-              name="email"
+              name="contactEmail"
               type="email"
               formik={formik}
               errorClass={errorClass}
             />
             <MemoedInputField
               labelName="Full name"
-              name="name"
+              name="contactName"
               formik={formik}
               errorClass={errorClass}
             />

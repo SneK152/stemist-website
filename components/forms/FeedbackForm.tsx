@@ -4,9 +4,10 @@ import { memo, ReactElement, useEffect, useState } from "react";
 import * as Yup from "yup";
 import InputField from "./InputField";
 import Spinner from "../Spinner";
-interface InputField {
-  name: string;
-  email: string;
+
+interface Input {
+  feedbackName: string;
+  feedbackEmail: string;
   feedback: string;
 }
 const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
@@ -20,12 +21,12 @@ export default function FeedBackForm() {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      email: "",
+      feedbackName: "",
+      feedbackEmail: "",
       feedback: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Required"),
+      feedbackName: Yup.string().required("Required"),
       email: Yup.string().required("Required").email("Invalid email"),
       feedback: Yup.string()
         .min(4, "Must be greater than 4 characters")
@@ -33,12 +34,11 @@ export default function FeedBackForm() {
         .required("Required"),
     }),
     onSubmit: (
-      { name, email, feedback },
-      { resetForm }: FormikHelpers<InputField>
+      { feedbackName, feedbackEmail, feedback },
+      { resetForm }: FormikHelpers<Input>
     ) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
-      console.log(name, email, feedback);
-
+      console.log(feedbackEmail, feedbackName, feedback);
       setTimeout(() => {
         setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
         setTimeout(() => {
@@ -55,13 +55,13 @@ export default function FeedBackForm() {
         <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
           <MemoedInputField
             labelName="Name"
-            name="name"
+            name="feedbackName"
             formik={formik}
             errorClass={errorClass}
           />
           <MemoedInputField
             labelName="Email"
-            name="email"
+            name="feedbackEmail"
             formik={formik}
             errorClass={errorClass}
           />
