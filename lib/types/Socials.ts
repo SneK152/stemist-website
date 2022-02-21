@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 type Social = {
-  icon: JSX.Element;
+  icon: ReactNode;
   link: string;
   color: string;
   title: string;
