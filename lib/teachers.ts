@@ -126,7 +126,8 @@ const teachers: Person[] = [
     name: "Kiara Ha",
     positions: ["Math", "Physical Science", "Biology"],
     image: require("@/public/team/Kiara Ha.png").default.src,
-    description: "",
+    description:
+      "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
   },
   {
     name: "Kasturi Kirubaharan",

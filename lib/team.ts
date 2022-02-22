@@ -122,7 +122,8 @@ const people: Person[] = [
     name: "Kiara Ha",
     positions: ["Technology", "Teacher"],
     image: require("@/public/team/Kiara Ha.png").default.src,
-    description: "",
+    description:
+      "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
   },
   {
     name: "Sophie Mak",
