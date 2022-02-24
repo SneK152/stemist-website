@@ -23,9 +23,10 @@ export default function Navbar() {
                       <Image
                         src="/logo.svg"
                         alt="STEMist Education"
-                        height={40}
-                        width={66.6666}
                         priority
+                        height={55.3}
+                        width={166.6}
+                        className="filter invert"
                       />
                     </div>
                   </h1>
