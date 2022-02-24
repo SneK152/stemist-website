@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import Person from "@/components/team/Person";
 import people from "@/lib/team";
 import teachers from "@/lib/teachers";
@@ -15,6 +15,22 @@ const MemoedPerson = memo(Person);
 
 export default function Team() {
   const [activeTeacher, setActiveTeacher] = useState("All");
+  const memoedTeachers = useMemo(
+    () =>
+      teachers
+        .filter(
+          (person) =>
+            person.positions.includes(activeTeacher) || activeTeacher === "All"
+        )
+        .sort((a, b) =>
+          a.positions[0].includes(`${activeTeacher} Lead`)
+            ? -1
+            : b.positions[0].includes("Lead")
+            ? 1
+            : 0
+        ),
+    [activeTeacher]
+  );
   return (
     <>
       <Banner image="/homepage.webp" className="sm:w-auto">
@@ -60,27 +76,14 @@ export default function Team() {
           </div>
         </div>
         <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {teachers
-            .filter(
-              (person) =>
-                person.positions.includes(activeTeacher) ||
-                activeTeacher === "All"
-            )
-            .sort((a, b) =>
-              a.positions[0].includes(`${activeTeacher} Lead`)
-                ? -1
-                : b.positions[0].includes("Lead")
-                ? 1
-                : 0
-            )
-            .map((person, index) => (
-              <div
-                key={index}
-                className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
-              >
-                <MemoedPerson person={person} />
-              </div>
-            ))}
+          {memoedTeachers.map((person, index) => (
+            <div
+              key={index}
+              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+            >
+              <MemoedPerson person={person} />
+            </div>
+          ))}
         </div>
       </div>
     </>
