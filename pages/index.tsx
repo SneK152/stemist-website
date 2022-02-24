@@ -66,7 +66,7 @@ export default function Index() {
             controls
             src="/homepage.mp4"
             poster="/logo.svg"
-            className="aspect-video w-full"
+            className="aspect-video w-full bg-white"
           />
         </div>
       </div>
