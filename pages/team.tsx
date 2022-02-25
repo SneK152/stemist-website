@@ -4,7 +4,7 @@ import people from "@/lib/team";
 import teachers from "@/lib/teachers";
 import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import storage from "@/lib/serverApp";
 import fs from "fs";
@@ -116,19 +116,20 @@ function FilterButton({
   );
 }
 
-export const getStaticProps: GetStaticProps<TeamProps> = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<TeamProps> = async (
+  ctx
+) => {
   await storage
     .bucket("stemist-c71a6.appspot.com")
     .file("spotlight.json")
     .download({
-      destination: resolve(process.cwd(), "spotlight.json"),
+      destination: resolve(__dirname, "spotlight.json"),
     });
   return {
     props: {
       data: JSON.parse(
-        fs.readFileSync(resolve(process.cwd(), "spotlight.json")).toString()
+        fs.readFileSync(resolve(__dirname, "spotlight.json")).toString()
       ),
     },
-    revalidate: 60 * 60 * 24,
   };
 };

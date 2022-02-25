@@ -14,10 +14,10 @@ export default async function handler(
     .bucket("stemist-c71a6.appspot.com")
     .file("spotlight.json")
     .download({
-      destination: resolve(process.cwd(), "spotlight.json"),
+      destination: resolve(__dirname, "spotlight.json"),
     });
   const file: Person[] = JSON.parse(
-    fs.readFileSync(resolve(process.cwd(), "spotlight.json")).toString()
+    fs.readFileSync(resolve(__dirname, "spotlight.json")).toString()
   );
   let samp: Person = sample(teachers)!;
   let isFound = file.some((element) => element.name === samp.name);
@@ -26,13 +26,10 @@ export default async function handler(
     isFound = file.some((element) => element.name === samp.name);
   }
   file.push(samp);
-  fs.writeFileSync(
-    resolve(process.cwd(), "spotlight.json"),
-    JSON.stringify(file)
-  );
+  fs.writeFileSync(resolve(__dirname, "spotlight.json"), JSON.stringify(file));
   await storage
     .bucket("stemist-c71a6.appspot.com")
-    .upload(resolve(process.cwd(), "spotlight.json"), {
+    .upload(resolve(__dirname, "spotlight.json"), {
       destination: "spotlight.json",
     });
   res.status(200).json({});
