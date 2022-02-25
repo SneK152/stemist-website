@@ -10,5 +10,5 @@ if (!getApps().length) {
   app = getApp();
 }
 
-const storage = admin.storage(app);
-export default storage;
+const db = admin.firestore(app);
+export default db;

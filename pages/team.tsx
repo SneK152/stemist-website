@@ -6,9 +6,7 @@ import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
 import { GetServerSideProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
-import storage from "@/lib/serverApp";
-import fs from "fs";
-import { resolve } from "path";
+import db from "@/lib/serverApp";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {
@@ -116,20 +114,11 @@ function FilterButton({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<TeamProps> = async (
-  ctx
-) => {
-  await storage
-    .bucket("stemist-c71a6.appspot.com")
-    .file("spotlight.json")
-    .download({
-      destination: resolve(__dirname, "spotlight.json"),
-    });
+export const getServerSideProps: GetServerSideProps<TeamProps> = async () => {
+  const spotlight = await db.collection("spotlight").doc("spotlight").get();
   return {
     props: {
-      data: JSON.parse(
-        fs.readFileSync(resolve(__dirname, "spotlight.json")).toString()
-      ),
+      data: spotlight.data()!.spotlight,
     },
   };
 };

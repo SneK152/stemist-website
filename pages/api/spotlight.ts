@@ -3,22 +3,14 @@ import fs from "fs";
 import teachers from "@/lib/teachers";
 import { sample } from "lodash";
 import type Person from "@/lib/types/Person";
-import storage from "@/lib/serverApp";
-import { resolve } from "path";
+import db from "@/lib/serverApp";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await storage
-    .bucket("stemist-c71a6.appspot.com")
-    .file("spotlight.json")
-    .download({
-      destination: resolve(__dirname, "spotlight.json"),
-    });
-  const file: Person[] = JSON.parse(
-    fs.readFileSync(resolve(__dirname, "spotlight.json")).toString()
-  );
+  const spotlight = await db.collection("spotlight").doc("spotlight").get();
+  const file: Person[] = spotlight.data()!.spotlight;
   let samp: Person = sample(teachers)!;
   let isFound = file.some((element) => element.name === samp.name);
   while (isFound) {
@@ -26,11 +18,8 @@ export default async function handler(
     isFound = file.some((element) => element.name === samp.name);
   }
   file.push(samp);
-  fs.writeFileSync(resolve(__dirname, "spotlight.json"), JSON.stringify(file));
-  await storage
-    .bucket("stemist-c71a6.appspot.com")
-    .upload(resolve(__dirname, "spotlight.json"), {
-      destination: "spotlight.json",
-    });
+  await db.collection("spotlight").doc("spotlight").set({
+    spotlight: file,
+  });
   res.status(200).json({});
 }
