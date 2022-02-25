@@ -4,7 +4,7 @@ import teachers from "@/lib/teachers";
 import { sample } from "lodash";
 import type Person from "@/lib/types/Person";
 import storage from "@/lib/serverApp";
-import { join } from "path";
+import { resolve } from "path";
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,10 +14,10 @@ export default async function handler(
     .bucket("stemist-c71a6.appspot.com")
     .file("spotlight.json")
     .download({
-      destination: join(process.cwd(), "spotlight.json"),
+      destination: resolve(process.cwd(), "spotlight.json"),
     });
   const file: Person[] = JSON.parse(
-    fs.readFileSync(join(process.cwd(), "spotlight.json")).toString()
+    fs.readFileSync(resolve(process.cwd(), "spotlight.json")).toString()
   );
   let samp: Person = sample(teachers)!;
   let isFound = file.some((element) => element.name === samp.name);
@@ -26,10 +26,13 @@ export default async function handler(
     isFound = file.some((element) => element.name === samp.name);
   }
   file.push(samp);
-  fs.writeFileSync(join(process.cwd(), "spotlight.json"), JSON.stringify(file));
+  fs.writeFileSync(
+    resolve(process.cwd(), "spotlight.json"),
+    JSON.stringify(file)
+  );
   await storage
     .bucket("stemist-c71a6.appspot.com")
-    .upload(join(process.cwd(), "spotlight.json"), {
+    .upload(resolve(process.cwd(), "spotlight.json"), {
       destination: "spotlight.json",
     });
   res.status(200).json({});

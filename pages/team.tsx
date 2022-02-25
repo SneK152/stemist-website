@@ -8,7 +8,7 @@ import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import storage from "@/lib/serverApp";
 import fs from "fs";
-import { join } from "path";
+import { resolve } from "path";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {
@@ -121,12 +121,12 @@ export const getStaticProps: GetStaticProps<TeamProps> = async (ctx) => {
     .bucket("stemist-c71a6.appspot.com")
     .file("spotlight.json")
     .download({
-      destination: join(process.cwd(), "spotlight.json"),
+      destination: resolve(process.cwd(), "spotlight.json"),
     });
   return {
     props: {
       data: JSON.parse(
-        fs.readFileSync(join(process.cwd(), "spotlight.json")).toString()
+        fs.readFileSync(resolve(process.cwd(), "spotlight.json")).toString()
       ),
     },
     revalidate: 60 * 60 * 24,
