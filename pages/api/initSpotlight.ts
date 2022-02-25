@@ -7,13 +7,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  fs.writeFileSync(
-    join(process.cwd(), "lib/spotlight.json"),
-    JSON.stringify([])
-  );
+  fs.writeFileSync(join(process.cwd(), "spotlight.json"), JSON.stringify([]));
   await storage
     .bucket("stemist-c71a6.appspot.com")
-    .upload(join(process.cwd(), "lib/spotlight.json"), {
+    .upload(join(process.cwd(), "spotlight.json"), {
       destination: "spotlight.json",
     });
   res.status(200).json({});

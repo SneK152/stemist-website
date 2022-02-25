@@ -121,12 +121,12 @@ export const getStaticProps: GetStaticProps<TeamProps> = async (ctx) => {
     .bucket("stemist-c71a6.appspot.com")
     .file("spotlight.json")
     .download({
-      destination: join(process.cwd(), "lib/spotlight.json"),
+      destination: join(process.cwd(), "spotlight.json"),
     });
   return {
     props: {
       data: JSON.parse(
-        fs.readFileSync(join(process.cwd(), "lib/spotlight.json")).toString()
+        fs.readFileSync(join(process.cwd(), "spotlight.json")).toString()
       ),
     },
     revalidate: 60 * 60 * 24,
