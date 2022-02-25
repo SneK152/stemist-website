@@ -8,6 +8,8 @@
     "@next/bundle-analyzer": "^12.1.0",
     "@tailwindcss/forms": "^0.4.0",
     "aos": "^2.3.4",
+    "firebase": "^9.6.7",
+    "firebase-admin": "^10.0.2",
     "formik": "^2.2.9",
     "lodash": "^4.17.21",
     "next": "^12.1.0",

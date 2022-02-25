@@ -4,6 +4,10 @@ import people from "@/lib/team";
 import teachers from "@/lib/teachers";
 import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
+import { GetStaticProps } from "next";
+import TeamProps from "@/lib/types/TeamProps";
+import storage from "@/lib/serverApp";
+import fs from "fs";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {
@@ -13,7 +17,7 @@ teacherRoles = ["All", ...new Set(teacherRoles)];
 teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
 const MemoedPerson = memo(Person);
 
-export default function Team() {
+export default function Team(props: TeamProps) {
   const [activeTeacher, setActiveTeacher] = useState("All");
   const memoedTeachers = useMemo(
     () =>
@@ -42,7 +46,7 @@ export default function Team() {
         Weekly Mentor Spotlight
       </h1>
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
-        <Carousel />
+        <Carousel data={props.data} />
       </div>
       <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
@@ -110,3 +114,18 @@ function FilterButton({
     </button>
   );
 }
+
+export const getStaticProps: GetStaticProps<TeamProps> = async (ctx) => {
+  await storage
+    .bucket("stemist-c71a6.appspot.com")
+    .file("spotlight.json")
+    .download({
+      destination: "lib/spotlight.json",
+    });
+  return {
+    props: {
+      data: JSON.parse(fs.readFileSync("lib/spotlight.json").toString()),
+    },
+    revalidate: 60 * 60 * 24,
+  };
+};
