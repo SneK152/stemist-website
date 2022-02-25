@@ -4,7 +4,7 @@ import people from "@/lib/team";
 import teachers from "@/lib/teachers";
 import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
 
@@ -114,11 +114,12 @@ function FilterButton({
   );
 }
 
-export const getServerSideProps: GetServerSideProps<TeamProps> = async () => {
+export const getStaticProps: GetStaticProps<TeamProps> = async () => {
   const spotlight = await db.collection("spotlight").doc("spotlight").get();
   return {
     props: {
       data: spotlight.data()!.spotlight,
     },
+    revalidate: 60,
   };
 };
