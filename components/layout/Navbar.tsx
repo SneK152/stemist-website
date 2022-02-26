@@ -1,6 +1,6 @@
 import { Disclosure, Menu } from "@headlessui/react";
 import NavLink from "./NavLink";
-import { BanIcon, CogIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import DropdownLink from "./DropdownLink";
@@ -48,7 +48,18 @@ export default function Navbar() {
               <ul className="inline-flex gap-4">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
-                <NavLink href="/team">Meet the Team</NavLink>
+                <DropdownLink href="/team" title="Meet the Team">
+                  <DropdownButton href="/team#directors">
+                    Directors
+                  </DropdownButton>
+                  <DropdownButton href="/team#officers">
+                    Officers
+                  </DropdownButton>
+                  <DropdownButton href="/team#staff">Staff</DropdownButton>
+                  <DropdownButton href="/team#instructors">
+                    Instructors
+                  </DropdownButton>
+                </DropdownLink>
                 <NavLink href="/contact">Get Involved</NavLink>
                 <NavLink main href="/signup">
                   Sign Ups

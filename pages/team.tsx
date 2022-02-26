@@ -52,7 +52,10 @@ export default function Team(props: TeamProps) {
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <Carousel data={props.data} />
       </div>
-      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+      <div
+        id="directors"
+        className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black"
+      >
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Board of Directors
         </h1>
@@ -67,7 +70,10 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
-      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+      <div
+        id="officers"
+        className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black"
+      >
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Officers
         </h1>
@@ -82,7 +88,10 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
-      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+      <div
+        id="staff"
+        className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black"
+      >
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Staff
         </h1>
@@ -97,7 +106,10 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
-      <div className="m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
+      <div
+        id="instructors"
+        className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black"
+      >
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructors
         </h1>
