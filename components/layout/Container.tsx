@@ -1,8 +1,14 @@
 import Head from "next/head";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Navbar from "../navbar/Navbar";
 
-export default function Container({ children }: { children: React.ReactNode }) {
+export default function Container({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) {
   return (
     <>
       <Head>
@@ -35,7 +41,10 @@ export default function Container({ children }: { children: React.ReactNode }) {
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
-        <title>STEMist Education</title>
+        <title>
+          STEMist Education{" "}
+          {title ? `| ${title[0].toUpperCase() + title.substring(1)}` : ""}
+        </title>
       </Head>
       <Navbar />
       <div className="mx-auto h-full">

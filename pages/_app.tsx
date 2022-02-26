@@ -5,14 +5,14 @@ import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     AOS.init({
       once: true,
     });
   }, []);
   return (
-    <Container>
+    <Container title={router.pathname.substring(1)}>
       <Component {...pageProps} />
     </Container>
   );

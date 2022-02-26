@@ -1,5 +1,5 @@
 import { memo, ReactElement, useState } from "react";
-import useLocalStorage from "@/lib/useLocalStorage";
+import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import Spinner from "@/components/Spinner";
@@ -128,7 +128,7 @@ export default function Signup() {
   });
   return (
     <>
-      <Banner image="/homepage.webp" className="sm:w-auto">
+      <Banner image="/homepage.webp">
         <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           Sign Up
         </h1>
@@ -147,28 +147,20 @@ export default function Signup() {
                 name="email"
                 type="email"
                 formik={formik}
-                errorClass={errorClass}
               />
               <div className="flex w-full gap-2">
                 <MemoedInputField
                   labelName="First name"
                   name="firstName"
                   formik={formik}
-                  errorClass={errorClass}
                 />
                 <MemoedInputField
                   labelName="Last name"
                   name="lastName"
                   formik={formik}
-                  errorClass={errorClass}
                 />
               </div>
-              <MemoedSelectField
-                labelName="Grade"
-                name="grade"
-                formik={formik}
-                errorClass={errorClass}
-              >
+              <MemoedSelectField labelName="Grade" name="grade" formik={formik}>
                 {gradeOptions.map((item, index) => (
                   <option value={item} key={index}>
                     {item}
@@ -182,7 +174,6 @@ export default function Signup() {
                 labelName="Computer Science Class Interest"
                 name="csInterest"
                 formik={formik}
-                errorClass={errorClass}
               >
                 {csOptions.map((item, index) => (
                   <option value={item} key={index}>
@@ -194,7 +185,6 @@ export default function Signup() {
                 labelName="Math Class Interest"
                 name="mathInterest"
                 formik={formik}
-                errorClass={errorClass}
               >
                 {mathOptions.map((item, index) => (
                   <option value={item} key={index}>
@@ -206,7 +196,6 @@ export default function Signup() {
                 labelName="Science Class Interest"
                 name="scienceInterest"
                 formik={formik}
-                errorClass={errorClass}
               >
                 {scienceOptions.map((item, index) => (
                   <option value={item} key={index}>
@@ -218,7 +207,6 @@ export default function Signup() {
                 labelName="Questions?"
                 name="questions"
                 formik={formik}
-                errorClass={errorClass}
               />
             </div>
           </div>

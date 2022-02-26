@@ -1,5 +1,5 @@
 import { memo, ReactElement, useState, useEffect } from "react";
-import useLocalStorage from "@/lib/useLocalStorage";
+import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import Spinner from "@/components/Spinner";
@@ -7,8 +7,6 @@ import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import Banner from "@/components/layout/Banner";
 import FeedBackForm from "@/components/forms/FeedbackForm";
-
-const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
 const MemoedInputField = memo(InputField);
 
@@ -76,7 +74,7 @@ export default function Contact() {
   });
   return (
     <>
-      <Banner image="/homepage.webp" className="sm:w-auto">
+      <Banner image="/homepage.webp">
         <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
           Get Involved
         </h1>
@@ -97,20 +95,17 @@ export default function Contact() {
               name="contactEmail"
               type="email"
               formik={formik}
-              errorClass={errorClass}
             />
             <MemoedInputField
               labelName="Full name"
               name="contactName"
               formik={formik}
-              errorClass={errorClass}
             />
             <MemoedInputField
               labelName="Message"
               as="textarea"
               formik={formik}
               name="message"
-              errorClass={errorClass}
             />
             <button
               type="submit"

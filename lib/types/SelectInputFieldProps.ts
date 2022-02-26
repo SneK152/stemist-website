@@ -4,5 +4,5 @@ export default interface SelectInputFieldProps
   name: string;
   children: React.ReactNode;
   formik: any;
-  errorClass: string;
+  errorClass?: string;
 }

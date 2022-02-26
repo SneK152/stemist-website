@@ -10,7 +10,6 @@ interface Input {
   feedbackEmail: string;
   feedback: string;
 }
-const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 const MemoedInputField = memo(InputField);
 
 export default function FeedBackForm() {
@@ -50,36 +49,7 @@ export default function FeedBackForm() {
   });
 
   return (
-    <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
-      <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
-        <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-          <MemoedInputField
-            labelName="Name"
-            name="feedbackName"
-            formik={formik}
-            errorClass={errorClass}
-          />
-          <MemoedInputField
-            labelName="Email"
-            name="feedbackEmail"
-            formik={formik}
-            errorClass={errorClass}
-          />
-          <MemoedInputField
-            labelName="Feedback"
-            name="feedback"
-            as="textarea"
-            formik={formik}
-            errorClass={errorClass}
-          />
-          <button
-            type="submit"
-            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
-          >
-            {submit}
-          </button>
-        </div>
-      </form>
+    <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8 flex-row-reverse">
       <div className="flex w-full flex-col gap-3 pt-8 pl-5">
         <h1 className="font-display text-2xl font-bold">Session Feedback</h1>
         <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
@@ -89,6 +59,32 @@ export default function FeedBackForm() {
           improve on!
         </p>
       </div>
+      <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
+        <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
+          <MemoedInputField
+            labelName="Name"
+            name="feedbackName"
+            formik={formik}
+          />
+          <MemoedInputField
+            labelName="Email"
+            name="feedbackEmail"
+            formik={formik}
+          />
+          <MemoedInputField
+            labelName="Feedback"
+            name="feedback"
+            as="textarea"
+            formik={formik}
+          />
+          <button
+            type="submit"
+            className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+          >
+            {submit}
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

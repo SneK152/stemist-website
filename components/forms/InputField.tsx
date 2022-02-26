@@ -1,5 +1,5 @@
 import InputFieldProps from "@/lib/types/InputFieldProps";
-import useLocalStorage from "@/lib/useLocalStorage";
+import useLocalStorage from "@/lib/hooks/useLocalStorage";
 
 export default function InputField({
   labelName,
@@ -34,7 +34,14 @@ export default function InputField({
         value={local}
       />
       {formik.touched[name] && formik.errors[name] ? (
-        <div className={errorClass}>{formik.errors[name]}</div>
+        <div
+          className={
+            errorClass ||
+            "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2"
+          }
+        >
+          {formik.errors[name]}
+        </div>
       ) : null}
     </div>
   );

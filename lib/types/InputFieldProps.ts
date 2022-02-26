@@ -6,6 +6,6 @@ export default interface InputFieldProps
   autoComplete?: string;
   className?: string;
   formik: any;
-  errorClass: string;
+  errorClass?: string;
   as?: "input" | "textarea";
 }
