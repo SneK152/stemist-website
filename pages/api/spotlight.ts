@@ -17,7 +17,7 @@ export default async function handler(
     samp = sample(teachers)!;
     isFound = file.some((element) => element.name === samp.name);
   }
-  file.push(samp);
+  file.unshift(samp);
   await db.collection("spotlight").doc("spotlight").set({
     spotlight: file,
   });

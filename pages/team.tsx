@@ -81,7 +81,7 @@ export default function Team(props: TeamProps) {
           {officers.map((person, index) => (
             <div
               key={index}
-              className="h-48 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+              className="h-48 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg shadow-white/25"
             >
               <MemoedLargePerson person={person} />
             </div>
@@ -99,7 +99,7 @@ export default function Team(props: TeamProps) {
           {people.map((person, index) => (
             <div
               key={index}
-              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg shadow-white/25"
             >
               <MemoedPerson person={person} />
             </div>
@@ -129,7 +129,7 @@ export default function Team(props: TeamProps) {
           {memoedTeachers.map((person, index) => (
             <div
               key={index}
-              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg shadow-white/25"
             >
               <MemoedPerson person={person} />
             </div>
@@ -153,7 +153,7 @@ function FilterButton({
     <button
       className={`${
         active ? "bg-blue-200" : "bg-gray-200"
-      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg text-black`}
+      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg shadow-white/20 text-black`}
       onClick={onClick}
     >
       {name}
