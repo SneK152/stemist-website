@@ -13,6 +13,7 @@ export default function CarouselPerson({ person }: { person: Person }) {
           layout="responsive"
           loading="eager"
           className="rounded-full object-cover"
+          quality={100}
         />
       </div>
       <div className="py-5 pl-10 pt-10">

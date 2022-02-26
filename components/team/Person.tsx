@@ -14,6 +14,7 @@ export default function Person(props: PersonProps) {
           layout="fixed"
           className={`max-w-none rounded-full object-cover`}
           alt="User profile"
+          quality={100}
         />
       </div>
       <h1 className="font-display space-y-1 text-lg font-normal">
