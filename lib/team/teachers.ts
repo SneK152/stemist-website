@@ -1,4 +1,4 @@
-import type Person from "./types/Person";
+import type Person from "../types/Person";
 
 const teachers: Person[] = [
   {
@@ -66,7 +66,8 @@ const teachers: Person[] = [
     name: "Jianyu Wang",
     positions: ["Physical Science"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
+    description:
+      "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
   {
     name: "Daniel Kim",
@@ -93,7 +94,8 @@ const teachers: Person[] = [
     name: "Aryan Patnaik",
     positions: ["Biology"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
+    description:
+      "Aryan is a rare specimen of the human race, despite his name being used by hundreds of other homo sapiens. He teaches ecology, and when he's not studying (aka watching wild kratts), he's on the run with his school's track team, striving for olympic gold.",
   },
   {
     name: "Jishnu Balaji",
@@ -108,12 +110,6 @@ const teachers: Person[] = [
     image: require("@/public/team/Yajat Kiran.png").default.src,
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
-  },
-  {
-    name: "Jay Ghanta",
-    positions: ["Computer Science"],
-    image: require("@/public/avatar.svg").default.src,
-    description: "",
   },
   {
     name: "Rohan Fernandes",

@@ -9,14 +9,14 @@ export default function Person(props: PersonProps) {
       >
         <Image
           src={props.person.image}
-          height={90}
-          width={90}
+          height={130}
+          width={130}
           layout="fixed"
           className={`max-w-none rounded-full object-cover`}
           alt="User profile"
         />
       </div>
-      <h1 className="font-display space-y-1 text-lg font-normal">
+      <h1 className="font-display space-y-1 text-3xl font-normal">
         <span
           className={`${
             props.person.description ? "group-hover:hidden" : ""
@@ -29,7 +29,7 @@ export default function Person(props: PersonProps) {
               (pos, index) =>
                 !props.person.positions.includes(pos + " Lead") && (
                   <span
-                    className="m-0.5 w-min whitespace-nowrap rounded-xl bg-gray-200 py-1 px-2 text-xs"
+                    className="m-0.5 w-min whitespace-nowrap rounded-3xl bg-gray-200 py-1 px-2 text-sm"
                     key={index}
                   >
                     {pos}
@@ -39,7 +39,7 @@ export default function Person(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="hidden max-w-[40ch] font-sans text-sm transition-all group-hover:block">
+          <p className="hidden max-w-[40ch] font-sans text-lg transition-all group-hover:block">
             {props.person.description}
           </p>
         )}

@@ -1,12 +1,15 @@
 import { memo, useMemo, useState } from "react";
 import Person from "@/components/team/Person";
-import people from "@/lib/team";
-import teachers from "@/lib/teachers";
+import people from "@/lib/team/team";
+import teachers from "@/lib/team/teachers";
 import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
+import LargePerson from "@/components/team/LargePerson";
+import directors from "@/lib/team/directors";
+import officers from "@/lib/team/officers";
 
 let teacherRoles: string[] = [];
 teachers.forEach((person) => {
@@ -14,7 +17,9 @@ teachers.forEach((person) => {
 });
 teacherRoles = ["All", ...new Set(teacherRoles)];
 teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
+
 const MemoedPerson = memo(Person);
+const MemoedLargePerson = memo(LargePerson);
 
 export default function Team(props: TeamProps) {
   const [activeTeacher, setActiveTeacher] = useState("All");
@@ -49,7 +54,37 @@ export default function Team(props: TeamProps) {
       </div>
       <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
-          Executive Team
+          Board of Directors
+        </h1>
+        <div className="grid gap-3 pb-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+          {directors.map((person, index) => (
+            <div
+              key={index}
+              className="h-48 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+            >
+              <MemoedLargePerson person={person} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+        <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+          Officers
+        </h1>
+        <div className="grid gap-3 pb-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+          {officers.map((person, index) => (
+            <div
+              key={index}
+              className="h-48 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg"
+            >
+              <MemoedLargePerson person={person} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+        <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+          Staff
         </h1>
         <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {people.map((person, index) => (
@@ -64,7 +99,7 @@ export default function Team(props: TeamProps) {
       </div>
       <div className="m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
-          Instructor Team
+          Instructors
         </h1>
         <div className="m-auto flex justify-center">
           <div className="inline-block pb-3">

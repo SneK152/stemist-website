@@ -1,57 +1,16 @@
-import type Person from "./types/Person";
+import type Person from "../types/Person";
 
 const people: Person[] = [
   {
-    name: "Steve Yang",
-    positions: ["Board", "Teacher"],
-    image: require("@/public/team/Steve Yang.jpeg").default.src,
-    description:
-      "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
-  },
-  {
-    name: "Johnathan Kao",
-    positions: ["Board", "Teacher", "Outreach"],
-    image: require("@/public/team/Johnathan Kao.jpg").default.src,
-    description:
-      "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
-  },
-  {
-    name: "Justin Zhang",
-    positions: ["Board", "Operations", "HR", "Teacher"],
-    image: require("@/public/team/Justin Zhang.jpg").default.src,
-    description:
-      "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
-  },
-  {
-    name: "Snehil Kakani",
-    positions: ["Board", "Operations", "Technology", "Website", "Teacher"],
-    image: require("@/public/team/Snehil Kakani.jpg").default.src,
-    description:
-      "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
-  },
-  {
     name: "Jianyu Wang",
-    positions: ["Board", "HR", "Teacher"],
+    positions: ["HR", "Teacher"],
     image: require("@/public/avatar.svg").default.src,
-    description: "",
-  },
-  {
-    name: "Selena Yang",
-    positions: ["Board", "Teacher"],
-    image: require("@/public/team/Selena Yang.jpg").default.src,
     description:
-      "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
-  },
-  {
-    name: "Anish Bhethanabotla",
-    positions: ["Board", "Technology", "HR", "Teacher"],
-    image: require("@/public/team/Anish Bhethanabotla.jpeg").default.src,
-    description:
-      "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
+      "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
   {
     name: "Isaac Sun",
-    positions: ["Board", "Outreach", "Teacher"],
+    positions: ["Outreach", "Teacher"],
     image: require("@/public/team/Isaac Sun.jpeg").default.src,
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
@@ -62,19 +21,6 @@ const people: Person[] = [
     image: require("@/public/avatar.svg").default.src,
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
-  },
-  {
-    name: "Sanya Badhe",
-    positions: ["Operations", "Teacher"],
-    image: require("@/public/team/Sanya Badhe.png").default.src,
-    description:
-      "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
-  },
-  {
-    name: "Aryan Patnaik",
-    positions: ["Teacher", "Technology"],
-    image: require("@/public/avatar.svg").default.src,
-    description: "",
   },
   {
     name: "Krithik Mohan",
@@ -139,6 +85,6 @@ const people: Person[] = [
     description:
       "Richard is a dejected but content adolescent that aspires to be a business executive in the not-too-distant future.",
   },
-];
+].sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
 
 export default people;
