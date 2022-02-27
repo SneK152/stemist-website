@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
-import ReactPlayer from "react-player/file";
+import Plyr from "plyr-react";
 
 export default function Hero() {
   const el = useRef(null);
@@ -45,11 +45,12 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full">
-        <ReactPlayer
-          controls
-          url="/homepage.mp4"
-          poster="/logo.svg"
-          // className="aspect-video w-full bg-white"
+        <Plyr
+          source={{
+            sources: [{ src: "/homepage.mp4" }],
+            type: "video",
+            poster: "/logo.svg",
+          }}
         />
       </div>
     </div>
