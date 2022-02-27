@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
+import ReactPlayer from "react-player/file";
 
 export default function Hero() {
   const el = useRef(null);
@@ -44,11 +45,11 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full">
-        <video
+        <ReactPlayer
           controls
-          src="/homepage.mp4"
+          url="/homepage.mp4"
           poster="/logo.svg"
-          className="aspect-video w-full bg-white"
+          // className="aspect-video w-full bg-white"
         />
       </div>
     </div>
