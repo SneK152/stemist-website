@@ -1,9 +1,9 @@
 import SpinnerProps from "@/lib/types/SpinnerProps";
 
-export default function Spinner({ color, className }: SpinnerProps) {
+export default function Spinner(props: SpinnerProps) {
   return (
     <svg
-      className={`${className} h-6 w-6 animate-spin text-${color}`}
+      className={`${props.className} h-6 w-6 animate-spin text-${props.color}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

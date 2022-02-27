@@ -23,7 +23,7 @@ export default function Hero() {
     }
   }, []);
   return (
-    <div className="flex flex-col sm:flex-row my-5">
+    <div className="flex flex-col sm:flex-row my-5" id="hero">
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
           <h1 className="sm:text-7xl text-4xl font-bold font-display">

@@ -1,15 +1,14 @@
+import { ChevronDownIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { ReactNode } from "react";
 
 export default function Banner({
   image,
   children,
-  className,
   full,
 }: {
   image: string;
   children: ReactNode;
-  className?: string;
   full?: boolean;
 }) {
   return (
@@ -28,12 +27,26 @@ export default function Banner({
       />
       <div className="flex h-full w-full items-center justify-center">
         <div
-          className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 ${
+          className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
             full ? "" : "sm:w-3/4 sm:h-56"
           }`}
         >
           {children}
         </div>
+        {full && (
+          <div className="absolute h-full w-full flex justify-center items-end">
+            <button
+              className="animate-bounce"
+              onClick={() =>
+                document
+                  .getElementById("hero")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <ChevronDownIcon className="h-12" />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
