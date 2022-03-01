@@ -2,11 +2,13 @@ import { memo, ReactElement, useState, useEffect } from "react";
 import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
-import Spinner from "@/components/Spinner";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import Banner from "@/components/layout/Banner";
-import FeedBackForm from "@/components/forms/FeedbackForm";
+import dynamic from "next/dynamic";
+
+const Spinner = dynamic(() => import("@/components/Spinner"));
+const FeedBackForm = dynamic(() => import("@/components/forms/FeedbackForm"));
 
 const MemoedInputField = memo(InputField);
 

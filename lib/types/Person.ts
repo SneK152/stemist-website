@@ -13,7 +13,8 @@ export type TeacherSubject =
   | "Physical Science"
   | "Math"
   | "Biology"
-  | "Computer Science";
+  | "Computer Science"
+  | "All";
 
 export type TeamRole =
   | "Outreach"

@@ -1,5 +1,7 @@
 import Banner from "@/components/layout/Banner";
-import Card from "@/components/pages/Card";
+import dynamic from "next/dynamic";
+
+const Card = dynamic(() => import("@/components/pages/Card"));
 
 export default function About() {
   return (

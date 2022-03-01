@@ -1,5 +1,4 @@
 import { memo, useMemo, useState } from "react";
-import Person from "@/components/team/Person";
 import people from "@/lib/data/team";
 import teachers from "@/lib/data/teachers";
 import Banner from "@/components/layout/Banner";
@@ -7,12 +6,16 @@ import Carousel from "@/components/team/Carousel";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
-import LargePerson from "@/components/team/LargePerson";
 import directors from "@/lib/data/directors";
 import officers from "@/lib/data/officers";
-import TeamSection from "@/components/pages/TeamSection";
+import dynamic from "next/dynamic";
+import { TeacherSubject } from "@/lib/types/Person";
 
-let teacherRoles: string[] = [];
+const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
+const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
+const Person = dynamic(() => import("@/components/team/Person"));
+
+let teacherRoles: TeacherSubject[] = [];
 teachers.forEach((person) => {
   teacherRoles = [...teacherRoles, ...person.positions];
 });
@@ -23,7 +26,7 @@ const MemoedPerson = memo(Person);
 const MemoedLargePerson = memo(LargePerson);
 
 export default function Team(props: TeamProps) {
-  const [activeTeacher, setActiveTeacher] = useState("All");
+  const [activeTeacher, setActiveTeacher] = useState<TeacherSubject>("All");
   const memoedTeachers = useMemo(
     () =>
       teachers

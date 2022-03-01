@@ -1,6 +1,8 @@
 import Banner from "@/components/layout/Banner";
-import Hero from "@/components/pages/Hero";
-import Homepage from "@/components/pages/Homepage";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("@/components/pages/Hero"));
+const Homepage = dynamic(() => import("@/components/pages/Homepage"));
 
 export default function Index() {
   return (

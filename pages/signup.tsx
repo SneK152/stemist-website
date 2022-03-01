@@ -2,12 +2,14 @@ import { memo, ReactElement, useState } from "react";
 import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
-import Spinner from "@/components/Spinner";
 import { useEffect } from "react";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import SelectInputField from "@/components/forms/SelectInputField";
 import Banner from "@/components/layout/Banner";
+import dynamic from "next/dynamic";
+
+const Spinner = dynamic(() => import("@/components/Spinner"));
 
 const gradeOptions = [
   "Grade",
