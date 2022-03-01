@@ -1,7 +1,8 @@
 import { resolveTeamImage } from "../imageHelpers";
 import type Person from "../types/Person";
+import { TeacherSubject } from "../types/Person";
 
-const teachers: Person[] = [
+const teachers: Person<TeacherSubject>[] = [
   {
     name: "Sanya Badhe",
     positions: ["Math Lead", "Physical Science", "Math"],
@@ -147,7 +148,7 @@ const teachers: Person[] = [
   },
   {
     name: "Chaas Kandregula",
-    positions: ["Intern", "Teacher"],
+    positions: ["Physical Science", "Biology"],
     image: resolveTeamImage(),
     description: "",
   },

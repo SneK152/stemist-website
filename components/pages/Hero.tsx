@@ -21,7 +21,11 @@ export default function Hero() {
     }
   }, [isVisible]);
   return (
-    <div className="flex flex-col sm:flex-row my-5" id="hero" ref={heroDiv}>
+    <div
+      className="flex flex-col sm:flex-row my-5 bg-black bg-opacity-70"
+      id="hero"
+      ref={heroDiv}
+    >
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
           <h1 className="sm:text-7xl text-4xl font-bold font-display">

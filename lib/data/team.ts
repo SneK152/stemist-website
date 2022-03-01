@@ -1,7 +1,8 @@
 import { resolveTeamImage } from "../imageHelpers";
 import type Person from "../types/Person";
+import { TeamRole } from "../types/Person";
 
-const people: Person[] = [
+const people: Person<TeamRole>[] = [
   {
     name: "Jianyu Wang",
     positions: ["HR", "Teacher"],

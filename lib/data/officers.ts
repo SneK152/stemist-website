@@ -25,12 +25,7 @@ const officers: Person[] = [
   },
   {
     name: "Snehil Kakani",
-    positions: [
-      "Director of Technology",
-      "Website Dev",
-      "Operations",
-      "Teacher",
-    ],
+    positions: ["Director of Technology", "Website", "Operations", "Teacher"],
     image: resolveTeamImage("Snehil Kakani", "jpg"),
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",

@@ -1,4 +1,4 @@
-import { Disclosure, Menu } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
