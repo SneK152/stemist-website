@@ -25,5 +25,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "scripts/index.js"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
