@@ -18,7 +18,7 @@ const officers: Person[] = [
   },
   {
     name: "Johnathan Kao",
-    positions: ["Director of Outreach", "Teacher"],
+    positions: ["Director of PR and Outreach", "Teacher"],
     image: resolveTeamImage("Johnathan Kao", "jpg"),
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",

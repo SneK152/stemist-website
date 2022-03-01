@@ -1,5 +1,6 @@
 import Banner from "@/components/layout/Banner";
 import Hero from "@/components/pages/Hero";
+import Homepage from "@/components/pages/Homepage";
 
 export default function Index() {
   return (
@@ -21,6 +22,7 @@ export default function Index() {
         </p>
       </Banner>
       <Hero />
+      <Homepage />
     </div>
   );
 }
