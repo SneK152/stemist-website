@@ -14,10 +14,10 @@ export default function Index() {
         </h1>
         <p className="font-writing px-5 text-sm sm:px-10 sm:text-xl md:px-20">
           <span className="block italic">
-            &quot;Tell me, and I will listen Teach me, and I&apos;ll remember
-            Involve me, and I will learn.&quot;
+            &quot;Tell Me and I Forget; Teach Me and I May Remember; Involve Me
+            and I Learn &quot;
           </span>
-          <span className="block text-sm sm:text-base">-Benjamin Franklin</span>
+          <span className="block text-sm sm:text-base">-Confucius</span>
         </p>
       </Banner>
       <Hero />

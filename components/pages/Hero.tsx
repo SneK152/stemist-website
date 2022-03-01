@@ -8,15 +8,9 @@ export default function Hero() {
   const typed = useRef<any>(null);
   useEffect(() => {
     const options: TypedOptions = {
-      strings: [
-        "a place for kids to grow",
-        "a positive learning environment",
-        "a hands-on engaging class",
-      ],
-      typeSpeed: 50,
-      backSpeed: 50,
-      smartBackspace: true,
-      loop: true,
+      strings: ["engaging", "hands-on", "growth", "the class for you!"],
+      typeSpeed: 80,
+      backSpeed: 40,
     };
     if (true) {
       typed.current = new Typed(el.current!, options);
