@@ -90,8 +90,9 @@ const people: Person<TeamRole>[] = [
   {
     name: "Sriman Ratnapu",
     positions: ["Outreach", "HR"],
-    image: resolveTeamImage(),
-    description: "",
+    image: resolveTeamImage("Sriman Ratnapu", "png"),
+    description:
+      "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
   },
   {
     name: "Annie Li",
