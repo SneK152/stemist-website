@@ -63,6 +63,7 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Justin Zhang", "jpg"),
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
+    qualifications: ["Usaco"],
   },
   {
     name: "Jianyu Wang",

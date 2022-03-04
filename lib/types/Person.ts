@@ -3,6 +3,7 @@ type Person<T = string> = {
   positions: T[];
   description: string;
   image: string;
+  qualifications?: string[];
 };
 
 export type TeacherSubject =
