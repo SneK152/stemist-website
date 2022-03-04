@@ -56,7 +56,7 @@ export default function Person(props: PersonProps) {
         )}
         {props.person.qualifications && (
           <button
-            className="hidden m-auto bg-blue-500 px-3 py-1 shadow-md rounded-lg text-white font-sans text-base transition-all group-hover:block"
+            className="hidden m-auto bg-blue-500 px-2 py-1 shadow-md rounded-lg text-white font-sans text-xs transition-all group-hover:block"
             onClick={() => setOpen(true)}
           >
             Qualifications
@@ -111,9 +111,9 @@ export default function Person(props: PersonProps) {
                     />
                   </p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-1">
                   <button
-                    className="m-auto bg-blue-500 px-4 py-2 shadow-md rounded-lg text-white font-sans text-base"
+                    className="m-auto bg-blue-500 px-3 py-1 shadow-md rounded-lg text-white font-sans text-sm"
                     onClick={() => setOpen(false)}
                   >
                     Back

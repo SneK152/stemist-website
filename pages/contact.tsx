@@ -81,53 +81,56 @@ export default function Contact() {
           Get Involved
         </h1>
       </Banner>
-      <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
-        <div className="flex w-full flex-col gap-3 pt-8">
-          <h1 className="font-display text-2xl font-bold">Contact Us</h1>
-          <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
-          <p className="pr-5">
-            Fill out the form to get in touch with our team. We will get back to
-            you as soon as possible.
+      <div className="bg-black bg-opacity-60">
+        <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
+          <div className="flex w-full flex-col gap-3 pt-8">
+            <h1 className="font-display text-2xl font-bold">Contact Us</h1>
+            <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
+            <p className="pr-5">
+              Fill out the form to get in touch with our team. We will get back
+              to you as soon as possible.
+            </p>
+          </div>
+          <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
+            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
+              <MemoedInputField
+                labelName="Email address"
+                name="contactEmail"
+                type="email"
+                formik={formik}
+              />
+              <MemoedInputField
+                labelName="Full name"
+                name="contactName"
+                formik={formik}
+              />
+              <MemoedInputField
+                labelName="Message"
+                as="textarea"
+                formik={formik}
+                name="message"
+              />
+              <button
+                type="submit"
+                className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+              >
+                {submit}
+              </button>
+            </div>
+          </form>
+        </div>
+        <FeedBackForm />
+        <div className="text-center mt-10">
+          <h1 className="text-3xl font-display">
+            Looking to make a difference and educate kids in what you love?
+          </h1>
+          <p>
+            STEMist is looking to open applications for company positions and
+            teacher roles in the future, so stay tuned!
           </p>
         </div>
-        <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
-          <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-            <MemoedInputField
-              labelName="Email address"
-              name="contactEmail"
-              type="email"
-              formik={formik}
-            />
-            <MemoedInputField
-              labelName="Full name"
-              name="contactName"
-              formik={formik}
-            />
-            <MemoedInputField
-              labelName="Message"
-              as="textarea"
-              formik={formik}
-              name="message"
-            />
-            <button
-              type="submit"
-              className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
-            >
-              {submit}
-            </button>
-          </div>
-        </form>
       </div>
-      <FeedBackForm />
-      <div className="text-center mt-10">
-        <h1 className="text-3xl font-display">
-          Looking to make a difference and educate kids in what you love?
-        </h1>
-        <p>
-          STEMist is looking to open applications for company positions and
-          teacher roles in the future, so stay tuned!
-        </p>
-      </div>
+      <br />
     </>
   );
 }
