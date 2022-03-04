@@ -17,7 +17,7 @@ export default function Container({
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Free STEM Education for kids" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/homepage.webp" />
+        <meta property="og:image" content="/logo.svg" />
         <meta name="og:title" property="og:title" content="STEMist Education" />
         <meta
           name="og:description"
