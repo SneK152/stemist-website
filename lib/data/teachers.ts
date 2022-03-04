@@ -214,7 +214,7 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Vyaas Baskar",
     positions: ["Physical Science"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Vyaas Baskar", "jpg"),
     description: "",
     qualifications: [
       "Third Year Science Olympiad",
