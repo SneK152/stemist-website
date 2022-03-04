@@ -16,6 +16,13 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Selena Yang", "jpg"),
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
+    qualifications: [
+      "Two Time AIME Qualifier",
+      "Two Time Semifinalist USABO",
+      "Fifth Place Science Bowl Nationals",
+      "First Place Science Bowl Regionals",
+      "Second and Third Place Science Olympiad",
+    ],
   },
   {
     name: "Anish Bhethanabotla",
@@ -63,6 +70,14 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Steve Yang", "jpeg"),
     description:
       "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
+    qualifications: [
+      "Four Year Science Olympiad Competitor",
+      "Fifteen+ Medals",
+      "Third Place EPD",
+      "Varsity Team Ocean Science Bowl",
+      "Third Place Sea Lion Bowl Regionals",
+      "Two Year Science Bowl Competitor",
+    ],
   },
   {
     name: "Johnathan Kao",
@@ -128,6 +143,10 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage(),
     description:
       "Aryan is a rare specimen of the human race, despite his name being used by hundreds of other homo sapiens. He teaches ecology, and when he's not studying (aka watching wild kratts), he's on the run with his school's track team, striving for olympic gold.",
+    qualifications: [
+      "4 Time Science Olympiad Champion",
+      "Second Place State Competition Science Olympiad",
+    ],
   },
   {
     name: "Jishnu Balaji",
@@ -174,6 +193,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Kasturi Kirubaharan", "jpg"),
     description:
       "Kasturi Kirubaharan is a freshman at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
+    qualifications: [
+      "Algebra and Arithmetic Tutor",
+      "Algebra 2 Trig Student",
+      "Science Olympiad Heredity Competitor",
+    ],
   },
   {
     name: "Sarvesh Madullapalli",
