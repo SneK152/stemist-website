@@ -1,11 +1,19 @@
 import Image from "next/image";
 import PersonProps from "@/lib/types/PersonProps";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import Qualifications from "./Qualifications";
 
 export default function Person(props: PersonProps) {
+  const [open, setOpen] = useState(false);
   return (
     <div className="group flex h-full flex-row items-center justify-center gap-5">
       <div
-        className={`${props.person.description ? "group-hover:hidden" : ""}`}
+        className={`${
+          props.person.description || props.person.qualifications
+            ? "group-hover:hidden"
+            : ""
+        }`}
       >
         <Image
           src={props.person.image}
@@ -20,7 +28,9 @@ export default function Person(props: PersonProps) {
       <h1 className="font-display space-y-1 text-lg font-normal">
         <span
           className={`${
-            props.person.description ? "group-hover:hidden" : ""
+            props.person.description || props.person.qualifications
+              ? "group-hover:hidden"
+              : ""
           } transition-all`}
         >
           {props.person.name}
@@ -44,7 +54,76 @@ export default function Person(props: PersonProps) {
             {props.person.description}
           </p>
         )}
+        {props.person.qualifications && (
+          <button
+            className="hidden m-auto bg-blue-500 px-3 py-1 shadow-md rounded-lg text-white font-sans text-base transition-all group-hover:block"
+            onClick={() => setOpen(true)}
+          >
+            Qualifications
+          </button>
+        )}
       </h1>
+      <Transition appear show={open} as={Fragment}>
+        <Dialog
+          as="div"
+          onClose={() => setOpen(false)}
+          className="fixed inset-0 z-50 overflow-y-auto"
+        >
+          <div className="min-h-screen px-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30 "></Dialog.Overlay>
+            </Transition.Child>
+            <span
+              className="inline-block h-screen align-middle"
+              aria-hidden="true"
+            >
+              &#8203;
+            </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <Dialog.Title
+                  as="h1"
+                  className="text-lg font-medium leading-6 text-gray-900"
+                >
+                  {props.person.name.split(" ")[0]}&apos;s Qualifications
+                </Dialog.Title>
+                <div className="mt-2">
+                  <p className="text-sm text-black">
+                    <Qualifications
+                      quals={props.person.qualifications}
+                      header
+                    />
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <button
+                    className="m-auto bg-blue-500 px-4 py-2 shadow-md rounded-lg text-white font-sans text-base"
+                    onClick={() => setOpen(false)}
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
     </div>
   );
 }
