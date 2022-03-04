@@ -28,6 +28,15 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Anish Bhethanabotla", "jpeg"),
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
+    qualifications: [
+      "Two time First Place Synopsys Science Fair",
+      "One time Honorable Mention Synopsys Science Fair",
+      "Top 30 Broadcom Finalist",
+      "Most Innovative Award California Invention Convention",
+      "Community Benefit Award National Invention Convention",
+      "Science Olympiad Team C Astronomy",
+      "Multiple time Hackathon winner",
+    ],
   },
   {
     name: "Shanker Ram",
@@ -35,6 +44,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage(),
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
+    qualifications: [
+      "USACO Silver",
+      "Knows Python, Java, C++",
+      "Experienced in ML with supervised learning and reinforcement learning",
+    ],
   },
   {
     name: "Snehil Kakani",
@@ -56,6 +70,12 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Johnathan Kao", "jpg"),
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
+    qualifications: [
+      "Science Bowl 5th Nationals",
+      "Biology Bowl 2nd Nationals",
+      "Ocean Bowl 2nd Regionals",
+      "Geography Bee State Qualifier",
+    ],
   },
   {
     name: "Justin Zhang",
@@ -63,7 +83,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Justin Zhang", "jpg"),
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
-    qualifications: ["Usaco"],
+    qualifications: [
+      "USACO Silver",
+      "First place winner in many CA Hackathons",
+      "Two Year Coder",
+    ],
   },
   {
     name: "Jianyu Wang",
@@ -85,6 +109,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Isaac Sun", "jpeg"),
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
+    qualifications: [
+      "AIME Qualifier",
+      "Berkeley Math Tournament Honorable Mentions",
+      "AP Calculus BC Freshman Student",
+    ],
   },
   {
     name: "Harold Wang",
@@ -106,6 +135,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Jishnu Balaji", "jpg"),
     description:
       "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
+    qualifications: [
+      "Science Olympiad",
+      "Science Alliance",
+      "USABO Competitor",
+    ],
   },
   {
     name: "Yajat Nagaraj",
@@ -113,6 +147,7 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Yajat Kiran", "png"),
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
+    qualifications: ["Math Kangaroo Top 20 Placer", "AMC 8 Honor Roll"],
   },
   {
     name: "Rohan Fernandes",
@@ -120,6 +155,11 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage(),
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+    qualifications: [
+      "Multiple time Hackathon winner",
+      "USACO member",
+      "Three years of CS Competitive Coding",
+    ],
   },
   {
     name: "Kiara Ha",
@@ -140,12 +180,24 @@ const teachers: Person<TeacherSubject>[] = [
     positions: ["Computer Science"],
     image: resolveTeamImage(),
     description: "",
+    qualifications: [
+      "Won 1 Hackathon",
+      "Top 2% in LHD",
+      "Well versed with servers and APIs",
+      "Familiar with lots of libraries and programming languages",
+    ],
   },
   {
     name: "Vyaas Baskar",
     positions: ["Physical Science"],
     image: resolveTeamImage(),
     description: "",
+    qualifications: [
+      "Third Year Science Olympiad",
+      "Consistent Science Olympiad Medal Winner",
+      "Top 25 in National MYSO tournament in Engineering and Flight",
+      "Circuit Designer",
+    ],
   },
   {
     name: "Chaas Kandregula",

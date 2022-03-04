@@ -115,8 +115,9 @@ const people: Person<TeamRole>[] = [
   {
     name: "Vyaas Baskar",
     positions: ["Intern", "Teacher"],
-    image: resolveTeamImage(),
-    description: "",
+    image: resolveTeamImage("Vyaas Baskar", "jpg"),
+    description:
+      "Vyaas Baskar is an 8th grader at Miller Middle school, who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
   },
   {
     name: "Chaas Kandregula",
