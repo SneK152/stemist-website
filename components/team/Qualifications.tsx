@@ -13,10 +13,9 @@ export default function Qualifications(props: {
               <h1 className="font-bold text-xl">Qualifications</h1>
             </>
           )}
-          <ul>
+          <ul className="list-disc list-inside">
             {props.quals.map((qual, index) => (
-              <li key={index} className="py-1 flex items-center gap-1">
-                <hr className="w-3 border-black border-[0.75px] bg-black border-opacity-40 inline-block" />
+              <li key={index} className="py-1">
                 {qual}
               </li>
             ))}
