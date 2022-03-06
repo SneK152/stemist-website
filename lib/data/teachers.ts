@@ -220,7 +220,8 @@ const teachers: Person<TeacherSubject>[] = [
     name: "Vyaas Baskar",
     positions: ["Physical Science"],
     image: resolveTeamImage("Vyaas Baskar", "jpg"),
-    description: "",
+    description:
+      "Vyaas Baskar is an 8th grader at Miller Middle school, who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
     qualifications: [
       "Third Year Science Olympiad",
       "Consistent Science Olympiad Medal Winner",
