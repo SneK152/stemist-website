@@ -1,7 +1,9 @@
+import useOnScreen from "@/lib/hooks/useOnScreen";
 import { scrollTo } from "@/lib/scroll";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import { Transition } from "@headlessui/react";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import { ReactNode } from "react";
+import { Fragment, ReactNode, useRef } from "react";
 
 export default function Banner({
   image,
@@ -12,36 +14,61 @@ export default function Banner({
   children: ReactNode;
   full?: boolean;
 }) {
+  const titleDiv = useRef(null);
+  const onScreen = useOnScreen(titleDiv);
   return (
-    <div
-      className={`${
-        full ? "h-screen" : "h-[50vh] mb-10"
-      } object-cover relative`}
-    >
-      <Image
-        src={image}
-        alt="Background for page"
-        layout="fill"
-        className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover"
-        priority
-        quality={90}
-      />
-      <div className="flex h-full w-full items-center justify-center">
-        <div
-          className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
-            full ? "" : "sm:w-3/4 sm:h-56"
-          }`}
-        >
-          {children}
-        </div>
-        {full && (
-          <div className="absolute h-full w-full flex justify-center items-end">
-            <button className="animate-bounce" onClick={scrollTo("#hero")}>
-              <ChevronDownIcon className="h-12" />
-            </button>
+    <>
+      <div
+        className={`${
+          full ? "h-screen" : "h-[50vh] mb-10"
+        } object-cover relative`}
+        ref={titleDiv}
+      >
+        <Image
+          src={image}
+          alt="Background for page"
+          layout="fill"
+          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover"
+          priority
+          quality={90}
+        />
+        <div className="flex h-full w-full items-center justify-center">
+          <div
+            className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
+              full ? "" : "sm:w-3/4 sm:h-56"
+            }`}
+          >
+            {children}
           </div>
-        )}
+          {full && (
+            <div className="absolute h-full w-full flex justify-center items-end">
+              <button className="animate-bounce" onClick={scrollTo("#hero")}>
+                <ChevronDownIcon className="h-12" />
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      <div className="fixed w-screen left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
+        <Transition
+          show={!onScreen}
+          as={Fragment}
+          enter="ease-out duration-200"
+          enterFrom="opacity-50 scale-50"
+          enterTo="opacity-100 scale-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-50 scale-50"
+        >
+          <button
+            className={`z-[10000] pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5`}
+            onClick={scrollTo("html")}
+          >
+            <ChevronUpIcon className="h-8 w-8" />
+          </button>
+        </Transition>
+      </div>
+    </>
   );
 }
