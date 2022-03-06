@@ -5,6 +5,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import "plyr-react/dist/plyr.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
@@ -13,9 +14,11 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     });
   }, []);
   return (
-    <Container title={router.pathname.substring(1)}>
-      <Component {...pageProps} />
-    </Container>
+    <ScrollToTop>
+      <Container title={router.pathname.substring(1)}>
+        <Component {...pageProps} />
+      </Container>
+    </ScrollToTop>
   );
 };
 
