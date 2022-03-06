@@ -1,5 +1,7 @@
 import Banner from "@/components/layout/Banner";
+import { scrollTo } from "@/lib/scroll";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const Hero = dynamic(() => import("@/components/pages/Hero"));
 const Homepage = dynamic(() => import("@/components/pages/Homepage"));
@@ -22,6 +24,19 @@ export default function Index() {
           </span>
           <span className="block text-sm sm:text-base">-Confucius</span>
         </p>
+        <div className="flex justify-center gap-3 text-lg">
+          <button
+            className="bg-white bg-opacity-10 text-white py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all"
+            onClick={scrollTo("#learnmore")}
+          >
+            Learn More
+          </button>
+          <Link href="/signup">
+            <a className="bg-blue-500 py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all">
+              Sign Up
+            </a>
+          </Link>
+        </div>
       </Banner>
       <Hero />
       <Homepage />

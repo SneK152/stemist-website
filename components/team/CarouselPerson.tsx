@@ -11,7 +11,7 @@ export default function CarouselPerson({ person }: { person: Person }) {
   );
   return (
     <div className="flex flex-col sm:flex-row sm:px-10">
-      <div className="h-full relative p-3 m-auto grid sm:p-5">
+      <div className="sm:h-full relative p-3 mx-auto grid sm:p-5">
         <Image
           src={person.image}
           alt="Mentor spotlight"

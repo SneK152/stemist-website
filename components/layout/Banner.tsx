@@ -1,3 +1,4 @@
+import { scrollTo } from "@/lib/scroll";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { ReactNode } from "react";
@@ -35,14 +36,7 @@ export default function Banner({
         </div>
         {full && (
           <div className="absolute h-full w-full flex justify-center items-end">
-            <button
-              className="animate-bounce"
-              onClick={() =>
-                document
-                  .getElementById("hero")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
+            <button className="animate-bounce" onClick={scrollTo("#hero")}>
               <ChevronDownIcon className="h-12" />
             </button>
           </div>
