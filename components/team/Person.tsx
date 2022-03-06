@@ -50,7 +50,11 @@ export default function Person(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="hidden max-w-[40ch] font-sans text-sm transition-all group-hover:block">
+          <p
+            className={`hidden max-w-[40ch] font-sans ${
+              props.person.qualifications ? "text-xs" : "text-sm"
+            } transition-all group-hover:block`}
+          >
             {props.person.description}
           </p>
         )}
@@ -79,7 +83,7 @@ export default function Person(props: PersonProps) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30 "></Dialog.Overlay>
+              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30"></Dialog.Overlay>
             </Transition.Child>
             <span
               className="inline-block h-screen align-middle"
