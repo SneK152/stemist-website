@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <div
-      className="flex flex-col sm:flex-row my-5 bg-black bg-opacity-70"
+      className="flex flex-col sm:flex-row my-5 bg-black bg-opacity-70 scroll-mt-20"
       id="hero"
       ref={heroDiv}
     >
