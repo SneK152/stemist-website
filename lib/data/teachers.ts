@@ -51,7 +51,7 @@ const teachers: Person<TeacherSubject>[] = [
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
     qualifications: [
       "Two time First Place Synopsys Science Fair",
-      "One time Honorable Mention Synopsys Science Fair",
+      "USAAAO Semifinalist",
       "Top 30 Broadcom Finalist",
       "Most Innovative Award California Invention Convention",
       "Community Benefit Award National Invention Convention",
@@ -62,7 +62,7 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Shanker Ram",
     positions: ["Computer Science Lead", "Computer Science"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Shanker Ram", "jpeg"),
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
     qualifications: [
@@ -126,7 +126,7 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Jianyu Wang",
     positions: ["Physical Science"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Jianyu Wang", "jpeg"),
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
@@ -152,14 +152,14 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Harold Wang",
     positions: ["Math", "Biology"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Harold Wang", "jpeg"),
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
   },
   {
     name: "Aryan Patnaik",
     positions: ["Biology"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Aryan Patnaik", "jpeg"),
     description:
       "Aryan is a rare specimen of the human race, despite his name being used by hundreds of other homo sapiens. He teaches ecology, and when he's not studying (aka watching wild kratts), he's on the run with his school's track team, striving for olympic gold.",
     qualifications: [

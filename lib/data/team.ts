@@ -6,7 +6,7 @@ const people: Person<TeamRole>[] = [
   {
     name: "Jianyu Wang",
     positions: ["HR", "Teacher"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Jianyu Wang", "jpeg"),
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
@@ -20,7 +20,7 @@ const people: Person<TeamRole>[] = [
   {
     name: "Harold Wang",
     positions: ["Teacher", "HR"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Harold Wang", "jpeg"),
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
   },
@@ -90,13 +90,13 @@ const people: Person<TeamRole>[] = [
   {
     name: "Annie Li",
     positions: ["Graphic Design", "Outreach"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Annie Li", "jpeg"),
     description: "",
   },
   {
     name: "Valerie Shu",
     positions: ["Graphic Design", "Outreach"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Valerie Shu", "jpeg"),
     description: "",
   },
   {
