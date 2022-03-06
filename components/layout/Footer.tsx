@@ -2,7 +2,7 @@ import socials from "@/lib/socials";
 
 export default function Footer() {
   return (
-    <div className="bg-black bg-opacity-90 h-24">
+    <div className="bg-black bg-opacity-90 h-24 mt-5">
       <h1 className="text-center text-3xl font-display font-bold">
         STEMist Education
       </h1>

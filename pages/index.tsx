@@ -26,13 +26,13 @@ export default function Index() {
         </p>
         <div className="flex justify-center gap-3 text-lg">
           <button
-            className="bg-white bg-opacity-10 text-white py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all"
+            className="bg-white bg-opacity-10 text-white py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300"
             onClick={scrollTo("#learnmore")}
           >
             Learn More
           </button>
           <Link href="/signup">
-            <a className="bg-blue-500 py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all">
+            <a className="bg-blue-500 py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
               Sign Up
             </a>
           </Link>
