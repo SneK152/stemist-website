@@ -9,6 +9,20 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Sanya Badhe", "png"),
     description:
       "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
+    qualifications: [
+      "46 Medals in Science Olympiad",
+      "1st Place Regionals Science Olympiad",
+      "Second Place NorCAL States Science Olympiad",
+      "Perfect Score MOEMS",
+      "Perfect Score Math Kangaroo",
+      "Honor Roll AMC 10",
+      "Distinguished Honor Roll AMC 8",
+      "2 Time AIME Qualifier",
+      "AIME Score of 7",
+      "Top 10 Individual Round Berkeley Math Tournament",
+      "Distinguished Honor Roll Berkeley Math Tournament",
+      "USACO Silver Competitor",
+    ],
   },
   {
     name: "Selena Yang",
@@ -191,6 +205,12 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Kiara Ha", "png"),
     description:
       "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
+    qualifications: [
+      "Won and Competed in many math competitions in Asia and the US",
+      "AP Stats Freshman Student",
+      "AP Environmental Science Freshman Student",
+      "Biology and Physical Science Intern Experience",
+    ],
   },
   {
     name: "Kasturi Kirubaharan",

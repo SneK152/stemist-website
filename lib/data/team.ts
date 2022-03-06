@@ -67,13 +67,6 @@ const people: Person<TeamRole>[] = [
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
   },
   {
-    name: "Kiara Ha",
-    positions: ["Technology", "Teacher"],
-    image: resolveTeamImage("Kiara Ha", "png"),
-    description:
-      "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
-  },
-  {
     name: "Sophie Mak",
     positions: ["Outreach"],
     image: resolveTeamImage("Sophie Mak", "jpeg"),
