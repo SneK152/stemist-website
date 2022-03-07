@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
   }, []);
   return (
     <ScrollToTop>
-      <Container title={router.pathname.substring(1)}>
+      <Container title={router.pathname.substring(1).split("/")[0]}>
         <Component {...pageProps} />
       </Container>
     </ScrollToTop>
