@@ -62,13 +62,17 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Shanker Ram",
     positions: ["Computer Science Lead", "Computer Science"],
-    image: resolveTeamImage("Shanker Ram", "jpeg"),
+    image: resolveTeamImage("Shanker Ram", "jpg"),
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
     qualifications: [
       "USACO Silver",
       "Knows Python, Java, C++",
       "Experienced in ML with supervised learning and reinforcement learning",
+      "GitHub Pro",
+      "Codeforces Specialist Rank",
+      "Multiple time Hackathon winner",
+      "Experience with Information Theory",
     ],
   },
   {
@@ -155,6 +159,7 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Harold Wang", "jpeg"),
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
+    qualifications: ["USABO Semifinalist"],
   },
   {
     name: "Aryan Patnaik",
