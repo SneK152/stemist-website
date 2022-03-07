@@ -54,7 +54,7 @@ const officers: Person[] = [
   {
     name: "Shanker Ram",
     positions: ["Instructor Lead"],
-    image: resolveTeamImage("Shanker Ram", "jpeg"),
+    image: resolveTeamImage("Shanker Ram", "jpg"),
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
   },
