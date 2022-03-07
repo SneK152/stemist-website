@@ -90,8 +90,9 @@ const people: Person<TeamRole>[] = [
   {
     name: "Annie Li",
     positions: ["Graphic Design", "Outreach"],
-    image: resolveTeamImage("Annie Li", "jpeg"),
-    description: "",
+    image: resolveTeamImage("Annie Li", "jpg"),
+    description:
+      "Annie Li is a Lynbrook freshman who either makes digital art in her free time or is watching analysis videos on horror series.",
   },
   {
     name: "Valerie Shu",
@@ -102,8 +103,9 @@ const people: Person<TeamRole>[] = [
   {
     name: "Sarvesh Madullapalli",
     positions: ["Intern", "Technology", "Teacher"],
-    image: resolveTeamImage(),
-    description: "",
+    image: resolveTeamImage("Sarvesh Madullapalli", "jpg"),
+    description:
+      "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
   },
   {
     name: "Vyaas Baskar",

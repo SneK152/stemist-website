@@ -136,6 +136,7 @@ const teachers: Person<TeacherSubject>[] = [
     image: resolveTeamImage("Daniel Kim", "png"),
     description:
       "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
+    qualifications: ["USACO Gold Competitor", "AIME Qualifier"],
   },
   {
     name: "Isaac Sun",
@@ -227,8 +228,9 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Sarvesh Madullapalli",
     positions: ["Computer Science"],
-    image: resolveTeamImage(),
-    description: "",
+    image: resolveTeamImage("Sarvesh Madullapalli", "jpg"),
+    description:
+      "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
     qualifications: [
       "Won 1 Hackathon",
       "Top 2% in LHD",
