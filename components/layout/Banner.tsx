@@ -30,7 +30,7 @@ export default function Banner({
           leaveTo="opacity-50 scale-50"
         >
           <button
-            className={`z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5`}
+            className="z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5"
             onClick={scrollTo("html")}
           >
             <ChevronUpIcon className="h-8 w-8" />
