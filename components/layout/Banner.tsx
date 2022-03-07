@@ -18,6 +18,25 @@ export default function Banner({
   const onScreen = useOnScreen(titleDiv);
   return (
     <>
+      <div className="fixed w-screen z-50 left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
+        <Transition
+          show={!onScreen}
+          as={Fragment}
+          enter="ease-out duration-200"
+          enterFrom="opacity-50 scale-50"
+          enterTo="opacity-100 scale-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-50 scale-50"
+        >
+          <button
+            className={`z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5`}
+            onClick={scrollTo("html")}
+          >
+            <ChevronUpIcon className="h-8 w-8" />
+          </button>
+        </Transition>
+      </div>
       <div
         className={`${
           full ? "h-screen" : "h-[50vh] mb-10"
@@ -48,26 +67,6 @@ export default function Banner({
             </div>
           )}
         </div>
-      </div>
-
-      <div className="fixed w-screen left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
-        <Transition
-          show={!onScreen}
-          as={Fragment}
-          enter="ease-out duration-200"
-          enterFrom="opacity-50 scale-50"
-          enterTo="opacity-100 scale-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-50 scale-50"
-        >
-          <button
-            className={`z-[10000] pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5`}
-            onClick={scrollTo("html")}
-          >
-            <ChevronUpIcon className="h-8 w-8" />
-          </button>
-        </Transition>
       </div>
     </>
   );

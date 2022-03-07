@@ -23,7 +23,7 @@ export default function CarouselPerson({ person }: { person: Person }) {
           quality={100}
         />
       </div>
-      <div className="py-5 pl-10 pt-10">
+      <div className="pb-5 pt-10 pr-5 pl-5">
         <h1 className="text-5xl font-display">{person.name}</h1>
         <br />
         <p className="max-w-[80ch] sm:text-xl">{person.description}</p>
