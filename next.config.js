@@ -6,7 +6,7 @@ const config = {
     return [
       {
         source: "/hacks",
-        destination: "https://stemist-hacks.vercel.app/",
+        destination: "https://stemist-hacks.vercel.app/hacks",
       },
     ];
   },
