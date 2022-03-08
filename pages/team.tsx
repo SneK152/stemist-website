@@ -10,6 +10,7 @@ import directors from "@/lib/data/directors";
 import officers from "@/lib/data/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
+import PartialBanner from "@/components/layout/PartialBanner";
 
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
@@ -45,11 +46,7 @@ export default function Team(props: TeamProps) {
   );
   return (
     <>
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Meet the Team
-        </h1>
-      </Banner>
+      <PartialBanner title="Meet the Team" />
       <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
         Weekly Mentor Spotlight
       </h1>

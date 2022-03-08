@@ -1,4 +1,5 @@
 import Banner from "@/components/layout/Banner";
+import PartialBanner from "@/components/layout/PartialBanner";
 import dynamic from "next/dynamic";
 
 const Card = dynamic(() => import("@/components/pages/Card"));
@@ -6,11 +7,7 @@ const Card = dynamic(() => import("@/components/pages/Card"));
 export default function About() {
   return (
     <>
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          About our Organization
-        </h1>
-      </Banner>
+      <PartialBanner title="About Our Organization" />
       <div className="m-3 p-3 text-black">
         <Card title="Who We Are" className="m-auto sm:w-9/12">
           STEMist Education is a student-led nonprofit that focuses on bringing

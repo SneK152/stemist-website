@@ -8,6 +8,7 @@ import InputField from "@/components/forms/InputField";
 import SelectInputField from "@/components/forms/SelectInputField";
 import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
+import PartialBanner from "@/components/layout/PartialBanner";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -47,7 +48,6 @@ const scienceOptions = [
   "Chemistry",
   "Ecology",
 ];
-const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
 const MemoedInputField = memo(InputField);
 const MemoedSelectField = memo(SelectInputField);
@@ -130,11 +130,7 @@ export default function Signup() {
   });
   return (
     <>
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Sign Up
-        </h1>
-      </Banner>
+      <PartialBanner title="Sign Up" />
       <div>
         <h1 className="font-display text-center text-3xl font-bold">Signup</h1>
         <form

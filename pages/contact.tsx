@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
+import PartialBanner from "@/components/layout/PartialBanner";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 const FeedBackForm = dynamic(() => import("@/components/forms/FeedbackForm"));
@@ -76,11 +77,7 @@ export default function Contact() {
   });
   return (
     <>
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Contact Us
-        </h1>
-      </Banner>
+      <PartialBanner title="Contact Us" />
       <div className="bg-black bg-opacity-60">
         <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
           <div className="flex w-full flex-col gap-3 pt-8">

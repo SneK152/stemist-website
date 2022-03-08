@@ -1,4 +1,5 @@
 import Banner from "@/components/layout/Banner";
+import PartialBanner from "@/components/layout/PartialBanner";
 import Link from "next/link";
 
 type InvolvedLinks = {
@@ -30,11 +31,7 @@ const involvedLinks: InvolvedLinks[] = [
 export default function GetInvolved() {
   return (
     <>
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Get Involved
-        </h1>
-      </Banner>
+      <PartialBanner title="Get Involved" />
       <div className="grid place-items-center gap-3 items-center sm:grid-cols-3 grid-cols-1 h-48 sm:w-3/4 w-full m-auto">
         {involvedLinks.map((link, i) => (
           <Link href={"/get-involved" + link.url} key={i}>
