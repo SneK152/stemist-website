@@ -78,7 +78,7 @@ export default function Contact() {
     <>
       <Banner image="/homepage.webp">
         <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Get Involved
+          Contact Us
         </h1>
       </Banner>
       <div className="bg-black bg-opacity-60">
@@ -120,17 +120,7 @@ export default function Contact() {
           </form>
         </div>
         <FeedBackForm />
-        <div className="text-center mt-10">
-          <h1 className="text-3xl font-display">
-            Looking to make a difference and educate kids in what you love?
-          </h1>
-          <p>
-            STEMist is looking to open applications for company positions and
-            teacher roles in the future, so stay tuned!
-          </p>
-        </div>
       </div>
-      <br />
     </>
   );
 }

@@ -60,7 +60,18 @@ export default function Navbar() {
                     Instructors
                   </DropdownButton>
                 </DropdownLink>
-                <NavLink href="/contact">Get Involved</NavLink>
+                <DropdownLink href="/get-involved" title="Get Involved">
+                  <DropdownButton href="/get-involved/students">
+                    Students
+                  </DropdownButton>
+                  <DropdownButton href="/get-involved/instructors">
+                    Instructors
+                  </DropdownButton>
+                  <DropdownButton href="/get-involved/donate">
+                    Donations
+                  </DropdownButton>
+                </DropdownLink>
+                <NavLink href="/contact">Contact Us</NavLink>
                 <NavLink main href="/signup">
                   Sign Ups
                 </NavLink>
@@ -81,7 +92,10 @@ export default function Navbar() {
                     <NavLink href="/team">Meet the Team</NavLink>
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
-                    <NavLink href="/contact">Get Involved</NavLink>
+                    <NavLink href="/get-involved">Get Involved</NavLink>
+                  </Disclosure.Button>
+                  <Disclosure.Button className="block">
+                    <NavLink href="/contact">Contact Us</NavLink>
                   </Disclosure.Button>
                   <div className="h-2"></div>
                   <Disclosure.Button className="block">
