@@ -64,8 +64,8 @@ export default function Navbar() {
                   <DropdownButton href="/get-involved/students">
                     Students
                   </DropdownButton>
-                  <DropdownButton href="/get-involved/instructors">
-                    Instructors
+                  <DropdownButton href="https://bit.ly/stemistapps">
+                    Applications
                   </DropdownButton>
                   <DropdownButton href="/get-involved/donate">
                     Donations
