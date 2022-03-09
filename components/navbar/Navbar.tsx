@@ -33,7 +33,7 @@ export default function Navbar() {
                 </a>
               </Link>
             </div>
-            <Disclosure.Button className="sm:hidden">
+            <Disclosure.Button className="md:hidden">
               <span className="sr-only">Open main menu</span>
               {open ? (
                 <XIcon
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <MenuIcon className="block h-6 w-6 text-white" />
               )}
             </Disclosure.Button>
-            <div className="mt-auto mb-auto hidden sm:block">
+            <div className="mt-auto mb-auto hidden md:block">
               <ul className="inline-flex gap-4">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
@@ -90,7 +90,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             {() => (
               <div className="absolute w-full -translate-x-2 space-y-1 bg-[#0d021f] bg-opacity-100 object-cover px-2 pt-2 pb-3">
                 <ul>

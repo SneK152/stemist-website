@@ -33,7 +33,7 @@ export default function Index() {
             >
               Learn More
             </button>
-            <Link href="/signup">
+            <Link href="/get-involved/students">
               <a className="bg-blue-500 py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
                 Sign Up
               </a>
