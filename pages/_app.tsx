@@ -12,11 +12,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
       once: true,
     });
   }, []);
-  return (
-    <Container title={router.pathname.substring(1).split("/")[0]}>
-      <Component {...pageProps} />
-    </Container>
-  );
+  return <Component {...pageProps} />;
 };
 
 export default MyApp;

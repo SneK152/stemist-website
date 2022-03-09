@@ -1,5 +1,6 @@
 import Button from "@/components/hacks/layout/Button";
 import InputField from "@/components/hacks/layout/InputField";
+import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -14,7 +15,7 @@ export default function SignupPage() {
     }),
   });
   return (
-    <>
+    <Container title="STEMist Hacks Signups">
       <PartialBanner title="Hackathon Signups" />
       <div className="p-8 text-center justify-center">
         <div className="text-center justify-center shadow-md p-5">
@@ -39,6 +40,6 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 }

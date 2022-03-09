@@ -72,14 +72,26 @@ export default function Navbar() {
                   </DropdownButton>
                 </DropdownLink>
                 <NavLink href="/contact">Contact Us</NavLink>
-                <NavLink main href="/signup">
-                  Sign Ups
+                <DropdownLink href="/projects" title="Projects">
+                  <DropdownButton href="/hacks">STEMist Hacks</DropdownButton>
+                  <DropdownButton href="/webs">WEBS</DropdownButton>
+                </DropdownLink>
+                <NavLink
+                  main
+                  color="blue-500"
+                  textColor="white"
+                  href="/programs"
+                >
+                  Programs
+                </NavLink>
+                <NavLink main href="/get-involved/students">
+                  Student Signups
                 </NavLink>
               </ul>
             </div>
           </div>
           <Disclosure.Panel className="sm:hidden">
-            {({ close }) => (
+            {() => (
               <div className="absolute w-full -translate-x-2 space-y-1 bg-[#0d021f] bg-opacity-100 object-cover px-2 pt-2 pb-3">
                 <ul>
                   <Disclosure.Button className="block">
@@ -99,8 +111,19 @@ export default function Navbar() {
                   </Disclosure.Button>
                   <div className="h-2"></div>
                   <Disclosure.Button className="block">
-                    <NavLink main href="/signup">
-                      Sign Ups
+                    <NavLink
+                      main
+                      color="blue-500"
+                      textColor="white"
+                      href="/programs"
+                    >
+                      Programs
+                    </NavLink>
+                  </Disclosure.Button>
+                  <div className="h-2"></div>
+                  <Disclosure.Button className="block">
+                    <NavLink main href="/get-involved/students">
+                      Student Signups
                     </NavLink>
                   </Disclosure.Button>
                 </ul>

@@ -1,4 +1,5 @@
 import Banner from "@/components/layout/Banner";
+import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import dynamic from "next/dynamic";
 
@@ -6,7 +7,7 @@ const Card = dynamic(() => import("@/components/pages/Card"));
 
 export default function About() {
   return (
-    <>
+    <Container title="About Us">
       <PartialBanner title="About Our Organization" />
       <div className="m-3 p-3 text-black">
         <Card title="Who We Are" className="m-auto sm:w-9/12">
@@ -42,6 +43,6 @@ export default function About() {
           </Card>
         </div>
       </div>
-    </>
+    </Container>
   );
 }

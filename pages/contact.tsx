@@ -7,6 +7,7 @@ import InputField from "@/components/forms/InputField";
 import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
 import PartialBanner from "@/components/layout/PartialBanner";
+import Container from "@/components/layout/Container";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 const FeedBackForm = dynamic(() => import("@/components/forms/FeedbackForm"));
@@ -76,7 +77,7 @@ export default function Contact() {
     }),
   });
   return (
-    <>
+    <Container title="Contact">
       <PartialBanner title="Contact Us" />
       <div className="bg-black bg-opacity-60">
         <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
@@ -118,6 +119,6 @@ export default function Contact() {
         </div>
         <FeedBackForm />
       </div>
-    </>
+    </Container>
   );
 }

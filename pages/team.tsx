@@ -11,6 +11,7 @@ import officers from "@/lib/data/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
+import Container from "@/components/layout/Container";
 
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
@@ -45,7 +46,7 @@ export default function Team(props: TeamProps) {
     [activeTeacher]
   );
   return (
-    <>
+    <Container title="Our Team">
       <PartialBanner title="Meet the Team" />
       <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
         Weekly Mentor Spotlight
@@ -103,7 +104,7 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
-    </>
+    </Container>
   );
 }
 

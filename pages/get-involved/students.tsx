@@ -8,7 +8,7 @@ import InputField from "@/components/forms/InputField";
 import SelectInputField from "@/components/forms/SelectInputField";
 import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
-import PartialBanner from "@/components/layout/PartialBanner";
+import Container from "@/components/layout/Container";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -48,6 +48,7 @@ const scienceOptions = [
   "Chemistry",
   "Ecology",
 ];
+const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
 const MemoedInputField = memo(InputField);
 const MemoedSelectField = memo(SelectInputField);
@@ -129,10 +130,13 @@ export default function Signup() {
     }),
   });
   return (
-    <>
-      <PartialBanner title="Sign Up" />
+    <Container title="Students">
+      <Banner image="/homepage.webp">
+        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
+          Student Signups
+        </h1>
+      </Banner>
       <div>
-        <h1 className="font-display text-center text-3xl font-bold">Signup</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
@@ -216,6 +220,6 @@ export default function Signup() {
           </button>
         </form>
       </div>
-    </>
+    </Container>
   );
 }
