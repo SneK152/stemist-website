@@ -1,5 +1,6 @@
 import { useSpring, animated } from "react-spring";
 import { useState } from "react";
+import useQuestionSprings from "./QuestionSprings";
 
 export default function Question({
   answer,
@@ -13,21 +14,12 @@ export default function Question({
   let arrow = "▼";
 
   const [isToggled, setToggle] = useState(false);
-  const questionSpring = useSpring({
-    background: isToggled ? "#6ce2ff" : "#ebebeb",
-    borderBottomLeftRadius: !isToggled ? "0.5rem" : "0rem",
-    borderBottomRightRadius: !isToggled ? "0.5rem" : "0rem",
-  });
-  const answerSpring = useSpring({
-    transform: isToggled ? "translate3D(0,0,0)" : "translate3D(0,-40px,0)",
-    opacity: isToggled ? 1 : 0,
-    background: isToggled ? "pink" : "white",
-    borderTopLeftRadius: !isToggled ? "0.5rem" : "0rem",
-    borderTopRightRadius: !isToggled ? "0.5rem" : "0rem",
-  });
   const arrowSpring = useSpring({
     y: isToggled ? 180 : 0,
   });
+
+  let {answerSpring, questionSpring} = useQuestionSprings(isToggled)
+
   return (
     <div
       onClick={() => setToggle(!isToggled)}
@@ -35,7 +27,7 @@ export default function Question({
     >
       <animated.div
         style={questionSpring}
-        className="cursor-pointer rounded-lg w-full text-left flex pl-2 py-3"
+        className="cursor-pointer rounded-lg text-left flex pl-2 py-3"
         onClick={() => setToggle(!isToggled)}
       >
         {question} ?

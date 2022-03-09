@@ -5,10 +5,12 @@ export default function SpringSponsor({
   image,
   className,
   name,
+  url
 }: {
   image: any;
   className: string;
   name: string;
+  url: string;
 }) {
   let [isHovered, setHovered] = useState<boolean>(false);
   let containerSpring = useSpring({
@@ -20,9 +22,10 @@ export default function SpringSponsor({
   });
 
   return (
-    <animated.div
+    <animated.a
       style={containerSpring}
-      className="p-3 hover:shadow-xl hover:rounded-md "
+      className="p-3 hover:shadow-xl hover:rounded-md"
+      href={url}
     >
       <img
         onMouseOver={() => setHovered(true)}
@@ -38,6 +41,6 @@ export default function SpringSponsor({
       >
         {name}
       </animated.p>
-    </animated.div>
+    </animated.a>
   );
 }
