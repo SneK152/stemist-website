@@ -1,4 +1,5 @@
 import Banner from "@/components/layout/Banner";
+import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Link from "next/link";
 
@@ -30,12 +31,12 @@ const involvedLinks: InvolvedLinks[] = [
 
 export default function GetInvolved() {
   return (
-    <>
+    <Container title="Get Involved">
       <PartialBanner title="Get Involved" />
-      <div className="grid place-items-center gap-3 items-center sm:grid-cols-3 grid-cols-1 h-48 sm:w-3/4 w-full m-auto">
+      <div className="grid place-items-center gap-3 h-full items-center sm:grid-cols-3 grid-cols-1 sm:w-3/4 w-11/12 m-auto">
         {involvedLinks.map((link, i) => (
           <Link href={"/get-involved" + link.url} key={i}>
-            <a className="bg-white rounded-lg p-3 hover:rounded-2xl hover:-translate-y-4 transition-all duration-300 shadow-lg w-full h-full flex flex-col justify-center items-center">
+            <a className="bg-white rounded-lg p-3 hover:rounded-2xl hover:-translate-y-4 transition-all duration-300 shadow-lg w-full h-48 flex flex-col justify-center items-center">
               <h1 className="text-black font-display text-2xl font-medium text-center">
                 {link.name}
               </h1>
@@ -46,6 +47,6 @@ export default function GetInvolved() {
           </Link>
         ))}
       </div>
-    </>
+    </Container>
   );
 }

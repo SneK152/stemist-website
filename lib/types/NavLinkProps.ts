@@ -3,4 +3,5 @@ export default interface NavLinkProps
   href: string;
   children: React.ReactNode;
   main?: boolean;
+  textColor?: string;
 }

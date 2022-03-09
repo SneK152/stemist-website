@@ -7,12 +7,16 @@ export default function NavLink({
   href,
   className,
   main = false,
+  color = "white",
+  textColor = "black",
 }: NavLinkProps) {
   const router = useRouter();
   return (
     <li
       className={`font-writing m-auto text-lg underline-offset-1 ${
-        main ? `rounded-md bg-white px-3 py-1 text-black` : `text-white`
+        main
+          ? `bg-${color} py-1 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300 text-${textColor}`
+          : `text-white`
       } ${className || ""} ${router.pathname === href ? "font-extrabold" : ""}`}
     >
       <Link href={href}>

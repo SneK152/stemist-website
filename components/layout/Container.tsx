@@ -4,10 +4,10 @@ import Navbar from "../navbar/Navbar";
 
 export default function Container({
   children,
-  title,
+  title = "",
 }: {
   children: React.ReactNode;
-  title: string;
+  title?: string;
 }) {
   return (
     <>
@@ -41,10 +41,7 @@ export default function Container({
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
-        <title>
-          STEMist Education{" "}
-          {title ? `| ${title[0].toUpperCase() + title.substring(1)}` : ""}
-        </title>
+        <title>STEMist Education | {title}</title>
       </Head>
       <Navbar />
       <div className="mx-auto h-full">
