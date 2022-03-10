@@ -5,12 +5,14 @@ export default function SpringSponsor({
   image,
   className,
   name,
-  url
+  url,
+  color,
 }: {
   image: any;
   className: string;
   name: string;
   url: string;
+  color: string;
 }) {
   let [isHovered, setHovered] = useState<boolean>(false);
   let containerSpring = useSpring({
