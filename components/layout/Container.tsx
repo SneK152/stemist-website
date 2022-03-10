@@ -7,7 +7,7 @@ export default function Container({
   title = "",
 }: {
   children: React.ReactNode;
-  title?: string;
+  title: string;
 }) {
   return (
     <>

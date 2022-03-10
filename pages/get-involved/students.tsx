@@ -48,7 +48,6 @@ const scienceOptions = [
   "Chemistry",
   "Ecology",
 ];
-const errorClass = "text-red-500 font-bold inline-block sm:text-sm pl-3 pt-2";
 
 const MemoedInputField = memo(InputField);
 const MemoedSelectField = memo(SelectInputField);
