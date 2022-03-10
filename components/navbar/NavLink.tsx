@@ -13,7 +13,7 @@ export default function NavLink({
   const router = useRouter();
   return (
     <li
-      className={`font-writing m-auto text-lg underline-offset-1 ${
+      className={`font-writing m-auto text-lg underline-offset-1 whitespace-nowrap ${
         main
           ? `bg-${color} py-1 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300 text-${textColor}`
           : `text-white`
