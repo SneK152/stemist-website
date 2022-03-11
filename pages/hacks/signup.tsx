@@ -8,7 +8,9 @@ import * as Yup from "yup";
 export default function SignupPage() {
   const formik = useFormik({
     initialValues: { name: "", password: "" },
-    onSubmit: (values, { setSubmitting }) => {},
+    onSubmit: (values, { setSubmitting }) => {
+      console.log(values)
+    },
     validationSchema: Yup.object({
       name: Yup.string().required("Required"),
       password: Yup.string().required("Required"),
@@ -36,7 +38,7 @@ export default function SignupPage() {
               error={formik.errors.password}
               formik={formik}
             />
-            <Button>Sign Up for STEMist Hacks</Button>
+            <Button type='submit'>Sign Up for STEMist Hacks</Button>
           </div>
         </div>
       </div>

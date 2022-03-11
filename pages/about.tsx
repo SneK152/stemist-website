@@ -3,22 +3,23 @@ import PartialBanner from "@/components/layout/PartialBanner";
 import dynamic from "next/dynamic";
 
 const Card = dynamic(() => import("@/components/pages/Card"));
+const Section = dynamic(() => import('@/components/layout/AboutSection'))
 
 export default function About() {
   return (
     <Container title="About Us">
       <PartialBanner title="About Our Organization" />
       <div className="m-3 p-3 text-black">
-        <Card title="Who We Are" className="m-auto sm:w-9/12">
+        <Section title="Who We Are">
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
           qualified instructors whom are skilled in areas such as Algebra,
           Computer Science, Biology, Chemistry, Physics, and much more. STEMist
           has been teaching kids STEM since 2020 and hopes to continue for much
           longer.
-        </Card>
-        <div className="mt-4 flex flex-col gap-4 sm:flex-row">
-          <Card title="Our Mission">
+        </Section>
+        <div className="mt-4 space-y-4 sm:flex-row">
+          <Section title="Our Mission">
             We founded STEMist originally because we believed that learning was
             a gift that all students should have access to. We believe that kids
             should have access to proper education, especially in the
@@ -27,8 +28,8 @@ export default function About() {
             breaks. Ultimately, we want students to get an excelling immersion
             into STEM and build a foundation that they can rely on for years to
             come.
-          </Card>
-          <Card title="Curriculum and Format">
+          </Section>
+          <Section title="Curriculum and Format">
             Our team of instructors have vast amounts of experience in their
             respective STEM subjects, and they work hard to compile information
             in the form of engaging lectures every session. Our spring and
@@ -39,7 +40,7 @@ export default function About() {
             for a curriculum based format where classes are separated into STEM
             topics and has two weeks worth of content that allows students to
             join an in-depth exploration of those topics.
-          </Card>
+          </Section>
         </div>
       </div>
     </Container>

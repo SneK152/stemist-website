@@ -26,7 +26,7 @@ export default function InputField({ name, error, formik }: InputFieldProps) {
         <animated.input
           name={name}
           style={FieldSpring}
-          className="px-4 shadow-md py-3 rounded-md w-3/5 border-8 border-black"
+          className="px-4 shadow-md py-3 rounded-md w-3/5 border-8 border-black placeholder:text-black placeholder:text-clip"
           placeholder={`Enter your ${name} here...`}
           {...formik.getFieldProps(name)}
           onFocus={() => {

@@ -6,6 +6,7 @@ interface ButtonProps {
   children: React.ReactNode;
   start?: string;
   end?: string;
+  type?: 'button' | 'reset' | 'submit';
 }
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
   children,
   start = "#4C514A",
   end = "#6C3B2A",
+  type = 'button'
 }: ButtonProps) {
   const [pressed, setPressed] = useState(false);
 
@@ -31,6 +33,7 @@ export default function Button({
       onMouseDown={() => setPressed(true)}
       onClick={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
+      type={type}
     >
       {children}
     </a.button>
