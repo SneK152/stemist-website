@@ -62,7 +62,7 @@ export default function Programs() {
             {csTeachers.map((t, index) => (
               <div
                 key={index}
-                className={`h-28 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
+                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
               >
                 <Person person={t} />
               </div>
@@ -85,7 +85,7 @@ export default function Programs() {
             {physTeachers.map((t, index) => (
               <div
                 key={index}
-                className={`h-28 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
+                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
               >
                 <Person person={t} />
               </div>
@@ -108,7 +108,7 @@ export default function Programs() {
             {bioTeachers.map((t, index) => (
               <div
                 key={index}
-                className={`h-28 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
+                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
               >
                 <Person person={t} />
               </div>
@@ -131,7 +131,7 @@ export default function Programs() {
             {mathTeachers.map((t, index) => (
               <div
                 key={index}
-                className={`h-28 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
+                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
               >
                 <Person person={t} />
               </div>

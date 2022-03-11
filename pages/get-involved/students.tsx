@@ -9,6 +9,7 @@ import SelectInputField from "@/components/forms/SelectInputField";
 import dynamic from "next/dynamic";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
+import Link from "next/link";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -129,7 +130,18 @@ export default function Signup() {
   });
   return (
     <Container title="Students">
-      <PartialBanner title="Student Signups" />
+      <PartialBanner
+        title={
+          <>
+            <div className="-mb-5">Student Signups</div>
+            <Link href="/programs">
+              <a className="bg-blue-500 text-lg font-sans font-normal py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
+                Programs
+              </a>
+            </Link>
+          </>
+        }
+      />
       <div className="max-w-3xl px-5 m-auto">
         <form onSubmit={formik.handleSubmit}>
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">

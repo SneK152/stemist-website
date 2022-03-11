@@ -1,5 +1,4 @@
 import InputFieldProps from "@/lib/types/InputFieldProps";
-import useLocalStorage from "@/lib/hooks/useLocalStorage";
 
 export default function InputField({
   labelName,
