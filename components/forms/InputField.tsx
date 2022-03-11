@@ -12,7 +12,6 @@ export default function InputField({
   as: Elem = "input",
   ...rest
 }: InputFieldProps) {
-  const [local, setLocal] = useLocalStorage(name, formik.values[name]);
   return (
     <div className="w-full relative">
       <Elem
@@ -24,11 +23,6 @@ export default function InputField({
         autoComplete="off"
         {...formik.getFieldProps(name)}
         {...rest}
-        onChange={(e) => {
-          setLocal(e.target.value);
-          formik.handleChange(e);
-        }}
-        value={local}
       />
       <label
         htmlFor={name}

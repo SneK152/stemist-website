@@ -1,7 +1,7 @@
 import Image from "next/image";
 import PersonProps from "@/lib/types/PersonProps";
 
-export default function Person(props: PersonProps) {
+export default function LargePerson(props: PersonProps) {
   return (
     <div className="group flex h-full flex-row items-center justify-center gap-5">
       <div
