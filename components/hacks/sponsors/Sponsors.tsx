@@ -1,6 +1,7 @@
 import AnimatedSponsor from "./SponsorSpring";
-import Echo3DLogo from '../assets/images/Echo.png'
 import colors from 'tailwindcss/colors'
+
+let Echo3DLogo = require('../assets/images/Echo.png')
 
 export default function Sponsors() {
   return (

@@ -5,11 +5,9 @@ import useQuestionSprings from "./QuestionSprings";
 export default function Question({
   answer,
   question,
-  color,
 }: {
   answer: string;
   question: string;
-  color: string;
 }) {
   let arrow = "▼";
 

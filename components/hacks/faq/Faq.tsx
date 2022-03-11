@@ -6,22 +6,18 @@ export default function FAQ() {
       <Question
         question="Q: How much does it cost"
         answer="A: This hackathon is free to attend"
-        color="bg-blue-400"
       />
       <Question
         question="Q: Do I need experience to join"
         answer="A: No, this a beginner friendly hackathon where we also have workshops for you to learn"
-        color="bg-blue-400"
       />
       <Question
         question="Q: Do I need a team"
         answer="A: We try to encourage having people in teams and have a team building channel in the discord but if you want you can also work solo"
-        color="bg-blue-400"
       />
       <Question
         question="Q: Is this hackathon online or in-person"
         answer="A: Due to the current COVID-19 pandemic, we are holding this hackathon online"
-        color="bg-blue-400"
       />
     </div>
   );
