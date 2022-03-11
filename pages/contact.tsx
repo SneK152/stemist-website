@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
-import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";

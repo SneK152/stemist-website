@@ -1,7 +1,6 @@
 import { memo, useMemo, useState } from "react";
 import people from "@/lib/data/team";
 import teachers from "@/lib/data/teachers";
-import Banner from "@/components/layout/Banner";
 import Carousel from "@/components/team/Carousel";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";

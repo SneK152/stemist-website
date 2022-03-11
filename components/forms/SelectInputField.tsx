@@ -9,7 +9,7 @@ export default function SelectInputField({
 }: SelectInputFieldProps) {
   return (
     <div>
-      <label className="sr-only" htmlFor={name}>
+      <label className="sm:text-sm text-gray-600 px-1" htmlFor={name}>
         {labelName}
       </label>
       <select

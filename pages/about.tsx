@@ -1,4 +1,3 @@
-import Banner from "@/components/layout/Banner";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import dynamic from "next/dynamic";

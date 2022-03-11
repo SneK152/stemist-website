@@ -6,14 +6,14 @@ import { useEffect } from "react";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
 import SelectInputField from "@/components/forms/SelectInputField";
-import Banner from "@/components/layout/Banner";
 import dynamic from "next/dynamic";
 import Container from "@/components/layout/Container";
+import PartialBanner from "@/components/layout/PartialBanner";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
 const gradeOptions = [
-  "Grade",
+  "Select",
   "Kindergarten",
   "1st",
   "2nd",
@@ -26,7 +26,7 @@ const gradeOptions = [
   "9th",
 ];
 const csOptions = [
-  "Computer Science Class Interest",
+  "None",
   "Machine Learning",
   "Web Development",
   "Object Oriented Programming",
@@ -35,19 +35,13 @@ const csOptions = [
   "Python",
 ];
 const mathOptions = [
-  "Math Class Interest",
+  "None",
   "Combinatorics",
   "Number Theory",
   "Probability",
   "Gauss",
 ];
-const scienceOptions = [
-  "Science Class Interest",
-  "Biology",
-  "Physics",
-  "Chemistry",
-  "Ecology",
-];
+const scienceOptions = ["None", "Biology", "Physics", "Chemistry", "Ecology"];
 
 const MemoedInputField = memo(InputField);
 const MemoedSelectField = memo(SelectInputField);
@@ -69,6 +63,7 @@ export default function Signup() {
       mathInterest: "",
       scienceInterest: "",
       csInterest: "",
+      hearabout: "",
     },
     onSubmit: async (values, helpers) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
@@ -79,12 +74,13 @@ export default function Signup() {
         formdata.append("entry.1473300010", values.email); // Email
         formdata.append("entry.1047485006", values.questions); // Questions
         formdata.append("entry.890098326", values.grade); // Grade
-        if (!values.mathInterest.includes("Class Interest"))
+        if (!values.mathInterest.includes("None"))
           formdata.append("entry.1204481380", values.mathInterest); // Math
-        if (!values.scienceInterest.includes("Class Interest"))
+        if (!values.scienceInterest.includes("None"))
           formdata.append("entry.818035415", values.scienceInterest); // Science
-        if (!values.csInterest.includes("Class Interest"))
+        if (!values.csInterest.includes("None"))
           formdata.append("entry.2000892328", values.csInterest); // CS
+        formdata.append("entry.1723165048", values.hearabout);
         setEmail(values.email);
         await fetch(
           "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgwo15SXKJ-izaP99awlZOGcXszjwBwmYwRnlg3hfhd6CyhA/formResponse",
@@ -120,29 +116,24 @@ export default function Signup() {
       email: Yup.string().email("Invalid email address").required("Required"),
       grade: Yup.string()
         .oneOf(gradeOptions, "Choose a grade")
-        .notOneOf(["Grade"], "Required")
+        .notOneOf(["Select"], "Required")
         .required("Required"),
-      questions: Yup.string(),
+      questions: Yup.string()
+        .min(5, "Must be greater than 5 characters")
+        .max(300, "Cannot be greater than 300 characters"),
       mathInterest: Yup.string(),
       scienceInterest: Yup.string(),
       csInterest: Yup.string(),
+      hearabout: Yup.string().required("Required"),
     }),
   });
   return (
     <Container title="Students">
-      <Banner image="/homepage.webp">
-        <h1 className="font-sans text-3xl font-bold md:text-5xl lg:text-7xl">
-          Student Signups
-        </h1>
-      </Banner>
-      <div>
-        <form
-          onSubmit={formik.handleSubmit}
-          className="mx-auto max-w-6xl space-y-3 px-2 py-3 sm:px-6 lg:px-8"
-        >
+      <PartialBanner title="Student Signups" />
+      <div className="max-w-3xl px-5 m-auto">
+        <form onSubmit={formik.handleSubmit}>
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
-            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-              <h2>Personal Information</h2>
+            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-gray-50 p-5 shadow-lg">
               <MemoedInputField
                 labelName="Email address"
                 name="email"
@@ -161,6 +152,11 @@ export default function Signup() {
                   formik={formik}
                 />
               </div>
+              <MemoedInputField
+                labelName="How did you hear about us?"
+                name="hearabout"
+                formik={formik}
+              />
               <MemoedSelectField labelName="Grade" name="grade" formik={formik}>
                 {gradeOptions.map((item, index) => (
                   <option value={item} key={index}>
@@ -168,9 +164,6 @@ export default function Signup() {
                   </option>
                 ))}
               </MemoedSelectField>
-            </div>
-            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
-              <h2>Class Information</h2>
               <MemoedSelectField
                 labelName="Computer Science Class Interest"
                 name="csInterest"
@@ -208,6 +201,7 @@ export default function Signup() {
                 labelName="Questions?"
                 name="questions"
                 formik={formik}
+                as="textarea"
               />
             </div>
           </div>
