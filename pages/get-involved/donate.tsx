@@ -1,5 +1,4 @@
 import Container from "@/components/layout/Container";
-import PartialBanner from "@/components/layout/PartialBanner";
 import UnavailableBanner from "@/components/layout/UnavailableBanner";
 
 export default function Donate() {

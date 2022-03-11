@@ -7,12 +7,12 @@ export default function LinkPage({
   base,
 }: {
   links: PageLinks[];
-  columns: [number, number];
+  columns: number;
   base: string;
 }) {
   return (
     <div
-      className={`grid place-items-center gap-3 h-full items-center sm:grid-cols-${columns[0]} grid-cols-${columns[1]} sm:w-3/4 w-11/12 m-auto`}
+      className={`grid place-items-center gap-3 h-full items-center sm:grid-cols-${columns} grid-cols-1 sm:w-3/4 w-11/12 m-auto`}
     >
       {links.map((link, i) => (
         <Link href={link.external ? link.url : `${base}${link.url}`} key={i}>

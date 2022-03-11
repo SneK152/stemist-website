@@ -28,7 +28,7 @@ export default function GetInvolved() {
   return (
     <Container title="Get Involved">
       <PartialBanner title="Get Involved" />
-      <LinkPage links={involvedLinks} columns={[3, 1]} base="/get-involved" />
+      <LinkPage links={involvedLinks} columns={3} base="/get-involved" />
     </Container>
   );
 }
