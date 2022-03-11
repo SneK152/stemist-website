@@ -118,7 +118,8 @@ const people: Person<TeamRole>[] = [
     name: "Chaas Kandregula",
     positions: ["Intern", "Teacher"],
     image: resolveTeamImage(),
-    description: "",
+    description:
+      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team. Chaas believes in sharing knowledge, and strives to help others whenever possible.",
   },
 ];
 people.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
