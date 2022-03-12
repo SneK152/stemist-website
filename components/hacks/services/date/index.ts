@@ -1,7 +1,5 @@
 export function getCurrentDate() {
-    let date: Date = new Date()
+  let date: Date = new Date();
 }
 
-export function parseCurrentDate(date: Date) {
-
-}
+export function parseCurrentDate(date: Date) {}

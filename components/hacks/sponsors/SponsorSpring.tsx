@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { animated } from "react-spring";
 import { useState } from "react";
-import useSponsorSpring from "./useSponsorSping";
+import useSponsorSpring from "./useSponsorSpring";
+import Image from "next/image";
 
 export default function SpringSponsor({
   image,
@@ -16,21 +18,27 @@ export default function SpringSponsor({
   color: string;
 }) {
   let [isHovered, setHovered] = useState<boolean>(false);
-  let {containerSpring, descriptionSpring} = useSponsorSpring(isHovered, color)
+  let { containerSpring, descriptionSpring } = useSponsorSpring(
+    isHovered,
+    color
+  );
 
   return (
     <animated.a
       style={containerSpring}
-      className="text-black p-3 hover:shadow-xl rounded-md"
+      className={`text-black p-3 hover:shadow-xl rounded-md ${
+        isHovered ? "z-50" : "z-30"
+      }`}
       href={url}
+      target="_blank"
+      rel="noreferrer noopener"
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
       <img
-        {...className}
-        className="rounded-2xl"
-        src={image}
         alt={name}
+        src={`/sponsors/${image}`}
+        className={`${className} h-28`}
       />
       <animated.p
         style={descriptionSpring}

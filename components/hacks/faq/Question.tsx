@@ -16,7 +16,7 @@ export default function Question({
     y: isToggled ? 180 : 0,
   });
 
-  let {answerSpring, questionSpring} = useQuestionSprings(isToggled)
+  let { answerSpring, questionSpring } = useQuestionSprings(isToggled);
 
   return (
     <div

@@ -2,8 +2,7 @@ import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import dynamic from "next/dynamic";
 
-const Card = dynamic(() => import("@/components/pages/Card"));
-const Section = dynamic(() => import('@/components/layout/AboutSection'))
+const Section = dynamic(() => import("@/components/layout/AboutSection"));
 
 export default function About() {
   return (

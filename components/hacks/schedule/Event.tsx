@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { animated } from "react-spring";
-import useEventSpring from './EventSpring';
-import useTime from './Time';
+import useEventSpring from "./EventSpring";
+import useTime from "./Time";
 interface ExportProps {
   name: string;
   time: Date;
@@ -10,8 +10,8 @@ interface ExportProps {
 
 export default function Event({ name, time, description }: ExportProps) {
   let [hovered, setHovered] = useState(false);
-  let timestamp = useTime(time)
-  let {dropped, mainContainer} = useEventSpring(hovered)
+  let timestamp = useTime(time);
+  let { dropped, mainContainer } = useEventSpring(hovered);
 
   return (
     <animated.div
@@ -22,11 +22,12 @@ export default function Event({ name, time, description }: ExportProps) {
     >
       <div className="grid grid-cols-5 group">
         <div className="group-hover:pb-1 col-span-1 font-bold">{name}</div>
-        <div className="text-start col-span-2 font-semibold">
-          {timestamp}
-        </div>
+        <div className="text-start col-span-2 font-semibold">{timestamp}</div>
       </div>
-      <animated.p style={dropped} className={`text-black opacity-100 justify-center pt-2`}>
+      <animated.p
+        style={dropped}
+        className={`text-black opacity-100 justify-center pt-2`}
+      >
         {description}
       </animated.p>
     </animated.div>
