@@ -22,7 +22,9 @@ export default function LinkPage({
             <h1 className="font-display text-2xl font-medium text-center">
               {link.name}
             </h1>
-            <p className="text-center text-lg">{link.description}</p>
+            <p className="text-center text-lg max-w-[40ch]">
+              {link.description}
+            </p>
           </a>
         </Link>
       ))}

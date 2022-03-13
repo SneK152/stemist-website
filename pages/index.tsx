@@ -27,7 +27,7 @@ export default function Index(props: HomeProps) {
           <h1 className="font-display text-4xl font-bold md:text-6xl lg:text-8xl xl:text-8xl">
             STEMist Education
           </h1>
-          <span className="block font-sans text-sm sm:text-lg">
+          <span className="block font-sans text-sm sm:text-xl">
             Learn STEM hands-on. Engage with fellow students. Have the
             experience of a lifetime.
           </span>
