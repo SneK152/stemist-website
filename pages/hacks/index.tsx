@@ -16,7 +16,7 @@ export default function App() {
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
-        <Section name="The Schedule">
+        <Section name="Hackathon Agenda">
           <Schedule />
         </Section>
       </div>

@@ -196,7 +196,7 @@ const teachers: Person<TeacherSubject>[] = [
   {
     name: "Rohan Fernandes",
     positions: ["Computer Science"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
     qualifications: [
@@ -261,7 +261,7 @@ const teachers: Person<TeacherSubject>[] = [
     positions: ["Physical Science", "Biology"],
     image: resolveTeamImage(),
     description:
-      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team. Chaas believes in sharing knowledge, and strives to help others whenever possible.",
+      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
   },
 ];
 

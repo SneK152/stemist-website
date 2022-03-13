@@ -62,7 +62,7 @@ const people: Person<TeamRole>[] = [
   {
     name: "Rohan Fernandes",
     positions: ["Intern", "Technology", "Website"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
   },
@@ -102,7 +102,7 @@ const people: Person<TeamRole>[] = [
   },
   {
     name: "Sarvesh Madullapalli",
-    positions: ["Intern", "Technology", "Teacher"],
+    positions: ["Intern", "Technology", "Teacher", "Website"],
     image: resolveTeamImage("Sarvesh Madullapalli", "jpg"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
@@ -119,7 +119,7 @@ const people: Person<TeamRole>[] = [
     positions: ["Intern", "Teacher"],
     image: resolveTeamImage(),
     description:
-      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team. Chaas believes in sharing knowledge, and strives to help others whenever possible.",
+      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
   },
 ];
 people.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));

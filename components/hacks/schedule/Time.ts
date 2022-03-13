@@ -26,7 +26,10 @@ let days = [
 export default function useTime(date: Date) {
   let dotw = date.getDay();
   let dateString = date.toDateString();
-  let timeString = date.toLocaleTimeString();
+  let timeString = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+  });
   let moty = date.getMonth();
   let hour = date.getHours();
   let minute = date.getMinutes();
