@@ -1,7 +1,6 @@
 import { memo, useMemo, useState } from "react";
 import people from "@/lib/data/team";
 import teachers from "@/lib/data/teachers";
-import Carousel from "@/components/team/Carousel";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
@@ -15,6 +14,7 @@ import Container from "@/components/layout/Container";
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
 const Person = dynamic(() => import("@/components/team/Person"));
+const Carousel = dynamic(() => import("@/components/team/Carousel"));
 
 let teacherRoles: TeacherSubject[] = [];
 teachers.forEach((person) => {

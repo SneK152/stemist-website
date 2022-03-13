@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
-import Plyr from "plyr-react";
 import useOnScreen from "@/lib/hooks/useOnScreen";
+import dynamic from "next/dynamic";
+
+const Plyr = dynamic(() => import("plyr-react"));
 
 export default function Hero() {
   const el = useRef(null);
@@ -9,6 +11,8 @@ export default function Hero() {
   const heroDiv = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(heroDiv);
 
+  const video = useRef<HTMLDivElement>(null);
+  const videoIsVisible = useOnScreen(video);
   useEffect(() => {
     const options: TypedOptions = {
       strings: ["engaging", "hands-on", "growth", "the class for you!"],
@@ -41,14 +45,16 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="w-full">
-        <Plyr
-          source={{
-            sources: [{ src: "/homepage.mp4" }],
-            type: "video",
-            poster: "/logo.svg",
-          }}
-        />
+      <div className="w-full" ref={video}>
+        {videoIsVisible && (
+          <Plyr
+            source={{
+              sources: [{ src: "/homepage.mp4" }],
+              type: "video",
+              poster: "/logo.svg",
+            }}
+          />
+        )}
       </div>
     </div>
   );
