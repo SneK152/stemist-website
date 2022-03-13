@@ -3,7 +3,6 @@ import { FC, ReactNode } from "react";
 import PersonProps from "@/lib/types/PersonProps";
 
 interface TeamSectionProps {
-  id: string;
   people: Person[];
   children?: ReactNode;
   component: FC<PersonProps>;
@@ -13,10 +12,7 @@ interface TeamSectionProps {
 
 export default function TeamSection(props: TeamSectionProps) {
   return (
-    <div
-      id={props.id}
-      className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black"
-    >
+    <div className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
       <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
         {props.title}
       </h1>

@@ -16,18 +16,22 @@ const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
 const Person = dynamic(() => import("@/components/team/Person"));
 const Carousel = dynamic(() => import("@/components/team/Carousel"));
 
-let teacherRoles: TeacherSubject[] = [];
-teachers.forEach((person) => {
-  teacherRoles = [...teacherRoles, ...person.positions];
-});
-teacherRoles = ["All", ...new Set(teacherRoles)];
-teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
+function getTeachers() {
+  let teacherRoles: TeacherSubject[] = [];
+  teachers.forEach((person) => {
+    teacherRoles = [...teacherRoles, ...person.positions];
+  });
+  teacherRoles = ["All", ...new Set(teacherRoles)];
+  teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
+  return teacherRoles;
+}
 
 const MemoedPerson = memo(Person);
 const MemoedLargePerson = memo(LargePerson);
 
 export default function Team(props: TeamProps) {
   const [activeTeacher, setActiveTeacher] = useState<TeacherSubject>("All");
+  const teacherRoles = useMemo(() => getTeachers(), []);
   const memoedTeachers = useMemo(
     () =>
       teachers
@@ -55,28 +59,18 @@ export default function Team(props: TeamProps) {
       </div>
       <TeamSection
         component={MemoedLargePerson}
-        id="directors"
         title="Board of Directors"
         people={directors}
         large
       />
       <TeamSection
         component={MemoedLargePerson}
-        id="officers"
         title="Officers"
         people={officers}
         large
       />
-      <TeamSection
-        component={MemoedPerson}
-        people={people}
-        id="staff"
-        title="Staff"
-      />
-      <div
-        id="instructors"
-        className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black"
-      >
+      <TeamSection component={MemoedPerson} people={people} title="Staff" />
+      <div className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructors
         </h1>

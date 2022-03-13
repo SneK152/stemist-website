@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import "aos/dist/aos.css";
 import "plyr-react/dist/plyr.css";
 
-const MyApp = ({ Component, pageProps, router }: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     AOS.init({
       once: true,

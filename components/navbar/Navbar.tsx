@@ -48,18 +48,7 @@ export default function Navbar() {
               <ul className="inline-flex gap-4">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About Us</NavLink>
-                <DropdownLink href="/team" title="Meet the Team">
-                  <DropdownButton href="/team#directors">
-                    Directors
-                  </DropdownButton>
-                  <DropdownButton href="/team#officers">
-                    Officers
-                  </DropdownButton>
-                  <DropdownButton href="/team#staff">Staff</DropdownButton>
-                  <DropdownButton href="/team#instructors">
-                    Instructors
-                  </DropdownButton>
-                </DropdownLink>
+                <NavLink href="/team">Meet the Team</NavLink>
                 <DropdownLink href="/get-involved" title="Get Involved">
                   <DropdownButton href="/get-involved/students">
                     Students
