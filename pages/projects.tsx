@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <Container title="Projects">
       <PartialBanner title="Projects" />
-      <LinkPage links={projectLinks} columns={2} base="/" />
+      <LinkPage links={projectLinks} columns={2} base="" />
     </Container>
   );
 }

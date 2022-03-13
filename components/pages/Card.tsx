@@ -13,9 +13,9 @@ export default function Card(props: {
       <h1 className="font-display z-20 text-center text-3xl font-semibold text-black">
         {props.title}
       </h1>
-      <p className="z-20 text-center font-normal text-black">
+      <div className="z-20 text-center font-normal text-black">
         {props.children}
-      </p>
+      </div>
     </div>
   );
 }

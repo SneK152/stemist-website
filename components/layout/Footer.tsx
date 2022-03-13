@@ -2,7 +2,7 @@ import socials from "@/lib/socials";
 
 export default function Footer() {
   return (
-    <div className="bg-black bg-opacity-70 py-7">
+    <div className="bg-black bg-opacity-70 w-full h-48 flex flex-col justify-center absolute">
       <h1 className="text-center text-3xl font-display font-bold">
         STEMist Education
       </h1>

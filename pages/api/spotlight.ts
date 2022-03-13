@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
 import teachers from "@/lib/data/teachers";
 import { sample } from "lodash";
 import type Person from "@/lib/types/Person";
