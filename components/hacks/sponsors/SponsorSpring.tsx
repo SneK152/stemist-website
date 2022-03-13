@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { animated } from "react-spring";
+import { animated, useSpring } from "react-spring";
 import { useState } from "react";
 import useSponsorSpring from "./useSponsorSpring";
 import Image from "next/image";
@@ -17,11 +17,16 @@ export default function SpringSponsor({
   url: string;
   color: string;
 }) {
-  let [isHovered, setHovered] = useState<boolean>(false);
-  let { containerSpring, descriptionSpring } = useSponsorSpring(
+  const [isHovered, setHovered] = useState<boolean>(false);
+  const { containerSpring, descriptionSpring } = useSponsorSpring(
     isHovered,
     color
   );
+
+  const imageSpring = useSpring({
+    scale: isHovered ? 1 : 1.5,
+    translateY: isHovered ? 0 : 16,
+  });
 
   return (
     <animated.a
@@ -35,17 +40,22 @@ export default function SpringSponsor({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      <img
+      <animated.img
         alt={name}
-        src={`/sponsors/${image}`}
-        className={`${className} h-28`}
+        style={imageSpring}
+        src={`/sponsors/${name.toLowerCase()}_logo.png`}
+        className={`${className} h-28 m-auto`}
       />
-      <animated.p
+      {/* <animated.p
         style={descriptionSpring}
         className="text-2xl pt-2 font-semibold text-center capitalize"
       >
         {name}
-      </animated.p>
+      </animated.p> */}
+      <animated.img
+        style={descriptionSpring}
+        src={`/sponsors/${name.toLowerCase()}_text.png`}
+      />
     </animated.a>
   );
 }
