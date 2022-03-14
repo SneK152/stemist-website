@@ -108,12 +108,12 @@ export default function Person(props: PersonProps) {
                   {props.person.name.split(" ")[0]}&apos;s Qualifications
                 </Dialog.Title>
                 <div className="mt-2">
-                  <p className="text-sm text-black">
+                  <div className="text-sm text-black">
                     <Qualifications
                       quals={props.person.qualifications}
                       header
                     />
-                  </p>
+                  </div>
                 </div>
                 <div className="mt-1">
                   <button

@@ -117,7 +117,7 @@ const people: Person<TeamRole>[] = [
   {
     name: "Chaas Kandregula",
     positions: ["Intern", "Teacher"],
-    image: resolveTeamImage(),
+    image: resolveTeamImage("Chaas Kandregula", "jpg"),
     description:
       "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
   },
