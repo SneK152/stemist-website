@@ -198,7 +198,7 @@ const teachers: Person<TeacherSubject>[] = [
     positions: ["Computer Science"],
     image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
-      "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+      "Rising Freshman at Lynbrook Highschool, Likes to code and watch the NBA in his spare time.",
     qualifications: [
       "Multiple time Hackathon winner",
       "USACO member",

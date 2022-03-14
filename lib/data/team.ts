@@ -61,7 +61,7 @@ const people: Person<TeamRole>[] = [
   },
   {
     name: "Rohan Fernandes",
-    positions: ["Intern", "Technology", "Website"],
+    positions: ["Intern", "Technology", "Teacher", "Website"],
     image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
