@@ -1,9 +1,7 @@
 import { useMemo } from "react";
-import Dynamic from "next/dynamic";
 import prizes from "./prizes";
-
-const Section = Dynamic(() => import("@/components/hacks/layout/Section"));
-const Prize = Dynamic(() => import("./prize"));
+import Section from "@/components/hacks/layout/Section";
+import Prize from "./prize";
 
 export default function PrizesSection() {
   const PrizeList = useMemo(() => prizes, []);
