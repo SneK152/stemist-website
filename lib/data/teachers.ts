@@ -173,26 +173,6 @@ const teachers: Person<TeacherSubject>[] = [
     ],
   },
   {
-    name: "Jishnu Balaji",
-    positions: [],
-    image: resolveTeamImage("Jishnu Balaji", "jpg"),
-    description:
-      "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
-    qualifications: [
-      "Science Olympiad",
-      "Science Alliance",
-      "USABO Competitor",
-    ],
-  },
-  {
-    name: "Yajat Nagaraj",
-    positions: [],
-    image: resolveTeamImage("Yajat Kiran", "png"),
-    description:
-      "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
-    qualifications: ["Math Kangaroo Top 20 Placer", "AMC 8 Honor Roll"],
-  },
-  {
     name: "Rohan Fernandes",
     positions: ["Computer Science"],
     image: resolveTeamImage("Rohan Fernandes", "png"),

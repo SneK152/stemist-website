@@ -57,19 +57,18 @@ export default function Team(props: TeamProps) {
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <Carousel data={props.data} />
       </div>
-      <TeamSection
+      {/* <TeamSection
         component={MemoedLargePerson}
         title="Board of Directors"
         people={directors}
         large
-      />
+      /> */}
       <TeamSection
         component={MemoedLargePerson}
         title="Officers"
         people={officers}
         large
       />
-      <TeamSection component={MemoedPerson} people={people} title="Staff" />
       <div className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructors
@@ -97,6 +96,7 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
+      <TeamSection component={MemoedPerson} people={people} title="Staff" />
     </Container>
   );
 }
