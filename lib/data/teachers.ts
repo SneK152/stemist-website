@@ -5,7 +5,7 @@ import { TeacherSubject } from "../types/Person";
 const teachers: Person<TeacherSubject>[] = [
   {
     name: "Sanya Badhe",
-    positions: ["Math Lead", "Physical Science", "Math"],
+    positions: ["Math Lead", "Math"],
     image: resolveTeamImage("Sanya Badhe", "png"),
     description:
       "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
@@ -43,7 +43,6 @@ const teachers: Person<TeacherSubject>[] = [
     positions: [
       "Physical Science Lead",
       "Computer Science",
-      "Math",
       "Physical Science",
     ],
     image: resolveTeamImage("Anish Bhethanabotla", "jpeg"),
@@ -104,7 +103,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Johnathan Kao",
-    positions: ["Physical Science", "Biology"],
+    positions: ["Biology"],
     image: resolveTeamImage("Johnathan Kao", "jpg"),
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
@@ -117,7 +116,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Justin Zhang",
-    positions: ["Computer Science", "Math"],
+    positions: ["Computer Science"],
     image: resolveTeamImage("Justin Zhang", "jpg"),
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
@@ -156,7 +155,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Harold Wang",
-    positions: ["Math", "Biology"],
+    positions: ["Biology"],
     image: resolveTeamImage("Harold Wang", "jpeg"),
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
@@ -175,7 +174,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Jishnu Balaji",
-    positions: ["Biology"],
+    positions: [],
     image: resolveTeamImage("Jishnu Balaji", "jpg"),
     description:
       "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
@@ -187,7 +186,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Yajat Nagaraj",
-    positions: ["Math"],
+    positions: [],
     image: resolveTeamImage("Yajat Kiran", "png"),
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
@@ -207,7 +206,7 @@ const teachers: Person<TeacherSubject>[] = [
   },
   {
     name: "Kiara Ha",
-    positions: ["Math", "Physical Science", "Biology"],
+    positions: ["Physical Science", "Biology"],
     image: resolveTeamImage("Kiara Ha", "png"),
     description:
       "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
