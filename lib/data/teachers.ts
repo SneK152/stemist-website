@@ -237,7 +237,7 @@ const teachers: Person<TeacherSubject>[] = [
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
     qualifications: [
-      "Won 1 Hackathon",
+      "Won 5 Hackathons",
       "Top 2% in LHD",
       "Well versed with servers and APIs",
       "Familiar with lots of libraries and programming languages",

@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
 import dynamic from "next/dynamic";
-
-const Plyr = dynamic(() => import("plyr-react"));
+import Plyr from "plyr-react";
 
 export default function Hero() {
   const el = useRef(null);
@@ -34,7 +33,7 @@ export default function Hero() {
           <h1 className="sm:text-7xl text-4xl font-bold font-display">
             What is STEMist?
           </h1>
-          <h1 className="sm:text-5xl m-3 text-3xl">
+          <h1 className="sm:text-4xl m-3 text-2xl">
             STEMist is <span ref={el}></span>
           </h1>
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">

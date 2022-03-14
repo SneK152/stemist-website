@@ -6,8 +6,8 @@ import { sample } from "lodash";
 import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Hero from "@/components/pages/Hero";
 
-const Hero = dynamic(() => import("@/components/pages/Hero"));
 const Homepage = dynamic(() => import("@/components/pages/Homepage"));
 
 interface HomeProps {
