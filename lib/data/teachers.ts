@@ -94,11 +94,11 @@ const teachers: Person<TeacherSubject>[] = [
       "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
     qualifications: [
       "Four Year Science Olympiad Competitor",
-      "Fifteen+ Medals",
-      "Third Place EPD",
+      "Fifteen+ Science Olympiad Medals, Including 2nd at States",
       "Varsity Team Ocean Science Bowl",
       "Third Place Sea Lion Bowl Regionals",
       "Two Year Science Bowl Competitor",
+      "Over Two Years of Teaching Experience",
     ],
   },
   {
