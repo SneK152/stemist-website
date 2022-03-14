@@ -14,7 +14,7 @@ export default function Banner({
   children: ReactNode;
   full?: boolean;
 }) {
-  const titleDiv = useRef(null);
+  const titleDiv = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(titleDiv);
   return (
     <>

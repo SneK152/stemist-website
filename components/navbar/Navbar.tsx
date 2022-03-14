@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed z-50 w-full bg-[#0d021f] bg-opacity-100 px-2 sm:px-6 lg:px-6"
+      className="fixed z-50 w-full bg-black bg-opacity-100 px-2 sm:px-6 lg:px-6"
     >
       {({ open }) => (
         <>
@@ -97,6 +97,9 @@ export default function Navbar() {
                   </Disclosure.Button>
                   <Disclosure.Button className="block">
                     <NavLink href="/contact">Contact Us</NavLink>
+                  </Disclosure.Button>
+                  <Disclosure.Button className="block">
+                    <NavLink href="/projects">Projects</NavLink>
                   </Disclosure.Button>
                   <div className="h-2"></div>
                   <Disclosure.Button className="block">
