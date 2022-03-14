@@ -1,5 +1,4 @@
 import AnimatedSponsor from "./SponsorSpring";
-import colors from "tailwindcss/colors";
 
 export default function Sponsors() {
   return (
