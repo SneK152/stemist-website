@@ -1,10 +1,9 @@
-import { green, white, black } from "../Colors";
+import { green } from "../Colors";
 import { useSpring } from "react-spring";
-import { blue } from "tailwindcss/colors";
 
 export default function useQuestionSprings(state: boolean) {
   const questionSpring = useSpring({
-    background: state ? blue[500] : green,
+    background: state ? "#3b82f6" : green,
     borderBottomLeftRadius: !state ? "0.5rem" : "0rem",
     borderBottomRightRadius: !state ? "0.5rem" : "0rem",
   });
