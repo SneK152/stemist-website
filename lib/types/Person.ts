@@ -31,7 +31,7 @@ export type TeamRole =
   | "Outreach"
   | "HR"
   | "Intern"
-  | "Teacher"
+  | "Instructor"
   | "Graphic Design"
   | "Operations"
   | "Technology"

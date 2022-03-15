@@ -4,7 +4,7 @@ import { ExtendedPerson, TeamRole } from "../types/Person";
 const people: ExtendedPerson[] = [
   {
     name: "Steve Yang",
-    officerRoles: ["President", "Teacher"],
+    officerRoles: ["President", "Instructor"],
     teacherRoles: ["Biology", "Physical Science"],
     image: resolveTeamImage("Steve Yang", "jpeg"),
     description:
@@ -20,7 +20,12 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Vice President", "Director of HR", "Operations", "Teacher"],
+    officerRoles: [
+      "Vice President",
+      "Director of HR",
+      "Operations",
+      "Instructor",
+    ],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Justin Zhang", "jpg"),
     description:
@@ -33,7 +38,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Johnathan Kao",
-    officerRoles: ["Director of PR and Outreach", "Teacher"],
+    officerRoles: ["Director of PR and Outreach", "Instructor"],
     teacherRoles: ["Biology"],
     image: resolveTeamImage("Johnathan Kao", "jpg"),
     description:
@@ -51,7 +56,7 @@ const people: ExtendedPerson[] = [
       "Director of Technology",
       "Website",
       "Operations",
-      "Teacher",
+      "Instructor",
     ],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Snehil Kakani", "jpg"),
@@ -140,7 +145,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Jianyu Wang",
-    teamRoles: ["HR", "Teacher"],
+    teamRoles: ["HR", "Instructor"],
     teacherRoles: ["Physical Science"],
     image: resolveTeamImage("Jianyu Wang", "jpeg"),
     description:
@@ -148,7 +153,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    teamRoles: ["Outreach", "Teacher"],
+    teamRoles: ["Outreach", "Instructor"],
     teacherRoles: ["Math"],
     image: resolveTeamImage("Isaac Sun", "jpeg"),
     description:
@@ -161,7 +166,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Harold Wang",
-    teamRoles: ["Teacher", "HR"],
+    teamRoles: ["Instructor", "HR"],
     teacherRoles: ["Biology"],
     image: resolveTeamImage("Harold Wang", "jpeg"),
     description:
@@ -177,14 +182,14 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Jishnu Balaji",
-    teamRoles: ["Operations", "Teacher"],
+    teamRoles: ["Operations"],
     image: resolveTeamImage("Jishnu Balaji", "jpg"),
     description:
       "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
   },
   {
     name: "Yajat Nagaraj",
-    teamRoles: ["Operations", "Teacher"],
+    teamRoles: ["Operations"],
     image: resolveTeamImage("Yajat Kiran", "png"),
     description:
       "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
@@ -205,7 +210,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Rohan Fernandes",
-    teamRoles: ["Intern", "Technology", "Teacher", "Website"],
+    teamRoles: ["Intern", "Technology", "Instructor", "Website"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
@@ -252,7 +257,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sarvesh Madullapalli",
-    teamRoles: ["Intern", "Technology", "Teacher", "Website"],
+    teamRoles: ["Intern", "Technology", "Instructor", "Website"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Sarvesh Madullapalli", "jpg"),
     description:
@@ -266,7 +271,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Vyaas Baskar",
-    teamRoles: ["Intern", "Teacher"],
+    teamRoles: ["Intern", "Instructor"],
     teacherRoles: ["Physical Science"],
     image: resolveTeamImage("Vyaas Baskar", "jpg"),
     description:
@@ -280,7 +285,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teamRoles: ["Intern", "Teacher"],
+    teamRoles: ["Intern", "Instructor"],
     teacherRoles: ["Physical Science", "Biology"],
     image: resolveTeamImage("Chaas Kandregula", "jpg"),
     description:
