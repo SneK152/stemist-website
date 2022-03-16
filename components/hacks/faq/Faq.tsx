@@ -41,8 +41,16 @@ export default function FAQ() {
         answer="A: Submit a video less than 2 minutes long, along with your code on GitHub"
       />
       <Question
+        question="Q: How do I enter the raffle"
+        answer="A: There will be a certain task available on the weekend of the Hackathon"
+      />
+      <Question
+        question="Q: Will there be presentations"
+        answer="A: For winners, they will have to demo and do a presentation about their software"
+      />
+      <Question
         question="Q: Is Cross-Submission allowed for this hackathon"
-        answer="A: Yes, Cross-Submission is allowed"
+        answer="A: Yes, Cross-Submissions are allowed"
       />
       <Question
         question="Q: Do I have to attend all the workshops"
@@ -50,7 +58,11 @@ export default function FAQ() {
       />
       <Question
         question="Q: Do I have to submit a project"
-        answer="A: When you sign up, you have to submit a project"
+        answer="A: No, you do not have to submit a project"
+      />
+      <Question
+        question="Anymore Questions?"
+        answer="Email stemisteducation@gmail.com if you have more questions"
       />
     </div>
   );
