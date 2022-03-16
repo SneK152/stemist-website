@@ -1,5 +1,5 @@
 import Question from "./Question";
-import useAos from '../../useAos';
+import useAos from "../../useAos";
 
 export default function FAQ() {
   return (
