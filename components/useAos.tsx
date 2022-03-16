@@ -1,25 +1,15 @@
 import Aos from "aos";
 
-let animations = [
-  "fade",
-  "fade-up",
-  "fade-down",
-  "flip-up",
-  "flip-down",
-  "slide-up",
-  "slide-down",
-];
+type animations =
+  | "fade"
+  | "fade-up"
+  | "fade-down"
+  | "flip-up"
+  | "flip-down"
+  | "slide-up"
+  | "slide-down";
 
-export default function useAos(
-  transition?:
-    | "fade"
-    | "fade-up"
-    | "fade-down"
-    | "flip-up"
-    | "flip-down"
-    | "slide-up"
-    | "slide-down"
-) {
+export default function useAos(transition?: animations) {
   let exports = {
     "data-aos": transition ? transition : "fade-up",
     // "data-aos-offset": "200",
