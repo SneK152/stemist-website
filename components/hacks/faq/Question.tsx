@@ -21,7 +21,7 @@ export default function Question({
   return (
     <div
       onClick={() => setToggle(!isToggled)}
-      className="cursor-pointer max-h-fit h-fit px-3 text-2xl mx-1 rounded-md"
+      className="cursor-pointer max-h-fit h-fit mx-2 px-3 text-2xl rounded-md pb-3"
     >
       <animated.div
         style={questionSpring}
