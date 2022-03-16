@@ -1,8 +1,9 @@
 import Event from "./Event";
+import useAos from "@/components/useAos";
 
 export default function Schedule() {
   return (
-    <div className="space-y-4">
+    <div {...useAos()} className="space-y-4">
       <Event
         description="desc"
         name="name"

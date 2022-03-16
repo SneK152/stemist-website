@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
-import dynamic from "next/dynamic";
 import Plyr from "plyr-react";
+import { ArrowRightIcon } from "@heroicons/react/outline";
 
 export default function Hero() {
-  const el = useRef(null);
+  const el = useRef<HTMLDivElement>(null);
   const typed = useRef<any>(null);
   const heroDiv = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(heroDiv);
@@ -37,8 +37,8 @@ export default function Hero() {
             STEMist is <span ref={el}></span>
           </h1>
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
-            Watch our video to learn more about STEMist and why you should sign
-            up today!
+            Watch our video to learn more{" "}
+            <ArrowRightIcon className="h-4 w-4 inline-block" />
           </p>
         </div>
       </div>
