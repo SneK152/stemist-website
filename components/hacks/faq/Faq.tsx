@@ -1,8 +1,9 @@
 import Question from "./Question";
+import useAos from '../../useAos';
 
 export default function FAQ() {
   return (
-    <div className="my-2 space-y-4">
+    <div {...useAos()} className="my-2 space-y-4">
       <Question
         question="Q: How much does it cost"
         answer="A: This hackathon is free to attend"
