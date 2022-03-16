@@ -94,14 +94,18 @@ export default function Programs() {
         </Card>
         <Card title="Biology">
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            maxime pariatur natus officiis harum temporibus consequuntur.
-            Consequatur praesentium deserunt eveniet dolorum mollitia
-            dignissimos perferendis voluptates corporis qui. Aliquam, dicta.
-            Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Pariatur laborum temporibus inventore minima accusantium voluptatem
-            maiores, numquam repellat magnam modi? Perspiciatis itaque repellat
-            facilis id cupiditate hic praesentium, sequi totam?
+            STEMist{"'"}s Intro to Biology is a comprehensive course which not
+            only provides an introduction to the knowledge required for science
+            competitions (including USABO, Science Bowl and Science Olympiad),
+            but also delves deep into various fascinating topics (like oncology
+            and immunology). Our curriculum covers biochemistry, molecular and
+            cell biology, genetics, botany, anatomy, evolution and ethology, and
+            ecology, touching upon all of the subjects covered in biolympiads
+            and high school or AP biology courses. Our instructors are highly
+            qualified, winning awards in many different contests (USABO
+            semfinalists, Science Bowl competitors, Science Olympiad medalists,
+            etc.). They also have more than two years of teaching experience,
+            and are always happy to answer questions or explain tricky topics.
           </div>
           <br />
           <div className="grid gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
