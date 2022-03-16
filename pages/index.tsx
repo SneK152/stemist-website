@@ -20,18 +20,18 @@ export default function Index(props: HomeProps) {
     <Container title="Home">
       <div className="-mt-16">
         <Banner image="/homepage.webp" full>
-          <p className="font-writing px-5 text-sm sm:px-10 sm:text-xl md:px-20">
+          <p className="font-writing px-5 text-xs sm:px-10 sm:text-lg md:px-20">
             <span className="block italic">&quot;{props.quote}&quot;</span>
-            <span className="block text-sm sm:text-base">-{props.author}</span>
+            <span className="block">-{props.author}</span>
           </p>
-          <h1 className="font-display text-4xl font-bold md:text-6xl lg:text-8xl xl:text-8xl">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl">
             STEMist Education
           </h1>
-          <span className="block font-sans text-sm sm:text-xl">
+          <span className="block font-sans text-xs max-w-[45ch] mx-auto sm:text-xl">
             Learn STEM hands-on. Engage with fellow students. Have the
             experience of a lifetime.
           </span>
-          <div className="flex justify-center gap-3 text-lg">
+          <div className="flex justify-center gap-3 text-lg whitespace-nowrap">
             <button
               className="bg-white bg-opacity-10 text-white py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300"
               onClick={scrollTo("#learnmore")}

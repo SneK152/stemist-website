@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Plyr from "plyr-react";
 
 export default function Hero() {
-  const el = useRef(null);
+  const el = useRef<HTMLDivElement>(null);
   const typed = useRef<any>(null);
   const heroDiv = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(heroDiv);
