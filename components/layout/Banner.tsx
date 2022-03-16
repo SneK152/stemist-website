@@ -9,10 +9,12 @@ export default function Banner({
   image,
   children,
   full,
+  href = "#hero",
 }: {
   image: string;
   children: ReactNode;
   full?: boolean;
+  href?: string;
 }) {
   const titleDiv = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(titleDiv);
@@ -61,7 +63,7 @@ export default function Banner({
           </div>
           {full && (
             <div className="absolute h-full w-full flex justify-center items-end">
-              <button className="animate-bounce" onClick={scrollTo("#hero")}>
+              <button className="animate-bounce" onClick={scrollTo(href)}>
                 <ChevronDownIcon className="h-12" />
               </button>
             </div>

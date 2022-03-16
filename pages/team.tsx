@@ -1,5 +1,5 @@
 import { memo, useMemo, useState } from "react";
-import people from "@/lib/data/team";
+import staff from "@/lib/data/staff";
 import teachers from "@/lib/data/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
@@ -26,6 +26,28 @@ function getTeachers() {
   return teacherRoles;
 }
 
+function getSortedTeachers(activeTeacher: TeacherSubject) {
+  if (activeTeacher === "All") {
+    return teachers.sort((a, b) =>
+      a.positions[0].includes("Lead")
+        ? -1
+        : b.positions[0].includes("Lead")
+        ? 1
+        : 0
+    );
+  } else {
+    return teachers
+      .filter((person) => person.positions.includes(activeTeacher))
+      .sort((a, b) =>
+        a.positions[0].includes(`${activeTeacher} Lead`)
+          ? -1
+          : b.positions[0].includes("Lead")
+          ? 1
+          : 0
+      );
+  }
+}
+
 const MemoedPerson = memo(Person);
 const MemoedLargePerson = memo(LargePerson);
 
@@ -33,19 +55,7 @@ export default function Team(props: TeamProps) {
   const [activeTeacher, setActiveTeacher] = useState<TeacherSubject>("All");
   const teacherRoles = useMemo(() => getTeachers(), []);
   const memoedTeachers = useMemo(
-    () =>
-      teachers
-        .filter(
-          (person) =>
-            person.positions.includes(activeTeacher) || activeTeacher === "All"
-        )
-        .sort((a, b) =>
-          a.positions[0].includes(`${activeTeacher} Lead`)
-            ? -1
-            : b.positions[0].includes("Lead")
-            ? 1
-            : 0
-        ),
+    () => getSortedTeachers(activeTeacher),
     [activeTeacher]
   );
   return (
@@ -96,7 +106,7 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
-      <TeamSection component={MemoedPerson} people={people} title="Staff" />
+      <TeamSection component={MemoedPerson} people={staff} title="Staff" />
     </Container>
   );
 }

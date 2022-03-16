@@ -4,7 +4,7 @@ import Sponsors from "@/components/hacks/sponsors/Sponsors";
 import Section from "@/components/hacks/layout/Section";
 import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
-import Prize from '../../components/hacks/prizes/prize';
+import Prize from "../../components/hacks/prizes/prize";
 import PrizesSection from "@/components/hacks/prizes";
 
 export default function App() {
