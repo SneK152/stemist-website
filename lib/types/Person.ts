@@ -6,6 +6,16 @@ type Person<T = string> = {
   qualifications?: string[];
 };
 
+export interface ExtendedPerson {
+  name: string;
+  description: string;
+  image: string;
+  teacherRoles?: TeacherSubject[];
+  officerRoles?: string[];
+  teamRoles?: TeamRole[];
+  qualifications?: string[];
+}
+
 export type TeacherSubject =
   | "Math Lead"
   | "Biology Lead"
@@ -21,10 +31,12 @@ export type TeamRole =
   | "Outreach"
   | "HR"
   | "Intern"
-  | "Teacher"
+  | "Instructor"
   | "Graphic Design"
   | "Operations"
   | "Technology"
-  | "Website";
+  | "Website"
+  | "Events"
+  | "WEBS";
 
 export default Person;

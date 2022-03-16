@@ -1,5 +1,5 @@
 import { memo, useMemo, useState } from "react";
-import people from "@/lib/data/team";
+import staff from "@/lib/data/staff";
 import teachers from "@/lib/data/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
@@ -26,6 +26,28 @@ function getTeachers() {
   return teacherRoles;
 }
 
+function getSortedTeachers(activeTeacher: TeacherSubject) {
+  if (activeTeacher === "All") {
+    return teachers.sort((a, b) =>
+      a.positions[0].includes("Lead")
+        ? -1
+        : b.positions[0].includes("Lead")
+        ? 1
+        : 0
+    );
+  } else {
+    return teachers
+      .filter((person) => person.positions.includes(activeTeacher))
+      .sort((a, b) =>
+        a.positions[0].includes(`${activeTeacher} Lead`)
+          ? -1
+          : b.positions[0].includes("Lead")
+          ? 1
+          : 0
+      );
+  }
+}
+
 const MemoedPerson = memo(Person);
 const MemoedLargePerson = memo(LargePerson);
 
@@ -33,19 +55,7 @@ export default function Team(props: TeamProps) {
   const [activeTeacher, setActiveTeacher] = useState<TeacherSubject>("All");
   const teacherRoles = useMemo(() => getTeachers(), []);
   const memoedTeachers = useMemo(
-    () =>
-      teachers
-        .filter(
-          (person) =>
-            person.positions.includes(activeTeacher) || activeTeacher === "All"
-        )
-        .sort((a, b) =>
-          a.positions[0].includes(`${activeTeacher} Lead`)
-            ? -1
-            : b.positions[0].includes("Lead")
-            ? 1
-            : 0
-        ),
+    () => getSortedTeachers(activeTeacher),
     [activeTeacher]
   );
   return (
@@ -57,19 +67,18 @@ export default function Team(props: TeamProps) {
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <Carousel data={props.data} />
       </div>
-      <TeamSection
+      {/* <TeamSection
         component={MemoedLargePerson}
         title="Board of Directors"
         people={directors}
         large
-      />
+      /> */}
       <TeamSection
         component={MemoedLargePerson}
         title="Officers"
         people={officers}
         large
       />
-      <TeamSection component={MemoedPerson} people={people} title="Staff" />
       <div className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructors
@@ -97,6 +106,7 @@ export default function Team(props: TeamProps) {
           ))}
         </div>
       </div>
+      <TeamSection component={MemoedPerson} people={staff} title="Staff" />
     </Container>
   );
 }
