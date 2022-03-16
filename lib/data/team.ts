@@ -204,13 +204,6 @@ const people: ExtendedPerson[] = [
       "Sophie Mak is a freshman at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
   },
   {
-    name: "Richard Yuan",
-    teamRoles: ["Outreach"],
-    image: resolveTeamImage("Richard Yuan", "png"),
-    description:
-      "Richard is a dejected but content adolescent that aspires to be a business executive in the not-too-distant future.",
-  },
-  {
     name: "Sriman Ratnapu",
     teamRoles: ["Outreach", "HR", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu", "png"),
@@ -310,6 +303,12 @@ const people: ExtendedPerson[] = [
       "Algebra 2 Trig Student",
       "Science Olympiad Heredity Competitor",
     ],
+  },
+  {
+    name: "Idhant Rao",
+    teacherRoles: ["Math"],
+    image: resolveTeamImage(),
+    description: "",
   },
 ];
 export default people;
