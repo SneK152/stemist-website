@@ -35,6 +35,8 @@ export type TeamRole =
   | "Graphic Design"
   | "Operations"
   | "Technology"
-  | "Website";
+  | "Website"
+  | "Events"
+  | "WEBS";
 
 export default Person;

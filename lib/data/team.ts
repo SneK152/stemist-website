@@ -1,5 +1,5 @@
 import { resolveTeamImage } from "../imageHelpers";
-import { ExtendedPerson, TeamRole } from "../types/Person";
+import { ExtendedPerson } from "../types/Person";
 
 const people: ExtendedPerson[] = [
   {
@@ -20,12 +20,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: [
-      "Vice President",
-      "Director of HR",
-      "Operations",
-      "Instructor",
-    ],
+    officerRoles: ["Vice President", "Director of HR", "Instructor", "WEBS"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Justin Zhang", "jpg"),
     description:
@@ -55,8 +50,9 @@ const people: ExtendedPerson[] = [
     officerRoles: [
       "Director of Technology",
       "Website",
-      "Operations",
       "Instructor",
+      "WEBS",
+      "Events",
     ],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Snehil Kakani", "jpg"),
@@ -106,7 +102,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sanya Badhe",
-    officerRoles: ["Instructor Lead", "Operations"],
+    officerRoles: ["Instructor Lead"],
     teacherRoles: ["Math Lead", "Math"],
     image: resolveTeamImage("Sanya Badhe", "png"),
     description:
@@ -153,7 +149,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    teamRoles: ["Outreach", "Instructor"],
+    teamRoles: ["Outreach", "Instructor", "WEBS"],
     teacherRoles: ["Math"],
     image: resolveTeamImage("Isaac Sun", "jpeg"),
     description:
@@ -174,43 +170,22 @@ const people: ExtendedPerson[] = [
     qualifications: ["USABO Semifinalist"],
   },
   {
-    name: "Krithik Mohan",
-    teamRoles: ["Operations"],
-    image: resolveTeamImage("Krithik Mohan", "jpg"),
-    description:
-      "Krithik is a freshman at Lynbrook High school who likes helping with technical stuff. In his free time, he likes reading and biking places.",
-  },
-  {
-    name: "Jishnu Balaji",
-    teamRoles: ["Operations"],
-    image: resolveTeamImage("Jishnu Balaji", "jpg"),
-    description:
-      "Jishnu Balaji has been interested in science for a long time. He is a member of groups like Science Olympiad and Science Alliance, just to name a few. In his free time, he likes to swim.",
-  },
-  {
-    name: "Yajat Nagaraj",
-    teamRoles: ["Operations"],
-    image: resolveTeamImage("Yajat Kiran", "png"),
-    description:
-      "Yajat is a freshman at Lynbrook High School who likes to do math and solve puzzles.",
-  },
-  {
     name: "Joshua Li",
-    teamRoles: ["Outreach"],
+    teamRoles: ["Events"],
     image: resolveTeamImage("Joshua Li", "jpg"),
     description:
       "Joshua is a freshman at Lynbrook who enjoys all behind the curtain roles. He also likes exercising and gaming in his free time.",
   },
   {
     name: "Nathan Ye",
-    teamRoles: ["Outreach"],
+    teamRoles: ["Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Nathan Ye", "png"),
     description:
       "Nathan is a high school freshman that loves coding and football.",
   },
   {
     name: "Rohan Fernandes",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website"],
+    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Rohan Fernandes", "png"),
     description:
@@ -223,7 +198,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sophie Mak",
-    teamRoles: ["Outreach"],
+    teamRoles: ["Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sophie Mak", "jpeg"),
     description:
       "Sophie Mak is a freshman at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
@@ -237,27 +212,27 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    teamRoles: ["Outreach", "HR"],
+    teamRoles: ["Outreach", "HR", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu", "png"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
   },
   {
     name: "Annie Li",
-    teamRoles: ["Graphic Design", "Outreach"],
+    teamRoles: ["Graphic Design", "Outreach", "Events"],
     image: resolveTeamImage("Annie Li", "jpg"),
     description:
       "Annie Li is a Lynbrook freshman who either makes digital art in her free time or is watching analysis videos on horror series.",
   },
   {
     name: "Valerie Shu",
-    teamRoles: ["Graphic Design", "Outreach"],
+    teamRoles: ["Graphic Design", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Valerie Shu", "jpeg"),
     description: "",
   },
   {
     name: "Sarvesh Madullapalli",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website"],
+    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Sarvesh Madullapalli", "jpg"),
     description:
@@ -301,6 +276,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Aryan Patnaik",
+    officerRoles: ["WEBS Lead"],
     teacherRoles: ["Biology"],
     image: resolveTeamImage("Aryan Patnaik", "jpeg"),
     description:
