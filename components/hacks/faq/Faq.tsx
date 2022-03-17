@@ -1,6 +1,7 @@
 import Question from "./Question";
 import useAos from "../../useAos";
 
+
 export default function FAQ() {
   return (
     <div {...useAos()} className="grid md:grid-cols-2">
