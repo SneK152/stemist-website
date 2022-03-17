@@ -59,14 +59,19 @@ export default function Programs() {
           cupiditate hic praesentium, sequi totam?
         </SubjectCard>
         <SubjectCard title="Physical Science" teachers={physTeachers}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          maxime pariatur natus officiis harum temporibus consequuntur.
-          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
-          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Pariatur laborum
-          temporibus inventore minima accusantium voluptatem maiores, numquam
-          repellat magnam modi? Perspiciatis itaque repellat facilis id
-          cupiditate hic praesentium, sequi totam?
+          STEMist{"'"}s Physical Science covers a broad range of topics in
+          Physics, Chemistry, Earth Science, and Astronomy. Presentations will
+          go over the basics over the topic and show applications of the
+          extensive material provided through the form of sample problems and
+          explanations. Explanations will include information that is easily
+          broken down into different segments to best prepare students in the
+          subject matter. Our instructors include contestants and award winners
+          through various physical science-related competitions and olympiads in
+          science-related subjects including a combined 20+ years of Science
+          Olympiad, Science Bowl, and Ocean Science Bowl experience winning
+          dozens of medals and trophies. Instructors are familiar with teaching
+          with all have past experience and willing to answer questions where
+          students have lapses in understanding.
         </SubjectCard>
         <SubjectCard title="Biology" teachers={bioTeachers}>
           STEMist{"'"}s Intro to Biology is a comprehensive course which not
@@ -108,11 +113,11 @@ function SubjectCard(props: SubjectCardProps) {
     <Card title={props.title}>
       <div>{props.children}</div>
       <br />
-      <div className="grid text-left gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid text-left gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {props.teachers.map((t, index) => (
           <div
             key={index}
-            className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-md p-3`}
+            className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow p-3`}
           >
             <Person person={t} />
           </div>
