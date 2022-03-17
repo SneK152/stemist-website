@@ -4,7 +4,6 @@ import Sponsors from "@/components/hacks/sponsors/Sponsors";
 import Section from "@/components/hacks/layout/Section";
 import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
-import Prize from "../../components/hacks/prizes/prize";
 import PrizesSection from "@/components/hacks/prizes";
 
 export default function App() {
@@ -12,16 +11,16 @@ export default function App() {
     <Container title="STEMist Hacks">
       <Header />
       <div>
+        <Section name="Hackathon Agenda">
+          <Schedule />
+        </Section>
+        <PrizesSection />
         <Section name="Frequently Asked Questions">
           <FAQ />
         </Section>
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
-        <Section name="Hackathon Agenda">
-          <Schedule />
-        </Section>
-        <PrizesSection />
       </div>
     </Container>
   );
