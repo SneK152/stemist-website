@@ -33,13 +33,13 @@ export default function Index(props: HomeProps) {
           </span>
           <div className="flex justify-center gap-3 text-lg whitespace-nowrap">
             <button
-              className="bg-white bg-opacity-10 text-white py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300"
+              className="bg-white text-sm sm:text-lg bg-opacity-10 text-white sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300"
               onClick={scrollTo("#learnmore")}
             >
               Learn More
             </button>
             <Link href="/get-involved/students">
-              <a className="bg-blue-500 py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
+              <a className="bg-blue-500 text-sm sm:text-lg sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
                 Sign Up
               </a>
             </Link>

@@ -3,6 +3,8 @@ import PartialBanner from "@/components/layout/PartialBanner";
 import Card from "@/components/pages/Card";
 import Person from "@/components/team/Person";
 import teachers from "@/lib/data/teachers";
+import P from "@/lib/types/Person";
+import { ReactNode } from "react";
 
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
@@ -46,103 +48,76 @@ export default function Programs() {
     <Container title="Programs">
       <PartialBanner title="Programs" />
       <div className="sm:mx-5 flex-col flex gap-5">
-        <Card title="Computer Science">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            maxime pariatur natus officiis harum temporibus consequuntur.
-            Consequatur praesentium deserunt eveniet dolorum mollitia
-            dignissimos perferendis voluptates corporis qui. Aliquam, dicta.
-            Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Pariatur laborum temporibus inventore minima accusantium voluptatem
-            maiores, numquam repellat magnam modi? Perspiciatis itaque repellat
-            facilis id cupiditate hic praesentium, sequi totam?
-          </div>
-          <br />
-          <div className="grid gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {csTeachers.map((t, index) => (
-              <div
-                key={index}
-                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
-              >
-                <Person person={t} />
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card title="Physical Science">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            maxime pariatur natus officiis harum temporibus consequuntur.
-            Consequatur praesentium deserunt eveniet dolorum mollitia
-            dignissimos perferendis voluptates corporis qui. Aliquam, dicta.
-            Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Pariatur laborum temporibus inventore minima accusantium voluptatem
-            maiores, numquam repellat magnam modi? Perspiciatis itaque repellat
-            facilis id cupiditate hic praesentium, sequi totam?
-          </div>
-          <br />
-          <div className="grid gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {physTeachers.map((t, index) => (
-              <div
-                key={index}
-                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
-              >
-                <Person person={t} />
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card title="Biology">
-          <div>
-            STEMist{"'"}s Intro to Biology is a comprehensive course which not
-            only provides an introduction to the knowledge required for science
-            competitions (including USABO, Science Bowl and Science Olympiad),
-            but also delves deep into various fascinating topics (like oncology
-            and immunology). Our curriculum covers biochemistry, molecular and
-            cell biology, genetics, botany, anatomy, evolution and ethology, and
-            ecology, touching upon all of the subjects covered in biolympiads
-            and high school or AP biology courses. Our instructors are highly
-            qualified, winning awards in many different contests (USABO
-            semfinalists, Science Bowl competitors, Science Olympiad medalists,
-            etc.). They also have more than two years of teaching experience,
-            and are always happy to answer questions or explain tricky topics.
-          </div>
-          <br />
-          <div className="grid gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {bioTeachers.map((t, index) => (
-              <div
-                key={index}
-                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
-              >
-                <Person person={t} />
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card title="Mathematics">
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            maxime pariatur natus officiis harum temporibus consequuntur.
-            Consequatur praesentium deserunt eveniet dolorum mollitia
-            dignissimos perferendis voluptates corporis qui. Aliquam, dicta.
-            Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Pariatur laborum temporibus inventore minima accusantium voluptatem
-            maiores, numquam repellat magnam modi? Perspiciatis itaque repellat
-            facilis id cupiditate hic praesentium, sequi totam?
-          </div>
-          <br />
-          <div className="grid gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {mathTeachers.map((t, index) => (
-              <div
-                key={index}
-                className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-white/25`}
-              >
-                <Person person={t} />
-              </div>
-            ))}
-          </div>
-        </Card>
+        <SubjectCard title="Computer Science" teachers={csTeachers}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          maxime pariatur natus officiis harum temporibus consequuntur.
+          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
+          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Pariatur laborum
+          temporibus inventore minima accusantium voluptatem maiores, numquam
+          repellat magnam modi? Perspiciatis itaque repellat facilis id
+          cupiditate hic praesentium, sequi totam?
+        </SubjectCard>
+        <SubjectCard title="Physical Science" teachers={physTeachers}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          maxime pariatur natus officiis harum temporibus consequuntur.
+          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
+          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Pariatur laborum
+          temporibus inventore minima accusantium voluptatem maiores, numquam
+          repellat magnam modi? Perspiciatis itaque repellat facilis id
+          cupiditate hic praesentium, sequi totam?
+        </SubjectCard>
+        <SubjectCard title="Biology" teachers={bioTeachers}>
+          STEMist{"'"}s Intro to Biology is a comprehensive course which not
+          only provides an introduction to the knowledge required for science
+          competitions (including USABO, Science Bowl and Science Olympiad), but
+          also delves deep into various fascinating topics (like oncology and
+          immunology). Our curriculum covers biochemistry, molecular and cell
+          biology, genetics, botany, anatomy, evolution and ethology, and
+          ecology, touching upon all of the subjects covered in biolympiads and
+          high school or AP biology courses. Our instructors are highly
+          qualified, winning awards in many different contests (USABO
+          semfinalists, Science Bowl competitors, Science Olympiad medalists,
+          etc.). They also have more than two years of teaching experience, and
+          are always happy to answer questions or explain tricky topics.
+        </SubjectCard>
+        <SubjectCard title="Mathematics" teachers={mathTeachers}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          maxime pariatur natus officiis harum temporibus consequuntur.
+          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
+          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Pariatur laborum
+          temporibus inventore minima accusantium voluptatem maiores, numquam
+          repellat magnam modi? Perspiciatis itaque repellat facilis id
+          cupiditate hic praesentium, sequi totam?
+        </SubjectCard>
       </div>
     </Container>
+  );
+}
+
+interface SubjectCardProps {
+  teachers: P[];
+  children: ReactNode;
+  title: string;
+}
+
+function SubjectCard(props: SubjectCardProps) {
+  return (
+    <Card title={props.title}>
+      <div>{props.children}</div>
+      <br />
+      <div className="grid text-left gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {props.teachers.map((t, index) => (
+          <div
+            key={index}
+            className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow-md p-3`}
+          >
+            <Person person={t} />
+          </div>
+        ))}
+      </div>
+    </Card>
   );
 }
