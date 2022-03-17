@@ -20,7 +20,7 @@ export default function LinkPage({
       {links.map((link, i) => (
         <Link href={link.external ? link.url : `${base}${link.url}`} key={i}>
           <a
-            className="bg-white bg-opacity-[.15] backdrop-blur-sm rounded-lg p-3 hover:rounded-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg w-full h-48 flex flex-col justify-center items-center"
+            className="bg-white bg-opacity-[.15] backdrop-blur-sm rounded-lg p-3 hover:rounded-xl hover:-translate-y-2 transition-all duration-300 shadow-lg w-full h-48 flex flex-col justify-center items-center"
             {...(link.external ? { rel: "noreferrer noopener" } : {})}
             target={link.external ? "_blank" : "_self"}
           >

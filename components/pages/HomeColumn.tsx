@@ -14,7 +14,7 @@ export default function HomeColumn(props: {
       <p className="mb-5 text-center">{props.description}</p>
       <Link href={props.buttonLink}>
         <a
-          className={`bg-${props.buttonColor} text-black py-2 px-3 rounded-lg shadow-md hover:rounded-2xl hover:shadow-xl transition-all duration-300 mt-auto`}
+          className={`bg-${props.buttonColor} text-black py-2 px-3 rounded-lg shadow-md hover:rounded-xl hover:shadow-lg transition-all duration-300 mt-auto`}
         >
           {props.buttonText}
         </a>
