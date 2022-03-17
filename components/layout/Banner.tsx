@@ -55,7 +55,7 @@ export default function Banner({
         />
         <div className="flex h-full w-full items-center justify-center">
           <div
-            className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-3xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
+            className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
               full ? "" : "sm:w-3/4 sm:h-56"
             }`}
           >

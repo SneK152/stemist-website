@@ -147,7 +147,7 @@ export default function Signup() {
       <div className="max-w-3xl px-5 m-auto">
         <form onSubmit={formik.handleSubmit}>
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
-            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-gray-50 p-5 shadow-lg">
+            <div className="w-full space-y-3 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
               <MemoedInputField
                 labelName="Email address"
                 name="email"

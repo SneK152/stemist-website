@@ -117,7 +117,7 @@ function SubjectCard(props: SubjectCardProps) {
         {props.teachers.map((t, index) => (
           <div
             key={index}
-            className={`h-32 w-full overflow-hidden rounded-xl bg-white shadow p-3`}
+            className={`h-32 w-full overflow-hidden rounded-lg bg-white shadow p-3`}
           >
             <Person person={t} />
           </div>
