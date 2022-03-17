@@ -8,7 +8,7 @@ import PrizesSection from "@/components/hacks/prizes";
 
 export default function App() {
   return (
-    <Container title="STEMist Hacks">
+    <Container title="STEMist Hacks" noNav>
       <Header />
       <div>
         <Section name="Hackathon Agenda" id="agenda">

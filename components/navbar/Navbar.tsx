@@ -1,10 +1,11 @@
 import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { ArrowLeftIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
+import Button from "../layout/Button";
 
 export default function Navbar({ noNav = false }: { noNav: boolean }) {
   return (
@@ -44,7 +45,18 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                 <MenuIcon className="block h-6 w-6 text-white" />
               )}
             </Disclosure.Button>
-            {noNav && <div className="mt-auto mb-auto"></div>}
+            {noNav && (
+              <div className="mt-auto mb-auto">
+                <Button
+                  href="/"
+                  backgroundColor="bg-blue-500 bg-opacity-80 hover:bg-opacity-90 flex items-center gap-1"
+                  textColor="text-white font-display text-lg"
+                >
+                  <ArrowLeftIcon className="h-5 w-5 inline-block" />
+                  Back to STEMist
+                </Button>
+              </div>
+            )}
             {!noNav && (
               <div className="mt-auto mb-auto hidden md:block">
                 <ul className="inline-flex gap-4">

@@ -32,7 +32,7 @@ export default function Button({
   } else {
     return (
       <button
-        className={`${backgroundColor} text-sm sm:text-lg bg-opacity-10 ${textColor} sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300`}
+        className={`${backgroundColor} text-sm sm:text-lg ${textColor} sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300`}
         {...rest}
       >
         {children}
