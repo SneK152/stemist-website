@@ -133,12 +133,14 @@ export default function Signup() {
       <PartialBanner
         title={
           <>
-            <div className="-mb-5">Student Signups</div>
-            <Link href="/programs">
-              <a className="bg-blue-500 text-lg font-sans font-normal py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
-                Programs
-              </a>
-            </Link>
+            <span className="block">Student Signups</span>
+            <div className="flex sm:mt-4 justify-center">
+              <Link href="/programs">
+                <a className="bg-blue-500 sm:text-lg text-xs font-sans font-normal py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
+                  Programs
+                </a>
+              </Link>
+            </div>
           </>
         }
       />
