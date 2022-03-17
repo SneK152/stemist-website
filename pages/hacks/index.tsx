@@ -11,7 +11,7 @@ export default function App() {
     <Container title="STEMist Hacks">
       <Header />
       <div>
-        <Section name="Hackathon Agenda">
+        <Section name="Hackathon Agenda" id="agenda">
           <Schedule />
         </Section>
         <PrizesSection />

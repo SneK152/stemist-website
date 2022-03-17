@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Hero from "@/components/pages/Hero";
 import { ArrowRightIcon } from "@heroicons/react/outline";
+import Button from "@/components/layout/Button";
 
 const Homepage = dynamic(() => import("@/components/pages/Homepage"));
 
@@ -33,26 +34,29 @@ export default function Index(props: HomeProps) {
             experience of a lifetime.
           </span>
           <div className="flex justify-center gap-3 text-lg whitespace-nowrap">
-            <button
-              className="bg-white text-sm sm:text-lg bg-opacity-10 text-white sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300"
+            <Button
               onClick={scrollTo("#learnmore")}
+              backgroundColor="bg-white bg-opacity-10"
+              textColor="text-white"
             >
               Learn More
-            </button>
-            <Link href="/get-involved/students">
-              <a className="bg-blue-500 text-sm sm:text-lg sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300">
-                Sign Up
-              </a>
-            </Link>
-            <Link href="/hacks">
-              <a
-                className="bg-gray-900 bg-opacity-90 text-sm sm:text-lg sm:py-2 py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300"
-                target="_blank"
-              >
-                Hackathon{" "}
-                <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
-              </a>
-            </Link>
+            </Button>
+            <Button
+              href="/get-involved/students"
+              backgroundColor="bg-blue-500"
+              textColor="text-white"
+            >
+              Sign Up
+            </Button>
+            <Button
+              href="/hacks"
+              backgroundColor="bg-gray-900 bg-opacity-90"
+              textColor="text-white"
+              target="_blank"
+            >
+              Hackathon{" "}
+              <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+            </Button>
           </div>
         </Banner>
         <Hero />

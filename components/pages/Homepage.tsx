@@ -19,7 +19,7 @@ export default function Homepage() {
           description="Our vast team of instructors is highly specialized and qualified in the subjects they teach. The team includes AIME qualifiers, Science Olympiad winners in many different subjects, USACO competitors in a variety of divisions, and much more. We have been teaching workshops at STEMist for over two years, with 6 workshops hosted, and we are continuing to expand our learning model with new class and learning formats."
           buttonColor="white"
           buttonText="Meet our Instructors"
-          buttonLink="/team#instructors"
+          buttonLink="/programs"
         />
       </div>
     </>

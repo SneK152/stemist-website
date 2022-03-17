@@ -6,9 +6,11 @@ import Navbar from "../navbar/Navbar";
 export default function Container({
   children,
   title = "",
+  noNav = false,
 }: {
   children: React.ReactNode;
   title: string;
+  noNav?: boolean;
 }) {
   return (
     <>
@@ -47,7 +49,7 @@ export default function Container({
         <meta name="theme-color" content="#000000" />
         <title>STEMist Education | {title}</title>
       </Head>
-      <Navbar />
+      <Navbar noNav={noNav} />
       <div className="mx-auto h-full">
         <div className="mx-auto overflow-hidden pt-14 min-h-[calc(100vh-12rem)]">
           {children}

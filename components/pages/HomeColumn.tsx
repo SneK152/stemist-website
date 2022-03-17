@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../layout/Button";
 
 export default function HomeColumn(props: {
   title: string;
@@ -12,13 +13,13 @@ export default function HomeColumn(props: {
       <h1 className="font-display font-bold text-3xl">{props.title}</h1>
       <br />
       <p className="mb-5 text-center">{props.description}</p>
-      <Link href={props.buttonLink}>
-        <a
-          className={`bg-${props.buttonColor} text-black py-2 px-3 rounded-lg shadow-md hover:rounded-xl hover:shadow-lg transition-all duration-300 mt-auto`}
-        >
-          {props.buttonText}
-        </a>
-      </Link>
+      <Button
+        href={props.buttonLink}
+        backgroundColor={`bg-${props.buttonColor}`}
+        textColor="text-black"
+      >
+        {props.buttonText}
+      </Button>
     </div>
   );
 }

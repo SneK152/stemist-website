@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Link from "next/link";
+import Button from "@/components/layout/Button";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -135,11 +136,13 @@ export default function Signup() {
           <>
             <span className="block">Student Signups</span>
             <div className="flex sm:mt-4 justify-center">
-              <Link href="/programs">
-                <a className="bg-blue-500 sm:text-lg text-xs font-sans font-normal py-2 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300">
-                  Programs
-                </a>
-              </Link>
+              <Button
+                href="/programs"
+                backgroundColor="bg-blue-500"
+                textColor="text-white font-normal text-xs sm:text-lg font-sans"
+              >
+                Programs
+              </Button>
             </div>
           </>
         }

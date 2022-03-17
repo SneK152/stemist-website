@@ -1,3 +1,4 @@
+import Banner from "@/components/layout/Banner";
 import PartialBanner from "@/components/layout/PartialBanner";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
@@ -14,13 +15,13 @@ function Description() {
 
 export default function Header() {
   return (
-    <div className="w-full h-full p-5 text-center center justify-center">
-      <PartialBanner title="STEMist Hacks">
+    <div className="-mt-16">
+      <Banner image="/homepage.webp" full href="#agenda">
+        <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
+          STEMist Hacks
+        </h1>
         <Description />
-      </PartialBanner>
-      <div className="justify-center text-center m-auto">
-        <ChevronDownIcon className="mx-auto justify-center h-10 animate-bounce" />
-      </div>
+      </Banner>
     </div>
   );
 }
