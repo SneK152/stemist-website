@@ -35,17 +35,19 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                 </a>
               </Link>
             </div>
-            <Disclosure.Button className="lg:hidden">
-              <span className="sr-only">Open main menu</span>
-              {open ? (
-                <XIcon
-                  className="block h-6 w-6 text-white"
-                  aria-hidden="true"
-                />
-              ) : (
-                <MenuIcon className="block h-6 w-6 text-white" />
-              )}
-            </Disclosure.Button>
+            {!noNav && (
+              <Disclosure.Button className="lg:hidden">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <XIcon
+                    className="block h-6 w-6 text-white"
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <MenuIcon className="block h-6 w-6 text-white" />
+                )}
+              </Disclosure.Button>
+            )}
             {noNav && (
               <div className="mt-auto mb-auto">
                 <Button

@@ -21,7 +21,7 @@ export default function Button({
     return (
       <Link href={href}>
         <a
-          className={`${backgroundColor} ${textColor} py-2 px-3 rounded-lg shadow-md hover:rounded-xl hover:shadow-lg transition-all duration-300 mt-auto`}
+          className={`${backgroundColor} ${textColor} py-2 px-3 rounded-lg shadow-md hover:rounded-xl hover:shadow-lg transition-all duration-300 text-sm sm:text-lg mt-auto`}
           target={target}
         >
           {children}

@@ -49,14 +49,20 @@ export default function Programs() {
       <PartialBanner title="Programs" />
       <div className="sm:mx-5 flex-col flex gap-5">
         <SubjectCard title="Computer Science" teachers={csTeachers}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          maxime pariatur natus officiis harum temporibus consequuntur.
-          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
-          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Pariatur laborum
-          temporibus inventore minima accusantium voluptatem maiores, numquam
-          repellat magnam modi? Perspiciatis itaque repellat facilis id
-          cupiditate hic praesentium, sequi totam?
+          STEMist{"'"}s Computer Science course is highly rigorous, teaching
+          languages Python, C++, and Javascript. Our thorough lessons don{"'"}t
+          just teach students to memorize languages, but help them understand
+          the thought process and reasoning behind different syntax. After
+          learning the fundamentals, students take a deep dive into the
+          applications of computer science, including algorithmic thinking,
+          which is the premise of most programming contests, like USACO. We
+          teach topics that students have heard about, like machine learning,
+          and creating websites with web development, both of which help
+          students succeed in hackathons. Our qualified instructors have
+          experience with multiple facets of computer science, ranging from
+          USACO Silver and Gold competitors to multiple-time hackathon winners.
+          Our curriculum helps students learn to like computer science, and
+          helps them get interested in pursuing it further.
         </SubjectCard>
         <SubjectCard title="Physical Science" teachers={physTeachers}>
           STEMist{"'"}s Physical Science covers a broad range of topics in
@@ -88,14 +94,18 @@ export default function Programs() {
           are always happy to answer questions or explain tricky topics.
         </SubjectCard>
         <SubjectCard title="Mathematics" teachers={mathTeachers}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          maxime pariatur natus officiis harum temporibus consequuntur.
-          Consequatur praesentium deserunt eveniet dolorum mollitia dignissimos
-          perferendis voluptates corporis qui. Aliquam, dicta. Vel. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Pariatur laborum
-          temporibus inventore minima accusantium voluptatem maiores, numquam
-          repellat magnam modi? Perspiciatis itaque repellat facilis id
-          cupiditate hic praesentium, sequi totam?
+          Welcome to the math branch of STEMist! Here, you
+          {"'"}ll dive into the fundamentals of competition math. Our curriculum
+          has been carefully designed to cover the 4 main topics that appear in
+          math contests: Algebra, Combinatorics, Geometry, and Number Theory.
+          Whilst in classes, students can not only expect to be taught necessary
+          skills, but also be taught to apply these skills through challenging
+          and rewarding problems. Our instructors are tremendously qualified,
+          having won many high-level awards in contests like the AMC 8/10/12 and
+          Math Kangaroo, and have qualified for the AIME numerous amount of
+          times. They have more than a year of teaching experience and are
+          always open to answering any difficult questions that may come with
+          the twists and turns of mathematics.
         </SubjectCard>
       </div>
     </Container>
