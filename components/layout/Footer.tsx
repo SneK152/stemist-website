@@ -14,7 +14,7 @@ export default function Footer() {
       <ul className="flex justify-center">
         {socials.map((social, index) => (
           <li key={index}>
-            <a href={social.link}>
+            <a href={social.link} target="_blank" rel="noreferrer noopener">
               {social.icon} {social.title}
             </a>
           </li>

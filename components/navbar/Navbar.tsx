@@ -28,14 +28,14 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                         priority
                         height={55.3}
                         width={166.6}
-                        className="filter invert"
+                        className="filter invert select-none"
                       />
                     </div>
                   </h1>
                 </a>
               </Link>
             </div>
-            <Disclosure.Button className="md:hidden">
+            <Disclosure.Button className="lg:hidden">
               <span className="sr-only">Open main menu</span>
               {open ? (
                 <XIcon
@@ -59,7 +59,7 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
               </div>
             )}
             {!noNav && (
-              <div className="mt-auto mb-auto hidden md:block">
+              <div className="mt-auto mb-auto hidden lg:block">
                 <ul className="inline-flex gap-4">
                   {navLinks.map((navLink, index) =>
                     !navLink.dropdown ? (
@@ -89,55 +89,27 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
             )}
           </div>
           {!noNav && (
-            <Disclosure.Panel className="md:hidden">
+            <Disclosure.Panel className="lg:hidden">
               {() => (
-                <div className="absolute w-full -translate-x-2 space-y-1 bg-[#0d021f] bg-opacity-100 object-cover px-2 pt-2 pb-3">
+                <div className="absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 bg-black bg-opacity-100 object-cover px-2 pt-2 pb-3">
                   <ul>
                     {navLinks.map((navLink, i) => (
-                      <Disclosure.Button key={i} className="block">
-                        <NavLink
-                          href={navLink.link}
-                          {...(navLink.customProps ? navLink.customProps : {})}
-                        >
-                          {navLink.name}
-                        </NavLink>
-                      </Disclosure.Button>
+                      <>
+                        {navLink.customProps?.main && (
+                          <div className="h-2"></div>
+                        )}
+                        <Disclosure.Button key={i} className="block">
+                          <NavLink
+                            href={navLink.link}
+                            {...(navLink.customProps
+                              ? navLink.customProps
+                              : {})}
+                          >
+                            {navLink.name}
+                          </NavLink>
+                        </Disclosure.Button>
+                      </>
                     ))}
-                    {/* <Disclosure.Button className="block">
-                      <NavLink href="/">Home</NavLink>
-                    </Disclosure.Button>
-                    <Disclosure.Button className="block">
-                      <NavLink href="/about">About Us</NavLink>
-                    </Disclosure.Button>
-                    <Disclosure.Button className="block">
-                      <NavLink href="/team">Meet the Team</NavLink>
-                    </Disclosure.Button>
-                    <Disclosure.Button className="block">
-                      <NavLink href="/get-involved">Get Involved</NavLink>
-                    </Disclosure.Button>
-                    <Disclosure.Button className="block">
-                      <NavLink href="/contact">Contact Us</NavLink>
-                    </Disclosure.Button>
-                    <Disclosure.Button className="block">
-                      <NavLink href="/projects">Projects</NavLink>
-                    </Disclosure.Button>
-                    <div className="h-2"></div>
-                    <Disclosure.Button className="block">
-                      <NavLink
-                        main
-                        color="blue-500"
-                        textColor="white"
-                        href="/programs"
-                      >
-                        Programs
-                      </NavLink>
-                    </Disclosure.Button>
-                    <div className="h-2"></div>
-                    <Disclosure.Button className="block">
-                      <NavLink main href="/get-involved/students">
-                        Student Signups
-                      </NavLink>
-                    </Disclosure.Button> */}
                   </ul>
                 </div>
               )}
