@@ -26,7 +26,7 @@ export default function FeedBackForm() {
     },
     validationSchema: Yup.object({
       feedbackName: Yup.string().required("Required"),
-      email: Yup.string().required("Required").email("Invalid email"),
+      feedbackEmail: Yup.string().required("Required").email("Invalid email"),
       feedback: Yup.string()
         .min(4, "Must be greater than 4 characters")
         .max(200, "Must be less than 200 characters")
