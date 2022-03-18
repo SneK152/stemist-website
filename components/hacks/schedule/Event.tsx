@@ -22,7 +22,7 @@ export default function Event({ name, time, description }: ExportProps) {
     >
       <div className="grid grid-cols-5 group">
         <div className="group-hover:pb-1 col-span-1 font-bold">{name}</div>
-        <div className="text-start col-span-2 font-semibold">{timestamp}</div>
+        <div className="text-start col-span-4 font-semibold">{timestamp}</div>
       </div>
       <animated.p
         style={dropped}
