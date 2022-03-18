@@ -9,7 +9,7 @@ export default function About() {
     <Container title="About Us">
       <PartialBanner title="About Our Organization" />
       <div className="m-3 p-3 text-black space-y-3">
-        <Section title="Who We Are">
+        <Section title="Who We Are" image="/homepage.webp">
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
           qualified instructors whom are skilled in areas such as Algebra,
@@ -17,7 +17,7 @@ export default function About() {
           has been teaching kids STEM since 2020 and hopes to continue for much
           longer.
         </Section>
-        <Section title="Our Mission">
+        <Section title="Our Mission" image="/homepage.webp">
           We founded STEMist originally because we believed that learning was a
           gift that all students should have access to. We believe that kids
           should have access to proper education, especially in the
@@ -27,7 +27,7 @@ export default function About() {
           into STEM and build a foundation that they can rely on for years to
           come.
         </Section>
-        <Section title="Curriculum and Format">
+        <Section title="Curriculum and Format" image="/about/slides.png">
           Our team of instructors have vast amounts of experience in their
           respective STEM subjects, and they work hard to compile information in
           the form of engaging lectures every session. Our spring and winter

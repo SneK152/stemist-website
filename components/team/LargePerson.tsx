@@ -9,8 +9,8 @@ export default function LargePerson(props: PersonProps) {
       >
         <Image
           src={props.person.image}
-          height={130}
-          width={130}
+          height={140}
+          width={140}
           layout="fixed"
           className={`max-w-none rounded-full object-cover`}
           alt="User profile"
