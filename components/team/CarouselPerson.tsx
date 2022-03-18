@@ -1,7 +1,7 @@
 import type Person from "@/lib/types/Person";
 import Image from "next/image";
 import Qualifications from "./Qualifications";
-import teachers from "@/lib/data/teachers";
+import teachers from "@/lib/data/team/teachers";
 import { useMemo } from "react";
 
 export default function CarouselPerson({ person }: { person: Person }) {

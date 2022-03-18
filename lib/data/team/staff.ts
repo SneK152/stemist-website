@@ -1,5 +1,5 @@
-import Person, { TeamRole } from "../types/Person";
-import people from "./team";
+import Person, { TeamRole } from "../../types/Person";
+import people from "../team";
 
 const staff: Person<TeamRole>[] = people
   .filter((person) => person.teamRoles)

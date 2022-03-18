@@ -1,6 +1,6 @@
-import type Person from "../types/Person";
-import { TeacherSubject } from "../types/Person";
-import people from "./team";
+import type Person from "../../types/Person";
+import { TeacherSubject } from "../../types/Person";
+import people from "../team";
 
 const teachers: Person<TeacherSubject>[] = people
   .filter((person) => person.teacherRoles)

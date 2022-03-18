@@ -5,7 +5,6 @@ import { scrollTo } from "@/lib/scroll";
 import { sample } from "lodash";
 import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import Hero from "@/components/pages/Hero";
 import { ArrowRightIcon } from "@heroicons/react/outline";
 import Button from "@/components/layout/Button";

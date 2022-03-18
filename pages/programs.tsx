@@ -2,7 +2,7 @@ import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Card from "@/components/pages/Card";
 import Person from "@/components/team/Person";
-import teachers from "@/lib/data/teachers";
+import teachers from "@/lib/data/team/teachers";
 import P from "@/lib/types/Person";
 import { ReactNode } from "react";
 

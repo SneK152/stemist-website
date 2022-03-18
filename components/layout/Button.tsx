@@ -17,7 +17,6 @@ export default function Button({
   target = "_self",
   ...rest
 }: ButtonProps) {
-  console.log(target);
   if (href) {
     return (
       <Link href={href}>

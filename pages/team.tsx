@@ -1,11 +1,11 @@
 import { memo, useMemo, useState } from "react";
-import staff from "@/lib/data/staff";
-import teachers from "@/lib/data/teachers";
+import staff from "@/lib/data/team/staff";
+import teachers from "@/lib/data/team/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
-import directors from "@/lib/data/directors";
-import officers from "@/lib/data/officers";
+import directors from "@/lib/data/team/directors";
+import officers from "@/lib/data/team/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
