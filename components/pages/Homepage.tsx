@@ -1,8 +1,21 @@
+import { useRef } from "react";
 import HomeColumn from "./HomeColumn";
+import { useCountUp } from "react-countup";
+import Counter from "./Counter";
 
 export default function Homepage() {
   return (
     <>
+      <div className="my-10 bg-black bg-opacity-60">
+        <h1 className="text-center text-4xl font-display font-bold">
+          By the Numbers
+        </h1>
+        <div className="sm:grid-cols-3 gap-3 grid-cols-1 sm:w-3/4 w-full m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+          <Counter number={2} text="years enriching students with STEM" />
+          <Counter number={6} text="intriguing workshops hosted" />
+          <Counter number={30} symbol="+" text="highly qualified teachers" />
+        </div>
+      </div>
       <div
         className="flex sm:flex-row w-3/4 m-auto flex-col gap-3 scroll-mt-20"
         id="learnmore"
