@@ -50,7 +50,7 @@ export default function FeedBackForm() {
 
   return (
     <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8 flex-row-reverse">
-      <div className="flex w-full flex-col gap-3 pt-8 pl-5">
+      <div className="flex w-full flex-col gap-3 pt-8 pl-5 sm:mb-0 mb-8">
         <h1 className="font-display text-2xl font-bold">Session Feedback</h1>
         <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
         <p>

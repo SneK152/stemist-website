@@ -41,7 +41,7 @@ export default function Banner({
       </div>
       <div
         className={`${
-          full ? "h-screen" : "h-[50vh] mb-10"
+          full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
         } object-cover relative`}
         ref={titleDiv}
       >
@@ -62,7 +62,7 @@ export default function Banner({
             {children}
           </div>
           {full && (
-            <div className="absolute h-full w-full flex justify-center items-end">
+            <div className="absolute h-[80vh] sm:h-full w-full flex justify-center items-end">
               <button className="animate-bounce" onClick={scrollTo(href)}>
                 <ChevronDownIcon className="h-12" />
               </button>

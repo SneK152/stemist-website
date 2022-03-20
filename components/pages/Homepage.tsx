@@ -1,6 +1,4 @@
-import { useRef } from "react";
 import HomeColumn from "./HomeColumn";
-import { useCountUp } from "react-countup";
 import Counter from "./Counter";
 
 export default function Homepage() {
@@ -17,7 +15,7 @@ export default function Homepage() {
         </div>
       </div>
       <div
-        className="flex sm:flex-row w-3/4 m-auto flex-col gap-3 scroll-mt-20"
+        className="flex sm:flex-row sm:w-3/4 w-11/12 m-auto flex-col gap-3 scroll-mt-20"
         id="learnmore"
       >
         <HomeColumn
