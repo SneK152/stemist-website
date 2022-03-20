@@ -9,10 +9,19 @@ export default function PrizesSection() {
 
   return (
     <Section name="Prizes">
-      <div {...useAos()} className="odd:bg-gray-400 even:bg-gray-200 rounded-lg">
-        {PrizeList.map((props, k) => (
-          <Prize {...props} key={k} />
-        ))}
+      <div {...useAos()} className="text-black odd:bg-gray-400 even:bg-gray-200 rounded-lg w-full">
+        <table className="w-full">
+          <thead className="w-full">
+            <th> </th> 
+            <th>Position</th>
+            <th>Prizes</th>
+          </thead>
+          <tbody color="black" className="w-full">
+            {PrizeList.map((props, k) => (
+              <Prize {...props} key={k} />
+            ))}
+          </tbody>
+        </table>
       </div>
     </Section>
   );
