@@ -10,8 +10,7 @@ import UnavailableBanner from "@/components/layout/UnavailableBanner";
 export default function App() {
   return (
     <Container title="STEMist Hacks" noNav>
-      <UnavailableBanner title="Coming Soon" />
-      {/* <Header />
+      <Header />
       <div>
         <Section name="Hackathon Agenda" id="agenda">
           <Schedule />
@@ -23,7 +22,7 @@ export default function App() {
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
-      </div> */}
+      </div>
     </Container>
   );
 }
