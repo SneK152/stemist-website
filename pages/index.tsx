@@ -20,7 +20,7 @@ export default function Index(props: HomeProps) {
   return (
     <Container title="Home">
       <div className="-mt-16">
-        <Banner image="/homepage.webp" full>
+        <Banner image="/homepage.png" full>
           <p className="font-writing px-5 text-xs sm:px-10 sm:text-lg md:px-20">
             <span className="block italic">&quot;{props.quote}&quot;</span>
             <span className="block">-{props.author}</span>

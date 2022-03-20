@@ -17,7 +17,7 @@ function Description() {
 export default function Header() {
   return (
     <div className="-mt-16">
-      <Banner image="/homepage.webp" full href="#agenda">
+      <Banner image="/homepage.png" full href="#agenda">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
         </h1>
