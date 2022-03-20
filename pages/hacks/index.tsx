@@ -5,13 +5,15 @@ import Section from "@/components/hacks/layout/Section";
 import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
+import UnavailableBanner from "@/components/layout/UnavailableBanner";
 
 export default function App() {
   return (
-    <Container title="STEMist Hacks">
-      <Header />
+    <Container title="STEMist Hacks" noNav>
+      <UnavailableBanner title="Coming Soon" />
+      {/* <Header />
       <div>
-        <Section name="Hackathon Agenda">
+        <Section name="Hackathon Agenda" id="agenda">
           <Schedule />
         </Section>
         <PrizesSection />
@@ -21,7 +23,7 @@ export default function App() {
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
-      </div>
+      </div> */}
     </Container>
   );
 }

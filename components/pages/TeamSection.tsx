@@ -28,7 +28,7 @@ export default function TeamSection(props: TeamSectionProps) {
             key={index}
             className={`${
               props.large ? "h-48" : "h-36"
-            } w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg shadow-white/25`}
+            } w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25`}
           >
             <props.component person={person} />
           </div>

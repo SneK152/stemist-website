@@ -1,5 +1,5 @@
-import Person from "../types/Person";
-import people from "./team";
+import Person from "../../types/Person";
+import people from "../team";
 
 const staff: Person[] = people
   .filter((person) => person.officerRoles)

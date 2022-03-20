@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Link from "next/link";
+import Button from "@/components/layout/Button";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -135,11 +136,13 @@ export default function Signup() {
           <>
             <span className="block">Student Signups</span>
             <div className="flex sm:mt-4 justify-center">
-              <Link href="/programs">
-                <a className="bg-blue-500 sm:text-lg text-xs font-sans font-normal py-2 px-3 shadow-md rounded-lg hover:rounded-2xl hover:shadow-xl transition-all duration-300">
-                  Programs
-                </a>
-              </Link>
+              <Button
+                href="/programs"
+                backgroundColor="bg-blue-500"
+                textColor="text-white font-normal text-xs sm:text-lg font-sans"
+              >
+                Programs
+              </Button>
             </div>
           </>
         }
@@ -147,7 +150,7 @@ export default function Signup() {
       <div className="max-w-3xl px-5 m-auto">
         <form onSubmit={formik.handleSubmit}>
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
-            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-gray-50 p-5 shadow-lg">
+            <div className="w-full space-y-3 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
               <MemoedInputField
                 labelName="Email address"
                 name="email"

@@ -1,4 +1,5 @@
 import PageLinks from "@/lib/types/PageLinks";
+import { ArrowRightIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
 export default function LinkPage({
@@ -18,9 +19,16 @@ export default function LinkPage({
     >
       {links.map((link, i) => (
         <Link href={link.external ? link.url : `${base}${link.url}`} key={i}>
-          <a className="bg-white bg-opacity-[.15] backdrop-blur-sm rounded-lg p-3 hover:rounded-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg w-full h-48 flex flex-col justify-center items-center">
+          <a
+            className="bg-white bg-opacity-[.15] backdrop-blur-sm rounded-lg p-3 hover:rounded-xl hover:-translate-y-2 transition-all duration-300 shadow-lg w-full h-48 flex flex-col justify-center items-center"
+            {...(link.external ? { rel: "noreferrer noopener" } : {})}
+            target={link.external ? "_blank" : "_self"}
+          >
             <h1 className="font-display text-2xl font-medium text-center">
-              {link.name}
+              {link.name}{" "}
+              {link.external && (
+                <ArrowRightIcon className="h-6 w-6 inline-block transform -rotate-45" />
+              )}
             </h1>
             <p className="text-center text-lg max-w-[40ch]">
               {link.description}

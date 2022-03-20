@@ -1,11 +1,11 @@
 import { memo, useMemo, useState } from "react";
-import staff from "@/lib/data/staff";
-import teachers from "@/lib/data/teachers";
+import staff from "@/lib/data/team/staff";
+import teachers from "@/lib/data/team/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
-import directors from "@/lib/data/directors";
-import officers from "@/lib/data/officers";
+import directors from "@/lib/data/team/directors";
+import officers from "@/lib/data/team/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
@@ -99,7 +99,7 @@ export default function Team(props: TeamProps) {
           {memoedTeachers.map((person, index) => (
             <div
               key={index}
-              className="h-36 w-full overflow-hidden rounded-xl bg-white p-3 shadow-lg shadow-white/25"
+              className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25"
             >
               <MemoedPerson person={person} />
             </div>
@@ -124,7 +124,7 @@ function FilterButton({
     <button
       className={`${
         active ? "bg-blue-200" : "bg-gray-200"
-      } font-writing m-1 rounded-2xl py-1 px-3 text-lg shadow-lg shadow-white/20 text-black`}
+      } font-writing m-1 rounded-lg py-1 px-3 text-lg shadow-lg shadow-white/20 text-black`}
       onClick={onClick}
     >
       {name}

@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
 import Plyr from "plyr-react";
-import { ArrowRightIcon } from "@heroicons/react/outline";
+import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
+import useWindowSize from "@/lib/hooks/useWindowSize";
 
 export default function Hero() {
   const el = useRef<HTMLDivElement>(null);
@@ -22,6 +23,8 @@ export default function Hero() {
     }
   }, [isVisible]);
 
+  const { width } = useWindowSize();
+
   return (
     <div
       className="flex flex-col sm:flex-row my-5 bg-black bg-opacity-70 scroll-mt-20"
@@ -38,7 +41,11 @@ export default function Hero() {
           </h1>
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
-            <ArrowRightIcon className="h-4 w-4 inline-block" />
+            {width! > 640 ? (
+              <ArrowRightIcon className="h-4 w-4 inline-block" />
+            ) : (
+              <ArrowDownIcon className="h-4 w-4 inline-block" />
+            )}
           </p>
         </div>
       </div>
