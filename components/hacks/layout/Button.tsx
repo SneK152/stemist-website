@@ -7,6 +7,7 @@ interface ButtonProps {
   start?: string;
   end?: string;
   type?: "button" | "reset" | "submit";
+  onClick: Function;
 }
 
 export default function Button({
@@ -15,6 +16,7 @@ export default function Button({
   start = "#4C514A",
   end = "#6C3B2A",
   type = "button",
+  onClick,
 }: ButtonProps) {
   const [pressed, setPressed] = useState(false);
 
@@ -31,7 +33,10 @@ export default function Button({
       }}
       className={className}
       onMouseDown={() => setPressed(true)}
-      onClick={() => setPressed(false)}
+      onClick={() => {
+        onClick();
+        setPressed(false);
+      }}
       onMouseLeave={() => setPressed(false)}
       type={type}
     >
