@@ -189,7 +189,7 @@ const people: ExtendedPerson[] = [
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Rohan Fernandes"),
     description:
-      "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+      "Rising Freshman at Lynbrook Highschool, Likes to code and watch the NBA in his spare time and likes math.",
     qualifications: [
       "Multiple time Hackathon winner",
       "USACO member",
