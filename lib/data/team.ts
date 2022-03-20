@@ -294,7 +294,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Kasturi Kirubaharan",
-    teacherRoles: ["Math", "Biology"],
+    teacherRoles: ["Biology"],
     image: resolveTeamImage("Kasturi Kirubaharan"),
     description:
       "Kasturi Kirubaharan is a freshman at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
