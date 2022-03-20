@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Open Sans", "sans"],
+      sans: ["Raleway", "sans"],
       display: ["Exo", "sans"],
       writing: ["Raleway", "sans"],
       mono: ["Source Code Pro", "monospace"],
