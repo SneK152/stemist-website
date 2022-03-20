@@ -16,7 +16,7 @@ export default function Prize({ name, prizes, presented_by }: PrizeProps) {
     <>
       {width! > 640 && (
         <div className="col-span-1">
-          <GiftIcon className="h-12 rounded-full shadow-md p-2 group-hover:shadow-lg group-hover:border group-hover:border-gray-400 transition-all" />
+          <GiftIcon className="h-12 p-2 rounded-full shadow-md group-hover:shadow-lg group-hover:border-2 group-hover:border-gray-400 transition-all" />
         </div>
       )}
       <div className="sm:col-span-5 col-span-6 font-semibold">{name}</div>
