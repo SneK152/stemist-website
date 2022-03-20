@@ -98,7 +98,10 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                     {navLinks.map((navLink, i) => (
                       <>
                         {navLink.customProps?.main && (
-                          <div className="h-2"></div>
+                          <div
+                            className="h-2"
+                            key={`${navLink.name}${i}`}
+                          ></div>
                         )}
                         <Disclosure.Button key={i} className="block">
                           <NavLink

@@ -32,7 +32,7 @@ export default function Index(props: HomeProps) {
             Learn STEM hands-on. Engage with fellow students. Have the
             experience of a lifetime.
           </span>
-          <div className="flex justify-center gap-3 text-lg whitespace-nowrap">
+          <div className="sm:flex justify-center gap-3 text-lg whitespace-nowrap grid">
             <Button
               onClick={scrollTo("#learnmore")}
               backgroundColor="bg-white bg-opacity-10"
