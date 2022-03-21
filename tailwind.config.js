@@ -19,8 +19,7 @@ module.exports = {
     fontFamily: {
       sans: ["Raleway", "sans"],
       display: ["Exo", "sans"],
-      writing: ["Raleway", "sans"],
-      mono: ["Source Code Pro", "monospace"],
+      writing: ["Arimo", "sans"],
     },
   },
   plugins: [require("@tailwindcss/forms")],
