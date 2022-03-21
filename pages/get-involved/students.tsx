@@ -131,22 +131,7 @@ export default function Signup() {
   });
   return (
     <Container title="Students">
-      <PartialBanner
-        title={
-          <>
-            <span className="block">Student Signups</span>
-            <div className="flex sm:mt-4 justify-center">
-              <Button
-                href="/programs"
-                backgroundColor="bg-blue-500"
-                textColor="text-white font-normal text-xs sm:text-lg font-sans"
-              >
-                Programs
-              </Button>
-            </div>
-          </>
-        }
-      />
+      <PartialBanner title="Student Signups" />
       <div className="max-w-3xl px-5 m-auto">
         <form onSubmit={formik.handleSubmit}>
           <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
