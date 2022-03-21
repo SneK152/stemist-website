@@ -14,22 +14,33 @@ export const navLinks: NavLink[] = [
   {
     name: "About Us",
     link: "/about",
+    dropdown: true,
+    dropdownItems: [
+      {
+        name: "Who We Are",
+        link: "/about",
+      },
+      {
+        name: "Meet the Team",
+        link: "/team",
+      },
+    ],
   },
   {
-    name: "Meet the Team",
-    link: "/team",
-  },
-  {
-    name: "Get Involved",
+    name: "Reach Out",
     link: "/get-involved",
     dropdown: true,
     dropdownItems: [
       {
-        name: "Students",
+        name: "Contact Us",
+        link: "/contact",
+      },
+      {
+        name: "Student Signups",
         link: "/get-involved/students",
       },
       {
-        name: "Applications",
+        name: "Team Applications",
         link: "https://bit.ly/stemistapps",
       },
       {
@@ -37,10 +48,6 @@ export const navLinks: NavLink[] = [
         link: "/get-involved/donate",
       },
     ],
-  },
-  {
-    name: "Contact Us",
-    link: "/contact",
   },
   {
     name: "Projects",

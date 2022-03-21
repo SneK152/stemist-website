@@ -73,11 +73,7 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                         {navLink.name}
                       </NavLink>
                     ) : (
-                      <DropdownLink
-                        href={navLink.link}
-                        key={index}
-                        title={navLink.name}
-                      >
+                      <DropdownLink key={index} title={navLink.name}>
                         {navLink.dropdownItems?.map((item, i) => (
                           <DropdownButton href={item.link} key={i}>
                             {item.name}
@@ -103,16 +99,40 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                             key={`${navLink.name}${i}`}
                           ></div>
                         )}
-                        <Disclosure.Button key={i} className="block">
-                          <NavLink
-                            href={navLink.link}
-                            {...(navLink.customProps
-                              ? navLink.customProps
-                              : {})}
-                          >
-                            {navLink.name}
-                          </NavLink>
-                        </Disclosure.Button>
+                        {!navLink.dropdown ? (
+                          <Disclosure.Button key={i} className="block">
+                            <NavLink
+                              href={navLink.link}
+                              {...(navLink.customProps
+                                ? navLink.customProps
+                                : {})}
+                            >
+                              {navLink.name}
+                            </NavLink>
+                          </Disclosure.Button>
+                        ) : (
+                          // <DropdownLink key={i} title={navLink.name} mobile>
+                          //   {navLink.dropdownItems?.map((item, i) => (
+                          //     <Disclosure.Button key={i} className="block">
+                          //       <DropdownButton href={item.link}>
+                          //         {item.name}
+                          //       </DropdownButton>
+                          //     </Disclosure.Button>
+                          //   ))}
+                          // </DropdownLink>
+                          <Disclosure>
+                            <Disclosure.Button className="block font-writing text-lg underline-offset-1 whitespace-nowrap">
+                              {navLink.name}
+                            </Disclosure.Button>
+                            <Disclosure.Panel>
+                              {navLink.dropdownItems?.map((item, i) => (
+                                <Link key={i} href={item.link}>
+                                  <a className="block ml-3">{item.name}</a>
+                                </Link>
+                              ))}
+                            </Disclosure.Panel>
+                          </Disclosure>
+                        )}
                       </>
                     ))}
                   </ul>
