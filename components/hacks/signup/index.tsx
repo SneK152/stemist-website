@@ -5,6 +5,7 @@ import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Button from "@/components/hacks/layout/Button";
 import InputField from "@/components/forms/InputField";
+import { hackathonNavLinks } from "@/lib/data/navLinks";
 
 export default function SignupForm() {
   const formik = useFormik<Signup>({
@@ -15,7 +16,12 @@ export default function SignupForm() {
     validationSchema,
   });
   return (
-    <Container title="STEMist Hacks Signups">
+    <Container
+      title="STEMist Hacks Signups"
+      noNav
+      navTitle="STEMist Hacks"
+      customNav={hackathonNavLinks}
+    >
       <PartialBanner title="Hackathon Signups" />
       <div className="p-8 text-center justify-center">
         <div className="justify-center shadow-md p-5">

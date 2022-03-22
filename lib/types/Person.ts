@@ -4,6 +4,12 @@ type Person<T = string> = {
   description: string;
   image: string;
   qualifications?: string[];
+  curriculumRoles?: {
+    cs?: string[];
+    math?: string[];
+    bio?: string[];
+    phys?: string[];
+  };
 };
 
 export interface ExtendedPerson {
@@ -14,6 +20,12 @@ export interface ExtendedPerson {
   officerRoles?: string[];
   teamRoles?: TeamRole[];
   qualifications?: string[];
+  curriculumRoles?: {
+    cs?: string[];
+    math?: string[];
+    bio?: string[];
+    phys?: string[];
+  };
 }
 
 export type TeacherSubject =

@@ -5,11 +5,16 @@ import Section from "@/components/hacks/layout/Section";
 import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
-import UnavailableBanner from "@/components/layout/UnavailableBanner";
+import { hackathonNavLinks } from "@/lib/data/navLinks";
 
 export default function App() {
   return (
-    <Container title="STEMist Hacks" noNav>
+    <Container
+      title="STEMist Hacks"
+      noNav
+      navTitle="STEMist Hacks"
+      customNav={hackathonNavLinks}
+    >
       <Header />
       <div>
         <Section name="Hackathon Agenda" id="agenda">

@@ -8,7 +8,15 @@ import DropdownButton from "./DropdownButton";
 import Button from "../layout/Button";
 import { navLinks } from "@/lib/data/navLinks";
 
-export default function Navbar({ noNav = false }: { noNav: boolean }) {
+export default function Navbar({
+  noNav,
+  navTitle,
+  customNav,
+}: {
+  noNav: boolean;
+  navTitle: string;
+  customNav: any[];
+}) {
   return (
     <Disclosure
       as="nav"
@@ -30,6 +38,7 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
                         width={166.6}
                         className="filter invert select-none"
                       />
+                      <span className="font-semibold">{navTitle}</span>
                     </div>
                   </h1>
                 </a>
@@ -49,15 +58,24 @@ export default function Navbar({ noNav = false }: { noNav: boolean }) {
               </Disclosure.Button>
             )}
             {noNav && (
-              <div className="mt-auto mb-auto">
-                <Button
-                  href="/"
-                  backgroundColor="bg-blue-500 bg-opacity-80 hover:bg-opacity-90 flex items-center gap-1"
-                  textColor="text-white font-display text-lg"
-                >
-                  <ArrowLeftIcon className="h-5 w-5 inline-block" />
-                  Back to STEMist
-                </Button>
+              <div className="mt-auto mb-auto flex">
+                <ul className="inline-flex gap-4">
+                  {customNav.map((navLink, index) => (
+                    <NavLink key={index} href={navLink.link}>
+                      {navLink.name}
+                    </NavLink>
+                  ))}
+                  <NavLink
+                    main
+                    href="/"
+                    color="blue-500 bg-opacity-80 hover:bg-opacity-90"
+                    textColor="white"
+                    className="flex items-center gap-1"
+                  >
+                    <ArrowLeftIcon className="h-5 w-5 inline-block" />
+                    Back to STEMist
+                  </NavLink>
+                </ul>
               </div>
             )}
             {!noNav && (

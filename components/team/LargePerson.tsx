@@ -41,7 +41,7 @@ export default function LargePerson(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="hidden max-w-[40ch] font-sans text-lg transition-all group-hover:block">
+          <p className="hidden max-w-[40ch] font-writing text-lg transition-all group-hover:block">
             {props.person.description}
           </p>
         )}

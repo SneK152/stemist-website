@@ -1,15 +1,18 @@
 import Banner from "@/components/layout/Banner";
+import Button from "@/components/layout/Button";
 import Link from "next/link";
 
 function Description() {
   return (
-    <div className="py-3 px-2">
-      <p className="mb-8 text-lg font-semibold">From June 24th to June 26th</p>
-      <Link href={"/hacks/signup"}>
-        <a className="text-white bg-blue-400 mt-5 py-3 px-6 rounded-lg font-semibold">
-          Sign up for STEMist Hacks
-        </a>
-      </Link>
+    <div className="px-2">
+      <p className="mb-2 text-2xl font-semibold">From June 24th to June 26th</p>
+      <Button
+        href="/hacks/signup"
+        backgroundColor="bg-blue-500"
+        textColor="text-white"
+      >
+        Sign up!
+      </Button>
     </div>
   );
 }

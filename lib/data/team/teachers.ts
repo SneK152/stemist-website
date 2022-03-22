@@ -10,6 +10,7 @@ const teachers: Person<TeacherSubject>[] = people
     image: person.image,
     positions: person.teacherRoles!,
     qualifications: person.qualifications,
+    curriculumRoles: person.curriculumRoles,
   }));
 
 export default teachers;

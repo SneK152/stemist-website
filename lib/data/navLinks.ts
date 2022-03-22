@@ -81,3 +81,14 @@ export const navLinks: NavLink[] = [
     },
   },
 ];
+
+export const hackathonNavLinks: NavLink[] = [
+  {
+    name: "Home",
+    link: "/hacks",
+  },
+  {
+    name: "Signup",
+    link: "/hacks/signup",
+  },
+];

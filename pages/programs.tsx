@@ -4,7 +4,7 @@ import Card from "@/components/pages/Card";
 import Person from "@/components/team/Person";
 import teachers from "@/lib/data/team/teachers";
 import P from "@/lib/types/Person";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
@@ -48,7 +48,11 @@ export default function Programs() {
     <Container title="Programs">
       <PartialBanner title="Programs" />
       <div className="sm:mx-5 flex-col flex gap-5">
-        <SubjectCard title="Computer Science" teachers={csTeachers}>
+        <SubjectCard
+          title="Computer Science"
+          teachers={csTeachers}
+          roleName="cs"
+        >
           STEMist{"'"}s Computer Science course is highly rigorous, teaching
           languages Python, C++, and Javascript. Our thorough lessons don{"'"}t
           just teach students to memorize languages, but help them understand
@@ -64,7 +68,11 @@ export default function Programs() {
           Our curriculum helps students learn to like computer science, and
           helps them get interested in pursuing it further.
         </SubjectCard>
-        <SubjectCard title="Physical Science" teachers={physTeachers}>
+        <SubjectCard
+          title="Physical Science"
+          teachers={physTeachers}
+          roleName="phys"
+        >
           STEMist{"'"}s Physical Science covers a broad range of topics in
           Physics, Chemistry, Earth Science, and Astronomy. Presentations will
           go over the basics over the topic and show applications of the
@@ -79,7 +87,7 @@ export default function Programs() {
           with all have past experience and willing to answer questions where
           students have lapses in understanding.
         </SubjectCard>
-        <SubjectCard title="Biology" teachers={bioTeachers}>
+        <SubjectCard title="Biology" teachers={bioTeachers} roleName="bio">
           STEMist{"'"}s Intro to Biology is a comprehensive course which not
           only provides an introduction to the knowledge required for science
           competitions (including USABO, Science Bowl and Science Olympiad), but
@@ -93,7 +101,11 @@ export default function Programs() {
           etc.). They also have more than two years of teaching experience, and
           are always happy to answer questions or explain tricky topics.
         </SubjectCard>
-        <SubjectCard title="Mathematics" teachers={mathTeachers}>
+        <SubjectCard
+          title="Mathematics"
+          teachers={mathTeachers}
+          roleName="math"
+        >
           Welcome to the math branch of STEMist! Here, you
           {"'"}ll dive into the fundamentals of competition math. Our curriculum
           has been carefully designed to cover the 4 main topics that appear in
@@ -116,6 +128,7 @@ interface SubjectCardProps {
   teachers: P[];
   children: ReactNode;
   title: string;
+  roleName: "cs" | "bio" | "phys" | "math";
 }
 
 function SubjectCard(props: SubjectCardProps) {
@@ -129,7 +142,10 @@ function SubjectCard(props: SubjectCardProps) {
             key={index}
             className={`h-32 w-full overflow-hidden rounded-lg bg-white shadow p-3`}
           >
-            <Person person={t} />
+            <Person
+              person={t}
+              roles={t.curriculumRoles ? t.curriculumRoles[props.roleName] : []}
+            />
           </div>
         ))}
       </div>

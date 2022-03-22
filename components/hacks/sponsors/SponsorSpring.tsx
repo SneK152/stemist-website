@@ -18,20 +18,12 @@ export default function SpringSponsor({
   color: string;
 }) {
   const [isHovered, setHovered] = useState<boolean>(false);
-  const { containerSpring, descriptionSpring } = useSponsorSpring(
-    isHovered,
-    color
-  );
-
-  const imageSpring = useSpring({
-    scale: isHovered ? 1 : 1.5,
-    translateY: isHovered ? 0 : 16,
-  });
+  const { containerSpring } = useSponsorSpring(isHovered, color);
 
   return (
     <animated.a
       style={containerSpring}
-      className={`text-black p-3 hover:shadow-xl rounded-md ${
+      className={`text-black p-3 hover:shadow-xl rounded-md relative ${
         isHovered ? "z-50" : "z-30"
       }`}
       href={url}
@@ -40,21 +32,14 @@ export default function SpringSponsor({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      <animated.img
+      <img
         alt={name}
-        style={imageSpring}
         src={`/sponsors/${name.toLowerCase()}_logo.png`}
         className={`${className} h-28 m-auto`}
       />
-      {/* <animated.p
-        style={descriptionSpring}
-        className="text-2xl pt-2 font-semibold text-center capitalize"
-      >
-        {name}
-      </animated.p> */}
-      <animated.img
-        style={descriptionSpring}
+      <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}
+        alt="Sponsor image"
       />
     </animated.a>
   );
