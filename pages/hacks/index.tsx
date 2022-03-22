@@ -17,7 +17,7 @@ export default function App() {
     >
       <Header />
       <div>
-        <Section name="About our Hackathon">
+        <Section name="About our Hackathon" id="about">
           <div className="bg-gray-100 text-black p-5 rounded-lg shadow-md">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
             mollitia facere aperiam natus voluptatum porro excepturi, amet atque
@@ -45,7 +45,7 @@ export default function App() {
             repudiandae ex harum tenetur incidunt recusandae.
           </div>
         </Section>
-        <Section name="Hackathon Agenda" id="agenda">
+        <Section name="Hackathon Agenda">
           <Schedule />
         </Section>
         <PrizesSection />

@@ -8,7 +8,7 @@ const people: ExtendedPerson[] = [
     teacherRoles: ["Biology", "Physical Science"],
     curriculumRoles: {
       phys: ["Basic Chemistry", "Chemical Reactions", "Earth Science"],
-      bio: [],
+      bio: ["Chemistry of Life"],
     },
     image: resolveTeamImage("Steve Yang"),
     description:
@@ -42,7 +42,7 @@ const people: ExtendedPerson[] = [
     name: "Johnathan Kao",
     teacherRoles: ["Biology"],
     curriculumRoles: {
-      bio: [],
+      bio: ["Evolution", "Ethology"],
     },
     image: resolveTeamImage("Johnathan Kao"),
     description:
@@ -77,7 +77,7 @@ const people: ExtendedPerson[] = [
     teacherRoles: ["Biology Lead", "Math", "Biology"],
     curriculumRoles: {
       math: ["Algebra", "Geometry"],
-      bio: ["Lead"],
+      bio: ["Lead", "Molecular and Cell Biology", "Genetics"],
     },
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
@@ -187,7 +187,7 @@ const people: ExtendedPerson[] = [
     teamRoles: ["HR"],
     teacherRoles: ["Biology"],
     curriculumRoles: {
-      bio: [],
+      bio: ["Botany"],
     },
     image: resolveTeamImage("Harold Wang"),
     description:
@@ -286,10 +286,9 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teacherRoles: ["Physical Science", "Biology", "Intern"],
+    teacherRoles: ["Physical Science", "Intern"],
     curriculumRoles: {
       phys: ["Intern", "Basic Chemistry"],
-      bio: ["Intern"],
     },
     image: resolveTeamImage("Chaas Kandregula"),
     description:
@@ -312,7 +311,7 @@ const people: ExtendedPerson[] = [
     officerRoles: ["WEBS Lead"],
     teacherRoles: ["Biology"],
     curriculumRoles: {
-      bio: [],
+      bio: ["Ecology"],
     },
     image: resolveTeamImage("Aryan Patnaik"),
     description:
@@ -327,7 +326,7 @@ const people: ExtendedPerson[] = [
     teacherRoles: ["Physical Science", "Biology"],
     curriculumRoles: {
       phys: ["Acids and Bases"],
-      bio: [],
+      bio: ["Anatomy and Physiology"],
     },
     image: resolveTeamImage("Kiara Ha"),
     description:
@@ -343,7 +342,7 @@ const people: ExtendedPerson[] = [
     name: "Kasturi Kirubaharan",
     teacherRoles: ["Biology"],
     curriculumRoles: {
-      bio: [],
+      bio: ["Molecular and Cell Biology", "Genetics"],
     },
     image: resolveTeamImage("Kasturi Kirubaharan"),
     description:

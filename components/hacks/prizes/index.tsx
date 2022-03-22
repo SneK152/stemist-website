@@ -28,12 +28,7 @@ export default function PrizesSection() {
         <hr className="border-black" />
         <div className="w-full">
           {PrizeList.map((props, k) => (
-            <div
-              key={k}
-              className="grid grid-cols-12 items-center group py-1 transition-all px-5 hover:bg-gray-300"
-            >
-              <Prize {...props} />
-            </div>
+            <Prize {...props} key={k} />
           ))}
         </div>
       </div>

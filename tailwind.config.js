@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./components/**/*.{js,jsx,ts,tsx}",
@@ -6,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          DEFAULT: "#464F51",
-        },
+        neutral: colors.neutral,
+        gray: colors.gray,
         white: "#FFFCFF",
         black: "#0c001c",
         green: {
