@@ -1,15 +1,17 @@
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
-import dynamic from "next/dynamic";
-
-const Section = dynamic(() => import("@/components/layout/AboutSection"));
+import Section from "@/components/layout/AboutSection";
 
 export default function About() {
   return (
-    <Container title="About Us">
-      <PartialBanner title="About Our Organization" />
+    <Container title="Who We Are">
+      <PartialBanner title="Who We Are" />
       <div className="m-3 p-3 text-black space-y-3">
-        <Section title="Who We Are" image="/about/teamphoto.jpg">
+        <Section
+          title="About our Organization"
+          image="/about/teamphoto.jpg"
+          caption="Our amazing officer team. Front row left to right: Selena, Steve, Justin. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
+        >
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
           qualified instructors whom are skilled in areas such as Algebra,
@@ -17,7 +19,11 @@ export default function About() {
           has been teaching kids STEM since 2020 and hopes to continue for much
           longer.
         </Section>
-        <Section title="Our Mission" image="/homepage.png">
+        <Section
+          title="Our Mission"
+          image="/homepage.png"
+          caption="Some of our online Zoom sessions"
+        >
           We founded STEMist originally because we believed that learning was a
           gift that all students should have access to. We believe that kids
           should have access to proper education, especially in the
@@ -27,7 +33,11 @@ export default function About() {
           into STEM and build a foundation that they can rely on for years to
           come.
         </Section>
-        <Section title="Curriculum and Format" image="/about/slides.png">
+        <Section
+          title="Curriculum and Format"
+          image="/about/slides.png"
+          caption="Some of our past presentations"
+        >
           Our team of instructors have vast amounts of experience in their
           respective STEM subjects, and they work hard to compile information in
           the form of engaging lectures every session. Our spring and winter

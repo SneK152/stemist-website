@@ -25,13 +25,13 @@ export type TeacherSubject =
   | "Math"
   | "Biology"
   | "Computer Science"
-  | "All";
+  | "All"
+  | "Intern";
 
 export type TeamRole =
   | "Outreach"
   | "HR"
   | "Intern"
-  | "Instructor"
   | "Graphic Design"
   | "Operations"
   | "Technology"

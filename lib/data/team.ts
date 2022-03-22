@@ -4,7 +4,7 @@ import { ExtendedPerson } from "../types/Person";
 const people: ExtendedPerson[] = [
   {
     name: "Steve Yang",
-    officerRoles: ["President", "Instructor"],
+    officerRoles: ["President"],
     teacherRoles: ["Biology", "Physical Science"],
     image: resolveTeamImage("Steve Yang"),
     description:
@@ -20,7 +20,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Vice President", "Director of HR", "Instructor", "WEBS"],
+    officerRoles: ["Vice President", "Director of HR", "WEBS"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Justin Zhang"),
     description:
@@ -33,7 +33,6 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Johnathan Kao",
-    officerRoles: ["Director of PR and Outreach", "Instructor"],
     teacherRoles: ["Biology"],
     image: resolveTeamImage("Johnathan Kao"),
     description:
@@ -47,13 +46,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Snehil Kakani",
-    officerRoles: [
-      "Director of Technology",
-      "Website",
-      "Instructor",
-      "WEBS",
-      "Events",
-    ],
+    officerRoles: ["Director of Technology", "Website", "WEBS", "Events"],
     teacherRoles: ["Computer Science"],
     image: resolveTeamImage("Snehil Kakani"),
     description:
@@ -141,7 +134,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Jianyu Wang",
-    teamRoles: ["HR", "Instructor"],
+    teamRoles: ["HR"],
     teacherRoles: ["Physical Science"],
     image: resolveTeamImage("Jianyu Wang"),
     description:
@@ -149,7 +142,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    teamRoles: ["Outreach", "Instructor", "WEBS"],
+    officerRoles: ["Director of PR and Outreach", "WEBS"],
     teacherRoles: ["Math"],
     image: resolveTeamImage("Isaac Sun"),
     description:
@@ -162,7 +155,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Harold Wang",
-    teamRoles: ["Instructor", "HR"],
+    teamRoles: ["HR"],
     teacherRoles: ["Biology"],
     image: resolveTeamImage("Harold Wang"),
     description:
@@ -185,8 +178,8 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Rohan Fernandes",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
-    teacherRoles: ["Computer Science"],
+    teamRoles: ["Intern", "Technology", "Website", "Events"],
+    teacherRoles: ["Computer Science", "Intern"],
     image: resolveTeamImage("Rohan Fernandes"),
     description:
       "Rising Freshman at Lynbrook Highschool, Likes to code and watch the NBA in his spare time and likes math.",
@@ -225,8 +218,8 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sarvesh Madullapalli",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
-    teacherRoles: ["Computer Science"],
+    teamRoles: ["Intern", "Technology", "Events"],
+    teacherRoles: ["Computer Science", "Intern"],
     image: resolveTeamImage("Sarvesh Madullapalli"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
@@ -239,8 +232,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Vyaas Baskar",
-    teamRoles: ["Intern", "Instructor"],
-    teacherRoles: ["Physical Science"],
+    teacherRoles: ["Physical Science", "Intern"],
     image: resolveTeamImage("Vyaas Baskar"),
     description:
       "Vyaas Baskar is an 8th grader at Miller Middle school, who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
@@ -253,8 +245,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teamRoles: ["Intern", "Instructor"],
-    teacherRoles: ["Physical Science", "Biology"],
+    teacherRoles: ["Physical Science", "Biology", "Intern"],
     image: resolveTeamImage("Chaas Kandregula"),
     description:
       "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
