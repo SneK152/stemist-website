@@ -19,7 +19,7 @@ export default function Section({
           <h1 className="text-5xl font-bold py-2">{title}</h1>
           <p className="text-2xl font-sans text-clip">{children}</p>
         </div>
-        <div className="lg:col-span-3 col-span-8 relative gap-1 flex flex-col">
+        <div className="lg:col-span-3 col-span-8 relative gap-1 flex flex-col border border-black border-opacity-50">
           <div className="h-80 lg:h-full w-full relative">
             <Image
               src={image}
