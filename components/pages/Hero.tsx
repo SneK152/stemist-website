@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
-import Plyr from "plyr-react";
 import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import useWindowSize from "@/lib/hooks/useWindowSize";
 
@@ -50,12 +49,11 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full">
-        <Plyr
-          source={{
-            sources: [{ src: "/homepage.mp4" }],
-            type: "video",
-            poster: "/logo.svg",
-          }}
+        <video
+          src="/homepage.mp4"
+          poster="/logo.svg"
+          controls
+          className="bg-white aspect-video h-full w-full"
         />
       </div>
     </div>
