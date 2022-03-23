@@ -1,5 +1,6 @@
 import { Menu } from "@headlessui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 
 export default function DropdownButton({
@@ -9,14 +10,17 @@ export default function DropdownButton({
   href: string;
   children: ReactNode;
 }) {
+  const router = useRouter();
   return (
     <Menu.Item>
-      {({ active }) => (
+      {() => (
         <Link href={href}>
           <a
             className={`${
-              active ? "bg-gray-100 text-gray-900" : "text-gray-700"
-            } block px-4 py-2 text-base font-semibold z-50`}
+              router.pathname === href
+                ? "bg-neutral-200 font-semibold"
+                : "hover:bg-neutral-100"
+            } block px-4 py-2 text-base font-medium text-black z-50`}
           >
             {children}
           </a>

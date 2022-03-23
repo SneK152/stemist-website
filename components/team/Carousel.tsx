@@ -1,4 +1,4 @@
-import { useSpringCarousel } from "react-spring-carousel-js";
+import { useSpringCarousel } from "react-spring-carousel";
 import CarouselPerson from "./CarouselPerson";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import TeamProps from "@/lib/types/TeamProps";
@@ -7,6 +7,7 @@ export default function Carousel(props: TeamProps) {
   const { carouselFragment, slideToPrevItem, slideToNextItem } =
     useSpringCarousel({
       withLoop: true,
+      disableGestures: true,
       items: props.data.map((person) => ({
         id: person.name,
         renderItem: <CarouselPerson person={person} />,

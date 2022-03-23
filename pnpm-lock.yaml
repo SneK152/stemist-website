@@ -24,7 +24,7 @@ specifiers:
   react-countup: ^6.1.1
   react-dom: ^17.0.2
   react-spring: ^9.4.3
-  react-spring-carousel-js: ^1.9.30
+  react-spring-carousel: ^2.0.12
   sharp: ^0.30.1
   tailwindcss: ^3.0.8
   typed.js: ^2.0.12
@@ -45,7 +45,7 @@ dependencies:
   react-countup: 6.1.1_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-spring: 9.4.3_react-dom@17.0.2+react@17.0.2
-  react-spring-carousel-js: 1.9.30_react-dom@17.0.2+react@17.0.2
+  react-spring-carousel: 2.0.12_c0a81359237ba411aa6fff46fc362b78
   sharp: 0.30.1
   typed.js: 2.0.12
   typescript: 4.5.5
@@ -1237,16 +1237,16 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@use-gesture/core/10.2.6:
-    resolution: {integrity: sha512-+GpVSEoCLv1OeZ+qgAV+tLUKit1LKgKO3PgIiEVZqNr4A/YTXzbC1unlThpfzwyj5Dx22UxHDh0UfgRrQ9Lb1w==}
+  /@use-gesture/core/10.2.10:
+    resolution: {integrity: sha512-7WFIDfeTB+7RBui8YOrB2xbgmvMsvaCDjyzrdvECKkgOpIynNSdhlLXjiFuqQMtnK71IL/9WNZNU0P8xuaLuUQ==}
     dev: false
 
-  /@use-gesture/react/10.2.6_react@17.0.2:
-    resolution: {integrity: sha512-s/QDhKvsQVaSNq1ljRBMR2PWRkOp9BmoI+kgZR1DsHUSp5XDORtU33D5TZfJoWnD5X3E9SmePikPl66dDaEeDA==}
+  /@use-gesture/react/10.2.10_react@17.0.2:
+    resolution: {integrity: sha512-znChnKVAMMGXD9J7fCKN686BJNBlUJaRtCu92IQXVWdcxg4MqS0SgsBslGnTWXTlsHVkg5zcGjKYf7qYkOf0Rg==}
     peerDependencies:
       react: '>= 16.8.0'
     dependencies:
-      '@use-gesture/core': 10.2.6
+      '@use-gesture/core': 10.2.10
       react: 17.0.2
     dev: false
 
@@ -3676,26 +3676,19 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-spring-carousel-js/1.9.30_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-8zbNtKAEJEq1ZKuLoU8DCfthfEX4l0d6TxlZUtR5M3JWGaROuQO1V9WekDFBFxiiK5W0W93CQ7AQxBSef/qP6g==}
+  /react-spring-carousel/2.0.12_c0a81359237ba411aa6fff46fc362b78:
+    resolution: {integrity: sha512-+YQ8Ee/Y1UDBc5TPGxltLF7UHH0qnv7XddQ0w2NHNNBG6jjPGKa2t7cR/mPwKD1eaVB8T9XipkmGN+wlESRhTg==}
     peerDependencies:
       react: ^17.0.2
       react-dom: ^17.0.2
+      react-spring: ^9.4.2
     dependencies:
-      '@use-gesture/react': 10.2.6_react@17.0.2
+      '@use-gesture/react': 10.2.10_react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-spring: 9.4.3_react-dom@17.0.2+react@17.0.2
-      rxjs: 6.6.7
+      rxjs: 7.5.5
       screenfull: 5.2.0
-    transitivePeerDependencies:
-      - '@react-three/fiber'
-      - konva
-      - react-konva
-      - react-native
-      - react-zdog
-      - three
-      - zdog
     dev: false
 
   /react-spring/9.4.3_react-dom@17.0.2+react@17.0.2:
@@ -3831,11 +3824,10 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /rxjs/6.6.7:
-    resolution: {integrity: sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==}
-    engines: {npm: '>=2.0.0'}
+  /rxjs/7.5.5:
+    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
     dependencies:
-      tslib: 1.14.1
+      tslib: 2.3.1
     dev: false
 
   /safe-buffer/5.1.2:
