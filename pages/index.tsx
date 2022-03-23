@@ -28,14 +28,14 @@ export default function Index(props: HomeProps) {
           <h1 className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20">
             STEMist Education
           </h1>
-          <span className="block mb-4 font-sans text-lg text-left sm:text-2xl px-5 sm:px-10 md:px-20">
+          <span className="block sm:mb-4 font-sans text-lg text-left sm:text-2xl px-5 sm:px-10 md:px-20">
             Learn STEM hands-on.
             <br />
             Engage with fellow students.
             <br />
             Have the experience of a lifetime.
           </span>
-          <div className="sm:flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap grid">
+          <div className="flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
             <Button
               onClick={scrollTo("#learnmore")}
               backgroundColor="bg-white bg-opacity-10"
