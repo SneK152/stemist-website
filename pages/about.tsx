@@ -21,7 +21,7 @@ export default function About() {
         </Section>
         <Section
           title="Our Mission"
-          image="/homepage.png"
+          image="/homepage.jpeg"
           caption="Some of our online Zoom sessions"
         >
           We founded STEMist originally because we believed that learning was a

@@ -9,7 +9,7 @@
 
 html {
   background-image: url("/loop.webp");
-  @apply bg-contain text-white;
+  @apply bg-contain text-white bg-fixed;
 }
 body {
   @apply overflow-x-hidden;

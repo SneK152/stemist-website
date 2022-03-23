@@ -12,6 +12,7 @@ import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
 import { navLinks } from "@/lib/data/navLinks";
 import { useRouter } from "next/router";
+import { Fragment, useEffect, useState } from "react";
 
 export default function Navbar({
   noNav,
@@ -23,13 +24,24 @@ export default function Navbar({
   customNav: any[];
 }) {
   const router = useRouter();
+  const [colorChange, setColorChange] = useState(false);
+
+  useEffect(() => {
+    const callback = () => {
+      if (window.scrollY >= 80) {
+        setColorChange(true);
+      } else {
+        setColorChange(false);
+      }
+    };
+    window.addEventListener("scroll", callback);
+    return () => window.removeEventListener("scroll", callback);
+  }, []);
+
   return (
-    <Disclosure
-      as="nav"
-      className="fixed z-50 w-full bg-black bg-opacity-100 px-2 sm:px-6 lg:px-6"
-    >
+    <Disclosure as={Fragment}>
       {({ open }) => (
-        <>
+        <nav className={`fixed z-50 w-full bg-black px-2 sm:px-6 lg:px-6`}>
           <div className="flex justify-between py-3 font-writing">
             <div>
               <Link href="/">
@@ -133,7 +145,7 @@ export default function Navbar({
                             </NavLink>
                           </Disclosure.Button>
                         ) : (
-                          <Disclosure>
+                          <Disclosure key={i}>
                             <Disclosure.Button className="block font-writing text-lg underline-offset-1 whitespace-nowrap">
                               {navLink.name}{" "}
                               <ChevronDownIcon
@@ -167,7 +179,7 @@ export default function Navbar({
               </div>
             )}
           </Disclosure.Panel>
-        </>
+        </nav>
       )}
     </Disclosure>
   );

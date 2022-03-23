@@ -55,7 +55,7 @@ export default function Container({
       </Head>
       <Navbar noNav={noNav} navTitle={navTitle} customNav={customNav} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden pt-14 min-h-[calc(100vh-12rem)]">
+        <div className="mx-auto overflow-hidden pt-20 min-h-[calc(100vh-12rem)]">
           {children}
         </div>
       </div>
