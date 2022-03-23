@@ -1,11 +1,17 @@
 import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
-import { ArrowLeftIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import {
+  ArrowLeftIcon,
+  ChevronDownIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
 import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
 import { navLinks } from "@/lib/data/navLinks";
+import { useRouter } from "next/router";
 
 export default function Navbar({
   noNav,
@@ -16,6 +22,7 @@ export default function Navbar({
   navTitle: string;
   customNav: any[];
 }) {
+  const router = useRouter();
   return (
     <Disclosure
       as="nav"
@@ -23,7 +30,7 @@ export default function Navbar({
     >
       {({ open }) => (
         <>
-          <div className="flex justify-between py-3">
+          <div className="flex justify-between py-3 font-writing">
             <div>
               <Link href="/">
                 <a>
@@ -105,38 +112,57 @@ export default function Navbar({
             {() => (
               <div className="absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 bg-black bg-opacity-100 object-cover px-2 pt-2 pb-3">
                 <ul>
-                  {(customNav ? customNav : navLinks).map((navLink, i) => (
-                    <>
-                      {navLink.customProps?.main && (
-                        <div className="h-2" key={`${navLink.name}${i}`}></div>
-                      )}
-                      {!navLink.dropdown ? (
-                        <Disclosure.Button key={i} className="block">
-                          <NavLink
-                            href={navLink.link}
-                            {...(navLink.customProps
-                              ? navLink.customProps
-                              : {})}
-                          >
-                            {navLink.name}
-                          </NavLink>
-                        </Disclosure.Button>
-                      ) : (
-                        <Disclosure>
-                          <Disclosure.Button className="block font-writing text-lg underline-offset-1 whitespace-nowrap">
-                            {navLink.name}
+                  {(customNav.length ? customNav : navLinks).map(
+                    (navLink, i) => (
+                      <>
+                        {navLink.customProps?.main && (
+                          <div
+                            className="h-2"
+                            key={`${navLink.name}${i}`}
+                          ></div>
+                        )}
+                        {!navLink.dropdown ? (
+                          <Disclosure.Button key={i} className="block">
+                            <NavLink
+                              href={navLink.link}
+                              {...(navLink.customProps
+                                ? navLink.customProps
+                                : {})}
+                            >
+                              {navLink.name}
+                            </NavLink>
                           </Disclosure.Button>
-                          <Disclosure.Panel>
-                            {navLink.dropdownItems?.map((item: any, i: any) => (
-                              <Link key={i} href={item.link}>
-                                <a className="block ml-3">{item.name}</a>
-                              </Link>
-                            ))}
-                          </Disclosure.Panel>
-                        </Disclosure>
-                      )}
-                    </>
-                  ))}
+                        ) : (
+                          <Disclosure>
+                            <Disclosure.Button className="block font-writing text-lg underline-offset-1 whitespace-nowrap">
+                              {navLink.name}{" "}
+                              <ChevronDownIcon
+                                className="w-4 h-4 inline-block"
+                                aria-hidden="true"
+                              />
+                            </Disclosure.Button>
+                            <Disclosure.Panel>
+                              {navLink.dropdownItems?.map(
+                                (item: any, i: any) => (
+                                  <Link key={i} href={item.link}>
+                                    <a
+                                      className={`block ml-3 font-writing ${
+                                        router.pathname === item.link
+                                          ? "font-extrabold"
+                                          : "font-normal"
+                                      }`}
+                                    >
+                                      {item.name}
+                                    </a>
+                                  </Link>
+                                )
+                              )}
+                            </Disclosure.Panel>
+                          </Disclosure>
+                        )}
+                      </>
+                    )
+                  )}
                 </ul>
               </div>
             )}

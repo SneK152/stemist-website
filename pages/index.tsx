@@ -51,7 +51,6 @@ export default function Index(props: HomeProps) {
               href="/hacks"
               backgroundColor="bg-gray-900 bg-opacity-90"
               textColor="text-white"
-              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
