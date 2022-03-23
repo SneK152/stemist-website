@@ -41,7 +41,9 @@ export default function Navbar({
   return (
     <Disclosure as={Fragment}>
       {({ open }) => (
-        <nav className={`fixed z-50 w-full bg-black px-2 sm:px-6 lg:px-6`}>
+        <nav
+          className={`fixed z-50 w-full bg-black px-2 sm:px-6 lg:px-6 shadow-md shadow-black/50`}
+        >
           <div className="flex justify-between py-3 font-writing">
             <div>
               <Link href="/">
