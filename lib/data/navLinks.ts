@@ -18,11 +18,11 @@ export const navLinks: NavLink[] = [
     dropdownItems: [
       {
         name: "Who We Are",
-        link: "/about",
+        link: "/about/who-we-are",
       },
       {
         name: "Meet the Team",
-        link: "/team",
+        link: "/about/team",
       },
     ],
   },
@@ -33,11 +33,7 @@ export const navLinks: NavLink[] = [
     dropdownItems: [
       {
         name: "Contact Us",
-        link: "/contact",
-      },
-      {
-        name: "Student Signups",
-        link: "/get-involved/students",
+        link: "/get-involved/contact",
       },
       {
         name: "Team Applications",
@@ -74,8 +70,8 @@ export const navLinks: NavLink[] = [
     },
   },
   {
-    name: "Student Signups",
-    link: "/get-involved/students",
+    name: "Sign Up",
+    link: "/signup",
     customProps: {
       main: true,
     },

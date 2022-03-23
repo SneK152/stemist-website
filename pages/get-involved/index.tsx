@@ -5,10 +5,9 @@ import PageLinks from "@/lib/types/PageLinks";
 
 const involvedLinks: PageLinks[] = [
   {
-    name: "Student Signups",
-    description:
-      "If you are a student that is interested in joining our class, go here!",
-    url: "/students",
+    name: "Contact Us",
+    description: "If you want to reach out to us, go here!",
+    url: "/contact",
   },
   {
     name: "Team Applications",
