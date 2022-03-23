@@ -20,19 +20,22 @@ export default function Index(props: HomeProps) {
   return (
     <Container title="Home">
       <div className="-mt-20">
-        <Banner image="/homepage.jpeg" full>
-          <p className="font-writing px-5 text-xs sm:px-10 sm:text-lg md:px-20">
+        <Banner image="/homepage.jpg" full>
+          <p className="font-writing px-5 text-xs text-left sm:px-10 sm:text-lg md:px-20">
             <span className="block italic">&quot;{props.quote}&quot;</span>
             <span className="block">-{props.author}</span>
           </p>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl">
+          <h1 className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20">
             STEMist Education
           </h1>
-          <span className="block font-sans text-xs max-w-[45ch] mx-auto sm:text-xl">
-            Learn STEM hands-on. Engage with fellow students. Have the
-            experience of a lifetime.
+          <span className="block mb-4 font-sans text-lg text-left sm:text-2xl px-5 sm:px-10 md:px-20">
+            Learn STEM hands-on.
+            <br />
+            Engage with fellow students.
+            <br />
+            Have the experience of a lifetime.
           </span>
-          <div className="sm:flex justify-center gap-3 text-lg whitespace-nowrap grid">
+          <div className="sm:flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap grid">
             <Button
               onClick={scrollTo("#learnmore")}
               backgroundColor="bg-white bg-opacity-10"

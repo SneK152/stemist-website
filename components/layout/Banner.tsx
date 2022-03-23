@@ -55,19 +55,21 @@ export default function Banner({
         />
         <div className="flex h-full w-full items-center justify-center">
           <div
-            className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
-              full ? "" : "sm:w-3/4 sm:h-56"
+            className={`absolute py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 bg-opacity-20 bg-black text-center text-white backdrop-blur-md z-20 ${
+              full
+                ? "h-full w-full"
+                : "border-white border-2 h-auto w-3/4 sm:w-3/4 sm:h-56"
             }`}
           >
             {children}
+            {full && (
+              <div className="absolute h-[80vh] sm:h-full w-full flex justify-center items-end -z-[1]">
+                <button className="animate-bounce" onClick={scrollTo(href)}>
+                  <ChevronDownIcon className="h-12" />
+                </button>
+              </div>
+            )}
           </div>
-          {full && (
-            <div className="absolute h-[80vh] sm:h-full w-full flex justify-center items-end">
-              <button className="animate-bounce" onClick={scrollTo(href)}>
-                <ChevronDownIcon className="h-12" />
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </>
