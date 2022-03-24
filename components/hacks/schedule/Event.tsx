@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { animated } from "react-spring";
-import useEventSpring from "./EventSpring";
 import useTime from "./Time";
 interface ExportProps {
   name: string;
