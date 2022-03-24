@@ -4,12 +4,13 @@ import teachers from "@/lib/data/team/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
-import directors from "@/lib/data/team/directors";
+// import directors from "@/lib/data/team/directors";
 import officers from "@/lib/data/team/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
+import useWindowSize from "@/lib/hooks/useWindowSize";
 
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
@@ -58,6 +59,8 @@ export default function Team(props: TeamProps) {
     () => getSortedTeachers(activeTeacher),
     [activeTeacher]
   );
+
+  const { width } = useWindowSize();
   return (
     <Container title="Our Team">
       <PartialBanner title="Meet the Team" />
@@ -100,6 +103,19 @@ export default function Team(props: TeamProps) {
             <div
               key={index}
               className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25"
+              data-aos="fade-up"
+              {...{
+                "data-aos-delay":
+                  (index %
+                    (width! < 640
+                      ? 1
+                      : width! < 1024
+                      ? 2
+                      : width! < 1280
+                      ? 3
+                      : 4)) *
+                  100,
+              }}
             >
               <MemoedPerson person={person} />
             </div>

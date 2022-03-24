@@ -21,19 +21,45 @@ export default function Index(props: HomeProps) {
     <Container title="Home">
       <div className="-mt-20">
         <Banner image="/homepage.jpg" full>
-          <p className="font-writing px-5 text-xs text-left sm:px-10 sm:text-lg md:px-20">
+          <p
+            className="font-writing px-5 text-xs text-left sm:px-10 sm:text-lg md:px-20"
+            data-aos="fade-down"
+            data-aos-delay={1000}
+            data-aos-duration={600}
+          >
             <span className="block italic">&quot;{props.quote}&quot;</span>
             <span className="block">-{props.author}</span>
           </p>
-          <h1 className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20">
+          <h1
+            className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
+            data-aos="fade-right"
+            data-aos-delay={0}
+            data-aos-duration={600}
+          >
             STEMist Education
           </h1>
           <span className="block sm:mb-4 font-sans text-lg text-left sm:text-2xl px-5 sm:px-10 md:px-20">
-            Learn STEM hands-on.
-            <br />
-            Engage with fellow students.
-            <br />
-            Have the experience of a lifetime.
+            <div
+              data-aos="fade-up"
+              data-aos-delay={400}
+              data-aos-duration={600}
+            >
+              Learn STEM hands-on.
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay={600}
+              data-aos-duration={600}
+            >
+              Engage with fellow students.
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay={800}
+              data-aos-duration={600}
+            >
+              Have the experience of a lifetime.
+            </div>
           </span>
           <div className="flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
             <Button
