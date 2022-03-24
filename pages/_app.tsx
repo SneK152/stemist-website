@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
       AOS.refresh();
     };
     AOS.init({
-      // once: true,
+      once: true,
       easing: "ease-in-out-sine",
       duration: 400,
     });
