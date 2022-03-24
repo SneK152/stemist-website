@@ -21,7 +21,7 @@ export default function Index(props: HomeProps) {
     <Container title="Home">
       <div className="-mt-20">
         <Banner image="/homepage.jpg" full>
-          <p
+          {/* <p
             className="font-writing px-5 text-xs text-left sm:px-10 sm:text-lg md:px-20"
             data-aos="fade-down"
             data-aos-delay={1000}
@@ -29,7 +29,7 @@ export default function Index(props: HomeProps) {
           >
             <span className="block italic">&quot;{props.quote}&quot;</span>
             <span className="block">-{props.author}</span>
-          </p>
+          </p> */}
           <h1
             className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
