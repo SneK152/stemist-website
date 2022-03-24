@@ -3,7 +3,7 @@ import { useSpring } from "react-spring";
 export default function useEventSpring(state: boolean) {
   let dropped = useSpring({
     opacity: state ? 1 : 0,
-    borderTop: state ? "0.05px solid" : "0rem solid",
+    borderTop: state ? "0.05px solid black" : "0.05px solid transparent",
   });
 
   let mainContainer = useSpring({
