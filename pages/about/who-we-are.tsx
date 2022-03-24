@@ -9,8 +9,8 @@ export default function About() {
       <div className="m-3 p-3 text-black space-y-3">
         <Section
           title="About our Organization"
-          image="/about/teamphoto.jpg"
-          caption="Our amazing officer team. Front row left to right: Selena, Steve, Justin. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
+          image="/about/newteamphoto.png"
+          caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
         >
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
