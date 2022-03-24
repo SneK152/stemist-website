@@ -14,7 +14,7 @@ export default function Carousel(props: TeamProps) {
       })),
     });
   return (
-    <div className="bg-white bg-opacity-95 relative rounded-lg mb-10 text-black">
+    <div className="bg-white bg-opacity-95 relative rounded-lg mb-10 overflow-hidden text-black">
       <button
         className="absolute h-full top-0 bottom-0 left-0 z-[1] flex items-center justify-center sm:w-[5%] w-[10%] p-0 text-black text-center bg-none border-0"
         onClick={slideToPrevItem}

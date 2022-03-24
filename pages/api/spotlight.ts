@@ -8,15 +8,19 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const spotlight = await db.collection("spotlight").doc("spotlight").get();
-  const file: Person[] = spotlight.data()!.spotlight;
-  let samp: Person = sample(teachers)!;
-  let isFound = file.some((element) => element.name === samp.name);
-  while (isFound) {
-    samp = sample(teachers)!;
-    isFound = file.some((element) => element.name === samp.name);
+  const file: Person[] = [];
+  for (let i = 0; i < 4; i++) {
+    let samp: Person = sample(teachers)!;
+    while (samp.qualifications?.length! < 4) {
+      samp = sample(teachers)!;
+    }
+    let isFound = file.some((element) => element.name === samp.name);
+    while (isFound) {
+      samp = sample(teachers)!;
+      isFound = file.some((element) => element.name === samp.name);
+    }
+    file.push(samp);
   }
-  file.unshift(samp);
   await db.collection("spotlight").doc("spotlight").set({
     spotlight: file,
   });
