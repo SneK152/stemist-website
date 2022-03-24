@@ -9,7 +9,11 @@ export default function Homepage() {
           By the Numbers
         </h1>
         <div className="sm:grid-cols-3 gap-3 grid-cols-1 sm:w-3/4 w-full m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
-          <Counter number={2} text="years enriching students with STEM" />
+          <Counter
+            number={45}
+            symbol="+"
+            text="interactive presentations created"
+          />
           <Counter number={6} text="intriguing workshops hosted" />
           <Counter number={30} symbol="+" text="highly qualified teachers" />
         </div>
