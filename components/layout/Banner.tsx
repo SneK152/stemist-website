@@ -63,7 +63,7 @@ export default function Banner({
           >
             {children}
             {full && (
-              <div className="absolute h-[80vh] sm:h-full w-full flex justify-center items-end -z-[1]">
+              <div className="absolute h-[80vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1]">
                 <button className="animate-bounce" onClick={scrollTo(href)}>
                   <ChevronDownIcon className="h-12" />
                 </button>

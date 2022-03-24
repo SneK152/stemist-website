@@ -52,7 +52,7 @@ export default function Index(props: HomeProps) {
             </Button>
             <Button
               href="/hacks"
-              backgroundColor="bg-gray-900 bg-opacity-90"
+              backgroundColor="bg-green bg-opacity-80"
               textColor="text-white"
             >
               Hackathon{" "}
