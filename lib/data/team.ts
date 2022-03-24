@@ -194,8 +194,6 @@ const people: ExtendedPerson[] = [
       "Multiple time Hackathon winner",
       "USACO member",
       "Three years of CS Competitive Coding",
-      "Knowledgable in NodeJS and React",
-      "CA Synposis Science Fair Participant"
     ],
   },
   {
