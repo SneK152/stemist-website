@@ -66,6 +66,7 @@ const people: ExtendedPerson[] = [
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
     qualifications: [
       "Full Stack Web Developer",
+      "Synopsys Science Fair Engineering Participant",
       "Advanced Javascript and React Developer",
       "Skilled with Python and Node.js",
     ],
@@ -222,6 +223,8 @@ const people: ExtendedPerson[] = [
       "Multiple time Hackathon winner",
       "USACO member",
       "Three years of CS Competitive Coding",
+      "Knowledgable in NodeJS and React",
+      "CA Synposis Science Fair Participant",
     ],
   },
   {
