@@ -16,7 +16,7 @@ interface HomeProps {
   author: string;
 }
 
-export default function Index(props: HomeProps) {
+export default function Index(/*props: HomeProps*/) {
   return (
     <Container title="Home">
       <div className="-mt-20">
@@ -93,12 +93,12 @@ export default function Index(props: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const quote = sample(quotes)!;
-  return {
-    props: {
-      quote: quote.quote,
-      author: quote.author,
-    },
-  };
-};
+// export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+//   const quote = sample(quotes)!;
+//   return {
+//     props: {
+//       quote: quote.quote,
+//       author: quote.author,
+//     },
+//   };
+// };
