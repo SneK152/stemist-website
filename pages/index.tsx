@@ -1,35 +1,16 @@
 import Banner from "@/components/layout/Banner";
 import Container from "@/components/layout/Container";
-import quotes from "@/lib/data/quotes";
 import { scrollTo } from "@/lib/scroll";
-import { sample } from "lodash";
-import { GetServerSideProps } from "next";
-import dynamic from "next/dynamic";
 import Hero from "@/components/pages/Hero";
 import { ArrowRightIcon } from "@heroicons/react/outline";
 import Button from "@/components/layout/Button";
+import Homepage from "@/components/pages/Homepage";
 
-const Homepage = dynamic(() => import("@/components/pages/Homepage"));
-
-interface HomeProps {
-  quote: string;
-  author: string;
-}
-
-export default function Index(/*props: HomeProps*/) {
+export default function Index() {
   return (
     <Container title="Home">
       <div className="-mt-20">
         <Banner image="/homepage.jpg" full>
-          {/* <p
-            className="font-writing px-5 text-xs text-left sm:px-10 sm:text-lg md:px-20"
-            data-aos="fade-down"
-            data-aos-delay={1000}
-            data-aos-duration={600}
-          >
-            <span className="block italic">&quot;{props.quote}&quot;</span>
-            <span className="block">-{props.author}</span>
-          </p> */}
           <h1
             className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
@@ -92,13 +73,3 @@ export default function Index(/*props: HomeProps*/) {
     </Container>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-//   const quote = sample(quotes)!;
-//   return {
-//     props: {
-//       quote: quote.quote,
-//       author: quote.author,
-//     },
-//   };
-// };

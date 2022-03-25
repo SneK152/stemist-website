@@ -79,6 +79,42 @@ const quotes: Quote[] = [
       "Education is not a matter of getting facts and sowing them within brains, but that it is an attitude of mind that you teach children to find out for themselves.",
     author: "Sir David Attenborough",
   },
+  {
+    quote: "Nothing in life is to be feared. It is only to be understood.",
+    author: "Marie Curie",
+  },
+  {
+    quote:
+      "Being a scientist is like being in love with every aspect of the universe.",
+    author: "Mayim Bialik",
+  },
+  {
+    quote: "Solve a real problem and the world is yours.",
+    author: "Aaron Patzer",
+  },
+  {
+    quote:
+      "The beautiful thing about learning is that no one can take it away from you.",
+    author: "BB King",
+  },
+  {
+    quote: "Curiosity is the wick in the candle of learning.",
+    author: "William Arthur Ward",
+  },
+  {
+    quote: "An investment in knowledge pays the best interest.",
+    author: "Benjamin Franklin",
+  },
+  {
+    quote:
+      "You can teach a student a lesson for a day, but if you teach him to learn by creating curiosity, he will continue the learning process as long as he lives.",
+    author: "Clay Bedford",
+  },
+  {
+    quote:
+      "Education is the most powerful weapon which you can use to change the world.",
+    author: "Nelson Mandela",
+  },
 ];
 
 export default quotes;
