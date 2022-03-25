@@ -103,19 +103,6 @@ export default function Team(props: TeamProps) {
             <div
               key={index}
               className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25"
-              data-aos="fade-up"
-              {...{
-                "data-aos-delay":
-                  (index %
-                    (width! < 640
-                      ? 1
-                      : width! < 1024
-                      ? 2
-                      : width! < 1280
-                      ? 3
-                      : 4)) *
-                  100,
-              }}
             >
               <MemoedPerson person={person} />
             </div>

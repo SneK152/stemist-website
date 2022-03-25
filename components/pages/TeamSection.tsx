@@ -31,27 +31,6 @@ export default function TeamSection(props: TeamSectionProps) {
             className={`${
               props.large ? "h-48" : "h-36"
             } w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25`}
-            data-aos="fade-up"
-            {...{
-              "data-aos-delay":
-                (index %
-                  (props.large
-                    ? width! < 640
-                      ? 1
-                      : width! < 1024
-                      ? 1
-                      : width! < 1280
-                      ? 2
-                      : 3
-                    : width! < 640
-                    ? 1
-                    : width! < 1024
-                    ? 2
-                    : width! < 1280
-                    ? 3
-                    : 4)) *
-                100,
-            }}
           >
             <props.component person={person} />
           </div>
