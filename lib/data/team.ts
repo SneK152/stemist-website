@@ -24,7 +24,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Vice President", "Director of HR", "WEBS"],
+    officerRoles: ["Vice President", "Director of Events", "WEBS"],
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
       cs: ["C++"],
@@ -169,7 +169,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    officerRoles: ["Director of PR and Outreach", "WEBS"],
+    teamRoles: ["WEBS"],
     teacherRoles: ["Math"],
     curriculumRoles: {
       math: ["Advanced Algebra"],
@@ -204,7 +204,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Nathan Ye",
-    teamRoles: ["Outreach", "Events", "WEBS"],
+    officerRoles: ["Director of PR Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Nathan Ye"),
     description:
       "Nathan is a high school freshman that loves coding and football.",
@@ -236,7 +236,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    teamRoles: ["Outreach", "HR", "Events", "WEBS"],
+    officerRoles: ["Director of HR", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
