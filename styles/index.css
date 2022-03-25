@@ -8,7 +8,7 @@
 }
 
 html {
-  background-image: url("/loop.webp");
+  background-image: url("/loop.png");
   @apply bg-contain text-white;
 }
 body {
