@@ -2,19 +2,24 @@ import { PrizeProps } from "./prize";
 
 let prizes: PrizeProps[] = [
   {
-    prizes: "MacBook Pro",
-    name: "1st Place",
-    presented_by: "STEMist Education",
+    prizes: "Lifetime Taskade Subscription",
+    name: "Top Three",
+    presented_by: "Taskade",
   },
   {
-    prizes: "Nintendo Switch",
-    name: "2nd Place",
-    presented_by: "STEMist Education",
+    prizes: "Five Year Taskade Subscription",
+    name: "10x",
+    presented_by: "Taskade",
   },
   {
-    prizes: "AirPod Pros",
-    name: "3rd Place",
-    presented_by: "STEMist Education",
+    prizes: "Echo3D Business Plan Subscription",
+    name: "10x",
+    presented_by: "Echo3D",
+  },
+  {
+    prizes: "Desmos T-Shirt and Socks",
+    name: "Raffle",
+    presented_by: "Desmos",
   },
 ];
 
