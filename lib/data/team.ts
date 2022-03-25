@@ -362,8 +362,10 @@ const people: ExtendedPerson[] = [
     curriculumRoles: {
       math: ["Counting"],
     },
-    image: resolveTeamImage(),
-    description: "",
+    image: resolveTeamImage("Idhant Rao"),
+    description:
+      "Idhant Rao is a math instructor who loves to study various fields of mathematics. He loves to discuss all things math.",
+    qualifications: ["Former Math Kangaroo Participant"],
   },
 ];
 export default people;
