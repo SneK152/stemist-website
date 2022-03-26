@@ -39,9 +39,23 @@ export default function Index() {
               data-aos-delay={800}
               data-aos-duration={600}
             >
-              Have the experience of a lifetime.
+              Achieve your Goals!
             </div>
           </span>
+          <div className="flex px-5 sm:px-10 md:px-20 gap-10">
+            <div className="flex flex-col">
+              <h2 className="uppercase font-writing text-sm text-left">
+                upcoming event
+              </h2>
+              <h1 className="font-sans text-xl">April Workshop</h1>
+            </div>
+            <div className="flex flex-col">
+              <h2 className="uppercase font-writing text-sm text-left">
+                upcoming event
+              </h2>
+              <h1 className="font-sans text-xl">STEMist Hacks</h1>
+            </div>
+          </div>
           <div className="flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
             <Button
               onClick={scrollTo("#learnmore")}
