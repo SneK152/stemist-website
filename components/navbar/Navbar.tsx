@@ -24,20 +24,6 @@ export default function Navbar({
   customNav: any[];
 }) {
   const router = useRouter();
-  const [colorChange, setColorChange] = useState(false);
-
-  useEffect(() => {
-    const callback = () => {
-      if (window.scrollY >= 80) {
-        setColorChange(true);
-      } else {
-        setColorChange(false);
-      }
-    };
-    window.addEventListener("scroll", callback);
-    return () => window.removeEventListener("scroll", callback);
-  }, []);
-
   return (
     <Disclosure as={Fragment}>
       {({ open }) => (
@@ -109,7 +95,11 @@ export default function Navbar({
                         {navLink.name}
                       </NavLink>
                     ) : (
-                      <DropdownLink key={index} title={navLink.name}>
+                      <DropdownLink
+                        key={index}
+                        link={navLink.link}
+                        title={navLink.name}
+                      >
                         {navLink.dropdownItems?.map((item, i) => (
                           <DropdownButton href={item.link} key={i}>
                             {item.name}
@@ -148,7 +138,13 @@ export default function Navbar({
                           </Disclosure.Button>
                         ) : (
                           <Disclosure key={i}>
-                            <Disclosure.Button className="block font-writing text-lg underline-offset-1 whitespace-nowrap">
+                            <Disclosure.Button
+                              className={`block font-writing text-lg underline-offset-1 whitespace-nowrap ${
+                                router.pathname.includes(navLink.link)
+                                  ? "font-bold"
+                                  : "font-normal"
+                              }`}
+                            >
                               {navLink.name}{" "}
                               <ChevronDownIcon
                                 className="w-4 h-4 inline-block"

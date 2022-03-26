@@ -4,7 +4,7 @@ import Counter from "./Counter";
 export default function Homepage() {
   return (
     <>
-      <div className="my-10 bg-black bg-opacity-60">
+      <div className="my-10">
         <h1 className="text-center text-4xl font-display font-bold">
           By the Numbers
         </h1>

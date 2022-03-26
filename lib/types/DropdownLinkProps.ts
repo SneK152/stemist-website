@@ -3,4 +3,5 @@ export default interface DropdownLinkProps
   children: React.ReactNode;
   title: string;
   mobile?: boolean;
+  link: string;
 }

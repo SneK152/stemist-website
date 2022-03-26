@@ -8,7 +8,7 @@ export default function HomeColumn(props: {
   buttonLink: string;
 }) {
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-white bg-opacity-10 backdrop-blur-sm p-5 rounded-lg">
+    <div className="flex flex-col justify-center items-center w-full bg-black bg-opacity-60 backdrop-blur-sm p-5 rounded-lg">
       <h1 className="font-display font-bold text-3xl">{props.title}</h1>
       <br />
       <p className="mb-5 text-center">{props.description}</p>

@@ -102,7 +102,7 @@ export default function Team(props: TeamProps) {
           {memoedTeachers.map((person, index) => (
             <div
               key={index}
-              className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-white/25"
+              className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-black/25"
             >
               <MemoedPerson person={person} />
             </div>

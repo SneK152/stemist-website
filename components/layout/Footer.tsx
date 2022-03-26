@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="bg-black bg-opacity-70 w-full h-48 absolute">
+    <div className="w-full h-48 absolute">
       <div className="flex flex-row justify-center h-full max-w-[60rem] m-auto">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl font-display font-bold">STEMist Education</h1>

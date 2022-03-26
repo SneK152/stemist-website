@@ -1,21 +1,29 @@
 import DropdownLinkProps from "@/lib/types/DropdownLinkProps";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 import { Fragment, ReactNode } from "react";
 
 function Dropdown({
   children,
   title,
   mobile,
+  link,
 }: {
   children: ReactNode;
   title: string;
   mobile?: boolean;
+  link: string;
 }) {
+  const router = useRouter();
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex h-full">
-        <Menu.Button className="w-full rounded-md text-lg flex items-center font-medium focus:outline-none z-0">
+        <Menu.Button
+          className={`w-full rounded-md text-lg flex items-center  ${
+            router.pathname.includes(link) ? "font-bold" : "font-normal"
+          } focus:outline-none z-0`}
+        >
           {title}
           <ChevronDownIcon
             className="w-6 h-6 inline-block"
@@ -48,10 +56,11 @@ export default function DropdownLink({
   children,
   title,
   mobile,
+  link,
 }: DropdownLinkProps) {
   return (
     <div className="flex">
-      <Dropdown title={title} mobile={mobile}>
+      <Dropdown title={title} link={link} mobile={mobile}>
         {children}
       </Dropdown>
     </div>
