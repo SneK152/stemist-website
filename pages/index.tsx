@@ -47,7 +47,7 @@ export default function Index() {
               <h2 className="uppercase font-writing text-sm text-left">
                 upcoming event
               </h2>
-              <h1 className="font-sans text-xl">April Workshop</h1>
+              <h1 className="font-sans text-xl">Intro to STEM Workshop</h1>
             </div>
             <div className="flex flex-col">
               <h2 className="uppercase font-writing text-sm text-left">
