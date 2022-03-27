@@ -12,36 +12,19 @@ import PartialBanner from "@/components/layout/PartialBanner";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
-const gradeOptions = [
+const personOptions = ["Select", "Student", "Parent", "Other"];
+const hearaboutOptions = [
   "Select",
-  "Kindergarten",
-  "1st",
-  "2nd",
-  "3rd",
-  "4th",
-  "5th",
-  "6th",
-  "7th",
-  "8th",
-  "9th",
+  "Returning student",
+  "Recommended by a friend",
+  "By a teacher/school email",
+  "Search engine",
+  "Facebook",
+  "Instagram",
+  "Other",
 ];
-const csOptions = [
-  "None",
-  "Machine Learning",
-  "Web Development",
-  "Object Oriented Programming",
-  "C++",
-  "Java",
-  "Python",
-];
-const mathOptions = [
-  "None",
-  "Combinatorics",
-  "Number Theory",
-  "Probability",
-  "Gauss",
-];
-const scienceOptions = ["None", "Biology", "Physics", "Chemistry", "Ecology"];
+
+const gradeOptions = ["Select", "3rd", "4th", "5th", "6th", "7th", "8th"];
 
 const MemoedInputField = memo(InputField);
 const MemoedSelectField = memo(SelectInputField);
@@ -55,44 +38,46 @@ export default function Signup() {
 
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      email: "",
-      lastName: "",
-      questions: "",
-      grade: "",
-      mathInterest: "",
-      scienceInterest: "",
-      csInterest: "",
+      person: "",
       hearabout: "",
+      fullName: "",
+      grade: "",
+      email: "",
+      school: "",
+      discord: "",
+      friends: "",
+      parentName: "",
+      parentEmail: "",
     },
     onSubmit: async (values, helpers) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
       if (localEmail !== values.email) {
         const formdata = new URLSearchParams();
-        formdata.append("entry.1706588819", values.firstName); // First Name
-        formdata.append("entry.1968315359", values.lastName); // Last Name
-        formdata.append("entry.1473300010", values.email); // Email
-        formdata.append("entry.1047485006", values.questions); // Questions
-        formdata.append("entry.890098326", values.grade); // Grade
-        if (!values.mathInterest.includes("None"))
-          formdata.append("entry.1204481380", values.mathInterest); // Math
-        if (!values.scienceInterest.includes("None"))
-          formdata.append("entry.818035415", values.scienceInterest); // Science
-        if (!values.csInterest.includes("None"))
-          formdata.append("entry.2000892328", values.csInterest); // CS
-        formdata.append("entry.1723165048", values.hearabout);
+        // formdata.append("entry.1706588819", values.firstName); // First Name
+        // formdata.append("entry.1968315359", values.lastName); // Last Name
+        // formdata.append("entry.1473300010", values.email); // Email
+        // formdata.append("entry.1047485006", values.questions); // Questions
+        // formdata.append("entry.890098326", values.grade); // Grade
+        // if (!values.mathInterest.includes("None"))
+        //   formdata.append("entry.1204481380", values.mathInterest); // Math
+        // if (!values.scienceInterest.includes("None"))
+        //   formdata.append("entry.818035415", values.scienceInterest); // Science
+        // if (!values.csInterest.includes("None"))
+        //   formdata.append("entry.2000892328", values.csInterest); // CS
+        // formdata.append("entry.1723165048", values.hearabout);
+        console.log(values);
         setEmail(values.email);
-        await fetch(
-          "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgwo15SXKJ-izaP99awlZOGcXszjwBwmYwRnlg3hfhd6CyhA/formResponse",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            mode: "no-cors",
-            body: formdata.toString(),
-          }
-        );
+        // await fetch(
+        //   "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgwo15SXKJ-izaP99awlZOGcXszjwBwmYwRnlg3hfhd6CyhA/formResponse",
+        //   {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/x-www-form-urlencoded",
+        //     },
+        //     mode: "no-cors",
+        //     body: formdata.toString(),
+        //   }
+        // );
         setTimeout(() => {
           setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
           setTimeout(() => {
@@ -111,20 +96,26 @@ export default function Signup() {
       }
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("Required"),
-      lastName: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
+      person: Yup.string()
+        .required("Required")
+        .not(["Select"], "Please select an option"),
+      hearabout: Yup.string()
+        .required("Required")
+        .not(["Select"], "Please select an option"),
+      fullName: Yup.string()
+        .required("Required")
+        .matches(/[^a-zA-Z0-9s|]/, "Enter your full name"),
       grade: Yup.string()
-        .oneOf(gradeOptions, "Choose a grade")
-        .notOneOf(["Select"], "Required")
-        .required("Required"),
-      questions: Yup.string()
-        .min(5, "Must be greater than 5 characters")
-        .max(300, "Cannot be greater than 300 characters"),
-      mathInterest: Yup.string(),
-      scienceInterest: Yup.string(),
-      csInterest: Yup.string(),
-      hearabout: Yup.string().required("Required"),
+        .required("Required")
+        .not(["Select"], "Please select an option"),
+      email: Yup.string().email("Invalid email").required("Required"),
+      school: Yup.string().required("Required"),
+      discord: Yup.string(),
+      friends: Yup.string(),
+      parentName: Yup.string()
+        .required("Required")
+        .matches(/[^a-zA-Z0-9s|]/, "Enter your full name"),
+      parentEmail: Yup.string().email("Invalid email"),
     }),
   });
   return (
@@ -132,76 +123,82 @@ export default function Signup() {
       <PartialBanner title="Student Signups" />
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <form onSubmit={formik.handleSubmit}>
-          <div className="w-full gap-3 space-y-3 sm:flex sm:space-y-0 text-black">
-            <div className="w-full space-y-3 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
-              <MemoedInputField
-                labelName="Email address"
-                name="email"
-                type="email"
+          <div className="w-full gap-3 space-y-3 flex flex-col sm:space-y-0 text-black">
+            <div className="w-full space-y-4 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
+              <h1 className="text-lg font-bold">General Information</h1>
+              <MemoedSelectField
+                labelName="I am a..."
+                name="person"
                 formik={formik}
-              />
-              <div className="flex w-full gap-2">
-                <MemoedInputField
-                  labelName="First name"
-                  name="firstName"
-                  formik={formik}
-                />
-                <MemoedInputField
-                  labelName="Last name"
-                  name="lastName"
-                  formik={formik}
-                />
-              </div>
-              <MemoedInputField
-                labelName="How did you hear about us?"
+              >
+                {personOptions.map((option, i) => (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </MemoedSelectField>
+              <MemoedSelectField
+                labelName="How did you hear about STEMist?"
                 name="hearabout"
                 formik={formik}
+              >
+                {hearaboutOptions.map((option, i) => (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </MemoedSelectField>
+            </div>
+            <div className="w-full space-y-4 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
+              <h1 className="text-lg font-bold">Student Information</h1>
+              <MemoedInputField
+                labelName="Student's Full Name"
+                formik={formik}
+                name="fullName"
               />
-              <MemoedSelectField labelName="Grade" name="grade" formik={formik}>
-                {gradeOptions.map((item, index) => (
-                  <option value={item} key={index}>
-                    {item}
-                  </option>
-                ))}
-              </MemoedSelectField>
               <MemoedSelectField
-                labelName="Computer Science Class Interest"
-                name="csInterest"
+                labelName="Student's Grade as of Spring 2022"
+                name="grade"
                 formik={formik}
               >
-                {csOptions.map((item, index) => (
-                  <option value={item} key={index}>
-                    {item}
-                  </option>
-                ))}
-              </MemoedSelectField>
-              <MemoedSelectField
-                labelName="Math Class Interest"
-                name="mathInterest"
-                formik={formik}
-              >
-                {mathOptions.map((item, index) => (
-                  <option value={item} key={index}>
-                    {item}
-                  </option>
-                ))}
-              </MemoedSelectField>
-              <MemoedSelectField
-                labelName="Science Class Interest"
-                name="scienceInterest"
-                formik={formik}
-              >
-                {scienceOptions.map((item, index) => (
-                  <option value={item} key={index}>
-                    {item}
+                {gradeOptions.map((option, i) => (
+                  <option key={i} value={option}>
+                    {option}
                   </option>
                 ))}
               </MemoedSelectField>
               <MemoedInputField
-                labelName="Questions?"
-                name="questions"
+                labelName="Student's Email"
                 formik={formik}
-                as="textarea"
+                name="email"
+              />
+              <MemoedInputField
+                labelName="Name of the school student currently attends"
+                formik={formik}
+                name="school"
+              />
+              <MemoedInputField
+                labelName="Student's Discord (if applicable)"
+                formik={formik}
+                name="school"
+              />
+              <MemoedInputField
+                labelName="Emails of any friends that would benefit from these classes, if any!"
+                formik={formik}
+                name="friends"
+              />
+            </div>
+            <div className="w-full space-y-4 rounded-md border border-gray-100 bg-gray-50 p-5 shadow-lg">
+              <h1 className="text-lg font-bold">Parent Information</h1>
+              <MemoedInputField
+                labelName="Parent's Full Name"
+                name="parentName"
+                formik={formik}
+              />
+              <MemoedInputField
+                labelName="Parent's Email"
+                name="parentEmail"
+                formik={formik}
               />
             </div>
           </div>
