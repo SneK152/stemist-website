@@ -65,11 +65,12 @@ export default function Index() {
               Learn More
             </Button>
             <Button
-              href="/get-involved/students"
+              href="/signup"
+              target="_blank"
               backgroundColor="bg-blue-500"
               textColor="text-white"
             >
-              Sign Up
+              Intro to STEM Workshop Signups
             </Button>
             <Button
               href="/hacks"

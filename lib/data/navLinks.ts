@@ -60,20 +60,23 @@ export const navLinks: NavLink[] = [
       },
     ],
   },
-  {
-    name: "Programs",
-    link: "/programs",
-    customProps: {
-      main: true,
-      color: "blue-500",
-      textColor: "white",
-    },
-  },
+  // {
+  //   name: "Programs",
+  //   link: "/programs",
+  //   customProps: {
+  //     main: true,
+  //     color: "blue-500",
+  //     textColor: "white",
+  //   },
+  // },
   {
     name: "Sign Up",
     link: "/signup",
     customProps: {
       main: true,
+      color: "blue-500",
+      textColor: "white",
+      target: "_blank",
     },
   },
 ];
