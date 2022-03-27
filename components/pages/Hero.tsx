@@ -27,17 +27,14 @@ export default function Hero() {
   return (
     <div
       className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto sm:flex-row my-5 scroll-mt-20"
-      id="hero"
       ref={heroDiv}
     >
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
-          <h1 className="sm:text-7xl text-4xl font-bold font-display">
-            What is STEMist?
-          </h1>
-          <h1 className="sm:text-4xl m-3 text-2xl">
+          <h1 className="sm:text-5xl text-3xl font-bold">
             STEMist is <span ref={el}></span>
           </h1>
+          <br />
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
             {width! > 640 ? (

@@ -4,7 +4,7 @@ import Counter from "./Counter";
 export default function Homepage() {
   return (
     <>
-      <div className="my-10">
+      <div className="my-10 scroll-mt-20" id="hero">
         <h1 className="text-center text-4xl font-display font-bold">
           By the Numbers
         </h1>
@@ -18,6 +18,22 @@ export default function Homepage() {
           <Counter number={30} symbol="+" text="highly qualified teachers" />
         </div>
       </div>
+      <div className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <h1 className="text-center font-display text-4xl font-bold">
+          What We Do
+        </h1>
+        <p className="text-lg text-center">
+          Our goal is not only to teach kids STEM. We hope to empower students
+          with foundational concepts they will use throughout their life. To
+          accomplish this, we host workshops over Zoom to help students learn
+          about various topics in our modern society. These workshops take place
+          during school breaks such as Spring and Winter break. In the summer,
+          we opt for a comprehensive curriculum that delves more in-depth into
+          STEM topics.{" "}
+        </p>
+      </div>
+      <br />
+      <br />
       <div
         className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
         id="learnmore"
@@ -37,6 +53,7 @@ export default function Homepage() {
           buttonLink="/programs"
         />
       </div>
+      <br />
     </>
   );
 }

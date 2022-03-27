@@ -25,7 +25,7 @@ export default function Index() {
               data-aos-delay={400}
               data-aos-duration={600}
             >
-              Learn STEM hands-on.
+              Learn STEM in an interactive way.
             </div>
             <div
               data-aos="fade-up"
@@ -81,8 +81,8 @@ export default function Index() {
             </Button>
           </div>
         </Banner>
-        <Hero />
         <Homepage />
+        <Hero />
       </div>
     </Container>
   );
