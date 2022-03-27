@@ -42,10 +42,10 @@ export const navLinks: NavLink[] = [
           target: "_blank",
         },
       },
-      {
-        name: "Donations",
-        link: "/get-involved/donate",
-      },
+      // {
+      //   name: "Donations",
+      //   link: "/get-involved/donate",
+      // },
     ],
   },
   {
@@ -57,10 +57,10 @@ export const navLinks: NavLink[] = [
         name: "STEMist Hacks",
         link: "/hacks",
       },
-      {
-        name: "WEBS",
-        link: "/webs",
-      },
+      // {
+      //   name: "WEBS",
+      //   link: "/webs",
+      // },
     ],
   },
   {
