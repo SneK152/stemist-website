@@ -26,7 +26,7 @@ export default function Hero() {
 
   return (
     <div
-      className="flex flex-col sm:flex-row my-5 scroll-mt-20"
+      className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto sm:flex-row my-5 scroll-mt-20"
       id="hero"
       ref={heroDiv}
     >

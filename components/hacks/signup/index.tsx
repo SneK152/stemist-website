@@ -23,7 +23,7 @@ export default function SignupForm() {
       customNav={hackathonNavLinks}
     >
       <PartialBanner title="Hackathon Signups" />
-      <div className="p-8 text-center justify-center">
+      <div className="text-center justify-center max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <div className="justify-center shadow-md p-5">
           <h1 className="text-center text-white font-bold text-4xl">
             Sign Up for the Hackthon Today!

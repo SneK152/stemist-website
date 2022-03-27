@@ -4,7 +4,7 @@ import Card from "@/components/pages/Card";
 import Person from "@/components/team/Person";
 import teachers from "@/lib/data/team/teachers";
 import P from "@/lib/types/Person";
-import { ReactNode, useMemo } from "react";
+import { ReactNode } from "react";
 
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
@@ -47,7 +47,7 @@ export default function Programs() {
   return (
     <Container title="Programs">
       <PartialBanner title="Programs" />
-      <div className="sm:mx-5 flex-col flex gap-5">
+      <div className="flex-col flex gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <SubjectCard
           title="Computer Science"
           teachers={csTeachers}

@@ -39,7 +39,7 @@ export default function Index() {
               data-aos-delay={800}
               data-aos-duration={600}
             >
-              Achieve your Goals!
+              Achieve your goals!
             </div>
           </span>
           <div className="flex px-5 sm:px-10 md:px-20 gap-10">

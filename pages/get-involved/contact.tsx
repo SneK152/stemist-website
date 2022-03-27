@@ -79,7 +79,7 @@ export default function Contact() {
     <Container title="Contact">
       <PartialBanner title="Contact Us" />
       <div className="">
-        <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8">
+        <div className="mx-auto py-3 sm:flex sm:px-6 lg:px-8 max-w-[100rem] px-2">
           <div className="flex w-full flex-col gap-3 pt-8 sm:ml-0 ml-5 sm:mb-0 mb-8">
             <h1 className="font-display text-2xl font-bold">Contact Us</h1>
             <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />

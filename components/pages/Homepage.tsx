@@ -19,7 +19,7 @@ export default function Homepage() {
         </div>
       </div>
       <div
-        className="flex sm:flex-row sm:w-3/4 w-11/12 m-auto flex-col gap-3 scroll-mt-20"
+        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
         id="learnmore"
       >
         <HomeColumn
