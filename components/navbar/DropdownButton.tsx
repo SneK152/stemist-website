@@ -6,9 +6,11 @@ import { ReactNode } from "react";
 export default function DropdownButton({
   href,
   children,
+  target,
 }: {
   href: string;
   children: ReactNode;
+  target?: string;
 }) {
   const router = useRouter();
   return (
@@ -21,6 +23,7 @@ export default function DropdownButton({
                 ? "bg-neutral-200 font-semibold"
                 : "hover:bg-neutral-100"
             } block px-4 py-2 text-base font-medium text-black z-50`}
+            target={target || "_self"}
           >
             {children}
           </a>

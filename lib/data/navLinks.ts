@@ -37,7 +37,10 @@ export const navLinks: NavLink[] = [
       },
       {
         name: "Team Applications",
-        link: "https://bit.ly/stemistapps",
+        link: "https://bit.ly/stemistapplication",
+        customProps: {
+          target: "_blank",
+        },
       },
       {
         name: "Donations",

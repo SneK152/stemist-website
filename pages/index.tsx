@@ -42,21 +42,23 @@ export default function Index() {
               Achieve your goals!
             </div>
           </span>
-          <div className="flex px-5 sm:px-10 md:px-20 gap-10">
+          <div className="flex sm:flex-row flex-col px-5 sm:px-10 md:px-20 sm:gap-10">
             <div className="flex flex-col">
               <h2 className="uppercase font-writing text-sm text-left">
                 upcoming event
               </h2>
-              <h1 className="font-sans text-xl">Intro to STEM Workshop</h1>
+              <h1 className="font-sans text-xl text-left">
+                Intro to STEM Workshop
+              </h1>
             </div>
             <div className="flex flex-col">
               <h2 className="uppercase font-writing text-sm text-left">
                 upcoming event
               </h2>
-              <h1 className="font-sans text-xl">STEMist Hacks</h1>
+              <h1 className="font-sans text-xl text-left">STEMist Hacks</h1>
             </div>
           </div>
-          <div className="flex justify-start px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
+          <div className="flex justify-start sm:flex-row flex-col px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
             <Button
               onClick={scrollTo("#learnmore")}
               backgroundColor="bg-white bg-opacity-10"
@@ -71,6 +73,9 @@ export default function Index() {
               textColor="text-white"
             >
               Intro to STEM Workshop Signups
+            </Button>
+            <Button href="https://bit.ly/stemistapplication" target="_blank">
+              Join our Organization
             </Button>
             <Button
               href="/hacks"

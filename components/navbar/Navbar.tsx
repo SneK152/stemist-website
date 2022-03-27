@@ -101,7 +101,11 @@ export default function Navbar({
                         title={navLink.name}
                       >
                         {navLink.dropdownItems?.map((item, i) => (
-                          <DropdownButton href={item.link} key={i}>
+                          <DropdownButton
+                            href={item.link}
+                            key={i}
+                            target={item.customProps?.target || "_self"}
+                          >
                             {item.name}
                           </DropdownButton>
                         ))}
@@ -161,6 +165,7 @@ export default function Navbar({
                                           ? "font-extrabold"
                                           : "font-normal"
                                       }`}
+                                      target={item.customProps.target || ""}
                                     >
                                       {item.name}
                                     </a>
