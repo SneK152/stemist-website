@@ -60,6 +60,10 @@ export const navLinks: NavLink[] = [
       },
     ],
   },
+  {
+    name: "Curriculum",
+    link: "/curriculum",
+  },
   // {
   //   name: "Programs",
   //   link: "/programs",
