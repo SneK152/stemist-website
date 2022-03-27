@@ -8,7 +8,7 @@ export default function Homepage() {
         <h1 className="text-center text-4xl font-display font-bold">
           By the Numbers
         </h1>
-        <div className="sm:grid-cols-3 gap-3 grid-cols-1 sm:w-3/4 w-full m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+        <div className="sm:grid-cols-3 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
           <Counter
             number={45}
             symbol="+"
