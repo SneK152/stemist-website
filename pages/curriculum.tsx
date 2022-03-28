@@ -56,50 +56,55 @@ export default function Curriculum() {
           subtitle="Monday, April 18th"
           person={personByName("Snehil Kakani")}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sapiente
-          quibusdam architecto, totam tempore nemo cupiditate laudantium dolore
-          earum a optio veniam amet accusantium quam consequatur eveniet sed
-          excepturi ullam.
+          In this workshop session, we will take a deep dive into the basics of
+          web development. Students attending the session will learn how to get
+          started with building their own passion projects using web
+          technologies. Concepts learned include HTML, CSS, JavaScript, and the
+          basics of backend and API development. This session will be a great
+          opportunity to learn how to build a website from scratch.
         </CurriculumCard>
         <CurriculumCard
           subtitle="Tuesday, April 19th"
           title="Biotechnology"
           person={personByName("Selena Yang")}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quam
-          eius natus quas dolore, quisquam assumenda repellat repellendus sit
-          quis eligendi facere, at labore deleniti ipsa accusantium, pariatur
-          quidem saepe.
+          Biotechnology is a fascinating subject that not many students know
+          about. In this session, students will learn about all kinds of
+          concepts important in modern biology, such as protein structure, cell
+          purification, and DNA experimentation and sequencing. These concepts
+          can be applied to the real world and help students understand how to
+          make a difference in the world.
         </CurriculumCard>
         <CurriculumCard
           subtitle="Wednesday, April 20th"
           title="Genetics"
           person={personByName("Harold Wang")}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui
-          minus fuga dolore asperiores quibusdam, veritatis dolores consectetur
-          hic distinctio quos excepturi repellat ab sequi quam aspernatur
-          reiciendis quasi nam!
+          In this session, students will learn all about genetics, such as what
+          makes up the human body, how cells work, DNA, and heredity. By the end
+          of this session, expect to know many cool facts about the human body
+          and how it works.
         </CurriculumCard>
         <CurriculumCard
           subtitle="Thursday, April 21st"
           title="Waves"
           person={personByName("Steve Yang")}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          deserunt numquam vel dolorum recusandae voluptas sit sapiente odio
-          nobis, nostrum aspernatur debitis, consequatur voluptatum obcaecati
-          atque nemo quis, aut eius.
+          Waves are used in many real-world situations. Not just ocean waves,
+          but also electromagnetic waves, light waves, sound waves, and so much
+          more. In this session, students will learn all about waves and what
+          they are made up of. They will also learn amazing facts about waves
+          and how they work.
         </CurriculumCard>
         <CurriculumCard
           subtitle="Friday, April 22nd"
           title="Thermodynamics"
           person={personByName("Sanya Badhe")}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          veritatis perferendis perspiciatis, mollitia accusantium nobis sed
-          quisquam harum nam cum repellendus, iure dolor ab dolorum saepe quam
-          sequi quidem illo.
+          Thermodynamics is a fascinating subject that not many students know
+          of. It is the science of relationships between heat, temperature, and
+          energy. Students will learn lots of energy and heat related concepts
+          in this deep dive session.
         </CurriculumCard>
       </div>
     </Container>
