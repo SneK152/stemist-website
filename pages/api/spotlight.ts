@@ -11,7 +11,7 @@ export default async function handler(
   const file: Person[] = [];
   for (let i = 0; i < 4; i++) {
     let samp: Person = sample(teachers)!;
-    while (samp.qualifications?.length! < 4) {
+    while (samp.qualifications && samp.qualifications.length < 4) {
       samp = sample(teachers)!;
     }
     let isFound = file.some((element) => element.name === samp.name);
