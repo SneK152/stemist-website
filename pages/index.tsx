@@ -42,7 +42,7 @@ export default function Index() {
               Achieve your goals!
             </div>
           </span>
-          <div className="flex sm:flex-row flex-col px-5 sm:px-10 md:px-20 sm:gap-10">
+          <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
             <div className="flex flex-col">
               <h2 className="uppercase font-writing text-sm text-left">
                 upcoming event
@@ -58,7 +58,7 @@ export default function Index() {
               <h1 className="font-sans text-xl text-left">STEMist Hacks</h1>
             </div>
           </div>
-          <div className="flex justify-start sm:flex-row flex-col px-5 sm:px-10 md:px-20 gap-3 text-lg whitespace-nowrap">
+          <div className="flex justify-start flex-wrap px-5 sm:px-10 md:px-20 gap-3 mt-2 text-lg whitespace-nowrap">
             <Button
               onClick={scrollTo("#learnmore")}
               backgroundColor="bg-white bg-opacity-10"

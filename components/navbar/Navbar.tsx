@@ -165,7 +165,7 @@ export default function Navbar({
                                           ? "font-extrabold"
                                           : "font-normal"
                                       }`}
-                                      target={item.customProps.target || ""}
+                                      target={item.customProps?.target || ""}
                                     >
                                       {item.name}
                                     </a>

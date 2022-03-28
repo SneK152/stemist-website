@@ -54,7 +54,6 @@ export default function App() {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  // return a redirect to https://stemist-education.devpost.com
   return {
     redirect: {
       destination: "https://stemist-hacks.devpost.com",
