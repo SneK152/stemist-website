@@ -7,10 +7,14 @@ export default function Container({
   children,
   title = "",
   noNav = false,
+  navTitle = "",
+  customNav = [],
 }: {
   children: React.ReactNode;
   title: string;
   noNav?: boolean;
+  navTitle?: string;
+  customNav?: any[];
 }) {
   return (
     <>
@@ -49,9 +53,9 @@ export default function Container({
         <meta name="theme-color" content="#000000" />
         <title>STEMist Education | {title}</title>
       </Head>
-      <Navbar noNav={noNav} />
+      <Navbar noNav={noNav} navTitle={navTitle} customNav={customNav} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden pt-14 min-h-[calc(100vh-12rem)]">
+        <div className="mx-auto overflow-hidden pt-20 min-h-[calc(100vh-12rem)]">
           {children}
         </div>
       </div>

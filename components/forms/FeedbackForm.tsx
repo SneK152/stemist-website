@@ -32,12 +32,26 @@ export default function FeedBackForm() {
         .max(200, "Must be less than 200 characters")
         .required("Required"),
     }),
-    onSubmit: (
+    onSubmit: async (
       { feedbackName, feedbackEmail, feedback },
       { resetForm }: FormikHelpers<Input>
     ) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
-      console.log(feedbackEmail, feedbackName, feedback);
+      const formdata = new URLSearchParams();
+      formdata.append("entry.1380619326", feedbackName);
+      formdata.append("entry.1953937821", feedbackEmail);
+      formdata.append("entry.1040798066", feedback);
+      await fetch(
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeSa7soAmbGkNmhtXMdOUz2pD1puP_wL8SosKm_IackdbHiPA/formResponse",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          mode: "no-cors",
+          body: formdata.toString(),
+        }
+      );
       setTimeout(() => {
         setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
         setTimeout(() => {
@@ -49,7 +63,7 @@ export default function FeedBackForm() {
   });
 
   return (
-    <div className="mx-auto max-w-6xl px-2 py-3 sm:flex sm:px-6 lg:px-8 flex-row-reverse">
+    <div className="mx-auto max-w-[100rem] px-2 py-3 sm:flex sm:px-6 lg:px-8 flex-row-reverse">
       <div className="flex w-full flex-col gap-3 pt-8 pl-5 sm:mb-0 mb-8">
         <h1 className="font-display text-2xl font-bold">Session Feedback</h1>
         <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />

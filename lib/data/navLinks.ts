@@ -14,33 +14,39 @@ export const navLinks: NavLink[] = [
   {
     name: "About Us",
     link: "/about",
-  },
-  {
-    name: "Meet the Team",
-    link: "/team",
-  },
-  {
-    name: "Get Involved",
-    link: "/get-involved",
     dropdown: true,
     dropdownItems: [
       {
-        name: "Students",
-        link: "/get-involved/students",
+        name: "Who We Are",
+        link: "/about/who-we-are",
       },
       {
-        name: "Applications",
-        link: "https://bit.ly/stemistapps",
-      },
-      {
-        name: "Donations",
-        link: "/get-involved/donate",
+        name: "Meet the Team",
+        link: "/about/team",
       },
     ],
   },
   {
-    name: "Contact Us",
-    link: "/contact",
+    name: "Reach Out",
+    link: "/get-involved",
+    dropdown: true,
+    dropdownItems: [
+      {
+        name: "Contact Us",
+        link: "/get-involved/contact",
+      },
+      {
+        name: "Team Applications",
+        link: "https://bit.ly/stemistapplication",
+        customProps: {
+          target: "_blank",
+        },
+      },
+      // {
+      //   name: "Donations",
+      //   link: "/get-involved/donate",
+      // },
+    ],
   },
   {
     name: "Projects",
@@ -51,26 +57,44 @@ export const navLinks: NavLink[] = [
         name: "STEMist Hacks",
         link: "/hacks",
       },
-      {
-        name: "WEBS",
-        link: "/webs",
-      },
+      // {
+      //   name: "WEBS",
+      //   link: "/webs",
+      // },
     ],
   },
   {
-    name: "Programs",
-    link: "/programs",
+    name: "Curriculum",
+    link: "/curriculum",
+  },
+  // {
+  //   name: "Programs",
+  //   link: "/programs",
+  //   customProps: {
+  //     main: true,
+  //     color: "blue-500",
+  //     textColor: "white",
+  //   },
+  // },
+  {
+    name: "Sign Up",
+    link: "/signup",
     customProps: {
       main: true,
       color: "blue-500",
       textColor: "white",
+      target: "_blank",
     },
   },
+];
+
+export const hackathonNavLinks: NavLink[] = [
   {
-    name: "Student Signups",
-    link: "/get-involved/students",
-    customProps: {
-      main: true,
-    },
+    name: "Home",
+    link: "/hacks",
+  },
+  {
+    name: "Signup",
+    link: "/hacks/signup",
   },
 ];

@@ -1,6 +1,5 @@
-import { useSpring, animated } from "react-spring";
 import { useState } from "react";
-import useQuestionSprings from "./QuestionSprings";
+import { animated, useSpring } from "react-spring";
 
 export default function Question({
   answer,
@@ -9,38 +8,28 @@ export default function Question({
   answer: string;
   question: string;
 }) {
-  let arrow = "▼";
-
-  const [isToggled, setToggle] = useState(false);
-  const arrowSpring = useSpring({
-    y: isToggled ? 180 : 0,
+  const [open, setOpen] = useState(false);
+  const answerSpring = useSpring({
+    height: open ? "6rem" : "0rem",
+    backgroundColor: !open ? "transparent" : "white",
   });
-
-  let { answerSpring, questionSpring } = useQuestionSprings(isToggled);
-
   return (
-    <div
-      onClick={() => setToggle(!isToggled)}
-      className="cursor-pointer max-h-fit h-fit mx-2 px-3 text-2xl rounded-md pb-3"
-    >
-      <animated.div
-        style={questionSpring}
-        className="cursor-pointer rounded-lg text-left flex pl-2 py-3"
-        onClick={() => setToggle(!isToggled)}
+    <div className="rounded-md flex flex-col">
+      <div
+        className={`rounded-lg text-2xl ${
+          open ? "rounded-b-none" : ""
+        } text-left flex h-20 pl-2 py-3 transition-all bg-blue-500 bg-opacity-60 backdrop-blur-sm font-display cursor-pointer`}
+        onClick={() => setOpen((o) => !o)}
       >
-        {question} ?
-        <animated.p
-          className={`cursor-pointer pl-2`}
-          onClick={() => setToggle(!isToggled)}
-          style={{
-            transform: arrowSpring.y.to((y) => `rotateX(${y}deg)`),
-          }}
-        >
-          {arrow}
-        </animated.p>
-      </animated.div>
-      <animated.div style={answerSpring} className={`rounded-lg pl-2 py-3`}>
-        {isToggled ? answer : null}
+        {question}
+      </div>
+      <animated.div
+        style={answerSpring}
+        className={`rounded-lg pl-2 ${
+          open ? "opacity-100" : "opacity-0 select-none"
+        } font-writing transition-opacity rounded-t-none bg-gray-200 text-black`}
+      >
+        {answer}
       </animated.div>
     </div>
   );

@@ -4,8 +4,12 @@ import { ExtendedPerson } from "../types/Person";
 const people: ExtendedPerson[] = [
   {
     name: "Steve Yang",
-    officerRoles: ["President", "Instructor"],
+    officerRoles: ["President"],
     teacherRoles: ["Biology", "Physical Science"],
+    curriculumRoles: {
+      phys: ["Basic Chemistry", "Chemical Reactions", "Earth Science"],
+      bio: ["Chemistry of Life"],
+    },
     image: resolveTeamImage("Steve Yang"),
     description:
       "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
@@ -20,8 +24,11 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Vice President", "Director of HR", "Instructor", "WEBS"],
+    officerRoles: ["Vice President", "Director of Events", "WEBS"],
     teacherRoles: ["Computer Science"],
+    curriculumRoles: {
+      cs: ["C++"],
+    },
     image: resolveTeamImage("Justin Zhang"),
     description:
       "Justin Zhang is a computer science and math enthusiast who codes in his free time. If he's not playing video games or watching Youtube, he's busy studying for his upcoming exams.",
@@ -33,8 +40,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Johnathan Kao",
-    officerRoles: ["Director of PR and Outreach", "Instructor"],
     teacherRoles: ["Biology"],
+    curriculumRoles: {
+      bio: ["Evolution", "Ethology"],
+    },
     image: resolveTeamImage("Johnathan Kao"),
     description:
       "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
@@ -47,19 +56,17 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Snehil Kakani",
-    officerRoles: [
-      "Director of Technology",
-      "Website",
-      "Instructor",
-      "WEBS",
-      "Events",
-    ],
+    officerRoles: ["Director of Technology", "Website", "WEBS", "Events"],
     teacherRoles: ["Computer Science"],
+    curriculumRoles: {
+      cs: ["Javascript", "Python"],
+    },
     image: resolveTeamImage("Snehil Kakani"),
     description:
       "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
     qualifications: [
       "Full Stack Web Developer",
+      "Honorable Mention Synopsys Science Fair",
       "Advanced Javascript and React Developer",
       "Skilled with Python and Node.js",
     ],
@@ -69,6 +76,10 @@ const people: ExtendedPerson[] = [
     officerRoles: ["Instructor Lead"],
     image: resolveTeamImage("Selena Yang"),
     teacherRoles: ["Biology Lead", "Math", "Biology"],
+    curriculumRoles: {
+      math: ["Algebra", "Geometry"],
+      bio: ["Lead", "Molecular and Cell Biology", "Genetics"],
+    },
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
     qualifications: [
@@ -87,6 +98,10 @@ const people: ExtendedPerson[] = [
       "Computer Science",
       "Physical Science",
     ],
+    curriculumRoles: {
+      cs: ["Python"],
+      phys: ["Lead", "Electricity and Magnetism", "Stellar Evolution"],
+    },
     image: resolveTeamImage("Anish Bhethanabotla"),
     description:
       "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
@@ -104,6 +119,9 @@ const people: ExtendedPerson[] = [
     name: "Sanya Badhe",
     officerRoles: ["Instructor Lead"],
     teacherRoles: ["Math Lead", "Math"],
+    curriculumRoles: {
+      math: ["Lead", "Algebra", "Geometry", "Advanced Geometry"],
+    },
     image: resolveTeamImage("Sanya Badhe"),
     description:
       "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
@@ -126,6 +144,9 @@ const people: ExtendedPerson[] = [
     name: "Shanker Ram",
     officerRoles: ["Instructor Lead"],
     teacherRoles: ["Computer Science Lead", "Computer Science"],
+    curriculumRoles: {
+      cs: ["Lead", "Python"],
+    },
     image: resolveTeamImage("Shanker Ram"),
     description:
       "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
@@ -141,16 +162,18 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Jianyu Wang",
-    teamRoles: ["HR", "Instructor"],
-    teacherRoles: ["Physical Science"],
+    teamRoles: ["HR"],
     image: resolveTeamImage("Jianyu Wang"),
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
   {
     name: "Isaac Sun",
-    teamRoles: ["Outreach", "Instructor", "WEBS"],
+    teamRoles: ["WEBS"],
     teacherRoles: ["Math"],
+    curriculumRoles: {
+      math: ["Advanced Algebra"],
+    },
     image: resolveTeamImage("Isaac Sun"),
     description:
       "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
@@ -162,8 +185,11 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Harold Wang",
-    teamRoles: ["Instructor", "HR"],
+    teamRoles: ["HR"],
     teacherRoles: ["Biology"],
+    curriculumRoles: {
+      bio: ["Botany"],
+    },
     image: resolveTeamImage("Harold Wang"),
     description:
       "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
@@ -178,22 +204,27 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Nathan Ye",
-    teamRoles: ["Outreach", "Events", "WEBS"],
+    officerRoles: ["Director of PR Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Nathan Ye"),
     description:
       "Nathan is a high school freshman that loves coding and football.",
   },
   {
     name: "Rohan Fernandes",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
-    teacherRoles: ["Computer Science"],
+    teamRoles: ["Intern", "Technology", "Website", "Events"],
+    teacherRoles: ["Computer Science", "Intern"],
+    curriculumRoles: {
+      cs: ["Intern", "Python", "Javascript"],
+    },
     image: resolveTeamImage("Rohan Fernandes"),
     description:
-      "Rising Freshman at Lynbrook Highschool, Likes to code and watch th NBA in his spare timeand likes math.",
+      "Rising Freshman at Lynbrook Highschool, Likes to code and watch the NBA in his spare time and likes math.",
     qualifications: [
       "Multiple time Hackathon winner",
       "USACO member",
       "Three years of CS Competitive Coding",
+      "Knowledgable in NodeJS and React",
+      "CA Synposis Science Fair Participant",
     ],
   },
   {
@@ -205,7 +236,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    teamRoles: ["Outreach", "HR", "Events", "WEBS"],
+    officerRoles: ["Director of HR", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
@@ -225,8 +256,11 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sarvesh Madullapalli",
-    teamRoles: ["Intern", "Technology", "Instructor", "Website", "Events"],
-    teacherRoles: ["Computer Science"],
+    teamRoles: ["Intern", "Technology", "Events"],
+    teacherRoles: ["Computer Science", "Intern"],
+    curriculumRoles: {
+      cs: ["Intern", "Python"],
+    },
     image: resolveTeamImage("Sarvesh Madullapalli"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
@@ -239,8 +273,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Vyaas Baskar",
-    teamRoles: ["Intern", "Instructor"],
-    teacherRoles: ["Physical Science"],
+    teacherRoles: ["Physical Science", "Intern"],
+    curriculumRoles: {
+      phys: ["Intern", "Electricity and Magnetism"],
+    },
     image: resolveTeamImage("Vyaas Baskar"),
     description:
       "Vyaas Baskar is an 8th grader at Miller Middle school, who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
@@ -253,8 +289,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teamRoles: ["Intern", "Instructor"],
-    teacherRoles: ["Physical Science", "Biology"],
+    teacherRoles: ["Physical Science", "Intern"],
+    curriculumRoles: {
+      phys: ["Intern", "Basic Chemistry"],
+    },
     image: resolveTeamImage("Chaas Kandregula"),
     description:
       "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
@@ -262,6 +300,10 @@ const people: ExtendedPerson[] = [
   {
     name: "Daniel Kim",
     teacherRoles: ["Computer Science", "Math"],
+    curriculumRoles: {
+      cs: ["C++"],
+      math: ["Number Theory"],
+    },
     image: resolveTeamImage("Daniel Kim"),
     description:
       "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
@@ -271,6 +313,9 @@ const people: ExtendedPerson[] = [
     name: "Aryan Patnaik",
     officerRoles: ["WEBS Lead"],
     teacherRoles: ["Biology"],
+    curriculumRoles: {
+      bio: ["Ecology"],
+    },
     image: resolveTeamImage("Aryan Patnaik"),
     description:
       "Aryan is a rare specimen of the human race, despite his name being used by hundreds of other homo sapiens. He teaches ecology, and when he's not studying (aka watching wild kratts), he's on the run with his school's track team, striving for olympic gold.",
@@ -282,6 +327,10 @@ const people: ExtendedPerson[] = [
   {
     name: "Kiara Ha",
     teacherRoles: ["Physical Science", "Biology"],
+    curriculumRoles: {
+      phys: ["Acids and Bases"],
+      bio: ["Anatomy and Physiology"],
+    },
     image: resolveTeamImage("Kiara Ha"),
     description:
       "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
@@ -294,7 +343,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Kasturi Kirubaharan",
-    teacherRoles: ["Math", "Biology"],
+    teacherRoles: ["Biology"],
+    curriculumRoles: {
+      bio: ["Molecular and Cell Biology", "Genetics"],
+    },
     image: resolveTeamImage("Kasturi Kirubaharan"),
     description:
       "Kasturi Kirubaharan is a freshman at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
@@ -307,8 +359,13 @@ const people: ExtendedPerson[] = [
   {
     name: "Idhant Rao",
     teacherRoles: ["Math"],
-    image: resolveTeamImage(),
-    description: "",
+    curriculumRoles: {
+      math: ["Counting"],
+    },
+    image: resolveTeamImage("Idhant Rao"),
+    description:
+      "Idhant Rao is a math instructor who loves to study various fields of mathematics. He loves to discuss all things math.",
+    qualifications: ["Former Math Kangaroo Participant"],
   },
 ];
 export default people;

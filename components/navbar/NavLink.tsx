@@ -9,6 +9,7 @@ export default function NavLink({
   main = false,
   color = "white",
   textColor = "black",
+  target = "_self",
 }: NavLinkProps) {
   const router = useRouter();
   return (
@@ -17,10 +18,12 @@ export default function NavLink({
         main
           ? `bg-${color} py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300 text-${textColor}`
           : `text-white`
-      } ${className || ""} ${router.pathname === href ? "font-extrabold" : ""}`}
+      } ${router.pathname === href ? "font-bold" : "font-normal"}`}
     >
       <Link href={href}>
-        <a>{children}</a>
+        <a className={`${className || ""}`} target={target}>
+          {children}
+        </a>
       </Link>
     </li>
   );

@@ -11,4 +11,10 @@ app = getApps().length
     });
 
 const db = admin.firestore(app);
+
+try {
+  db.settings({
+    ignoreUndefinedProperties: true,
+  });
+} catch (e) {}
 export default db;

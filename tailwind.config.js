@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./components/**/*.{js,jsx,ts,tsx}",
@@ -6,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          DEFAULT: "#464F51",
-        },
+        neutral: colors.neutral,
+        gray: colors.gray,
         white: "#FFFCFF",
         black: "#0c001c",
         green: {
@@ -17,10 +18,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Open Sans", "sans"],
+      sans: ["Raleway", "sans"],
       display: ["Exo", "sans"],
-      writing: ["Raleway", "sans"],
-      mono: ["Source Code Pro", "monospace"],
+      writing: ["Open Sans", "sans"],
     },
   },
   plugins: [require("@tailwindcss/forms")],

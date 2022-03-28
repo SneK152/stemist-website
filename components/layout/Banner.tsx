@@ -49,25 +49,27 @@ export default function Banner({
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover"
+          className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover"
           priority
           quality={90}
         />
         <div className="flex h-full w-full items-center justify-center">
           <div
-            className={`bg-green absolute py-8 flex h-auto w-3/4 flex-col justify-center gap-3 overflow-hidden break-words rounded-xl border-2 border-white bg-opacity-60 p-4 text-center text-white backdrop-blur-md sm:w-3/4 z-10 ${
-              full ? "" : "sm:w-3/4 sm:h-56"
+            className={`absolute py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 bg-opacity-20 bg-black text-center text-white backdrop-blur-sm backdrop-brightness-75 z-20 ${
+              full
+                ? "h-full w-full"
+                : "border-white border-2 h-auto w-3/4 sm:w-3/4 sm:h-56"
             }`}
           >
             {children}
+            {full && (
+              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1]">
+                <button className="animate-bounce" onClick={scrollTo(href)}>
+                  <ChevronDownIcon className="h-12" />
+                </button>
+              </div>
+            )}
           </div>
-          {full && (
-            <div className="absolute h-[80vh] sm:h-full w-full flex justify-center items-end">
-              <button className="animate-bounce" onClick={scrollTo(href)}>
-                <ChevronDownIcon className="h-12" />
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </>

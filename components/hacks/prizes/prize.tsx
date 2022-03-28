@@ -1,21 +1,29 @@
 import React from "react";
 import { GiftIcon } from "@heroicons/react/outline";
+import useHover from "./useHover";
+import useWindowSize from "@/lib/hooks/useWindowSize";
 
 export interface PrizeProps {
   name: string;
-  description: string;
+  prizes: string;
   presented_by: string;
 }
 
-export default function Prize({ name, description, presented_by }: PrizeProps) {
+export default function Prize({ name, prizes, presented_by }: PrizeProps) {
+  let { hoverOptions, status } = useHover(presented_by, prizes);
+  const { width } = useWindowSize();
   return (
-    <div className="grid grid-cols-9 hover:bg-gray-100 rounded-lg text-black p-2">
-      <GiftIcon className="col-span-1 h-10" />
-      <div className="col-span-3 grid-rows-4">
-        <div className="row-span-2">{name}</div>
-        <div className="row-span-2">{presented_by}</div>
-      </div>
-      <div className="col-span-5">{description}</div>
+    <div
+      className="grid grid-cols-12 items-center group py-1 transition-all px-5 hover:bg-gray-300"
+      {...hoverOptions}
+    >
+      {width! > 640 && (
+        <div className="col-span-1">
+          <GiftIcon className="h-12 p-2 rounded-full shadow-md group-hover:shadow-lg group-hover:border-2 group-hover:border-gray-400 transition-all" />
+        </div>
+      )}
+      <div className="sm:col-span-5 col-span-6 font-semibold">{name}</div>
+      <div className="col-span-6">{status}</div>
     </div>
   );
 }

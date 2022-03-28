@@ -5,15 +5,40 @@ import Section from "@/components/hacks/layout/Section";
 import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
-import UnavailableBanner from "@/components/layout/UnavailableBanner";
+import { hackathonNavLinks } from "@/lib/data/navLinks";
+import { GetServerSideProps } from "next";
 
 export default function App() {
   return (
-    <Container title="STEMist Hacks" noNav>
-      <UnavailableBanner title="Coming Soon" />
-      {/* <Header />
-      <div>
-        <Section name="Hackathon Agenda" id="agenda">
+    <Container
+      title="STEMist Hacks"
+      noNav
+      navTitle="STEMist Hacks"
+      customNav={hackathonNavLinks}
+    >
+      <Header />
+      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <Section name="About our Hackathon" id="about">
+          <div className="bg-gray-100 text-black p-5 rounded-lg shadow-md">
+            Welcome to STEMist Hacks! Join other hackers in creating a project
+            to impress judges, and to win prizes. There will be workshops
+            provided from our gracious sponsors, volunteers, and guest speakers
+            to aid in your process. Or, you can start hacking the moment STEMist
+            Hacks is open!
+          </div>
+        </Section>
+        <Section name="Requirements">
+          <div className="bg-gray-100 text-black p-5 rounded-lg shadow-md">
+            Build anything {`"`}tech-related{`"`} to impress judges and win
+            prizes. This can include- AR/VR software, Camera Software, Data
+            Analysis, Computer Science Programs, Games, Blender Videos,
+            Mechanical Designs and Projects, Mini-Computers, Electrical or
+            Pneumatic powered systems, a solution to a problem with an MVP
+            coded, and much, much, more! If you have any questions, please ask
+            on our discord server.
+          </div>
+        </Section>
+        <Section name="Hackathon Agenda (PST)">
           <Schedule />
         </Section>
         <PrizesSection />
@@ -23,7 +48,16 @@ export default function App() {
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
-      </div> */}
+      </div>
     </Container>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: "https://stemist-hacks.devpost.com",
+      permanent: true,
+    },
+  };
+};

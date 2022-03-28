@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
-import Plyr from "plyr-react";
 import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import useWindowSize from "@/lib/hooks/useWindowSize";
 
@@ -27,18 +26,15 @@ export default function Hero() {
 
   return (
     <div
-      className="flex flex-col sm:flex-row my-5 bg-black bg-opacity-70 scroll-mt-20"
-      id="hero"
+      className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto sm:flex-row my-5 scroll-mt-20"
       ref={heroDiv}
     >
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
-          <h1 className="sm:text-7xl text-4xl font-bold font-display">
-            What is STEMist?
-          </h1>
-          <h1 className="sm:text-4xl m-3 text-2xl">
+          <h1 className="sm:text-5xl text-3xl font-bold">
             STEMist is <span ref={el}></span>
           </h1>
+          <br />
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
             {width! > 640 ? (
@@ -50,12 +46,11 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full">
-        <Plyr
-          source={{
-            sources: [{ src: "/homepage.mp4" }],
-            type: "video",
-            poster: "/logo.svg",
-          }}
+        <video
+          src="/homepage.mp4"
+          poster="/logo.svg"
+          controls
+          className="bg-white aspect-video h-full w-full"
         />
       </div>
     </div>

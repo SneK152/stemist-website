@@ -1,22 +1,26 @@
 import Banner from "@/components/layout/Banner";
-import PartialBanner from "@/components/layout/PartialBanner";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import Button from "@/components/layout/Button";
+import Link from "next/link";
 
 function Description() {
   return (
-    <div className="py-3 px-2">
-      <p className="text-lg font-semibold">From June 24th to June 26th</p>
-      <button className="text-white bg-blue-400 animate-bounce duration-200 mt-5 py-3 px-6 rounded-lg font-semibold">
+    <div className="px-2">
+      <p className="mb-2 text-2xl font-semibold">From June 24th to June 26th</p>
+      <Button
+        href="/hacks/signup"
+        backgroundColor="bg-blue-500"
+        textColor="text-white"
+      >
         Sign up!
-      </button>
+      </Button>
     </div>
   );
 }
 
 export default function Header() {
   return (
-    <div className="-mt-16">
-      <Banner image="/homepage.webp" full href="#agenda">
+    <div className="-mt-20">
+      <Banner image="/homepage.jpg" full href="#about">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
         </h1>

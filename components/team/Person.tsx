@@ -36,7 +36,7 @@ export default function Person(props: PersonProps) {
           {props.person.name}
           <br />
           <div className="font-writing flex flex-wrap gap-1">
-            {props.person.positions.map(
+            {(props.roles ? props.roles : props.person.positions).map(
               (pos, index) =>
                 !props.person.positions.includes(pos + " Lead") && (
                   <span
@@ -51,7 +51,7 @@ export default function Person(props: PersonProps) {
         </span>
         {props.person.description && (
           <p
-            className={`hidden max-w-[40ch] font-sans ${
+            className={`hidden max-w-[40ch] font-writing ${
               props.person.qualifications ? "text-xs" : "text-sm"
             } transition-all group-hover:block`}
           >
