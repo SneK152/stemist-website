@@ -204,7 +204,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Nathan Ye",
-    officerRoles: ["Director of PR Outreach", "Events", "WEBS"],
+    teamRoles: ["Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Nathan Ye"),
     description:
       "Nathan is a high school freshman that loves coding and football.",
@@ -236,7 +236,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    officerRoles: ["Director of HR", "Outreach", "Events", "WEBS"],
+    teamRoles: ["HR", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
@@ -252,7 +252,8 @@ const people: ExtendedPerson[] = [
     name: "Valerie Shu",
     teamRoles: ["Graphic Design", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Valerie Shu"),
-    description: "",
+    description:
+      "Valerie is a freshman at Lynbrook High who enjoys teaching and the outdoors. She reads avidly, writes intermittently, draws digitally, and owns 2 rabbits.",
   },
   {
     name: "Sarvesh Madullapalli",
