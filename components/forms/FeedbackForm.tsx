@@ -32,12 +32,26 @@ export default function FeedBackForm() {
         .max(200, "Must be less than 200 characters")
         .required("Required"),
     }),
-    onSubmit: (
+    onSubmit: async (
       { feedbackName, feedbackEmail, feedback },
       { resetForm }: FormikHelpers<Input>
     ) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
-      console.log(feedbackEmail, feedbackName, feedback);
+      const formdata = new URLSearchParams();
+      formdata.append("entry.1380619326", feedbackName);
+      formdata.append("entry.1953937821", feedbackEmail);
+      formdata.append("entry.1040798066", feedback);
+      await fetch(
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeSa7soAmbGkNmhtXMdOUz2pD1puP_wL8SosKm_IackdbHiPA/formResponse",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          mode: "no-cors",
+          body: formdata.toString(),
+        }
+      );
       setTimeout(() => {
         setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
         setTimeout(() => {
