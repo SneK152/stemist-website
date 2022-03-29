@@ -368,5 +368,12 @@ const people: ExtendedPerson[] = [
       "Idhant Rao is a math instructor who loves to study various fields of mathematics. He loves to discuss all things math.",
     qualifications: ["Former Math Kangaroo Participant"],
   },
+  {
+    name: "Sarthak Ratan",
+    teamRoles: ["Outreach", "HR"],
+    image: resolveTeamImage("Sarthak Ratan"),
+    description:
+      "Sarthak Ratan is a freshman at Lynbrook high who enjoys science, designing, and business. When he isn’t working he loves swimming, playing the guitar, or talking to friends.",
+  },
 ];
 export default people;
