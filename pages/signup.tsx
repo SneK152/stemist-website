@@ -9,7 +9,6 @@ import SelectInputField from "@/components/forms/SelectInputField";
 import dynamic from "next/dynamic";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
-import { GetServerSideProps } from "next";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
 
@@ -215,12 +214,3 @@ export default function Signup() {
     </Container>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  return {
-    redirect: {
-      destination: "https://forms.gle/ECuJtaGiVR8bVtin9",
-      permanent: true,
-    },
-  };
-};

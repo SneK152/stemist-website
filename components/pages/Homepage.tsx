@@ -22,7 +22,7 @@ export default function Homepage() {
         <h1 className="text-center font-display text-4xl font-bold">
           What We Do
         </h1>
-        <p className="text-lg text-center">
+        <p className="text-lg text-center px-3">
           Our goal is not only to teach kids STEM. We hope to empower students
           with foundational concepts they will use throughout their life. To
           accomplish this, we host workshops over Zoom to help students learn

@@ -13,7 +13,7 @@ export default function Curriculum() {
   return (
     <Container title="Curriculum">
       <PartialBanner title="Workshop Curriculum - Intro to STEM" />
-      <div className="grid grid-cols-2 gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <CurriculumCard
           title="Full Stack Web Development"
           subtitle="Monday, April 18th"
@@ -92,7 +92,7 @@ function CurriculumCard(props: CurriculumCardProps) {
       <br />
       <div className="grid text-left">
         <div
-        // className={`h-32 w-full overflow-hidden rounded-lg bg-white shadow p-3`}
+          className={`h-32 w-full overflow-hidden rounded-lg bg-white shadow p-3`}
         >
           <Person person={{ ...props.person, positions: [] }} />
         </div>

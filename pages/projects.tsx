@@ -6,7 +6,8 @@ import PageLinks from "@/lib/types/PageLinks";
 const projectLinks: PageLinks[] = [
   {
     name: "STEMist Hacks",
-    url: "/hacks",
+    url: "https://stemist-hacks.devpost.com",
+    external: true,
     description:
       "If you are interested in learning about our upcoming hackathon, go here!",
   },

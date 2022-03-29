@@ -67,7 +67,7 @@ export default function Index() {
               Learn More
             </Button>
             <Button
-              href="/signup"
+              href="https://forms.gle/ECuJtaGiVR8bVtin9"
               target="_blank"
               backgroundColor="bg-blue-500"
               textColor="text-white"
@@ -78,9 +78,10 @@ export default function Index() {
               Join our Organization
             </Button>
             <Button
-              href="/hacks"
+              href="https://stemist-hacks.devpost.com"
               backgroundColor="bg-green bg-opacity-80"
               textColor="text-white"
+              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />

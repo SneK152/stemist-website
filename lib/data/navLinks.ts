@@ -55,7 +55,10 @@ export const navLinks: NavLink[] = [
     dropdownItems: [
       {
         name: "STEMist Hacks",
-        link: "/hacks",
+        link: "https://stemist-hacks.devpost.com",
+        customProps: {
+          target: "_blank",
+        },
       },
       // {
       //   name: "WEBS",
@@ -78,7 +81,7 @@ export const navLinks: NavLink[] = [
   // },
   {
     name: "Sign Up",
-    link: "/signup",
+    link: "https://forms.gle/ECuJtaGiVR8bVtin9",
     customProps: {
       main: true,
       color: "blue-500",
