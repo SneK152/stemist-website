@@ -6,43 +6,6 @@ import teachers from "@/lib/data/team/teachers";
 import P from "@/lib/types/Person";
 import { ReactNode, useCallback } from "react";
 
-const csTeachers = [...teachers]
-  .filter((person) => person.positions.includes("Computer Science"))
-  .sort((a, b) =>
-    a.positions[0].includes("Computer Science Lead")
-      ? -1
-      : b.positions[0].includes("Lead")
-      ? 1
-      : 0
-  );
-const physTeachers = [...teachers]
-  .filter((person) => person.positions.includes("Physical Science"))
-  .sort((a, b) =>
-    a.positions[0].includes("Physical Science Lead")
-      ? -1
-      : b.positions[0].includes("Lead")
-      ? 1
-      : 0
-  );
-const mathTeachers = [...teachers]
-  .filter((person) => person.positions.includes("Math"))
-  .sort((a, b) =>
-    a.positions[0].includes("Math Lead")
-      ? -1
-      : b.positions[0].includes("Lead")
-      ? 1
-      : 0
-  );
-const bioTeachers = [...teachers]
-  .filter((person) => person.positions.includes("Biology"))
-  .sort((a, b) =>
-    a.positions[0].includes("Biology Lead")
-      ? -1
-      : b.positions[0].includes("Lead")
-      ? 1
-      : 0
-  );
-
 export default function Curriculum() {
   const personByName = useCallback((name: string) => {
     return teachers.find((person) => person.name === name)!;
