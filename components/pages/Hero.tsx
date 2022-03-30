@@ -12,7 +12,7 @@ export default function Hero() {
 
   useEffect(() => {
     const options: TypedOptions = {
-      strings: ["engaging", "hands-on", "growth", "the class for you!"],
+      strings: ["engaging", "interactive", "growth", "the class for you!"],
       typeSpeed: 80,
       backSpeed: 40,
     };
