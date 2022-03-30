@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "next dev",
-    "build": "next-sitemap && next build",
+    "build": "next build && next-sitemap",
     "postbuild": "next-sitemap",
     "serve": "next start",
     "lint": "next lint",
