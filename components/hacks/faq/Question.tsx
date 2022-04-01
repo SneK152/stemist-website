@@ -13,8 +13,11 @@ export default function Question({
   const [open, setOpen] = useState(false);
   const answerSpring = useSpring({
     height: open ? "6rem" : "0rem",
-    backgroundColor: !open ? "transparent" : "white",
-    paddingTop: !open ? "0rem" : "0.75rem",
+    backgroundColor: "transparent",
+    // paddingTop: !open ? "0rem" : "0.75rem",
+    config: {
+      duration: open ? 100 : 100,
+    },
   });
   const questionRef = useRef(null);
   useClickOutside(questionRef, () => setOpen(false));
@@ -23,7 +26,7 @@ export default function Question({
       <div
         className={`rounded-lg text-2xl ${
           open ? "rounded-b-none" : ""
-        } text-left flex items-center gap-3 pl-2 py-3 transition-all backdrop-blur-sm font-display cursor-pointer`}
+        } text-left flex items-center gap-3 pl-2 py-3 transition-all font-display cursor-pointer`}
         onClick={() => setOpen((o) => !o)}
       >
         {!open ? (
@@ -36,8 +39,8 @@ export default function Question({
       <animated.div
         style={answerSpring}
         className={`rounded-lg pl-2 ${
-          open ? "opacity-100 py-3" : "opacity-0 select-none"
-        } font-writing transition-opacity bg-gray-200 text-black`}
+          open ? "opacity-100 pt-3" : "hidden select-none"
+        } font-writing bg-gray-200 text-white`}
       >
         {answer}
       </animated.div>
