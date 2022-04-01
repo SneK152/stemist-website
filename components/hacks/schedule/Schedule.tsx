@@ -2,9 +2,9 @@ import Event from "./Event";
 
 export default function Schedule() {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 bg-white rounded-lg">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
       <div className="grid mb-auto">
-        <h1 className="text-black py-3 text-xl font-display font-semibold text-center">
+        <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
           Friday, June 24th
         </h1>
         <Event
@@ -39,7 +39,7 @@ export default function Schedule() {
         />
       </div>
       <div className="grid mb-auto">
-        <h1 className="text-black py-3 text-xl font-display font-semibold text-center">
+        <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
           Saturday, June 25th
         </h1>
         <Event
@@ -69,7 +69,7 @@ export default function Schedule() {
         />
       </div>
       <div className="grid mb-auto">
-        <h1 className="text-black py-3 text-xl font-display font-semibold text-center">
+        <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
           Sunday, June 26th
         </h1>
         <Event
