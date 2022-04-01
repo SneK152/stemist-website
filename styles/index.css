@@ -8,8 +8,8 @@
 }
 
 html {
-  background-image: url("/loop.webp");
-  @apply bg-contain text-white;
+  /* background-image: url("/loop.webp"); */
+  @apply bg-contain text-white bg-black;
 }
 body {
   @apply overflow-x-hidden;
