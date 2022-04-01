@@ -24,7 +24,7 @@ export default function SpringSponsor({
     <animated.a
       style={containerSpring}
       className={`text-black p-3 hover:shadow-xl rounded-md relative ${
-        isHovered ? "z-50" : "z-30"
+        isHovered ? "z-40" : "z-30"
       }`}
       href={url}
       target="_blank"
