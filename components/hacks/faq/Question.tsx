@@ -1,4 +1,3 @@
-import useClickOutside from "@/lib/hooks/useClickOutside";
 import { MinusIcon, PlusIcon } from "@heroicons/react/outline";
 import { useRef, useState } from "react";
 import { animated, useSpring } from "react-spring";
@@ -14,13 +13,8 @@ export default function Question({
   const answerSpring = useSpring({
     height: open ? "6rem" : "0rem",
     backgroundColor: "transparent",
-    // paddingTop: !open ? "0rem" : "0.75rem",
-    config: {
-      duration: open ? 100 : 100,
-    },
   });
   const questionRef = useRef(null);
-  useClickOutside(questionRef, () => setOpen(false));
   return (
     <div className="rounded-md flex flex-col" ref={questionRef}>
       <div

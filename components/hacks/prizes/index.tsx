@@ -12,10 +12,7 @@ export default function PrizesSection() {
 
   return (
     <Section name="Prizes">
-      <div
-        {...useAos()}
-        className="text-black odd:bg-gray-400 even:bg-gray-200 rounded-lg w-full"
-      >
+      <div {...useAos()} className="text-white rounded-lg w-full">
         <div className="w-full grid grid-cols-12 py-3 px-5">
           {width! > 640 && <span className="col-span-1"></span>}
           <p className="w-full col-span-6 sm:col-span-5 text-xl font-display font-semibold">
@@ -25,7 +22,7 @@ export default function PrizesSection() {
             Prizes
           </p>
         </div>
-        <hr className="border-black" />
+        <hr className="border-white" />
         <div className="w-full">
           {PrizeList.map((props, k) => (
             <Prize {...props} key={k} />
