@@ -1,5 +1,3 @@
-import Aos from "aos";
-
 type animations =
   | "fade"
   | "fade-up"
