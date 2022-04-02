@@ -14,22 +14,23 @@ export default function PrizesSection() {
   return (
     <Section name="Prizes">
       <div {...useAos()} className="text-white rounded-lg w-full">
-        <Counter number={15_500} text="worth in prizes" symbol="$" before />
-        <div className="w-full grid grid-cols-12 py-3 px-5">
+        {/* <div className="w-full grid grid-cols-12 py-3 px-5">
           {width! > 640 && <span className="col-span-1"></span>}
           <p className="w-full col-span-6 sm:col-span-5 text-xl font-display font-semibold">
-            Position
+            Type
           </p>
           <p className="w-full col-span-6 text-xl font-display font-semibold">
             Prizes
           </p>
-        </div>
+        </div> */}
         <hr className="border-white" />
         <div className="w-full">
           {PrizeList.map((props, k) => (
             <Prize {...props} key={k} />
           ))}
         </div>
+        <br />
+        <Counter number={15_500} text="worth in prizes" symbol="$" before />
       </div>
     </Section>
   );
