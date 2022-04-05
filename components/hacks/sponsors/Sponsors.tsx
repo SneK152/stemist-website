@@ -6,7 +6,7 @@ export default function Sponsors() {
     <div className="p-4">
       <div
         {...useAos()}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
         <AnimatedSponsor
           color={"#000000"}
