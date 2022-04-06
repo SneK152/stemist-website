@@ -51,7 +51,6 @@ export default function Banner({
           layout="fill"
           className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover"
           priority
-          quality={90}
         />
         <div className="flex h-full w-full items-center justify-center">
           <div

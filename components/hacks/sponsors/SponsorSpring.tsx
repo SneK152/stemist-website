@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { animated, useSpring } from "react-spring";
+import { animated } from "react-spring";
 import { useState } from "react";
 import useSponsorSpring from "./useSponsorSpring";
-import Image from "next/image";
 
 export default function SpringSponsor({
   image,
@@ -23,8 +22,8 @@ export default function SpringSponsor({
   return (
     <animated.a
       style={containerSpring}
-      className={`text-black p-3 hover:shadow-xl rounded-md relative ${
-        isHovered ? "z-50" : "z-30"
+      className={`text-black p-3 hover:shadow-xl transition-shadow duration-300 rounded-md relative ${
+        isHovered ? "z-40" : "z-30"
       }`}
       href={url}
       target="_blank"

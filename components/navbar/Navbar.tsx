@@ -31,7 +31,7 @@ export default function Navbar({
           className={`fixed z-50 w-full bg-black px-2 sm:px-6 lg:px-6 shadow-md shadow-black/50`}
         >
           <div className="flex justify-between py-3 font-writing">
-            <div>
+            <div className="flex items-center gap-1">
               <Link href="/">
                 <a>
                   <h1 className="font-display text-2xl font-bold">
@@ -44,11 +44,13 @@ export default function Navbar({
                         width={166.6}
                         className="filter invert select-none"
                       />
-                      <span className="font-semibold">{navTitle}</span>
                     </div>
                   </h1>
                 </a>
               </Link>
+              <span className="font-semibold text-2xl font-display">
+                {navTitle}
+              </span>
             </div>
             <Disclosure.Button className="lg:hidden">
               <span className="sr-only">Open main menu</span>

@@ -12,7 +12,7 @@ export default function Hero() {
 
   useEffect(() => {
     const options: TypedOptions = {
-      strings: ["engaging", "hands-on", "growth", "the class for you!"],
+      strings: ["engaging", "interactive", "growth", "the class for you!"],
       typeSpeed: 80,
       backSpeed: 40,
     };
@@ -47,11 +47,18 @@ export default function Hero() {
       </div>
       <div className="w-full">
         <video
-          src="/homepage.mp4"
+          // src="/homepage.mp4"
           poster="/logo.svg"
-          controls
+          // controls
+          preload="none"
+          loop
+          muted
+          autoPlay
+          playsInline
           className="bg-white aspect-video h-full w-full"
-        />
+        >
+          <source src="/homepage.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   );

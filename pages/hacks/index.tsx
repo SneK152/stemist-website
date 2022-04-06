@@ -6,6 +6,7 @@ import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
 import { hackathonNavLinks } from "@/lib/data/navLinks";
+import { GetServerSideProps } from "next";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
       <Header />
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
         <Section name="About our Hackathon" id="about">
-          <div className="bg-gray-100 text-black p-5 rounded-lg shadow-md">
+          <div className="bg-black bg-opacity-20 text-white text-lg p-5 rounded-lg shadow-md">
             Welcome to STEMist Hacks! Join other hackers in creating a project
             to impress judges, and to win prizes. There will be workshops
             provided from our gracious sponsors, volunteers, and guest speakers
@@ -27,7 +28,7 @@ export default function App() {
           </div>
         </Section>
         <Section name="Requirements">
-          <div className="bg-gray-100 text-black p-5 rounded-lg shadow-md">
+          <div className="bg-black bg-opacity-20 text-white text-lg p-5 rounded-lg shadow-md">
             Build anything {`"`}tech-related{`"`} to impress judges and win
             prizes. This can include- AR/VR software, Camera Software, Data
             Analysis, Computer Science Programs, Games, Blender Videos,
@@ -41,13 +42,22 @@ export default function App() {
           <Schedule />
         </Section>
         <PrizesSection />
-        <Section name="Frequently Asked Questions">
-          <FAQ />
-        </Section>
         <Section name="Our Sponsors">
           <Sponsors />
+        </Section>
+        <Section name="Frequently Asked Questions">
+          <FAQ />
         </Section>
       </div>
     </Container>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: "https://stemist-hacks.devpost.com",
+      permanent: false,
+    },
+  };
+};

@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <Container title="Home">
       <div className="-mt-20">
-        <Banner image="/homepage.jpg" full>
+        <Banner image="/homepage.png" full>
           <h1
             className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
@@ -77,6 +77,9 @@ export default function Index() {
             <Button href="https://bit.ly/stemistapplication" target="_blank">
               Join our Organization
             </Button>
+            {/* <Button href="/hacks">
+              *DEV PURPOSES* Hackathon
+            </Button> */}
             <Button
               href="https://stemist-hacks.devpost.com"
               backgroundColor="bg-green bg-opacity-80"

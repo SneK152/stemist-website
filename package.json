@@ -26,7 +26,8 @@
   },
   "scripts": {
     "start": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
+    "postbuild": "next-sitemap",
     "serve": "next start",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build"
@@ -41,6 +42,7 @@
     "autoprefixer": "^10.4.1",
     "eslint": "^8.9.0",
     "eslint-config-next": "12.0.10",
+    "next-sitemap": "^2.5.15",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.8"

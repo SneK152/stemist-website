@@ -21,6 +21,16 @@ let prizes: PrizeProps[] = [
     name: "Raffle",
     presented_by: "Desmos",
   },
+  {
+    prizes: "Two Year NordVPN Subscription",
+    name: "2x",
+    presented_by: "NordVPN",
+  },
+  {
+    prizes: "Wolfram|One and Wolfram|Alpha Pro",
+    name: "3x",
+    presented_by: "Wolfram",
+  },
 ];
 
 export default prizes;

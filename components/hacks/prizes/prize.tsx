@@ -14,12 +14,12 @@ export default function Prize({ name, prizes, presented_by }: PrizeProps) {
   const { width } = useWindowSize();
   return (
     <div
-      className="grid grid-cols-12 items-center group py-1 transition-all px-5 hover:bg-gray-300"
+      className="grid grid-cols-12 items-center group py-1 transition-all px-5 hover:bg-black hover:bg-opacity-10"
       {...hoverOptions}
     >
       {width! > 640 && (
         <div className="col-span-1">
-          <GiftIcon className="h-12 p-2 rounded-full shadow-md group-hover:shadow-lg group-hover:border-2 group-hover:border-gray-400 transition-all" />
+          <GiftIcon className="h-12 p-2 rounded-full shadow-md" />
         </div>
       )}
       <div className="sm:col-span-5 col-span-6 font-semibold">{name}</div>

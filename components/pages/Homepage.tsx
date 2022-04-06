@@ -4,21 +4,10 @@ import Counter from "./Counter";
 export default function Homepage() {
   return (
     <>
-      <div className="my-10 scroll-mt-20" id="hero">
-        <h1 className="text-center text-4xl font-display font-bold">
-          By the Numbers
-        </h1>
-        <div className="sm:grid-cols-3 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
-          <Counter
-            number={45}
-            symbol="+"
-            text="interactive presentations created"
-          />
-          <Counter number={6} text="intriguing workshops hosted" />
-          <Counter number={30} symbol="+" text="highly qualified teachers" />
-        </div>
-      </div>
-      <div className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+      <div
+        className="flex scroll-mt-20 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
+        id="hero"
+      >
         <h1 className="text-center font-display text-4xl font-bold">
           What We Do
         </h1>
@@ -33,6 +22,21 @@ export default function Homepage() {
         </p>
       </div>
       <br />
+      <div>
+        <h1 className="text-center text-4xl font-display font-bold">
+          By the Numbers
+        </h1>
+        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+          <Counter
+            number={45}
+            symbol="+"
+            text="interactive presentations created"
+          />
+          <Counter number={6} symbol="+" text="intriguing workshops hosted" />
+          <Counter number={30} symbol="+" text="highly qualified teachers" />
+          <Counter number={150} symbol="+" text="students taught" />
+        </div>
+      </div>
       <br />
       <div
         className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
