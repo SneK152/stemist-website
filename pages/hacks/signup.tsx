@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     redirect: {
       destination:
         "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
-      permanent: true,
+      permanent: false,
     },
   };
 };

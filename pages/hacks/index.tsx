@@ -6,6 +6,7 @@ import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
 import { hackathonNavLinks } from "@/lib/data/navLinks";
+import { GetServerSideProps } from "next";
 
 export default function App() {
   return (
@@ -51,3 +52,12 @@ export default function App() {
     </Container>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: "https://stemist-hacks.devpost.com",
+      permanent: false,
+    },
+  };
+};

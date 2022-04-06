@@ -220,7 +220,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: "https://forms.gle/ECuJtaGiVR8bVtin9",
-      permanent: true,
+      permanent: false,
     },
   };
 };
