@@ -1,22 +1,22 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/outline";
-import { useRef, useState } from "react";
+import { ReactNode, useState } from "react";
 import { animated, useSpring } from "react-spring";
 
 export default function Question({
   answer,
   question,
 }: {
-  answer: string;
-  question: string;
+  answer: ReactNode;
+  question: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
   const answerSpring = useSpring({
-    height: open ? "6rem" : "0rem",
+    height: open ? "8rem" : "0rem",
     transform: open ? "translate(0,0)" : "translate(0,10px)",
     opacity: open ? 1 : 0,
   });
   const containerSpring = useSpring({
-    height: open ? "9rem" : "3rem",
+    height: open ? "11rem" : "3rem",
   });
   return (
     <animated.div className="rounded-md flex flex-col" style={containerSpring}>

@@ -17,7 +17,7 @@ export default function App() {
       customNav={hackathonNavLinks}
     >
       <Header />
-      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+      <div className="max-w-[100rem] m-auto">
         <Section name="About our Hackathon" id="about">
           <div className="bg-black bg-opacity-20 text-white text-lg p-5 rounded-lg shadow-md">
             Welcome to STEMist Hacks! Join other hackers in creating a project
