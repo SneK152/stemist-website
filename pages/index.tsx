@@ -77,9 +77,7 @@ export default function Index() {
             <Button href="https://bit.ly/stemistapplication" target="_blank">
               Join our Organization
             </Button>
-            {/* <Button href="/hacks">
-              *DEV PURPOSES* Hackathon
-            </Button> */}
+            <Button href="/hacks">*DEV PURPOSES* Hackathon</Button>
             <Button
               href="https://stemist-hacks.devpost.com"
               backgroundColor="bg-green bg-opacity-80"
