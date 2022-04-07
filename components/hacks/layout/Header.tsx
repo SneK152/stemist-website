@@ -2,6 +2,11 @@ import Banner from "@/components/layout/Banner";
 import Button from "@/components/layout/Button";
 import Link from "next/link";
 
+const HACKATHON_INFO = {
+  signup_form: "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
+  devpost: "https://stemist-hacks.devpost.com/"
+}
+
 function Description() {
   return (
     <div className="px-2">
@@ -17,13 +22,18 @@ function Description() {
         June 24th to June 26th, 2022
       </p>
       <br />
-      <Button
-        href="/hacks/signup"
-        backgroundColor="bg-blue-500"
-        textColor="text-white"
-      >
-        Sign up Today!
-      </Button>
+      <div className="space-x-5 ">
+        <Button
+          href={HACKATHON_INFO.signup_form}
+          backgroundColor="bg-blue-500"
+          textColor="font-semibold"
+        >
+          Sign up Today!
+        </Button>
+        <Button href={HACKATHON_INFO.devpost} backgroundColor="border border-blue-500" textColor="text-blue-500 font-semibold">
+          Join the Devpost
+        </Button>
+      </div>
     </div>
   );
 }
