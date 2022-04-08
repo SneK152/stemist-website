@@ -1,11 +1,12 @@
 import Banner from "@/components/layout/Banner";
 import Button from "@/components/layout/Button";
-import Link from "next/link";
 
 const HACKATHON_INFO = {
-  signup_form: "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
-  devpost: "https://stemist-hacks.devpost.com/"
-}
+  signup_form:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
+  devpost: "https://stemist-hacks.devpost.com/",
+  discord: "https://discord.gg/mQFreT6eCX",
+};
 
 function Description() {
   return (
@@ -25,12 +26,23 @@ function Description() {
       <div className="space-x-5 ">
         <Button
           href={HACKATHON_INFO.signup_form}
-          backgroundColor="bg-blue-500"
-          textColor="font-semibold"
+          backgroundColor="bg-green bg-opacity-70"
+          textColor="text-white"
         >
           Sign up Today!
         </Button>
-        <Button href={HACKATHON_INFO.devpost} backgroundColor="border border-blue-500" textColor="text-blue-500 font-semibold">
+        <Button
+          href={HACKATHON_INFO.discord}
+          backgroundColor="bg-black bg-opacity-80"
+          textColor="text-white"
+        >
+          Join our Discord
+        </Button>
+        <Button
+          href={HACKATHON_INFO.devpost}
+          backgroundColor="bg-blue-500"
+          textColor="text-white"
+        >
           Join the Devpost
         </Button>
       </div>
