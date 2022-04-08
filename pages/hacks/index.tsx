@@ -78,9 +78,9 @@ export default function App() {
             Advance for complying to this rule
           </div>
         </Section>
-          <Section name="Hackathon Agenda (PST)">
-              <Schedule />
-          </Section>
+        <Section name="Hackathon Agenda (PST)">
+          <Schedule />
+        </Section>
         <PrizesSection />
         <Section name="Our Sponsors">
           <Sponsors />
