@@ -73,9 +73,9 @@ export default function App() {
         <Section name="Requirements to Attend">
           <div className="bg-black bg-opacity-20 text-white text-lg py-5 rounded-lg shadow-md">
             Due to restrictions from DevPost, if you are above 13 years old you
-            can come but if you are younger, you will need parent permission
-            especially parent supervisin while filing out the forms. Thanks in
-            Advance for complying to this rule
+            can come. However if you are younger, you will need parent
+            permission especially parent supervision while filing out the forms.
+            Thanks in advance for complying with this rule.
           </div>
         </Section>
         <Section name="Hackathon Agenda (PST)">

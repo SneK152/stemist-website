@@ -9,7 +9,7 @@ export default function Schedule() {
           (Sunday, 6/26)
         </h1>
       </div>
-      <div className="grid sm:grid-cols-1  lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
         <div className="grid mb-auto">
           <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
             Friday, June 24th
