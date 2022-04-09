@@ -9,22 +9,24 @@ export default function SpringSponsor({
   name,
   url,
   color,
+  baseClassName
 }: {
   image: any;
   className: string;
   name: string;
   url: string;
   color: string;
+  baseClassName?: string;
 }) {
   const [isHovered, setHovered] = useState<boolean>(false);
-  const { containerSpring } = useSponsorSpring(isHovered, color);
+  const { containerSpring } = useSponsorSpring(isHovered);
 
   return (
     <animated.a
-      style={containerSpring}
+      style={{background: (color.toLowerCase().toString()), ...containerSpring}}
       className={`text-black p-3 hover:shadow-xl transition-shadow duration-300 rounded-md relative ${
         isHovered ? "z-40" : "z-30"
-      }`}
+      } ${className}`}
       href={url}
       target="_blank"
       rel="noreferrer noopener"
@@ -34,7 +36,7 @@ export default function SpringSponsor({
       <img
         alt={name}
         src={`/sponsors/${name.toLowerCase()}_logo.png`}
-        className={`${className} h-28 m-auto`}
+        className={`${baseClassName} h-28 m-auto`}
       />
       <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}

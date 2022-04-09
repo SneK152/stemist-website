@@ -20,7 +20,8 @@ export default function Sponsors() {
           url="https://nordvpn.com"
           name="NordVPN"
           image="nordvpn.png"
-          className=""
+          className="bg-green-400"
+          baseClassName=""
         />
         <AnimatedSponsor
           color="#ef222a"
