@@ -68,10 +68,9 @@ export default function Footer() {
               Sign Up
             </Button>
             <Button
-              href="https://stemist-hacks.devpost.com"
+              href="/hacks"
               backgroundColor="bg-green bg-opacity-80"
               textColor="text-white mt-0"
-              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />

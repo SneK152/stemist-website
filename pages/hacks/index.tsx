@@ -8,8 +8,7 @@ import PrizesSection from "@/components/hacks/prizes";
 import { hackathonNavLinks } from "@/lib/data/navLinks";
 
 const HACKATHON_INFO = {
-  signup_form:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
+  signup_form: "/hacks/signup",
   devpost: "https://stemist-hacks.devpost.com/",
   discord: "https://discord.gg/mQFreT6eCX",
 };

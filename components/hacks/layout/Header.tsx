@@ -2,8 +2,7 @@ import Banner from "@/components/layout/Banner";
 import Button from "@/components/layout/Button";
 
 const HACKATHON_INFO = {
-  signup_form:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
+  signup_form: "/hacks/signup",
   devpost: "https://stemist-hacks.devpost.com/",
   discord: "https://discord.gg/mQFreT6eCX",
 };
