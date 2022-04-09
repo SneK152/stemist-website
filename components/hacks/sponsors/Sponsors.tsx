@@ -16,14 +16,14 @@ export default function Sponsors() {
           className=""
         />
         <AnimatedSponsor
-          color="#ffffff"
+          color="#1167b1"
           url="https://nordvpn.com"
           name="NordVPN"
           image="nordvpn.png"
           className=""
         />
         <AnimatedSponsor
-          color="#f4f4f4"
+          color="#cc1100"
           url="https://wolfram.com"
           name="Wolfram"
           image="wolfram.png"
