@@ -16,7 +16,7 @@ export default function Question({
     opacity: open ? 1 : 0,
   });
   const containerSpring = useSpring({
-    height: open ? "11rem" : "3rem",
+    height: open ? "11rem" : "4rem",
   });
   return (
     <animated.div className="rounded-md flex flex-col" style={containerSpring}>

@@ -11,7 +11,7 @@ const HACKATHON_INFO = {
 function Description() {
   return (
     <div className="px-2">
-      <p className="text-xl mb-2 max-w-[100ch] text-center mx-auto">
+      <p className="sm:text-xl text-base mb-2 max-w-[100ch] text-center mx-auto">
         STEMist Hacks aims to spark a light in the minds of students around the
         world interested in tech-related fields. We hope that by adding a form
         of competition and fun whilst still preserving the systematic school
@@ -23,7 +23,7 @@ function Description() {
         June 24th to June 26th, 2022
       </p>
       <br />
-      <div className="space-x-5 ">
+      <div className="flex flex-wrap sm:gap-5 gap-1 justify-center">
         <Button
           href={HACKATHON_INFO.signup_form}
           backgroundColor="bg-green bg-opacity-70"

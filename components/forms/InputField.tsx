@@ -25,7 +25,7 @@ export default function InputField({
       />
       <label
         htmlFor={name}
-        className="absolute left-2 -top-3 text-neutral-500 text-base sm:text-sm transition-all peer-placeholder-shown:left-3.5 peer-placeholder-shown:sm:text-sm peer-placeholder-shown:text-neutral-500 peer-placeholder-shown:top-[9px] peer-focus:-top-3 peer-focus:left-1 peer-focus:text-neutral-600 z-20 bg-black peer-focus:px-1 peer-focus:text-sm cursor-text"
+        className="absolute left-2 -top-3 text-gray-50 text-sm transition-all peer-placeholder-shown:left-3.5 peer-placeholder-shown:sm:text-sm peer-placeholder-shown:text-gray-50 peer-placeholder-shown:top-[9px] peer-focus:-top-3 peer-focus:left-1 peer-focus:text-gray-50 z-20 bg-black peer-focus:px-1 peer-focus:text-sm cursor-text"
       >
         {labelName}
       </label>

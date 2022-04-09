@@ -7,7 +7,7 @@ interface SectionProps {
 export default function Section({ children, name, id }: SectionProps) {
   return (
     <div className="px-5 scroll-mt-20" {...(id ? { id: id } : {})}>
-      <h1 className="text-white text-4xl py-4 capitalize font-bold max-w-screen-sm font-display w-2/5">
+      <h1 className="text-white text-4xl py-4 capitalize font-bold font-display">
         {name}
       </h1>
       {children}

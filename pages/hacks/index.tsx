@@ -31,7 +31,7 @@ export default function App() {
             provided from our gracious sponsors, volunteers, and guest speakers
             to aid in your process. Or, you can start hacking the moment STEMist
             Hacks is open!
-            <div className="space-x-5 pt-4">
+            <div className="flex flex-wrap pt-4">
               <a
                 href={HACKATHON_INFO.signup_form}
                 target="_blank"
