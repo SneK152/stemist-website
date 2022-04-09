@@ -17,7 +17,7 @@ export default function InputField({
         id={name}
         name={name}
         type={type}
-        className={`${className} relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:z-10 focus:border-black focus:outline-none focus:ring-black sm:text-sm peer placeholder-transparent transition-[background-color] duration-[10000000s]`}
+        className={`${className} relative block w-full appearance-none rounded-md border border-neutral-600 px-3 py-2 text-gray-50 shadow-sm focus:z-10 shadow-white/25 focus:border-neutral-600 bg-black focus:outline-none focus:ring-black sm:text-sm peer placeholder-transparent transition-[background-color] duration-[10000000s]`}
         placeholder={labelName}
         autoComplete="off"
         {...formik.getFieldProps(name)}
@@ -25,7 +25,7 @@ export default function InputField({
       />
       <label
         htmlFor={name}
-        className="absolute left-2 -top-3 text-gray-500 text-base sm:text-sm transition-all peer-placeholder-shown:left-3.5 peer-placeholder-shown:sm:text-sm peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-[9px] peer-focus:-top-3 peer-focus:left-1 peer-focus:text-gray-600 z-20 bg-white peer-focus:px-1 peer-focus:text-sm cursor-text"
+        className="absolute left-2 -top-3 text-neutral-500 text-base sm:text-sm transition-all peer-placeholder-shown:left-3.5 peer-placeholder-shown:sm:text-sm peer-placeholder-shown:text-neutral-500 peer-placeholder-shown:top-[9px] peer-focus:-top-3 peer-focus:left-1 peer-focus:text-neutral-600 z-20 bg-black peer-focus:px-1 peer-focus:text-sm cursor-text"
       >
         {labelName}
       </label>
@@ -33,7 +33,7 @@ export default function InputField({
         <div
           className={
             errorClass ||
-            "text-red-500 font-bold sm:text-sm pl-3 pt-2 text-left"
+            "text-red-600 font-bold sm:text-sm pl-3 pt-2 text-left"
           }
         >
           {formik.errors[name]}

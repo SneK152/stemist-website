@@ -9,7 +9,6 @@ import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 
 const Spinner = dynamic(() => import("@/components/Spinner"));
-const FeedBackForm = dynamic(() => import("@/components/forms/FeedbackForm"));
 
 const MemoedInputField = memo(InputField);
 
@@ -77,17 +76,15 @@ export default function Contact() {
     <Container title="Contact">
       <PartialBanner title="Contact Us" />
       <div className="">
-        <div className="mx-auto py-3 sm:flex sm:px-6 lg:px-8 max-w-[100rem] px-2">
-          <div className="flex w-full flex-col gap-3 pt-8 sm:ml-0 ml-5 sm:mb-0 mb-8">
-            <h1 className="font-display text-2xl font-bold">Contact Us</h1>
-            <hr className="w-1/3 rounded-2xl border border-gray-400 bg-gray-400 opacity-50" />
-            <p className="pr-5">
-              Fill out the form to get in touch with our team. We will get back
-              to you as soon as possible.
-            </p>
-          </div>
+        <div className="mx-auto py-3 flex-col flex gap-5 sm:px-6 lg:px-8 max-w-[100rem] px-2">
+          <h1 className="font-sans text-xl text-center max-w-[80ch] m-auto">
+            Fill out this form if you would like to contact us, if you have
+            feedback on one of our recent sessions, or if you would like to
+            provide a testimonial (thank you by the way). We will reach out to
+            you within 2-5 days.
+          </h1>
           <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
-            <div className="w-full space-y-3 rounded-lg border border-gray-100 bg-stone-50 p-4 shadow-lg">
+            <div className="w-full space-y-3 rounded-lg p-4">
               <MemoedInputField
                 labelName="Email address"
                 name="contactEmail"
@@ -107,14 +104,13 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="relative m-auto block w-full rounded-md border border-transparent bg-black py-2 px-4 text-sm font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+                className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
               >
                 {submit}
               </button>
             </div>
           </form>
         </div>
-        <FeedBackForm />
       </div>
     </Container>
   );
