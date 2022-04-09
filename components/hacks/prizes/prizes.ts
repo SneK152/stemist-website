@@ -1,6 +1,6 @@
 import { PrizeProps } from "./prize";
 
-let prizes: PrizeProps[] = [
+const prizes: PrizeProps[] = [
   {
     prizes: "Lifetime Taskade Subscription",
     name: "Top Three",
