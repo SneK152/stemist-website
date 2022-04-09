@@ -39,6 +39,7 @@ export default function SpringSponsor({
       <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}
         alt="Sponsor image"
+        className="w-full"
       />
     </animated.a>
   );
