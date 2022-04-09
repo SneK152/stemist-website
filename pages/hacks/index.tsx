@@ -92,12 +92,3 @@ export default function App() {
     </Container>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   return {
-//     redirect: {
-//       destination: "https://stemist-hacks.devpost.com",
-//       permanent: false,
-//     },
-//   };
-// };

@@ -1,7 +1,6 @@
 import SignupForm from "@/components/hacks/signup";
 import Container from "@/components/layout/Container";
-import { hackathonNavLinks, navLinks } from "@/lib/data/navLinks";
-import { GetServerSideProps } from "next";
+import { hackathonNavLinks } from "@/lib/data/navLinks";
 
 export default function SignupPage() {
   return (
@@ -19,13 +18,3 @@ export default function SignupPage() {
     </Container>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination:
-        "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
-      permanent: false,
-    },
-  };
-};
