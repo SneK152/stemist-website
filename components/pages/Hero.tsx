@@ -31,7 +31,7 @@ export default function Hero() {
     >
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
-          <h1 className="sm:text-5xl text-3xl font-bold">
+          <h1 className="lg:text-5xl sm:text-3xl text-2xl font-bold">
             STEMist is <span ref={el}></span>
           </h1>
           <br />

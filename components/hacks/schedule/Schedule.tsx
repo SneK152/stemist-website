@@ -5,11 +5,11 @@ export default function Schedule() {
     <>
       <div>
         <h1 className="font-semibold text-xl text-center pb-3">
-          Note: Hackathon starts at 8:00 PM (Friday, 6/24)
-          and ends at 2PM (Sunday, 6/26) 
+          Note: Project submission starts at 10AM Friday (6/24) and ends at 2PM
+          Sunday (6/26)
         </h1>
       </div>
-      <div className="grid sm:grid-cols-1  lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
         <div className="grid mb-auto">
           <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
             Friday, June 24th
@@ -120,7 +120,7 @@ export default function Schedule() {
             time="5:00 PM"
           />
         </div>
-        </div>
-      </>
+      </div>
+    </>
   );
 }

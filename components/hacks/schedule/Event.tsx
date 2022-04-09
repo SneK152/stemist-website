@@ -12,10 +12,8 @@ export default function Event({ name, time, description }: ExportProps) {
         <div className="text-start col-span-2 font-semibold">{time}</div>
       </div>
       <div className="border-t-[0.05px] border-white pt-2" />
-      <p
-        className={`text-white opacity-100 justify-center max-w-sm`}
-      >
-          {description}
+      <p className={`text-white opacity-100 justify-center max-w-sm`}>
+        {description}
       </p>
     </div>
   );

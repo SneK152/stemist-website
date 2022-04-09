@@ -8,8 +8,7 @@ import PrizesSection from "@/components/hacks/prizes";
 import { hackathonNavLinks } from "@/lib/data/navLinks";
 
 const HACKATHON_INFO = {
-  signup_form:
-    "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
+  signup_form: "/hacks/signup",
   devpost: "https://stemist-hacks.devpost.com/",
   discord: "https://discord.gg/mQFreT6eCX",
 };
@@ -31,7 +30,7 @@ export default function App() {
             provided from our gracious sponsors, volunteers, and guest speakers
             to aid in your process. Or, you can start hacking the moment STEMist
             Hacks is open!
-            <div className="space-x-5 pt-4">
+            <div className="flex flex-wrap gap-5 pt-4">
               <a
                 href={HACKATHON_INFO.signup_form}
                 target="_blank"
@@ -73,14 +72,14 @@ export default function App() {
         <Section name="Requirements to Attend">
           <div className="bg-black bg-opacity-20 text-white text-lg py-5 rounded-lg shadow-md">
             Due to restrictions from DevPost, if you are above 13 years old you
-            can come but if you are younger, you will need parent permission
-            especially parent supervisin while filing out the forms. Thanks in
-            Advance for complying to this rule
+            can come. However if you are younger, you will need parent
+            permission especially parent supervision while filing out the forms.
+            Thanks in advance for complying with this rule.
           </div>
         </Section>
-          <Section name="Hackathon Agenda (PST)">
-              <Schedule />
-          </Section>
+        <Section name="Hackathon Agenda (PST)">
+          <Schedule />
+        </Section>
         <PrizesSection />
         <Section name="Our Sponsors">
           <Sponsors />
@@ -92,12 +91,3 @@ export default function App() {
     </Container>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   return {
-//     redirect: {
-//       destination: "https://stemist-hacks.devpost.com",
-//       permanent: false,
-//     },
-//   };
-// };

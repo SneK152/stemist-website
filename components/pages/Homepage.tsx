@@ -23,7 +23,7 @@ export default function Homepage() {
       </div>
       <br />
       <div>
-        <h1 className="text-center text-4xl font-display font-bold">
+        <h1 className="text-center mb-2 sm:mb-0 text-4xl font-display font-bold">
           By the Numbers
         </h1>
         <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
@@ -31,10 +31,26 @@ export default function Homepage() {
             number={45}
             symbol="+"
             text="interactive presentations created"
+            className="!text-4xl sm:!text-5xl"
           />
-          <Counter number={6} symbol="+" text="intriguing workshops hosted" />
-          <Counter number={30} symbol="+" text="highly qualified teachers" />
-          <Counter number={150} symbol="+" text="students taught" />
+          <Counter
+            number={6}
+            symbol="+"
+            text="intriguing workshops hosted"
+            className="!text-4xl sm:!text-5xl"
+          />
+          <Counter
+            number={30}
+            symbol="+"
+            text="highly qualified teachers"
+            className="!text-4xl sm:!text-5xl"
+          />
+          <Counter
+            number={150}
+            symbol="+"
+            text="students taught"
+            className="!text-4xl sm:!text-5xl"
+          />
         </div>
       </div>
       <br />
@@ -47,7 +63,7 @@ export default function Homepage() {
           description="We founded STEMist originally because we believed that learning was a gift that all students should have access to. We believe that kids should have access to proper education, especially in the rapidly-growing STEM fields. Our goal is to provide this education during times where students are available, such as in most school breaks. Ultimately, we want students to get an excelling immersion into STEM and build a foundation that they can rely on for years to come."
           buttonColor="white"
           buttonText="More Info"
-          buttonLink="/about"
+          buttonLink="/about/who-we-are"
         />
         <HomeColumn
           title="Qualifications"

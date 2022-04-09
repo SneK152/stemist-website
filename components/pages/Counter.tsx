@@ -6,7 +6,8 @@ export default function Counter(props: {
   number: number;
   text: string;
   symbol?: string;
-  before?: boolean;
+  before?: string;
+  className?: string;
 }) {
   const countUpRef = useRef(null);
   const { start, reset } = useCountUp({
@@ -24,10 +25,14 @@ export default function Counter(props: {
   }, [isVisible, start, reset]);
   return (
     <div className="flex flex-col gap-2 justify-center">
-      <span className="text-5xl font-semibold w-full text-center">
-        {props.before && props.symbol && <span>{props.symbol}</span>}
+      <span
+        className={`text-5xl font-semibold w-full text-center ${
+          props.className || ""
+        }`}
+      >
+        {props.before && <span>{props.before}</span>}
         <span ref={countUpRef}></span>
-        {props.symbol && !props.before && <span>{props.symbol}</span>}
+        {props.symbol && <span>{props.symbol}</span>}
       </span>
       <div className="text-center text-lg font-medium">{props.text}</div>
     </div>

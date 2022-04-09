@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Container title="Who We Are">
       <PartialBanner title="Who We Are" />
-      <div className="m-3 p-3 text-black space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="m-3 p-3 text-white space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <Section
           title="About our Organization"
           image="/about/teamphoto.jpg"

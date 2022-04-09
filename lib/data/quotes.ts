@@ -115,6 +115,28 @@ const quotes: Quote[] = [
       "Education is the most powerful weapon which you can use to change the world.",
     author: "Nelson Mandela",
   },
+  {
+    quote:
+      "You cannot make people learn. You can only provide the right conditions for learning to happen.",
+    author: "Vince Gowmon",
+  },
+  {
+    quote: "The mind is not a vessel to be filled, but a fire to be kindled.",
+    author: "Plutarch",
+  },
+  {
+    quote:
+      "Children learn as they play. Most importantly, in play, children learn how to learn.",
+    author: "O. Fred Donaldson",
+  },
+  {
+    quote: "Early childhood education is the key to the betterment of society.",
+    author: "Maria Montessori",
+  },
+  {
+    quote: "Children must be taught how to think, not what to think.",
+    author: "Margaret Mead",
+  },
 ];
 
 export default quotes;

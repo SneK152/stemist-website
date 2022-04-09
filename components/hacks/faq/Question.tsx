@@ -21,7 +21,7 @@ export default function Question({
   return (
     <animated.div className="rounded-md flex flex-col" style={containerSpring}>
       <div
-        className={`rounded-lg text-2xl ${
+        className={`rounded-lg sm:text-lg md:text-xl xl:text-2xl ${
           open ? "rounded-b-none" : ""
         } text-left flex items-center gap-3 pl-2 py-3 transition-all font-display cursor-pointer`}
         onClick={() => setOpen((o) => !o)}

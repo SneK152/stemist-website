@@ -67,22 +67,20 @@ export default function Index() {
               Learn More
             </Button>
             <Button
-              href="https://forms.gle/ECuJtaGiVR8bVtin9"
+              href="/signup"
               target="_blank"
               backgroundColor="bg-blue-500"
               textColor="text-white"
             >
               Intro to STEM Workshop Signups
             </Button>
-            <Button href="https://bit.ly/stemistapplication" target="_blank">
+            <Button href="https://bit.ly/stemistapps" target="_blank">
               Join our Organization
             </Button>
-            <Button href="/hacks">*DEV PURPOSES* Hackathon</Button>
             <Button
-              href="https://stemist-hacks.devpost.com"
+              href="/hacks"
               backgroundColor="bg-green bg-opacity-80"
               textColor="text-white"
-              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
