@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="text-center lg:text-left bg-black text-white">
       <div className="flex justify-center items-center lg:justify-between p-6 pb-1 border-b border-gray-300">
-        <div className="mr-12 hidden lg:block">
+        <div className="mr-12">
           <Link href="/">
             <a>
               <Image
@@ -33,18 +33,18 @@ export default function Footer() {
         </ul>
       </div>
       <div className="mx-6 py-10 text-center md:text-left">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-4">
+        <div className="grid lg:grid-cols-12 grid-cols-1 gap-8">
+          <div className="lg:col-span-4">
             <p>
               A student-led nonprofit bringing free STEM education to children
               ages 7 to 14.
             </p>
           </div>
-          <div className="flex col-span-5 gap-2">
+          <div className="flex w-full lg:col-span-5 gap-2">
             {navLinks
               .filter((l) => l.dropdown)
               .map((link, i) => (
-                <div key={i} className="min-w-[10rem]">
+                <div key={i} className="min-w-[10rem] w-full">
                   <Link href={link.link}>
                     <a className="font-writing uppercase font-semibold text-xl">
                       {link.name}
@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
               ))}
           </div>
-          <div className="col-span-3 flex justify-start gap-1 items-center">
+          <div className="lg:col-span-3 flex justify-center gap-1 items-center">
             <Button
               href={navLinks.find((l) => l.name === "Sign Up")?.link}
               backgroundColor="bg-blue-500"
