@@ -74,7 +74,7 @@ export default function Index() {
             >
               Intro to STEM Workshop Signups
             </Button>
-            <Button href="https://bit.ly/stemistapplication" target="_blank">
+            <Button href="https://bit.ly/stemistapps" target="_blank">
               Join our Organization
             </Button>
             <Button href="/hacks">*DEV PURPOSES* Hackathon</Button>
