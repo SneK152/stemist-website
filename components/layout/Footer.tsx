@@ -12,11 +12,11 @@ export default function Footer() {
             ages 7 to 14.
           </p>
           <div className="h-1"></div>
-          <ul className="flex justify-start">
+          <ul className="flex gap-1 items-center justify-start">
             {socials.map((social, index) => (
               <li key={index}>
                 <a href={social.link} target="_blank" rel="noreferrer noopener">
-                  {social.icon} {social.title}
+                  {social.icon}
                 </a>
               </li>
             ))}
