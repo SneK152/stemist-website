@@ -27,6 +27,7 @@ function Description() {
           href={HACKATHON_INFO.signup_form}
           backgroundColor="bg-green bg-opacity-70"
           textColor="text-white"
+          target="_blank"
         >
           Sign up Today!
         </Button>
@@ -34,6 +35,7 @@ function Description() {
           href={HACKATHON_INFO.discord}
           backgroundColor="bg-black bg-opacity-80"
           textColor="text-white"
+          target="_blank"
         >
           Join our Discord
         </Button>
@@ -41,6 +43,7 @@ function Description() {
           href={HACKATHON_INFO.devpost}
           backgroundColor="bg-blue-500"
           textColor="text-white"
+          target="_blank"
         >
           Join the Devpost
         </Button>

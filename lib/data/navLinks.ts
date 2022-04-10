@@ -96,5 +96,8 @@ export const hackathonNavLinks: NavLink[] = [
   {
     name: "Signup",
     link: "/hacks/signup",
+    customProps: {
+      target: "_blank",
+    },
   },
 ];

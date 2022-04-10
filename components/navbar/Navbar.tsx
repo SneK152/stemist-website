@@ -67,7 +67,11 @@ export default function Navbar({
               <div className="mt-auto mb-auto hidden lg:flex">
                 <ul className="inline-flex gap-4">
                   {customNav.map((navLink, index) => (
-                    <NavLink key={index} href={navLink.link}>
+                    <NavLink
+                      key={index}
+                      href={navLink.link}
+                      {...navLink.customProps}
+                    >
                       {navLink.name}
                     </NavLink>
                   ))}
