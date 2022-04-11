@@ -49,7 +49,7 @@ export default function Banner({
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover"
+          className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.1)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.1));]"
           priority
         />
         <div className="flex h-full w-full items-center justify-center">
