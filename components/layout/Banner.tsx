@@ -49,14 +49,14 @@ export default function Banner({
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.1)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.1));]"
+          className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
           priority
         />
         <div className="flex h-full w-full items-center justify-center">
           <div
             className={`absolute py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-center text-white z-20 ${
               full
-                ? "h-full w-full bg-black backdrop-blur-sm bg-opacity-20 backdrop-brightness-75"
+                ? "h-full w-full bg-transparent"
                 : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56"
             }`}
           >
