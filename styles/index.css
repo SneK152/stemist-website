@@ -8,7 +8,7 @@
 }
 
 html {
-  /* background-image: url("/loops.png"); */
+  background-image: url("/loop.jpg");
   @apply bg-contain text-white bg-black;
 }
 body {
