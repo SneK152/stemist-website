@@ -52,7 +52,7 @@ export default function Banner({
           className="-z-10 blur-sm pointer-events-none h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
           priority
         />
-        <div className="h-full w-full -z-20 bg-black absolute">asdf</div>
+        <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute"></div>
         <div className="flex h-full w-full items-center justify-center">
           <div
             className={`absolute py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-center text-white z-20 ${
