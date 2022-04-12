@@ -7,7 +7,7 @@ import Button from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="text-center lg:text-left bg-black text-white">
+    <footer className="text-center lg:text-left text-white">
       <div className="flex justify-center items-center lg:justify-between p-6 pb-1 border-b border-gray-300">
         <div className="mr-12">
           <Link href="/">
