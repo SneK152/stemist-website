@@ -9,7 +9,7 @@
 
 html {
   background-image: url("/loop.jpg");
-  background-size: 150%;
+  background-size: 125%;
   @apply text-white bg-black;
 }
 body {
