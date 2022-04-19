@@ -169,7 +169,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    teamRoles: ["WEBS"],
+    officerRoles: ["Director of PR and Outreach", "WEBS", "Events"],
     teacherRoles: ["Math"],
     curriculumRoles: {
       math: ["Advanced Algebra"],
@@ -374,6 +374,20 @@ const people: ExtendedPerson[] = [
     image: resolveTeamImage("Sarthak Ratan"),
     description:
       "Sarthak Ratan is a freshman at Lynbrook high who enjoys science, designing, and business. When he isn’t working he loves swimming, playing the guitar, or talking to friends.",
+  },
+  {
+    name: "Yash Singh",
+    teamRoles: ["Technology", "Intern"],
+    description:
+      "Yash Singh is a computer science and math fanatic who codes in his free time and can often be found in hackathons. He likes to go on hikes and play basketball when he is not studying.",
+    image: resolveTeamImage("Yash Singh"),
+    qualifications: [
+      "Advanced TypeScript and C++ Developer",
+      "Front-end Web Developer",
+      "Open Source Contributor and Maintainer",
+      "Mermaid.js Core Maintainer",
+      "Schema-Inspector Maintainer",
+    ],
   },
 ];
 export default people;
