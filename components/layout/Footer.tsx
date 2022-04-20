@@ -40,11 +40,11 @@ export default function Footer() {
               ages 7 to 14.
             </p>
           </div>
-          <div className="flex flex-wrap lg:col-span-5 gap-2">
+          <div className="flex mx-auto flex-wrap lg:col-span-5 gap-2">
             {navLinks
               .filter((l) => l.dropdown)
               .map((link, i) => (
-                <div key={i} className="min-w-[10rem] w-full">
+                <div key={i} className="min-w-[10rem] mx-auto">
                   <Link href={link.link}>
                     <a className="font-writing uppercase font-semibold text-xl">
                       {link.name}

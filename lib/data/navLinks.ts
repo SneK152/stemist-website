@@ -27,20 +27,24 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "Reach Out",
+    name: "Contact Us",
+    link: "/contact",
+  },
+  {
+    name: "Get Involved",
     link: "/get-involved",
     dropdown: true,
     dropdownItems: [
-      {
-        name: "Contact Us",
-        link: "/get-involved/contact",
-      },
       {
         name: "Team Applications",
         link: "https://bit.ly/stemistapps",
         customProps: {
           target: "_blank",
         },
+      },
+      {
+        name: "Workshop Signups",
+        link: "/signup",
       },
       // {
       //   name: "Donations",
@@ -49,23 +53,16 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "Projects",
-    link: "/projects",
-    dropdown: true,
-    dropdownItems: [
-      {
-        name: "STEMist Hacks",
-        link: "/hacks",
-      },
-      // {
-      //   name: "WEBS",
-      //   link: "/webs",
-      // },
-    ],
+    name: "STEMist Hacks",
+    link: "/hacks",
   },
+  // {
+  //   name: "WEBS",
+  //   link: "/webs",
+  // },
   {
-    name: "Curriculum",
-    link: "/curriculum",
+    name: "Workshops",
+    link: "/workshops",
   },
   // {
   //   name: "Programs",
