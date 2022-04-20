@@ -45,6 +45,9 @@ export const navLinks: NavLink[] = [
       {
         name: "Workshop Signups",
         link: "/signup",
+        customProps: {
+          target: "_blank",
+        },
       },
       // {
       //   name: "Donations",
