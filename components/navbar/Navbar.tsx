@@ -2,6 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import NavLink from "./NavLink";
 import {
   ArrowLeftIcon,
+  ArrowRightIcon,
   ChevronDownIcon,
   MenuIcon,
   XIcon,
@@ -98,7 +99,10 @@ export default function Navbar({
                         href={navLink.link}
                         {...(navLink.customProps ? navLink.customProps : {})}
                       >
-                        {navLink.name}
+                        {navLink.name}{" "}
+                        {navLink.customProps?.target && (
+                          <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                        )}
                       </NavLink>
                     ) : (
                       <DropdownLink
@@ -112,7 +116,10 @@ export default function Navbar({
                             key={i}
                             target={item.customProps?.target || "_self"}
                           >
-                            {item.name}
+                            {item.name}{" "}
+                            {item.customProps?.target && (
+                              <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                            )}
                           </DropdownButton>
                         ))}
                       </DropdownLink>
@@ -143,7 +150,10 @@ export default function Navbar({
                                 ? navLink.customProps
                                 : {})}
                             >
-                              {navLink.name}
+                              {navLink.name}{" "}
+                              {navLink.customProps?.target && (
+                                <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                              )}
                             </NavLink>
                           </Disclosure.Button>
                         ) : (
@@ -173,7 +183,10 @@ export default function Navbar({
                                       }`}
                                       target={item.customProps?.target || ""}
                                     >
-                                      {item.name}
+                                      {item.name}{" "}
+                                      {item.customProps?.target && (
+                                        <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                                      )}
                                     </a>
                                   </Link>
                                 )
