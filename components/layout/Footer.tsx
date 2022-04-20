@@ -40,7 +40,7 @@ export default function Footer() {
               ages 7 to 14.
             </p>
           </div>
-          <div className="flex w-full lg:col-span-5 gap-2">
+          <div className="flex flex-wrap lg:col-span-5 gap-2">
             {navLinks
               .filter((l) => l.dropdown)
               .map((link, i) => (
