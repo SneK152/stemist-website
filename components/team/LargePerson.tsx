@@ -3,7 +3,7 @@ import PersonProps from "@/lib/types/PersonProps";
 
 export default function LargePerson(props: PersonProps) {
   return (
-    <div className="group flex h-full flex-row items-center justify-center gap-5">
+    <div className="group flex w-96 h-full flex-row mx-auto items-center gap-5">
       <div
         className={`${props.person.description ? "group-hover:hidden" : ""}`}
       >
@@ -18,7 +18,7 @@ export default function LargePerson(props: PersonProps) {
           priority
         />
       </div>
-      <h1 className="font-display space-y-1 text-3xl font-normal">
+      <h1 className="font-display justify-self-center space-y-1 text-3xl font-normal">
         <span
           className={`${
             props.person.description ? "group-hover:hidden" : ""
@@ -41,7 +41,7 @@ export default function LargePerson(props: PersonProps) {
           </div>
         </span>
         {props.person.description && (
-          <p className="hidden max-w-[40ch] font-writing text-lg transition-all group-hover:block">
+          <p className="hidden max-w-[40ch] font-writing text-lg transition-all group-hover:block mx-auto">
             {props.person.description}
           </p>
         )}

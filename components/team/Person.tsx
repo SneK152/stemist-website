@@ -7,7 +7,7 @@ import Qualifications from "./Qualifications";
 export default function Person(props: PersonProps) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="group flex h-full flex-row items-center justify-center gap-5">
+    <div className="group flex w-72 h-full flex-row mx-auto items-center gap-5">
       <div
         className={`${
           props.person.description || props.person.qualifications
@@ -25,7 +25,7 @@ export default function Person(props: PersonProps) {
           quality={100}
         />
       </div>
-      <h1 className="font-display space-y-1 text-lg font-normal">
+      <h1 className="font-display justify-self-center w-full space-y-1 text-lg font-normal">
         <span
           className={`${
             props.person.description || props.person.qualifications
@@ -53,7 +53,7 @@ export default function Person(props: PersonProps) {
           <p
             className={`hidden max-w-[40ch] font-writing ${
               props.person.qualifications ? "text-xs" : "text-sm"
-            } transition-all group-hover:block`}
+            } transition-all group-hover:block mx-auto`}
           >
             {props.person.description}
           </p>

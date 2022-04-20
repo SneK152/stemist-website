@@ -236,7 +236,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    teamRoles: ["HR", "Outreach", "Events", "WEBS"],
+    officerRoles: ["Director of HR", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
