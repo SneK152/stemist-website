@@ -1,10 +1,12 @@
-type NavLink = {
+export type NavLink = {
   name: string;
   link: string;
-  dropdownItems?: NavLink[];
+  dropdownItems?: (Omit<NavLink, 'dropdown' | 'dropdownItems'>)[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
 };
+
+export type NavLinks = NavLink[];
 
 export const navLinks: NavLink[] = [
   {

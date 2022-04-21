@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
-import { navLinks } from "@/lib/data/navLinks";
+import { NavLinks, navLinks } from "@/lib/data/navLinks";
 import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
 
@@ -22,7 +22,7 @@ export default function Navbar({
 }: {
   noNav: boolean;
   navTitle: string;
-  customNav: any[];
+  customNav: NavLinks;
 }) {
   const router = useRouter();
   return (
@@ -107,8 +107,8 @@ export default function Navbar({
                     ) : (
                       <DropdownLink
                         key={index}
-                        link={navLink.link}
                         title={navLink.name}
+                        navLink={navLink}
                       >
                         {navLink.dropdownItems?.map((item, i) => (
                           <DropdownButton
@@ -160,9 +160,9 @@ export default function Navbar({
                           <Disclosure key={i}>
                             <Disclosure.Button
                               className={`block font-writing text-lg underline-offset-1 whitespace-nowrap ${
-                                router.pathname.includes(navLink.link)
-                                  ? "font-bold"
-                                  : "font-normal"
+                                navLink.dropdownItems!.some((dropDownItem) => dropDownItem.link === router.pathname)
+                                    ? "font-bold"
+                                    : "font-normal"
                               }`}
                             >
                               {navLink.name}{" "}

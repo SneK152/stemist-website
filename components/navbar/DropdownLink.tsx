@@ -8,20 +8,17 @@ function Dropdown({
   children,
   title,
   mobile,
-  link,
-}: {
-  children: ReactNode;
-  title: string;
-  mobile?: boolean;
-  link: string;
-}) {
+  navLink
+}: DropdownLinkProps) {
   const router = useRouter();
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex h-full">
         <Menu.Button
           className={`w-full rounded-md text-lg flex items-center  ${
-            router.pathname.includes(link) ? "font-bold" : "font-normal"
+            navLink.dropdownItems!.some((dropDownItem) => dropDownItem.link === router.pathname)
+              ? "font-bold"
+              : "font-normal"
           } focus:outline-none z-0`}
         >
           {title}
@@ -56,11 +53,11 @@ export default function DropdownLink({
   children,
   title,
   mobile,
-  link,
+  navLink
 }: DropdownLinkProps) {
   return (
     <div className="flex">
-      <Dropdown title={title} link={link} mobile={mobile}>
+      <Dropdown title={title} mobile={mobile} navLink={navLink}>
         {children}
       </Dropdown>
     </div>
