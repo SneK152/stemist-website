@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center p-6">
-        <span>© 2022 Copyright </span>
+        <span>© <time dateTime="2022">2022</time> Copyright </span>
         <span className="text-blue-500 font-semibold">STEMist Education</span>
       </div>
     </footer>

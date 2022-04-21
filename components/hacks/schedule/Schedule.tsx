@@ -5,119 +5,135 @@ export default function Schedule() {
     <>
       <div>
         <h1 className="font-semibold text-xl text-center pb-3">
-          Note: Project submission starts at 10AM Friday (6/24) and ends at 2PM
-          Sunday (6/26)
+          Note: Project submission starts at <time dateTime="2022-06-24 10:00-07:00">10AM Friday (6/24)</time> and ends at <time dateTime="2022-06-26 14:00-07:00">2PM
+          Sunday (6/26)</time>
         </h1>
       </div>
       <div className="grid sm:grid-cols-1 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
         <div className="grid mb-auto">
           <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
-            Friday, June 24th
+            <time dateTime="2022-06-24">Friday, June 24th</time>
           </h1>
           <Event
             description="Day 1 Opening Ceremony"
             name="Day 1 Opening Ceremony"
-            time="8:00 to 9:00 AM"
+            timeStart="2022-06-24 08:00-07:00"
+            timeEnd="2022-06-24 09:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="9:00 to 10:00 AM"
+            timeStart="2022-06-24 09:00-07:00"
+            timeEnd="2022-06-24 10:00-07:00"
           />
           <Event
             description="At this time, you may start submitting your project!"
             name="Submissions Open"
-            time="10:00 AM"
+            timeStart="2022-06-24 10:00-07:00"
           />
           <Event
             description="A workshop will be held by Echo3D"
             name="Echo3D Workshop"
-            time="10:00 to 11:00 AM"
+            timeStart="2022-06-24 10:00-07:00"
+            timeEnd="2022-06-24 11:00-07:00"
           />
           <Event
             description="You can use this break to eat lunch and take a break from hacking on your project!"
             name="Lunch Break"
-            time="12:00 to 2:00 PM"
+            timeStart="2022-06-24 12:00-07:00"
+            timeEnd="2022-06-24 14:00-07:00"
           />
           <Event
             description="Feel free to chat with one of our mentors!"
             name="Mentors Open"
-            time="2:00 to 6:00 PM"
+            timeStart="2022-06-24 14:00-07:00"
+            timeEnd="2022-06-24 18:00-07:00"
           />
         </div>
         <div className="grid mb-auto">
           <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
-            Saturday, June 25th
+            <time dateTime="2022-06-25">Saturday, June 25th</time>
           </h1>
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="9:00 to 10:00 AM"
+            timeStart="2022-06-25 09:00-07:00"
+            timeEnd="2022-06-25 10:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="10:00 to 11:00 AM"
+            timeStart="2022-06-25 10:00-07:00"
+            timeEnd="2022-06-25 11:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="11:00 AM to 12:00 PM"
+            timeStart="2022-06-25 11:00-07:00"
+            timeEnd="2022-06-25 12:00-07:00"
           />
           <Event
             description="You can use this break to eat lunch and take a break from hacking on your project!"
             name="Lunch Break"
-            time="12:00 to 2:00 PM"
+            timeStart="2022-06-25 12:00-07:00"
+            timeEnd="2022-06-25 14:00-07:00"
           />
           <Event
             description="Feel free to chat with one of our mentors!"
             name="Mentors Open"
-            time="2:00 to 6:00 PM"
+            timeStart="2022-06-25 14:00-07:00"
+            timeEnd="2022-06-25 18:00-07:00"
           />
         </div>
         <div className="grid mb-auto">
           <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
-            Sunday, June 26th
+            <time dateTime="2022-06-26">Sunday, June 26th</time>
           </h1>
           <Event
             description="Feel free to chat with one of our mentors!"
             name="Mentors Open"
-            time="9:00 to 2:00 PM"
+            timeStart="2022-06-26 09:00-07:00"
+            timeEnd="2022-06-26 14:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="9:00 to 10:00 AM"
+            timeStart="2022-06-26 09:00-07:00"
+            timeEnd="2022-06-26 10:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="10:00 to 1:00 AM"
+            timeStart="2022-06-26 10:00-07:00"
+            timeEnd="2022-06-26 13:00-07:00"
           />
           <Event
             description="A workshop will be held"
             name="Workshop / Speaker Talk"
-            time="11:00 AM to 12:00 PM"
+            timeStart="2022-06-26 11:00-07:00"
+            timeEnd="2022-06-26 12:00-07:00"
           />
           <Event
             description="You can use this break to eat lunch and take a break from hacking on your project!"
             name="Lunch Break"
-            time="12:00 to 2:00 PM"
+            timeStart="2022-06-26 12:00-07:00"
+            timeEnd="2022-06-26 14:00-07:00"
           />
           <Event
             description="At this time, you may no longer submit your project."
             name="Submissions Closed"
-            time="2:00 PM"
+            timeStart="2022-06-26 14:00-07:00"
           />
           <Event
             description="During this time, we will be judging your projects!"
             name="Judging"
-            time="2:30 to 4:30 PM"
+            timeStart="2022-06-26 14:30-07:00"
+            timeEnd="2022-06-26 16:30-07:00"
           />
           <Event
             description="We will be hosting our awards ceremony!"
             name="Award Ceremony and Thanks"
-            time="5:00 PM"
+            timeStart="2022-06-26 17:00-07:00"
           />
         </div>
       </div>

@@ -19,7 +19,7 @@ function Description() {
         nonprofit run by and for students.
       </p>
       <p className="mb-2 text-2xl font-semibold">
-        June 24th to June 26th, 2022
+        <time dateTime="2022-06-24">June 24th</time> to <time dateTime="2022-06-26">June 26th, 2022</time>
       </p>
       <br />
       <div className="flex flex-wrap sm:gap-5 gap-1 justify-center">
