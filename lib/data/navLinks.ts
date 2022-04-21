@@ -28,7 +28,7 @@ export const navLinks: NavLink[] = [
   },
   {
     name: "Contact Us",
-    link: "/contact",
+    link: "/get-involved/contact",
   },
   {
     name: "Get Involved",
