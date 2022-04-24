@@ -16,6 +16,7 @@ export default function Index() {
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
+            data-aos-anchor="#top"
           >
             STEMist Education
           </h1>
@@ -24,6 +25,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={400}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Learn STEM in an interactive way.
             </div>
@@ -31,6 +33,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={600}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Engage with fellow students.
             </div>
@@ -38,6 +41,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={800}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Achieve your goals!
             </div>
