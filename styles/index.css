@@ -2,14 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --plyr-video-background: rgba(255, 255, 255, 1);
-  --plyr-color-main: #09c39e;
-}
-
 html {
   background-image: url("/loop.jpg");
-  background-size: 25%;
+  background-size: 50%;
   scrollbar-color: #454a4d #202324;
   @apply text-white bg-black;
 }

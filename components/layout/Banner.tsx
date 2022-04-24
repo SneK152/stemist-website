@@ -49,7 +49,7 @@ export default function Banner({
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
+          className="-z-10 pointer-events-none blur-[2px] h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
           priority
         />
         <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute" />
@@ -63,7 +63,7 @@ export default function Banner({
           >
             {children}
             {full && (
-              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-5">
+              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-20">
                 <button className="animate-bounce" onClick={scrollTo(href)}>
                   <ChevronDownIcon className="h-12" />
                 </button>

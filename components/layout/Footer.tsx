@@ -40,7 +40,16 @@ export default function Footer() {
               ages 7 to 14.
             </p>
           </div>
-          <div className="flex mx-auto flex-wrap lg:col-span-5 gap-2">
+          <div className="flex mx-auto flex-wrap lg:col-span-5 gap-3">
+            <div className="min-w-[10rem] mx-auto">
+              {navLinks
+                .filter((l) => !l.dropdown && !l.customProps?.main)
+                .map((link, i) => (
+                  <Link href={link.link} key={i}>
+                    <a className="text-base block">{link.name}</a>
+                  </Link>
+                ))}
+            </div>
             {navLinks
               .filter((l) => l.dropdown)
               .map((link, i) => (
