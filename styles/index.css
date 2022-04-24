@@ -9,9 +9,28 @@
 
 html {
   background-image: url("/loop.jpg");
-  background-size: 125%;
+  background-size: 25%;
+  scrollbar-color: #454a4d #202324;
   @apply text-white bg-black;
 }
+
 body {
   @apply overflow-x-hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: #202324;
+  color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #454a4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #575e62;
 }

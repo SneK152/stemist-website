@@ -9,7 +9,7 @@ import Homepage from "@/components/pages/Homepage";
 export default function Index() {
   return (
     <Container title="Home">
-      <div className="-mt-20">
+      <div>
         <Banner image="/homepage2.jpg" full>
           <h1
             className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
