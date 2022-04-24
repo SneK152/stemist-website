@@ -137,7 +137,7 @@ export default function Navbar({
                   <ul>
                     {(customNav.length ? customNav : navLinks).map(
                       (navLink, i) => (
-                        <>
+                        <Fragment key={i}>
                           {navLink.customProps?.main && (
                             <div
                               className="h-2"
@@ -199,8 +199,23 @@ export default function Navbar({
                               </Disclosure.Panel>
                             </Disclosure>
                           )}
-                        </>
+                        </Fragment>
                       )
+                    )}
+                    {noNav && (
+                      <>
+                        <div className="h-2"></div>
+                        <NavLink
+                          main
+                          href="/"
+                          color="blue-500 bg-opacity-80 hover:bg-opacity-90"
+                          textColor="white"
+                          className="flex items-center gap-1"
+                        >
+                          <ArrowLeftIcon className="h-5 w-5 inline-block" />
+                          Back to STEMist
+                        </NavLink>
+                      </>
                     )}
                   </ul>
                 </div>
