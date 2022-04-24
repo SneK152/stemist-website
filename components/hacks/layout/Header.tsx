@@ -55,7 +55,7 @@ function Description() {
 
 export default function Header() {
   return (
-    <div className="-mt-20">
+    <div>
       <Banner image="/homepage2.jpg" full href="#about">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
