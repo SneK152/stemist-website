@@ -8,22 +8,24 @@ export default function Section({
   title,
   image,
   caption,
+  quote_num
 }: {
   children: ReactNode;
   title: string;
   image: string;
   caption: string;
+  quote_num: number;
 }) {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   useEffect(() => {
-    const selectedQuote = sample(quotes)!;
-    setQuote(selectedQuote.quote);
-    setAuthor(selectedQuote.author);
+    const selectedQuote = quotes[quote_num]
+    setAuthor(selectedQuote.author)
+    setQuote(selectedQuote.quote)
   }, []);
   return (
     <>
-      <div className="justify-center grid grid-cols-9 w-12/13 min-h-[30rem] font-display sm:px-6 px-3 text-elipsis py-3 rounded-sm gap-3">
+      <div className="justify-center grid grid-cols-9 w-11/13 min-h-[30rem] font-display sm:px-6 px-4 text-elipsis py-3 rounded-sm gap-6">
         <div className="lg:col-span-5 col-span-9 my-auto">
           <h1 className="text-4xl font-bold py-2">{title}</h1>
           <p className="text-xl font-sans text-clip">{children}</p>
@@ -42,6 +44,7 @@ export default function Section({
               alt="Placeholder Image"
               layout="fill"
               objectFit="cover"
+              className="rounded-2xl"
             />
           </div>
           <caption className="text-base p-1 font-writing text-gray-200">
