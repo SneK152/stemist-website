@@ -33,7 +33,7 @@ export default function Banner({
         >
           <button
             className="z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5"
-            onClick={scrollTo("html")}
+            onClick={scrollTo("#top")}
           >
             <ChevronUpIcon className="h-8 w-8" />
           </button>
@@ -63,7 +63,7 @@ export default function Banner({
           >
             {children}
             {full && (
-              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1]">
+              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-5">
                 <button className="animate-bounce" onClick={scrollTo(href)}>
                   <ChevronDownIcon className="h-12" />
                 </button>

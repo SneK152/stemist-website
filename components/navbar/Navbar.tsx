@@ -26,6 +26,8 @@ export default function Navbar({
 }) {
   const router = useRouter();
   return (
+    <>
+    <div id="top"></div>
     <Disclosure as={Fragment}>
       {({ open }) => (
         <nav
@@ -204,5 +206,6 @@ export default function Navbar({
         </nav>
       )}
     </Disclosure>
+    </>
   );
 }
