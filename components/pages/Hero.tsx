@@ -8,7 +8,16 @@ export default function Hero() {
   const el = useRef<HTMLDivElement>(null);
   const typed = useRef<any>(null);
   const heroDiv = useRef<HTMLDivElement>(null);
+  const video = useRef<HTMLVideoElement>(null);
   const isVisible = useOnScreen(heroDiv);
+
+  useEffect(() => {
+    if (video.current) {
+      for (let i = 0; i < video.current.textTracks.length; i++) {
+        video.current.textTracks[i].mode = "hidden";
+      }
+    }
+  }, [video]);
 
   useEffect(() => {
     const options: TypedOptions = {
@@ -55,8 +64,11 @@ export default function Hero() {
           muted
           autoPlay
           playsInline
+          ref={video}
           className="bg-white aspect-video h-full w-full"
         >
+          <track src="/homepage-subtitles.vtt" label="English" kind="subtitles" srcLang="en" default />
+          <track src="/homepage-captions.vtt" label="English" kind="captions" srcLang="en" default />
           <source src="/homepage.mp4" type="video/mp4" />
         </video>
       </div>
