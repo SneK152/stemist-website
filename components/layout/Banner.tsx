@@ -55,7 +55,7 @@ export default function Banner({
         <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute" />
         <div className="flex h-full w-full items-center justify-center">
           <div
-            className={`absolute top-0 py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-center text-white z-20 -mt-0 short:-mt-20 ${
+            className={`absolute py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-center text-white z-20 -mt-0 short:-mt-20 ${
               full
                 ? "min-h-full w-full bg-transparent"
                 : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56"
