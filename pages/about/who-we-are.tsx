@@ -11,7 +11,7 @@ export default function About() {
           quote_num={1}
           title="About our Organization"
           image="/about/teamphoto.jpg"
-          caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
+          caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin, Sriman. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
         >
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of

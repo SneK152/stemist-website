@@ -9,7 +9,7 @@ export default function SpringSponsor({
   name,
   url,
   color,
-  baseClassName
+  baseClassName,
 }: {
   image: any;
   className: string;
@@ -23,7 +23,7 @@ export default function SpringSponsor({
 
   return (
     <animated.a
-      style={{background: (color.toLowerCase().toString()), ...containerSpring}}
+      style={{ background: color.toLowerCase().toString(), ...containerSpring }}
       className={`text-black p-3 hover:shadow-xl transition-shadow duration-300 rounded-md relative ${
         isHovered ? "z-40" : "z-30"
       } ${className}`}

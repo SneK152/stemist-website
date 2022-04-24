@@ -49,9 +49,9 @@ export default function Hero() {
         <video
           // src="/homepage.mp4"
           poster="/logo.svg"
-          // controls
+          controls
           preload="none"
-          loop
+          // loop
           muted
           autoPlay
           playsInline

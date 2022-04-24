@@ -14,8 +14,8 @@ export default function Counter(props: {
     ref: countUpRef,
     start: 0,
     end: props.number,
-    // duration: 3,
-    useEasing: true,
+    duration: Math.max(0.5, Math.min(props.number / 50, 1)),
+    useEasing: props.number > 25 ? true : false,
     separator: ",",
   });
   const isVisible = useOnScreen(countUpRef);

@@ -48,11 +48,11 @@ const questions: {
   {
     question: "What do I submit for the hackathon?",
     answer:
-      "Submissions should be sent through our Devpost <link>. You will need to include your team name, all of your team member names, the dev tools used if any (ex. JS for websites, Bash for a script, Arduino for physical, etc.). Optionally, but strongly recommended, you can include a Github repository for your project, as well as photos and videos for demoing the project. The more the better!",
+      "Submissions should be sent through our Devpost. You will need to include your team name, all of your team member names, the dev tools used if any (ex. JS for websites, Arduino for physical, etc.). It is recommended to include a Github repository for your project, as well as photos and videos demoing the project.",
   },
   {
     question: "How do I enter the raffle?",
-    answer: "IDK",
+    answer: "Work in progress.",
   },
   {
     question: "Do I have to create a presentation?",

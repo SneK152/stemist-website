@@ -37,7 +37,7 @@ export default function Section({
             <span className="block text-xs sm:text-base">-{author}</span>
           </p>
         </div>
-        <div className="lg:col-span-4 col-span-9 relative gap-1 flex flex-col border border-black border-opacity-50">
+        <figure className="lg:col-span-4 col-span-9 relative gap-1 flex flex-col border border-black border-opacity-50">
           <div className="sm:h-80 h-56 lg:h-full w-full relative">
             <Image
               src={image}
@@ -47,10 +47,10 @@ export default function Section({
               className="rounded-2xl"
             />
           </div>
-          <caption className="text-base p-1 font-writing text-gray-200">
+          <figcaption className="text-base p-1 font-writing text-gray-200">
             {caption}
-          </caption>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </>
   );

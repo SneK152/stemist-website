@@ -19,7 +19,8 @@ function Description() {
         nonprofit run by and for students.
       </p>
       <p className="mb-2 text-2xl font-semibold">
-        June 24th to June 26th, 2022
+        <time dateTime="2022-06-24">June 24th</time> to{" "}
+        <time dateTime="2022-06-26">June 26th, 2022</time>
       </p>
       <br />
       <div className="flex flex-wrap sm:gap-5 gap-1 justify-center">
@@ -27,6 +28,7 @@ function Description() {
           href={HACKATHON_INFO.signup_form}
           backgroundColor="bg-green bg-opacity-70"
           textColor="text-white"
+          target="_blank"
         >
           Sign up Today!
         </Button>
@@ -34,6 +36,7 @@ function Description() {
           href={HACKATHON_INFO.discord}
           backgroundColor="bg-black bg-opacity-80"
           textColor="text-white"
+          target="_blank"
         >
           Join our Discord
         </Button>
@@ -41,6 +44,7 @@ function Description() {
           href={HACKATHON_INFO.devpost}
           backgroundColor="bg-blue-500"
           textColor="text-white"
+          target="_blank"
         >
           Join the Devpost
         </Button>
@@ -52,7 +56,7 @@ function Description() {
 export default function Header() {
   return (
     <div className="-mt-20">
-      <Banner image="/homepage.png" full href="#about">
+      <Banner image="/homepage2.jpg" full href="#about">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
         </h1>

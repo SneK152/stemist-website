@@ -41,7 +41,7 @@ function PrizeSection({
       <hr className="border-white" />
       <br />
       {PrizeList.map((prize) => (
-        <Prize {...prize} key={prize.name} />
+        <Prize {...prize} key={prize.presented_by} />
       ))}
       <br />
     </div>

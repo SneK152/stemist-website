@@ -7,7 +7,7 @@ import Button from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="text-center lg:text-left bg-black text-white">
+    <footer className="text-center lg:text-left text-white">
       <div className="flex justify-center items-center lg:justify-between p-6 pb-1 border-b border-gray-300">
         <div className="mr-12">
           <Link href="/">
@@ -40,11 +40,20 @@ export default function Footer() {
               ages 7 to 14.
             </p>
           </div>
-          <div className="flex w-full lg:col-span-5 gap-2">
+          <div className="flex mx-auto flex-wrap lg:col-span-5 gap-3">
+            <div className="min-w-[10rem] mx-auto">
+              {navLinks
+                .filter((l) => !l.dropdown && !l.customProps?.main)
+                .map((link, i) => (
+                  <Link href={link.link} key={i}>
+                    <a className="text-base block">{link.name}</a>
+                  </Link>
+                ))}
+            </div>
             {navLinks
               .filter((l) => l.dropdown)
               .map((link, i) => (
-                <div key={i} className="min-w-[10rem] w-full">
+                <div key={i} className="min-w-[10rem] mx-auto">
                   <Link href={link.link}>
                     <a className="font-writing uppercase font-semibold text-xl">
                       {link.name}
@@ -79,7 +88,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center p-6">
-        <span>© 2022 Copyright </span>
+        <span>
+          © <time dateTime="2022">2022</time> Copyright{" "}
+        </span>
         <span className="text-blue-500 font-semibold">STEMist Education</span>
       </div>
     </footer>

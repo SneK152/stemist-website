@@ -9,13 +9,14 @@ import Homepage from "@/components/pages/Homepage";
 export default function Index() {
   return (
     <Container title="Home">
-      <div className="-mt-20">
-        <Banner image="/homepage.png" full>
+      <div>
+        <Banner image="/homepage2.jpg" full>
           <h1
             className="font-display text-left text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
+            data-aos-anchor="#top"
           >
             STEMist Education
           </h1>
@@ -24,6 +25,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={400}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Learn STEM in an interactive way.
             </div>
@@ -31,6 +33,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={600}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Engage with fellow students.
             </div>
@@ -38,6 +41,7 @@ export default function Index() {
               data-aos="fade-up"
               data-aos-delay={800}
               data-aos-duration={600}
+              data-aos-anchor="#top"
             >
               Achieve your goals!
             </div>
