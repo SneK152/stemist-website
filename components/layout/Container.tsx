@@ -79,9 +79,7 @@ export default function Container({
       </Head>
       <Navbar noNav={noNav} navTitle={navTitle} customNav={customNav} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden min-h-screen">
-          {children}
-        </div>
+        <div className="mx-auto overflow-hidden min-h-screen">{children}</div>
       </div>
       <Footer />
     </>

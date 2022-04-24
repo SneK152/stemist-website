@@ -5,8 +5,10 @@ export default function Schedule() {
     <>
       <div>
         <h1 className="font-semibold text-xl text-center pb-3">
-          Note: Project submission starts at <time dateTime="2022-06-24 10:00-07:00">10AM Friday (6/24)</time> and ends at <time dateTime="2022-06-26 14:00-07:00">2PM
-          Sunday (6/26)</time>
+          Note: Project submission starts at{" "}
+          <time dateTime="2022-06-24 10:00-07:00">10AM Friday (6/24)</time> and
+          ends at{" "}
+          <time dateTime="2022-06-26 14:00-07:00">2PM Sunday (6/26)</time>
         </h1>
       </div>
       <div className="grid sm:grid-cols-1 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">

@@ -4,19 +4,16 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { Fragment, ReactNode } from "react";
 
-function Dropdown({
-  children,
-  title,
-  mobile,
-  navLink
-}: DropdownLinkProps) {
+function Dropdown({ children, title, mobile, navLink }: DropdownLinkProps) {
   const router = useRouter();
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex h-full">
         <Menu.Button
           className={`w-full rounded-md text-lg flex items-center  ${
-            navLink.dropdownItems!.some((dropDownItem) => dropDownItem.link === router.pathname)
+            navLink.dropdownItems!.some(
+              (dropDownItem) => dropDownItem.link === router.pathname
+            )
               ? "font-bold"
               : "font-normal"
           } focus:outline-none z-0`}
@@ -53,7 +50,7 @@ export default function DropdownLink({
   children,
   title,
   mobile,
-  navLink
+  navLink,
 }: DropdownLinkProps) {
   return (
     <div className="flex">

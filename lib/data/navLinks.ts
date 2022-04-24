@@ -1,7 +1,7 @@
 export type NavLink = {
   name: string;
   link: string;
-  dropdownItems?: (Omit<NavLink, 'dropdown' | 'dropdownItems'>)[];
+  dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
 };
@@ -30,7 +30,7 @@ export const navLinks: NavLink[] = [
   },
   {
     name: "Contact Us",
-    link: "/get-involved/contact",
+    link: "/contact",
   },
   {
     name: "Get Involved",
