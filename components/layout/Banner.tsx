@@ -4,6 +4,7 @@ import { Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { Fragment, ReactNode, useRef } from "react";
+import CTABanner from "./CTABanner";
 
 export default function Banner({
   image,
@@ -39,6 +40,7 @@ export default function Banner({
           </button>
         </Transition>
       </div>
+      <CTABanner />
       <div
         className={`${
           full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
