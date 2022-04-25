@@ -56,19 +56,27 @@ export default function Hero() {
       </div>
       <div className="w-full">
         <video
-          // src="/homepage.mp4"
           poster="/logo.svg"
-          controls
           preload="none"
-          // loop
-          muted
-          autoPlay
+          controls
           playsInline
           ref={video}
           className="bg-white aspect-video h-full w-full"
         >
-          <track src="/homepage-subtitles.vtt" label="English" kind="subtitles" srcLang="en" default />
-          <track src="/homepage-captions.vtt" label="English" kind="captions" srcLang="en" default />
+          <track
+            src="/homepage-subtitles.vtt"
+            label="English"
+            kind="subtitles"
+            srcLang="en"
+            default
+          />
+          <track
+            src="/homepage-captions.vtt"
+            label="English"
+            kind="captions"
+            srcLang="en"
+            default
+          />
           <source src="/homepage.mp4" type="video/mp4" />
         </video>
       </div>

@@ -1,6 +1,6 @@
 import useOnScreen from "@/lib/hooks/useOnScreen";
-import { useEffect, useRef } from "react";
-import { useCountUp } from "react-countup";
+import { useEffect, useRef, useState } from "react";
+import { useCountUp } from "use-count-up";
 
 export default function Counter(props: {
   number: number;
@@ -10,19 +10,22 @@ export default function Counter(props: {
   className?: string;
 }) {
   const countUpRef = useRef(null);
-  const { start, reset } = useCountUp({
-    ref: countUpRef,
+  const { reset, value } = useCountUp({
+    isCounting: true,
     start: 0,
     end: props.number,
     duration: Math.max(2, Math.min(props.number / 10, 2.5)),
-    useEasing: true,
-    separator: ",",
+    easing: "easeOutCubic",
+    thousandsSeparator: ",",
   });
-  const isVisible = useOnScreen(countUpRef);
+  const isVisible = useOnScreen(countUpRef, false);
+  const [should, setShould] = useState(true);
   useEffect(() => {
-    start();
-    return () => reset();
-  }, [isVisible, start, reset]);
+    if (isVisible && should) {
+      reset();
+      setShould(false);
+    }
+  }, [isVisible, reset, should]);
   return (
     <div className="flex flex-col gap-2 justify-center">
       <span
@@ -31,7 +34,7 @@ export default function Counter(props: {
         }`}
       >
         {props.before && <span>{props.before}</span>}
-        <span ref={countUpRef}></span>
+        <span ref={countUpRef}>{value}</span>
         {props.symbol && <span>{props.symbol}</span>}
       </span>
       <div className="text-center text-lg font-medium">{props.text}</div>
