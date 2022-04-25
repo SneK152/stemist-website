@@ -1,14 +1,14 @@
 import quotes from "@/lib/data/quotes";
 import { sample } from "lodash";
 import Image from "next/image";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 
 export default function Section({
   children,
   title,
   image,
   caption,
-  quote_num
+  quote_num,
 }: {
   children: ReactNode;
   title: string;
@@ -16,13 +16,7 @@ export default function Section({
   caption: string;
   quote_num: number;
 }) {
-  const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("");
-  useEffect(() => {
-    const selectedQuote = quotes[quote_num]
-    setAuthor(selectedQuote.author)
-    setQuote(selectedQuote.quote)
-  }, []);
+  const selectedQuote = useMemo(() => quotes[quote_num], [quote_num]);
   return (
     <>
       <div className="justify-center grid grid-cols-9 w-11/13 min-h-[30rem] font-display sm:px-6 px-4 text-elipsis py-3 rounded-sm gap-6">
@@ -32,9 +26,11 @@ export default function Section({
           <br />
           <p className="col-span-9 font-writing h-auto text-left">
             <span className="block italic text-sm sm:text-lg">
-              &quot;{quote}&quot;
+              &quot;{selectedQuote.quote}&quot;
             </span>
-            <span className="block text-xs sm:text-base">-{author}</span>
+            <span className="block text-xs sm:text-base">
+              -{selectedQuote.author}
+            </span>
           </p>
         </div>
         <figure className="lg:col-span-4 col-span-9 relative gap-1 flex flex-col border border-black border-opacity-50">
