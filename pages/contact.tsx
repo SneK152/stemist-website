@@ -75,15 +75,15 @@ export default function Contact() {
   return (
     <Container title="Contact">
       <PartialBanner title="Contact Us" />
-      <div className="">
+      <div>
         <div className="mx-auto py-3 flex-col flex gap-5 sm:px-6 lg:px-8 max-w-[100rem] px-2">
           <h1 className="font-sans text-xl text-center max-w-[80ch] m-auto">
             Fill out this form if you would like to contact us, if you have
             feedback on one of our recent sessions, or if you would like to
-            provide a testimonial (thank you by the way). We will reach out to
+            provide a testimonial. We will reach out to
             you within 2-5 days.
           </h1>
-          <form onSubmit={formik.handleSubmit} className="w-full space-y-3">
+          <form onSubmit={formik.handleSubmit} className="w-full space-y-3 bg-opacity-90 rounded-3xl bg-slate-800 p-5">
             <div className="w-full space-y-3 rounded-lg p-4">
               <MemoedInputField
                 labelName="Email address"
@@ -104,7 +104,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2 md:w-1/3"
+                className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
               >
                 {submit}
               </button>

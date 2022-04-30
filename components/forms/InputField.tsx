@@ -33,7 +33,7 @@ export default function InputField({
         <div
           className={
             errorClass ||
-            "text-red-600 font-bold sm:text-sm pl-3 pt-2 text-left"
+            "text-red-600 font-bold sm:text-sm pl-3 pt-2 text-left mb-2"
           }
         >
           {formik.errors[name]}

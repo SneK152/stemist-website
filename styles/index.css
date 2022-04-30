@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  background-image: url("/loop.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/loop.jpg');
   background-size: 50%;
   scrollbar-color: #454a4d #202324;
   @apply text-white bg-black;

@@ -35,6 +35,7 @@ export default function Banner({
           <button
             className="z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5"
             onClick={scrollTo("#top")}
+            tabIndex={-1}
           >
             <ChevronUpIcon className="h-8 w-8" />
           </button>
