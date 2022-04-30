@@ -4,6 +4,7 @@ export type NavLink = {
   dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
+  important?: boolean;
 };
 
 export type NavLinks = NavLink[];
@@ -12,10 +13,12 @@ export const navLinks: NavLink[] = [
   {
     name: "Home",
     link: "/",
+    important: true,
   },
   {
     name: "About Us",
     link: "/about",
+    important: true,
     dropdown: true,
     dropdownItems: [
       {
@@ -31,6 +34,7 @@ export const navLinks: NavLink[] = [
   {
     name: "Contact Us",
     link: "/contact",
+    important: true,
   },
   {
     name: "Get Involved",

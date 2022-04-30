@@ -1,5 +1,5 @@
 import { navLinks } from "@/lib/data/navLinks";
-import socials from "@/lib/socials";
+import socials from "@/lib/data/socials";
 import { ArrowRightIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,21 +8,8 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <footer className="text-center lg:text-left text-white">
-      <div className="flex justify-center items-center lg:justify-between p-6 pb-1 border-b border-gray-300">
-        <div className="mr-12">
-          <Link href="/">
-            <a>
-              <Image
-                src="/logo.svg"
-                className="filter invert select-none"
-                height={55.3}
-                width={166.6}
-                alt="Our logo"
-              />
-            </a>
-          </Link>
-        </div>
-        <ul className="flex gap-3 items-center justify-start">
+      <div className="flex justify-end items-center p-6 pb-1 border-b border-gray-300 border-opacity-50">
+        <ul className="flex gap-3 items-center justify-start mb-2">
           {socials.map((social, index) => (
             <li key={index}>
               <a href={social.link} target="_blank" rel="noreferrer noopener">
@@ -32,42 +19,31 @@ export default function Footer() {
           ))}
         </ul>
       </div>
-      <div className="mx-6 py-10 text-center md:text-left">
+      <div className="mx-6 py-10 pt-5 text-center md:text-left">
         <div className="grid lg:grid-cols-12 grid-cols-1 gap-8">
-          <div className="lg:col-span-4">
-            <p>
-              A student-led nonprofit bringing free STEM education to children
-              ages 7 to 14.
-            </p>
+          <div className="lg:col-span-2 hidden md:block">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logo.svg"
+                  className="filter invert select-none"
+                  height={55.3}
+                  width={166.6}
+                  alt="Our logo"
+                />
+              </a>
+            </Link>
           </div>
-          <div className="flex mx-auto flex-wrap lg:col-span-5 gap-3">
-            <div className="min-w-[10rem] mx-auto">
-              {navLinks
-                .filter((l) => !l.dropdown && !l.customProps?.main)
-                .map((link, i) => (
-                  <Link href={link.link} key={i}>
-                    <a className="text-base block">{link.name}</a>
-                  </Link>
-                ))}
-            </div>
+          <div className="flex flex-wrap gap-x-10 lg:col-span-7 items-center justify-start min-w-[10rem]">
             {navLinks
-              .filter((l) => l.dropdown)
+              .filter((l) => l.important === true && !l.customProps?.main)
               .map((link, i) => (
-                <div key={i} className="min-w-[10rem] mx-auto">
-                  <Link href={link.link}>
-                    <a className="font-writing uppercase font-semibold text-xl">
-                      {link.name}
-                    </a>
-                  </Link>
-                  {link.dropdownItems?.map((item) => (
-                    <Link href={item.link} key={item.name}>
-                      <a className="text-base block">{item.name}</a>
-                    </Link>
-                  ))}
-                </div>
+                <Link href={link.link} key={i}>
+                  <a className="font-writing uppercase font-semibold text-xl basis-1/3 shrink xs:shrink-0 grow text-left lg:text-center footer-value">{link.name}</a>
+                </Link>
               ))}
           </div>
-          <div className="lg:col-span-3 flex justify-center gap-1 items-center">
+          {/* <div className="lg:col-span-3 flex justify-center gap-1 items-center">
             <Button
               href={navLinks.find((l) => l.name === "Sign Up")?.link}
               backgroundColor="bg-blue-500"
@@ -84,14 +60,16 @@ export default function Footer() {
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
+          </div> */}
+          <div className="text-center lg:col-span-3 items-center flex">
+            <div>
+              <span>
+                © <time dateTime="2022">2022</time> Copyright{" "}
+              </span>
+              <span className="text-blue-500 font-semibold">STEMist Education</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="text-center p-6">
-        <span>
-          © <time dateTime="2022">2022</time> Copyright{" "}
-        </span>
-        <span className="text-blue-500 font-semibold">STEMist Education</span>
       </div>
     </footer>
   );
