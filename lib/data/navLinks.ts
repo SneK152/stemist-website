@@ -39,18 +39,18 @@ export const navLinks: NavLink[] = [
     dropdownItems: [
       {
         name: "Team Applications",
-        link: "https://bit.ly/stemistapps",
+        link: "http://bit.ly/stemistapplication",
         customProps: {
           target: "_blank",
         },
       },
-      {
-        name: "Workshop Signups",
-        link: "/signup",
-        customProps: {
-          target: "_blank",
-        },
-      },
+      // {
+      //   name: "Workshop Signups",
+      //   link: "/signup",
+      //   customProps: {
+      //     target: "_blank",
+      //   },
+      // },
       // {
       //   name: "Donations",
       //   link: "/get-involved/donate",
