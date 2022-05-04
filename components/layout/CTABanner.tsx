@@ -20,8 +20,7 @@ export default function CTABanner() {
               </span>
               <span className="hidden md:inline">
                 Our spring workshops have just ended! We would like to shoutout
-                our top 5 kahoot winners: Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit.
+                our top 5 Kahoot! winners: Rohan, Lily, Nate, John, and Ariana.
               </span>
             </p>
           </div>
