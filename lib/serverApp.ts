@@ -6,7 +6,7 @@ app = getApps().length
   ? getApp()
   : admin.initializeApp({
       credential: admin.credential.cert(
-        JSON.parse(process.env.FIREBASE_ADMIN!)
+        process.env.FIREBASE_ADMIN as any
       ),
     });
 

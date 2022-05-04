@@ -64,7 +64,7 @@ export default function Team(props: TeamProps) {
   return (
     <Container title="Our Team">
       <PartialBanner title="Meet the Team" />
-      <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+      <h1 className="font-display mb-8 text-center text-4xl  md:text-5xl lg:text-7xl font-bold text-white">
         Weekly Mentor Spotlight
       </h1>
       <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">

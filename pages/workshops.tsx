@@ -12,7 +12,7 @@ export default function Curriculum() {
   }, []);
   return (
     <Container title="Curriculum">
-      <PartialBanner title="Workshop Curriculum - Intro to STEM" />
+      <PartialBanner title="Curriculum - Intro to Stem" />
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <CurriculumCard
           title="Full Stack Web Development"

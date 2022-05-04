@@ -70,7 +70,7 @@ export const navLinks: NavLink[] = [
   //   link: "/webs",
   // },
   {
-    name: "Workshops",
+    name: "Curriculum",
     link: "/workshops",
   },
   // {
