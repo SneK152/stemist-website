@@ -47,7 +47,7 @@ const socials: Social[] = [
         />
       </svg>
     ),
-    link: 'https://www.linkedin.com/in/stemist-education-85a749234/',
+    link: 'https://www.linkedin.com/company/stemist-education/',
   },
 ];
 

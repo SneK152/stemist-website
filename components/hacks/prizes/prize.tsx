@@ -13,9 +13,11 @@ export interface PrizeProps {
 export default function Prize({ name, prizes, presented_by }: PrizeProps) {
   let { hoverOptions, status } = useHover(presented_by, prizes);
   const countUpRef = useRef(null);
-  const { value, reset } = useCountUp({
+  const { reset, value } = useCountUp({
+    isCounting: true,
     start: 0,
     end: name,
+    duration: Math.max(2, Math.min(name / 10, 2.5)),
     easing: "easeOutCubic",
     thousandsSeparator: ",",
   });

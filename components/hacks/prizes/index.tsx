@@ -13,7 +13,7 @@ export default function PrizesSection() {
         <PrizeSection title="Popular Vote" filter="everyone" />
         <PrizeSection title="Raffle" filter="raffle" />
         <Counter
-          number={15000}
+          number={20000}
           className="!text-4xl"
           text="worth in prizes"
           symbol="+"
@@ -37,8 +37,8 @@ function PrizeSection({
   );
   return (
     <div>
-      <h1 className="text-2xl font-display text-center">{title}</h1>
-      <hr className="border-white" />
+      <h1 className="text-2xl font-display text-left px-5">{title}</h1>
+      <hr className="border-white opacity-30 ml-4" />
       <br />
       {PrizeList.map((prize) => (
         <Prize {...prize} key={prize.presented_by} />

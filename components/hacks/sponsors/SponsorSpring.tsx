@@ -4,19 +4,19 @@ import { useState } from "react";
 import useSponsorSpring from "./useSponsorSpring";
 
 export default function SpringSponsor({
-  image,
-  className,
+  className = "",
   name,
   url,
   color,
-  baseClassName,
+  baseClassName = "",
+  icon = true,
 }: {
-  image: any;
-  className: string;
+  className?: string;
   name: string;
   url: string;
   color: string;
   baseClassName?: string;
+  icon?: boolean;
 }) {
   const [isHovered, setHovered] = useState<boolean>(false);
   const { containerSpring } = useSponsorSpring(isHovered);
@@ -33,11 +33,11 @@ export default function SpringSponsor({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      <img
+      {icon ? <img
         alt={name}
         src={`/sponsors/${name.toLowerCase()}_logo.png`}
         className={`${baseClassName} h-28 m-auto`}
-      />
+      /> : null}
       <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}
         alt="Sponsor image"

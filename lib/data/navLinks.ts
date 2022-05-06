@@ -100,7 +100,7 @@ export const hackathonNavLinks: NavLink[] = [
     link: "/hacks",
   },
   {
-    name: "Signup",
+    name: "Sign Up",
     link: "/hacks/signup",
     customProps: {
       target: "_blank",

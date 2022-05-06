@@ -30,7 +30,7 @@ function Description() {
           textColor="text-white"
           target="_blank"
         >
-          Sign up Today!
+          Sign Up
         </Button>
         <Button
           href={HACKATHON_INFO.discord}

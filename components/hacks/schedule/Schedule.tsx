@@ -23,7 +23,7 @@ export default function Schedule() {
             timeEnd="2022-06-24 09:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-24 09:00-07:00"
             timeEnd="2022-06-24 10:00-07:00"
@@ -57,19 +57,19 @@ export default function Schedule() {
             <time dateTime="2022-06-25">Saturday, June 25th</time>
           </h1>
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-25 09:00-07:00"
             timeEnd="2022-06-25 10:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-25 10:00-07:00"
             timeEnd="2022-06-25 11:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-25 11:00-07:00"
             timeEnd="2022-06-25 12:00-07:00"
@@ -98,19 +98,19 @@ export default function Schedule() {
             timeEnd="2022-06-26 14:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-26 09:00-07:00"
             timeEnd="2022-06-26 10:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-26 10:00-07:00"
             timeEnd="2022-06-26 13:00-07:00"
           />
           <Event
-            description="A workshop will be held"
+            description="<undecided>"
             name="Workshop / Speaker Talk"
             timeStart="2022-06-26 11:00-07:00"
             timeEnd="2022-06-26 12:00-07:00"
