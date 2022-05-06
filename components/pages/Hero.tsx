@@ -8,7 +8,16 @@ export default function Hero() {
   const el = useRef<HTMLDivElement>(null);
   const typed = useRef<any>(null);
   const heroDiv = useRef<HTMLDivElement>(null);
+  const video = useRef<HTMLVideoElement>(null);
   const isVisible = useOnScreen(heroDiv);
+
+  useEffect(() => {
+    if (video.current) {
+      for (let i = 0; i < video.current.textTracks.length; i++) {
+        video.current.textTracks[i].mode = "hidden";
+      }
+    }
+  }, [video]);
 
   useEffect(() => {
     const options: TypedOptions = {
@@ -31,7 +40,7 @@ export default function Hero() {
     >
       <div className="w-full grid place-items-center">
         <div className="w-full text-center">
-          <h1 className="sm:text-5xl text-3xl font-bold">
+          <h1 className="lg:text-5xl sm:text-3xl text-2xl font-bold">
             STEMist is <span ref={el}></span>
           </h1>
           <br />
@@ -47,16 +56,27 @@ export default function Hero() {
       </div>
       <div className="w-full">
         <video
-          // src="/homepage.mp4"
           poster="/logo.svg"
-          // controls
           preload="none"
-          loop
-          muted
-          autoPlay
+          controls
           playsInline
+          ref={video}
           className="bg-white aspect-video h-full w-full"
         >
+          <track
+            src="/homepage-subtitles.vtt"
+            label="English"
+            kind="subtitles"
+            srcLang="en"
+            default
+          />
+          <track
+            src="/homepage-captions.vtt"
+            label="English"
+            kind="captions"
+            srcLang="en"
+            default
+          />
           <source src="/homepage.mp4" type="video/mp4" />
         </video>
       </div>

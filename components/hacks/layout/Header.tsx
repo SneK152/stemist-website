@@ -1,11 +1,16 @@
 import Banner from "@/components/layout/Banner";
 import Button from "@/components/layout/Button";
-import Link from "next/link";
+
+const HACKATHON_INFO = {
+  signup_form: "/hacks/signup",
+  devpost: "https://stemist-hacks.devpost.com/",
+  discord: "https://discord.gg/mQFreT6eCX",
+};
 
 function Description() {
   return (
     <div className="px-2">
-      <p className="text-xl mb-2 max-w-[100ch] text-center mx-auto">
+      <p className="sm:text-xl text-base mb-2 max-w-[100ch] text-center mx-auto">
         STEMist Hacks aims to spark a light in the minds of students around the
         world interested in tech-related fields. We hope that by adding a form
         of competition and fun whilst still preserving the systematic school
@@ -14,24 +19,44 @@ function Description() {
         nonprofit run by and for students.
       </p>
       <p className="mb-2 text-2xl font-semibold">
-        June 24th to June 26th, 2022
+        <time dateTime="2022-06-24">June 24th</time> to{" "}
+        <time dateTime="2022-06-26">June 26th, 2022</time>
       </p>
       <br />
-      <Button
-        href="/hacks/signup"
-        backgroundColor="bg-blue-500"
-        textColor="text-white"
-      >
-        Sign up Today!
-      </Button>
+      <div className="flex flex-wrap sm:gap-5 gap-1 justify-center">
+        <Button
+          href={HACKATHON_INFO.signup_form}
+          backgroundColor="bg-green bg-opacity-70"
+          textColor="text-white"
+          target="_blank"
+        >
+          Sign up Today!
+        </Button>
+        <Button
+          href={HACKATHON_INFO.discord}
+          backgroundColor="bg-black bg-opacity-80"
+          textColor="text-white"
+          target="_blank"
+        >
+          Join our Discord
+        </Button>
+        <Button
+          href={HACKATHON_INFO.devpost}
+          backgroundColor="bg-blue-500"
+          textColor="text-white"
+          target="_blank"
+        >
+          Join the Devpost
+        </Button>
+      </div>
     </div>
   );
 }
 
 export default function Header() {
   return (
-    <div className="-mt-20">
-      <Banner image="/homepage.png" full href="#about">
+    <div>
+      <Banner image="/homepage2.jpg" full href="#about">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
         </h1>

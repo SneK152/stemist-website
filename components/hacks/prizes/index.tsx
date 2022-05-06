@@ -2,36 +2,48 @@ import { useMemo } from "react";
 import prizes from "./prizes";
 import Section from "@/components/hacks/layout/Section";
 import Prize from "./prize";
-import useAos from "@/components/useAos";
 import useWindowSize from "@/lib/hooks/useWindowSize";
 import Counter from "@/components/pages/Counter";
 
 export default function PrizesSection() {
-  const PrizeList = useMemo(() => prizes, []);
-
-  const { width } = useWindowSize();
-
   return (
     <Section name="Prizes">
-      <div {...useAos()} className="text-white rounded-lg w-full">
-        {/* <div className="w-full grid grid-cols-12 py-3 px-5">
-          {width! > 640 && <span className="col-span-1"></span>}
-          <p className="w-full col-span-6 sm:col-span-5 text-xl font-display font-semibold">
-            Type
-          </p>
-          <p className="w-full col-span-6 text-xl font-display font-semibold">
-            Prizes
-          </p>
-        </div> */}
-        <hr className="border-white" />
-        <div className="w-full">
-          {PrizeList.map((props, k) => (
-            <Prize {...props} key={k} />
-          ))}
-        </div>
-        <br />
-        <Counter number={15_500} text="worth in prizes" symbol="$" before />
+      <div className="text-white rounded-lg w-full">
+        <PrizeSection title="Winners" filter="winners" />
+        <PrizeSection title="Popular Vote" filter="everyone" />
+        <PrizeSection title="Raffle" filter="raffle" />
+        <Counter
+          number={15000}
+          className="!text-4xl"
+          text="worth in prizes"
+          symbol="+"
+          before="$"
+        />
       </div>
     </Section>
+  );
+}
+
+function PrizeSection({
+  title,
+  filter,
+}: {
+  title: string;
+  filter: "winners" | "everyone" | "raffle";
+}) {
+  const PrizeList = useMemo(
+    () => prizes.filter((v) => v.type === filter),
+    [filter]
+  );
+  return (
+    <div>
+      <h1 className="text-2xl font-display text-center">{title}</h1>
+      <hr className="border-white" />
+      <br />
+      {PrizeList.map((prize) => (
+        <Prize {...prize} key={prize.presented_by} />
+      ))}
+      <br />
+    </div>
   );
 }

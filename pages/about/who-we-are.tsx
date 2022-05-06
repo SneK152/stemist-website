@@ -6,11 +6,12 @@ export default function About() {
   return (
     <Container title="Who We Are">
       <PartialBanner title="Who We Are" />
-      <div className="m-3 p-3 text-black space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="m-3 p-4 text-white space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <Section
+          quote_num={0}
           title="About our Organization"
           image="/about/teamphoto.jpg"
-          caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
+          caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin, Sriman. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
         >
           STEMist Education is a student-led nonprofit that focuses on bringing
           free STEM education to children of ages 7 to 14. We have a variety of
@@ -20,6 +21,7 @@ export default function About() {
           longer.
         </Section>
         <Section
+          quote_num={1}
           title="Our Mission"
           image="/about/session.jpg"
           caption="A snapshot of one of our presentations"
@@ -34,6 +36,7 @@ export default function About() {
           come.
         </Section>
         <Section
+          quote_num={2}
           title="Curriculum and Format"
           image="/about/slides.png"
           caption="Some of our past presentations"

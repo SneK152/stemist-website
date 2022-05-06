@@ -23,6 +23,8 @@ export default function Button({
         <a
           className={`${backgroundColor} ${textColor} py-1 sm:py-2 px-3 rounded-lg shadow-md hover:rounded-xl hover:shadow-lg transition-all duration-300 text-sm sm:text-lg mt-auto font-writing`}
           target={target}
+          tabIndex={0}
+          role='button'
         >
           {children}
         </a>

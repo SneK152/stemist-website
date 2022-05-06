@@ -23,7 +23,6 @@ specifiers:
   postcss: ^8.4.5
   prettier: ^2.5.1
   react: ^17.0.2
-  react-countup: ^6.1.1
   react-dom: ^17.0.2
   react-spring: ^9.4.3
   react-spring-carousel: ^2.0.12
@@ -32,6 +31,7 @@ specifiers:
   tailwindcss: ^3.0.8
   typed.js: ^2.0.12
   typescript: ^4.5.4
+  use-count-up: ^3.0.1
   web-vitals: ^1.1.2
   yup: ^0.32.11
 
@@ -46,7 +46,6 @@ dependencies:
   lodash: 4.17.21
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
-  react-countup: 6.1.1_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-spring: 9.4.3_react-dom@17.0.2+react@17.0.2
   react-spring-carousel: 2.0.12_c0a81359237ba411aa6fff46fc362b78
@@ -54,6 +53,7 @@ dependencies:
   smoothscroll-polyfill: 0.4.4
   typed.js: 2.0.12
   typescript: 4.5.5
+  use-count-up: 3.0.1_react@17.0.2
   web-vitals: 1.1.2
   yup: 0.32.11
 
@@ -1695,10 +1695,6 @@ packages:
       path-type: 4.0.0
       yaml: 1.10.2
     dev: true
-
-  /countup.js/2.1.0:
-    resolution: {integrity: sha512-VanMzLEjkt3Hp/ty5BXikM8s4wE3OH4m1AnFro7THR86nYGRvGfGCoV+zrRJcqTbZi7X1egkLSIeUKDz7+4XLA==}
-    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -3679,15 +3675,6 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
 
-  /react-countup/6.1.1_react@17.0.2:
-    resolution: {integrity: sha512-9mYlnk/yCFg3g2/65pCTex6mr9h0eYdDMIL4T5nfLj/RzoiqY03wlPxZglzbJ6OzXvU37OmYApwQ4WMZNFr8Aw==}
-    peerDependencies:
-      react: '>= 16.3.0'
-    dependencies:
-      countup.js: 2.1.0
-      react: 17.0.2
-    dev: false
-
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -4342,6 +4329,23 @@ packages:
     dependencies:
       punycode: 2.1.1
     dev: true
+
+  /use-count-up/3.0.1_react@17.0.2:
+    resolution: {integrity: sha512-jlVsXJYje6jh+xwQaCEYrwHoB+nRyillNEmr21bhe9kw7tpRzyrSq9jQs9UOlo+8hCFkuOmjUihL3IjEK/piVg==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 17.0.2
+      use-elapsed-time: 3.0.2_react@17.0.2
+    dev: false
+
+  /use-elapsed-time/3.0.2_react@17.0.2:
+    resolution: {integrity: sha512-2EY9lJ5DWbAvT8wWiEp6Ztnl46DjXz2j78uhWbXaz/bg3OfpbgVucCAlcN8Bih6hTJfFTdVYX9L6ySMn5py/wQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /use-subscription/1.5.1_react@17.0.2:
     resolution: {integrity: sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==}

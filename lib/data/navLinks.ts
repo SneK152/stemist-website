@@ -1,19 +1,24 @@
-type NavLink = {
+export type NavLink = {
   name: string;
   link: string;
-  dropdownItems?: NavLink[];
+  dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
+  important?: boolean;
 };
+
+export type NavLinks = NavLink[];
 
 export const navLinks: NavLink[] = [
   {
     name: "Home",
     link: "/",
+    important: true,
   },
   {
     name: "About Us",
     link: "/about",
+    important: true,
     dropdown: true,
     dropdownItems: [
       {
@@ -27,21 +32,29 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "Reach Out",
+    name: "Contact Us",
+    link: "/contact",
+    important: true,
+  },
+  {
+    name: "Get Involved",
     link: "/get-involved",
     dropdown: true,
     dropdownItems: [
       {
-        name: "Contact Us",
-        link: "/get-involved/contact",
-      },
-      {
         name: "Team Applications",
-        link: "https://bit.ly/stemistapplication",
+        link: "http://bit.ly/stemistapplication",
         customProps: {
           target: "_blank",
         },
       },
+      // {
+      //   name: "Workshop Signups",
+      //   link: "/signup",
+      //   customProps: {
+      //     target: "_blank",
+      //   },
+      // },
       // {
       //   name: "Donations",
       //   link: "/get-involved/donate",
@@ -49,26 +62,16 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "Projects",
-    link: "/projects",
-    dropdown: true,
-    dropdownItems: [
-      {
-        name: "STEMist Hacks",
-        link: "https://stemist-hacks.devpost.com",
-        customProps: {
-          target: "_blank",
-        },
-      },
-      // {
-      //   name: "WEBS",
-      //   link: "/webs",
-      // },
-    ],
+    name: "STEMist Hacks",
+    link: "/hacks",
   },
+  // {
+  //   name: "WEBS",
+  //   link: "/webs",
+  // },
   {
     name: "Curriculum",
-    link: "/curriculum",
+    link: "/workshops",
   },
   // {
   //   name: "Programs",
@@ -81,7 +84,7 @@ export const navLinks: NavLink[] = [
   // },
   {
     name: "Sign Up",
-    link: "https://forms.gle/ECuJtaGiVR8bVtin9",
+    link: "/signup",
     customProps: {
       main: true,
       color: "blue-500",
@@ -99,5 +102,8 @@ export const hackathonNavLinks: NavLink[] = [
   {
     name: "Signup",
     link: "/hacks/signup",
+    customProps: {
+      target: "_blank",
+    },
   },
 ];

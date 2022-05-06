@@ -1,35 +1,47 @@
 import { PrizeProps } from "./prize";
 
-let prizes: PrizeProps[] = [
+const prizes: PrizeProps[] = [
   {
     prizes: "Lifetime Taskade Subscription",
-    name: "Top Three",
+    name: 3005,
     presented_by: "Taskade",
+    type: "winners",
   },
   {
     prizes: "Five Year Taskade Subscription",
-    name: "10x",
+    name: 300,
     presented_by: "Taskade",
+    type: "everyone",
   },
   {
     prizes: "Echo3D Business Plan Subscription",
-    name: "10x",
+    name: 89,
     presented_by: "Echo3D",
+    type: "everyone",
   },
   {
     prizes: "Desmos T-Shirt and Socks",
-    name: "Raffle",
+    name: 30,
     presented_by: "Desmos",
+    type: "raffle",
   },
   {
     prizes: "Two Year NordVPN Subscription",
-    name: "2x",
+    name: 300,
     presented_by: "NordVPN",
+    type: "winners",
   },
   {
-    prizes: "Wolfram|One and Wolfram|Alpha Pro",
-    name: "3x",
+    prizes: "Wolfram | One and Wolfram | Alpha Pro",
+    name: 375,
     presented_by: "Wolfram",
+    type: "winners",
+  },
+  {
+    prizes: "Sticker Mule Voucher",
+    name: 30,
+    presented_by: "STEMist Education",
+    type: "raffle",
   },
 ];
 
