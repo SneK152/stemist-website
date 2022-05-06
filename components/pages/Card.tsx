@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 
 export default function Card(props: {
   title: string;
   children: ReactNode;
   className?: string;
+  image?: string;
 }) {
   return (
     <div
@@ -11,6 +13,12 @@ export default function Card(props: {
         props.className || ""
       } `}
     >
+      {props.image
+        ? <div
+            className="relative w-full h-full text-center bg-transparent bg-contain bg-no-repeat bg-center"
+            style={{ backgroundImage: `url('${props.image}')` }}
+          ></div>
+        : null}
       <h1 className="font-display z-20 text-center text-4xl font-semibold">
         {props.title}
       </h1>

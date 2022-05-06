@@ -6,6 +6,7 @@ import Schedule from "@/components/hacks/schedule/Schedule";
 import Container from "@/components/layout/Container";
 import PrizesSection from "@/components/hacks/prizes";
 import { hackathonNavLinks } from "@/lib/data/navLinks";
+import Partners from "@/components/hacks/partners/Partners";
 
 const HACKATHON_INFO = {
   signup_form: "/hacks/signup",
@@ -83,6 +84,9 @@ export default function App() {
         <PrizesSection />
         <Section name="Our Sponsors">
           <Sponsors />
+        </Section>
+        <Section name="Partners">
+          <Partners />
         </Section>
         <Section name="Frequently Asked Questions">
           <FAQ />
