@@ -9,6 +9,7 @@ export default function SpringSponsor({
   url,
   color,
   baseClassName = "",
+  textClassName = "",
   icon = true,
 }: {
   className?: string;
@@ -16,6 +17,7 @@ export default function SpringSponsor({
   url: string;
   color: string;
   baseClassName?: string;
+  textClassName?: string;
   icon?: boolean;
 }) {
   const [isHovered, setHovered] = useState<boolean>(false);
@@ -41,7 +43,7 @@ export default function SpringSponsor({
       <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}
         alt="Sponsor image"
-        className="w-full"
+        className={`w-full ${textClassName}`}
       />
     </animated.a>
   );

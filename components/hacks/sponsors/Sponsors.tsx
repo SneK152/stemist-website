@@ -55,6 +55,7 @@ export default function Sponsors() {
           color={"#ffffff"}
           url="https://artofproblemsolving.com/"
           name="AOPS"
+          textClassName="mx-auto w-3/4"
         />
       </div>
     </div>
