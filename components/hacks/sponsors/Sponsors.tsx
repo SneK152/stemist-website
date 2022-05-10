@@ -12,44 +12,50 @@ export default function Sponsors() {
           color={"#000000"}
           url="https://www.taskade.com/"
           name="Taskade"
-          image="taskade.png"
-          className=""
         />
         <AnimatedSponsor
           color="#4687ff"
           url="https://nordvpn.com"
           name="NordVPN"
-          image="nordvpn.png"
           className="bg-green-400"
-          baseClassName=""
         />
         <AnimatedSponsor
           color="#ef222a"
           url="https://wolfram.com"
           name="Wolfram"
-          image="wolfram.png"
-          className=""
         />
         <AnimatedSponsor
           color={"#002d64"}
           url="https://www.echo3d.co/"
           name="Echo3D"
-          image="echo3d.png"
-          className=""
         />
         <AnimatedSponsor
           color={"#55e0ca"}
           url="https://www.desmos.com/"
           name="Desmos"
-          image="desmos.png"
-          className=""
         />
         <AnimatedSponsor
           color={"#2d363e"}
           url="https://certopus.com/"
           name="Certopus"
-          image="certopus.png"
-          className=""
+        />
+        <AnimatedSponsor
+          color={"#434285"}
+          url="https://www.sashido.io/"
+          name="Sashido"
+        />
+        <AnimatedSponsor
+          color={"#eff1f3"}
+          url="https://www.axure.com/"
+          name="axure"
+          icon={false}
+          className="grid content-center"
+        />
+        <AnimatedSponsor
+          color={"#ffffff"}
+          url="https://artofproblemsolving.com/"
+          name="AOPS"
+          textClassName="mx-auto w-3/4"
         />
       </div>
     </div>
