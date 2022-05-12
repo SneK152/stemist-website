@@ -17,6 +17,11 @@ const config = {
       },
     ];
   },
+  experimental: {
+    images: {
+      layoutRaw: true,
+    },
+  },
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
