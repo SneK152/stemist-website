@@ -23,7 +23,7 @@ export default function About() {
         <Section
           quote_num={1}
           title="Our Mission"
-          image="/about/session.jpg"
+          image="/about/session.png"
           caption="A snapshot of one of our presentations"
         >
           We founded STEMist originally because we believed that learning was a
