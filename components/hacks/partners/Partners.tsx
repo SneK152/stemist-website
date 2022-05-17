@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Partners() {
   return (
-    <div className="p-4">
+    <div className="p-4 m-auto text-center justify-center">
       <div {...useAos()} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <Link href="https://discord.gg/FxABpUX">
           <a
