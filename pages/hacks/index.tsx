@@ -20,10 +20,14 @@ export default function App() {
       title="STEMist Hacks"
       noNav
       navTitle="STEMist Hacks"
+      hacks
       customNav={hackathonNavLinks}
     >
       <Header />
       <div className="max-w-[100rem] m-auto">
+        <Section name="Our Sponsors">
+          <Sponsors />
+        </Section>
         <Section name="About our Hackathon" id="about">
           <div className="bg-black bg-opacity-20 text-white text-lg py-5 rounded-lg shadow-md">
             Welcome to STEMist Hacks! Join other hackers in creating a project
@@ -82,9 +86,6 @@ export default function App() {
           <Schedule />
         </Section>
         <PrizesSection />
-        <Section name="Our Sponsors">
-          <Sponsors />
-        </Section>
         <Section name="Partners">
           <Partners />
         </Section>
