@@ -9,12 +9,14 @@ export default function Container({
   noNav = false,
   navTitle = "",
   customNav = [],
+  hacks,
 }: {
   children: React.ReactNode;
   title: string;
   noNav?: boolean;
   navTitle?: string;
   customNav?: any[];
+  hacks?: boolean
 }) {
   return (
     <>
@@ -77,9 +79,11 @@ export default function Container({
         <meta name="language" content="English" />
         <meta name="revisit-after" content="14 days" />
       </Head>
-      <Navbar noNav={noNav} navTitle={navTitle} customNav={customNav} />
+      <Navbar {...{noNav, navTitle, customNav, hacks}} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden min-h-screen">{children}</div>
+        <div className="mx-auto overflow-hidden min-h-screen">
+          {children}
+        </div>
       </div>
       <Footer />
     </>
