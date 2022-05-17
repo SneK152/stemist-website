@@ -32,7 +32,8 @@ export default function Container({
           content="Our goal is not only to teach kids STEM. We hope to empower students with foundational concepts through interactive workshops and curriculums."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="/logo-dark.png" />
+        <meta property="og:image:alt" content="Stemist Education Logo" />
         <meta
           name="og:title"
           property="og:title"

@@ -26,7 +26,7 @@ function Description() {
       <div className="flex flex-wrap sm:gap-5 gap-1 justify-center">
         <Button
           href={HACKATHON_INFO.signup_form}
-          backgroundColor="bg-green bg-opacity-70"
+          backgroundColor="bg-[#4edcd4] bg-opacity-70"
           textColor="text-white"
           target="_blank"
         >
@@ -34,7 +34,7 @@ function Description() {
         </Button>
         <Button
           href={HACKATHON_INFO.discord}
-          backgroundColor="bg-black bg-opacity-80"
+          backgroundColor="bg-[#59eda8] bg-opacity-80"
           textColor="text-white"
           target="_blank"
         >
@@ -42,7 +42,7 @@ function Description() {
         </Button>
         <Button
           href={HACKATHON_INFO.devpost}
-          backgroundColor="bg-blue-500"
+          backgroundColor="bg-[#6259ed] bg-opacity-70"
           textColor="text-white"
           target="_blank"
         >
@@ -53,10 +53,10 @@ function Description() {
   );
 }
 
-export default function Header() {
+export default function Header({ image = '/homepage2.jpg' }: { image?: string }) {
   return (
-    <div>
-      <Banner image="/homepage2.jpg" full href="#about">
+    <div className="bg-[#060249] bg-opacity-10">
+      <Banner image={image} full href="#about">
         <h1 className="font-display text-3xl font-bold md:text-5xl lg:text-7xl">
           STEMist Hacks
         </h1>

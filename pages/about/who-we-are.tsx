@@ -23,7 +23,7 @@ export default function About() {
         <Section
           quote_num={1}
           title="Our Mission"
-          image="/about/session.jpg"
+          image="/about/session.png"
           caption="A snapshot of one of our presentations"
         >
           We founded STEMist originally because we believed that learning was a
@@ -44,13 +44,12 @@ export default function About() {
           Our team of instructors have vast amounts of experience in their
           respective STEM subjects, and they work hard to compile information in
           the form of engaging lectures every session. Our spring and winter
-          break sessions are workshop based, where each day in the break has two
-          to three 45-minute-classes. Students have the opportunity to pick and
-          choose which ones they want to attend and learn from. During the long
-          summer break from June to August, we opt for a curriculum based format
-          where classes are separated into STEM topics and has two weeks worth
-          of content that allows students to join an in-depth exploration of
-          those topics.
+          break sessions are usually workshop-based with lectures daily followed
+          by a twenty-minute Kahoot. These sessions have varying topics and
+          difficulties, so everyone will be able to learn! During summer break,
+          classes will be more curriculum-based, with different topics, ranging
+          from Biology to CS to Math and more that students can learn over a
+          one-week intensive period.
         </Section>
       </div>
     </Container>
