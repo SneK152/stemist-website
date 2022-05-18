@@ -6,7 +6,7 @@ const config = {
     return [
       {
         source: "/signup",
-        destination: "https://forms.gle/ECuJtaGiVR8bVtin9",
+        destination: "https://forms.gle/9vAjCq3REiBeTQ9c6",
         permanent: true,
       },
       {
