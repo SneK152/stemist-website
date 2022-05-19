@@ -46,6 +46,7 @@ export default function SpringSponsor({
         width={300}
         height={60}
         alt="Sponsor image"
+        layout="raw"
         className={`w-full h-auto aspect-auto ${textClassName}`}
       />
     </animated.a>

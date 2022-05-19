@@ -1,9 +1,7 @@
 import { navLinks } from "@/lib/data/navLinks";
 import socials from "@/lib/data/socials";
-import { ArrowRightIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 export default function Footer() {
   return (
@@ -39,7 +37,9 @@ export default function Footer() {
               .filter((l) => l.important === true && !l.customProps?.main)
               .map((link, i) => (
                 <Link href={link.link} key={i}>
-                  <a className="font-writing uppercase font-semibold text-xl basis-1/3 shrink xs:shrink-0 grow text-left lg:text-center footer-value">{link.name}</a>
+                  <a className="font-writing uppercase font-semibold text-xl basis-1/3 shrink xs:shrink-0 grow text-left lg:text-center footer-value">
+                    {link.name}
+                  </a>
                 </Link>
               ))}
           </div>
@@ -61,13 +61,16 @@ export default function Footer() {
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
           </div> */}
-          <div className="text-center lg:col-span-3 items-center flex">
+          <div className="text-center lg:col-span-3 items-center justify-center flex flex-col">
             <div>
               <span>
                 © <time dateTime="2022">2022</time> Copyright{" "}
               </span>
-              <span className="text-blue-500 font-semibold">STEMist Education</span>
+              <span className="text-blue-500 font-semibold">
+                STEMist Education
+              </span>
             </div>
+            <div>A registered 501(c)3 organization.</div>
           </div>
         </div>
       </div>

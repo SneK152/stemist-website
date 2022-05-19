@@ -71,17 +71,13 @@ export const navLinks: NavLink[] = [
   // },
   {
     name: "Curriculum",
-    link: "/workshops",
+    link: "/curriculum",
+    customProps: {
+      main: true,
+      color: "white",
+      textColor: "black",
+    },
   },
-  // {
-  //   name: "Programs",
-  //   link: "/programs",
-  //   customProps: {
-  //     main: true,
-  //     color: "blue-500",
-  //     textColor: "white",
-  //   },
-  // },
   {
     name: "Sign Up",
     link: "/signup",
