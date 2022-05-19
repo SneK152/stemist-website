@@ -19,6 +19,10 @@ body {
   @apply overflow-x-hidden;
 }
 
+h1 {
+  @apply text-center
+}
+
 .footer-value {
   flex-basis: calc(33.333333% - 2.5rem);
 }
