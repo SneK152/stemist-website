@@ -19,10 +19,12 @@ export default function Navbar({
   noNav,
   navTitle,
   customNav,
+  hacks,
 }: {
   noNav: boolean;
   navTitle: string;
   customNav: NavLinks;
+  hacks?: boolean;
 }) {
   const router = useRouter();
   return (
@@ -66,7 +68,7 @@ export default function Navbar({
                   <MenuIcon className="block h-6 w-6 text-white" />
                 )}
               </Disclosure.Button>
-              {noNav && (
+              {noNav  && (
                 <div className="mt-auto mb-auto hidden lg:flex">
                   <ul className="inline-flex gap-4">
                     {customNav.map((navLink, index) => (
@@ -78,7 +80,7 @@ export default function Navbar({
                         {navLink.name}
                       </NavLink>
                     ))}
-                    <NavLink
+                    {!hacks && <NavLink
                       main
                       href="/"
                       color="blue-500 bg-opacity-80 hover:bg-opacity-90"
@@ -87,7 +89,7 @@ export default function Navbar({
                     >
                       <ArrowLeftIcon className="h-5 w-5 inline-block" />
                       Back to STEMist
-                    </NavLink>
+                    </NavLink> }
                   </ul>
                 </div>
               )}
@@ -202,7 +204,7 @@ export default function Navbar({
                         </Fragment>
                       )
                     )}
-                    {noNav && (
+                    {noNav && !hacks && (
                       <>
                         <div className="h-2"></div>
                         <NavLink

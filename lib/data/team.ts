@@ -24,7 +24,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Vice President", "Director of Events", "WEBS"],
+    officerRoles: ["Secretary", "Director of Events", "WEBS"],
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
       cs: ["C++"],
@@ -36,6 +36,27 @@ const people: ExtendedPerson[] = [
       "USACO Silver",
       "First place winner in many CA Hackathons",
       "Two Year Coder",
+    ],
+  },
+  {
+    name: "Isaac Sun",
+    officerRoles: [
+      "Treasurer",
+      "Director of PR and Outreach",
+      "WEBS",
+      "Events",
+    ],
+    teacherRoles: ["Math"],
+    curriculumRoles: {
+      math: ["Advanced Algebra"],
+    },
+    image: resolveTeamImage("Isaac Sun"),
+    description:
+      "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
+    qualifications: [
+      "AIME Qualifier",
+      "Berkeley Math Tournament Honorable Mentions",
+      "AP Calculus BC Freshman Student",
     ],
   },
   {
@@ -167,22 +188,7 @@ const people: ExtendedPerson[] = [
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
-  {
-    name: "Isaac Sun",
-    officerRoles: ["Director of PR and Outreach", "WEBS", "Events"],
-    teacherRoles: ["Math"],
-    curriculumRoles: {
-      math: ["Advanced Algebra"],
-    },
-    image: resolveTeamImage("Isaac Sun"),
-    description:
-      "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
-    qualifications: [
-      "AIME Qualifier",
-      "Berkeley Math Tournament Honorable Mentions",
-      "AP Calculus BC Freshman Student",
-    ],
-  },
+
   {
     name: "Harold Wang",
     teamRoles: ["HR"],

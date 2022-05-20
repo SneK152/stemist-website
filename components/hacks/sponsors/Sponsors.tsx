@@ -6,7 +6,7 @@ export default function Sponsors() {
     <div className="p-4">
       <div
         {...useAos()}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
         <AnimatedSponsor
           color={"#000000"}
@@ -43,6 +43,7 @@ export default function Sponsors() {
           color={"#434285"}
           url="https://www.sashido.io/"
           name="Sashido"
+          textClassName="mt-5"
         />
         <AnimatedSponsor
           color={"#eff1f3"}

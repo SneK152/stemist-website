@@ -2,6 +2,7 @@
 import { animated } from "react-spring";
 import { useState } from "react";
 import useSponsorSpring from "./useSponsorSpring";
+import Image from "next/image";
 
 export default function SpringSponsor({
   className = "",
@@ -40,10 +41,13 @@ export default function SpringSponsor({
         src={`/sponsors/${name.toLowerCase()}_logo.png`}
         className={`${baseClassName} h-28 m-auto`}
       /> : null}
-      <img
+      <Image
         src={`/sponsors/${name.toLowerCase()}_text.png`}
+        width={300}
+        height={60}
         alt="Sponsor image"
-        className={`w-full ${textClassName}`}
+        layout="raw"
+        className={`w-full h-auto aspect-auto ${textClassName}`}
       />
     </animated.a>
   );

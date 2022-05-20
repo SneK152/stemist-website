@@ -20,10 +20,14 @@ export default function App() {
       title="STEMist Hacks"
       noNav
       navTitle="STEMist Hacks"
+      hacks
       customNav={hackathonNavLinks}
     >
-      <Header />
+      <Header image="/homepage.png" />
       <div className="max-w-[100rem] m-auto">
+        <Section name="Our Sponsors">
+          <Sponsors />
+        </Section>
         <Section name="About our Hackathon" id="about">
           <div className="bg-black bg-opacity-20 text-white text-lg py-5 rounded-lg shadow-md">
             Welcome to STEMist Hacks! Join other hackers in creating a project
@@ -36,7 +40,7 @@ export default function App() {
                 href={HACKATHON_INFO.signup_form}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2 bg-white text-black border-2 border-white font-semibold rounded-md hover:bg-slate-200"
+                className="px-5 py-2 bg-[#4edcd4] bg-opacity-70 text-white font-semibold rounded-md hover:bg-opacity-60"
               >
                 Sign Up
               </a>
@@ -44,7 +48,7 @@ export default function App() {
                 href={HACKATHON_INFO.discord}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2 bg-blue-500 text-white border-2 border-blue-500 font-semibold rounded-md hover:bg-blue-600"
+                className="px-5 py-2 bg-[#59eda8] bg-opacity-80 text-white font-semibold rounded-md hover:bg-opacity-70"
               >
                 Discord
               </a>
@@ -52,7 +56,7 @@ export default function App() {
                 href={HACKATHON_INFO.devpost}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2 text-white border-2 font-semibold border-white rounded-md hover:bg-neutral-900 hover:bg-opacity-50 hover:border-slate-200"
+                className="bg-[#6259ed] bg-opacity-70 px-5 py-2 text-white font-semibold rounded-md hover:bg-opacity-50"
               >
                 Devpost
               </a>
@@ -82,9 +86,6 @@ export default function App() {
           <Schedule />
         </Section>
         <PrizesSection />
-        <Section name="Our Sponsors">
-          <Sponsors />
-        </Section>
         <Section name="Partners">
           <Partners />
         </Section>

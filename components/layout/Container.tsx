@@ -9,12 +9,14 @@ export default function Container({
   noNav = false,
   navTitle = "",
   customNav = [],
+  hacks,
 }: {
   children: React.ReactNode;
   title: string;
   noNav?: boolean;
   navTitle?: string;
   customNav?: any[];
+  hacks?: boolean
 }) {
   return (
     <>
@@ -30,7 +32,8 @@ export default function Container({
           content="Our goal is not only to teach kids STEM. We hope to empower students with foundational concepts through interactive workshops and curriculums."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="/logo-dark.png" />
+        <meta property="og:image:alt" content="Stemist Education Logo" />
         <meta
           name="og:title"
           property="og:title"
@@ -77,9 +80,11 @@ export default function Container({
         <meta name="language" content="English" />
         <meta name="revisit-after" content="14 days" />
       </Head>
-      <Navbar noNav={noNav} navTitle={navTitle} customNav={customNav} />
+      <Navbar {...{noNav, navTitle, customNav, hacks}} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden min-h-screen">{children}</div>
+        <div className="mx-auto overflow-hidden min-h-screen">
+          {children}
+        </div>
       </div>
       <Footer />
     </>

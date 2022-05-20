@@ -67,7 +67,7 @@ export default function Banner({
             {children}
             {full && (
               <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-20">
-                <button className="animate-bounce" onClick={scrollTo(href)}>
+                <button className="animate-bounce" onClick={scrollTo(href)} aria-label="Learn More">
                   <ChevronDownIcon className="h-12" />
                 </button>
               </div>

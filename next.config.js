@@ -6,7 +6,7 @@ const config = {
     return [
       {
         source: "/signup",
-        destination: "https://forms.gle/ECuJtaGiVR8bVtin9",
+        destination: "https://forms.gle/9vAjCq3REiBeTQ9c6",
         permanent: true,
       },
       {
@@ -16,6 +16,15 @@ const config = {
         permanent: true,
       },
     ];
+  },
+  experimental: {
+    images: {
+      layoutRaw: true,
+    },
+  },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
   },
 };
 

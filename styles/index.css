@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .aspect-auto {
+    aspect-ratio: auto !important;
+  }
+}
+
 html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/loop.jpg');
   background-size: 50%;
@@ -11,6 +17,10 @@ html {
 
 body {
   @apply overflow-x-hidden;
+}
+
+h1 {
+  @apply text-center
 }
 
 .footer-value {
