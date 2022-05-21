@@ -14,7 +14,7 @@ export default function Index() {
       <div>
         <Banner image="/homepage2.jpg" full>
           <h1
-            className="text-center font-display text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
+            className="text-left font-display text-4xl sm:text-5xl font-bold md:text-6xl lg:text-8xl xl:text-8xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
@@ -22,7 +22,7 @@ export default function Index() {
           >
             STEMist Education
           </h1>
-          <span className="block sm:mb-4 font-sans text-base text-center sm:text-2xl px-5 sm:px-10 md:px-20">
+          <span className="block sm:mb-4 font-sans text-base text-left sm:text-2xl px-5 sm:px-10 md:px-20">
             <div
               data-aos="fade-up"
               data-aos-delay={400}
@@ -47,9 +47,8 @@ export default function Index() {
             >
               Achieve your goals!
             </div>
-            </span>
-        <div className="self-center items-center text-center justify-center">        
-          <div className="items-center self-center text-center justify-center flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
+          </span>
+          <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
             {events.map((e) => (
               <div className="flex flex-col" key={e}>
                 <h2 className="uppercase font-writing text-xs sm:text-sm text-left">
@@ -78,7 +77,6 @@ export default function Index() {
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
-            </div>
           </div>
         </Banner>
         <Homepage />
