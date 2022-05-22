@@ -43,10 +43,14 @@ export const navLinks: NavLink[] = [
     dropdownItems: [
       {
         name: "Team Applications",
-        link: "http://bit.ly/stemistapplication",
+        link: "https://bit.ly/stemistapplication",
         customProps: {
           target: "_blank",
         },
+      },
+      {
+        name: "Donations",
+        link: "https://paypal.com",
       },
       // {
       //   name: "Workshop Signups",
@@ -54,10 +58,6 @@ export const navLinks: NavLink[] = [
       //   customProps: {
       //     target: "_blank",
       //   },
-      // },
-      // {
-      //   name: "Donations",
-      //   link: "/get-involved/donate",
       // },
     ],
   },
@@ -70,22 +70,12 @@ export const navLinks: NavLink[] = [
   //   link: "/webs",
   // },
   {
-    name: "Curriculum",
+    name: "Summer Classes",
     link: "/curriculum",
     customProps: {
       main: true,
       color: "white",
       textColor: "black",
-    },
-  },
-  {
-    name: "Sign Up",
-    link: "/signup",
-    customProps: {
-      main: true,
-      color: "blue-500",
-      textColor: "white",
-      target: "_blank",
     },
   },
 ];
