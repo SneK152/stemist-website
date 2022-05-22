@@ -29,10 +29,10 @@ export interface ExtendedPerson {
 }
 
 export type TeacherSubject =
-  | "Math Lead"
-  | "Biology Lead"
-  | "Physical Science Lead"
-  | "Computer Science Lead"
+  | "Head of Math"
+  | "Head of Biology"
+  | "Head of Physical Science"
+  | "Head of Computer Science"
   | "Physical Science"
   | "Math"
   | "Biology"

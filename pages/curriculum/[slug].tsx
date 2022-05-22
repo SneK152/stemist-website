@@ -12,36 +12,36 @@ interface SubjectCurriculumProps {
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
   .sort((a, b) =>
-    a.positions[0].includes("Computer Science Lead")
+    a.positions[0].includes("Head of Computer Science")
       ? -1
-      : b.positions[0].includes("Lead")
+      : b.positions[0].includes("Head")
       ? 1
       : 0
   );
 const physTeachers = [...teachers]
   .filter((person) => person.positions.includes("Physical Science"))
   .sort((a, b) =>
-    a.positions[0].includes("Physical Science Lead")
+    a.positions[0].includes("Head of Physical Science")
       ? -1
-      : b.positions[0].includes("Lead")
+      : b.positions[0].includes("Head")
       ? 1
       : 0
   );
 const mathTeachers = [...teachers]
   .filter((person) => person.positions.includes("Math"))
   .sort((a, b) =>
-    a.positions[0].includes("Math Lead")
+    a.positions[0].includes("Head of Math")
       ? -1
-      : b.positions[0].includes("Lead")
+      : b.positions[0].includes("Head")
       ? 1
       : 0
   );
 const bioTeachers = [...teachers]
   .filter((person) => person.positions.includes("Biology"))
   .sort((a, b) =>
-    a.positions[0].includes("Biology Lead")
+    a.positions[0].includes("Head of Biology")
       ? -1
-      : b.positions[0].includes("Lead")
+      : b.positions[0].includes("Head")
       ? 1
       : 0
   );

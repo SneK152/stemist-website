@@ -23,16 +23,16 @@ function getTeachers() {
     teacherRoles = [...teacherRoles, ...person.positions];
   });
   teacherRoles = ["All", ...new Set(teacherRoles)];
-  teacherRoles = teacherRoles.filter((role) => !role.includes("Lead"));
+  teacherRoles = teacherRoles.filter((role) => !role.includes("Head"));
   return teacherRoles;
 }
 
 function getSortedTeachers(activeTeacher: TeacherSubject) {
   if (activeTeacher === "All") {
     return teachers.sort((a, b) =>
-      a.positions[0].includes("Lead")
+      a.positions[0].includes("Head")
         ? -1
-        : b.positions[0].includes("Lead")
+        : b.positions[0].includes("Head")
         ? 1
         : 0
     );
@@ -40,9 +40,9 @@ function getSortedTeachers(activeTeacher: TeacherSubject) {
     return teachers
       .filter((person) => person.positions.includes(activeTeacher))
       .sort((a, b) =>
-        a.positions[0].includes(`${activeTeacher} Lead`)
+        a.positions[0].includes(`Head of ${activeTeacher}`)
           ? -1
-          : b.positions[0].includes("Lead")
+          : b.positions[0].includes("Head")
           ? 1
           : 0
       );
@@ -60,7 +60,6 @@ export default function Team(props: TeamProps) {
     [activeTeacher]
   );
 
-  const { width } = useWindowSize();
   return (
     <Container title="Our Team">
       <PartialBanner title="Meet the Team" />

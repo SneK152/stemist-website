@@ -94,12 +94,12 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Selena Yang",
-    officerRoles: ["Instructor Lead"],
+    officerRoles: ["Curriculum Director"],
     image: resolveTeamImage("Selena Yang"),
-    teacherRoles: ["Biology Lead", "Math", "Biology"],
+    teacherRoles: ["Head of Biology", "Math", "Biology"],
     curriculumRoles: {
       math: ["Algebra", "Geometry"],
-      bio: ["Lead", "Molecular and Cell Biology", "Genetics"],
+      bio: ["Head", "Molecular and Cell Biology", "Genetics"],
     },
     description:
       "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
@@ -113,15 +113,15 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Anish Bhethanabotla",
-    officerRoles: ["Instructor Lead", "HR"],
+    officerRoles: ["Curriculum Director", "HR"],
     teacherRoles: [
-      "Physical Science Lead",
+      "Head of Physical Science",
       "Computer Science",
       "Physical Science",
     ],
     curriculumRoles: {
       cs: ["Python"],
-      phys: ["Lead", "Electricity and Magnetism", "Stellar Evolution"],
+      phys: ["Head", "Electricity and Magnetism", "Stellar Evolution"],
     },
     image: resolveTeamImage("Anish Bhethanabotla"),
     description:
@@ -138,10 +138,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sanya Badhe",
-    officerRoles: ["Instructor Lead"],
-    teacherRoles: ["Math Lead", "Math"],
+    officerRoles: ["Curriculum Director"],
+    teacherRoles: ["Head of Math", "Math"],
     curriculumRoles: {
-      math: ["Lead", "Algebra", "Geometry", "Advanced Geometry"],
+      math: ["Head", "Algebra", "Geometry", "Advanced Geometry"],
     },
     image: resolveTeamImage("Sanya Badhe"),
     description:
@@ -163,10 +163,10 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Shanker Ram",
-    officerRoles: ["Instructor Lead"],
-    teacherRoles: ["Computer Science Lead", "Computer Science"],
+    officerRoles: ["Curriculum Director"],
+    teacherRoles: ["Head of Computer Science", "Computer Science"],
     curriculumRoles: {
-      cs: ["Lead", "Python"],
+      cs: ["Head", "Python"],
     },
     image: resolveTeamImage("Shanker Ram"),
     description:
