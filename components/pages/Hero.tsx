@@ -3,6 +3,7 @@ import Typed, { TypedOptions } from "typed.js";
 import useOnScreen from "@/lib/hooks/useOnScreen";
 import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import useWindowSize from "@/lib/hooks/useWindowSize";
+import HomeCarousel from "./HomeCarousel";
 
 export default function Hero() {
   const el = useRef<HTMLDivElement>(null);
@@ -55,7 +56,8 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full">
-        <video
+        <HomeCarousel />
+        {/* <video
           poster="/logo.svg"
           preload="none"
           controls
@@ -78,7 +80,7 @@ export default function Hero() {
             default
           />
           <source src="/homepage.mp4" type="video/mp4" />
-        </video>
+        </video> */}
       </div>
     </div>
   );
