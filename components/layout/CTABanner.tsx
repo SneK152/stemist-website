@@ -1,10 +1,12 @@
 import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
 
-export default function CTABanner() {
+export default function CTABanner({ full = false }: { full?: boolean }) {
   const [show, setShow] = useLocalStorage("showBanner", true);
   return show ? (
-    <div className="bg-blue-600 absolute w-full z-30">
+    <div
+      className={`bg-blue-600 absolute w-full z-30 ${!full ? "mt-20" : "mt-0"}`}
+    >
       <div className="mx-auto py-1 sm:py-3 px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">

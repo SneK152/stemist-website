@@ -41,7 +41,7 @@ export default function Banner({
           </button>
         </Transition>
       </div>
-      <CTABanner />
+      <CTABanner full={full} />
       <div
         className={`${
           full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
