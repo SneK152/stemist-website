@@ -16,7 +16,7 @@ export default function Container({
   noNav?: boolean;
   navTitle?: string;
   customNav?: any[];
-  hacks?: boolean
+  hacks?: boolean;
 }) {
   return (
     <>
@@ -42,7 +42,7 @@ export default function Container({
         <meta
           name="og:description"
           property="og:description"
-          content="Free STEM Education for kids"
+          content="Exceptional and Unparalleled STEM Education for kids"
         />
         <meta
           property="og:site_name"
@@ -52,7 +52,7 @@ export default function Container({
         <meta name="twitter:title" content={`STEMist Education | ${title}`} />
         <meta
           name="twitter:description"
-          content="Free STEM Education for kids"
+          content="Exceptional and Unparalleled STEM Education for kids"
         />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -80,11 +80,9 @@ export default function Container({
         <meta name="language" content="English" />
         <meta name="revisit-after" content="14 days" />
       </Head>
-      <Navbar {...{noNav, navTitle, customNav, hacks}} />
+      <Navbar {...{ noNav, navTitle, customNav, hacks }} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden min-h-screen">
-          {children}
-        </div>
+        <div className="mx-auto overflow-hidden min-h-screen">{children}</div>
       </div>
       <Footer />
     </>

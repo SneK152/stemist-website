@@ -114,13 +114,8 @@ const people: ExtendedPerson[] = [
   {
     name: "Anish Bhethanabotla",
     officerRoles: ["Curriculum Director", "HR"],
-    teacherRoles: [
-      "Head of Physical Science",
-      "Computer Science",
-      "Physical Science",
-    ],
+    teacherRoles: ["Head of Physical Science", "Physical Science"],
     curriculumRoles: {
-      cs: ["Python"],
       phys: ["Head", "Electricity and Magnetism", "Stellar Evolution"],
     },
     image: resolveTeamImage("Anish Bhethanabotla"),
@@ -394,6 +389,16 @@ const people: ExtendedPerson[] = [
       "Mermaid.js Core Maintainer",
       "Schema-Inspector Maintainer",
     ],
+  },
+  {
+    name: "Aadharsh Rajkumar",
+    description:
+      "Aadharsh Rajkumar is a freshman at Lynbrook High School, and is very passionate about computer science. In his free time you can find him reading or playing the drums or guitar.",
+    image: resolveTeamImage("Aadharsh Rajkumar"),
+    teacherRoles: ["Computer Science"],
+    curriculumRoles: {
+      cs: ["Python"],
+    },
   },
 ];
 export default people;
