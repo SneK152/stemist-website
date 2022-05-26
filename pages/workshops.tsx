@@ -11,8 +11,41 @@ export default function Curriculum() {
     return teachers.find((person) => person.name === name)!;
   }, []);
   return (
-    <Container title="Curriculum">
-      <PartialBanner title="Curriculum - Intro to Stem" />
+    <Container title="Workshop Recap">
+      <PartialBanner title="Workshop Recap" />
+      <h1 className="text-center font-display font-bold text-3xl">
+        Recordings
+      </h1>
+      <div className="flex justify-center gap-3 sm:flex-row flex-col w-full px-2 sm:px-6 lg:px-6 mx-auto">
+        <iframe
+          src="https://www.youtube.com/embed/xM73rqNecig"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-96"
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/nhyKvVnXGCQ"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-96"
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/CDrld7EdTb4"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-96"
+        ></iframe>
+      </div>
+      <br />
+      <h1 className="text-center font-display font-bold text-3xl">
+        Class Descriptions
+      </h1>
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
         <CurriculumCard
           title="Full Stack Web Development"
