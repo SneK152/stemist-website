@@ -53,7 +53,7 @@ export const navLinks: NavLink[] = [
   },
   {
     name: "Summer Classes",
-    link: "/summer-classes",
+    link: "/programs",
     customProps: {
       main: true,
       color: "white",
