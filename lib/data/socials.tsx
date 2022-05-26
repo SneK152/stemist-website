@@ -1,9 +1,16 @@
-import Social from '../types/Socials';
+import Social from "../types/Socials";
 
 const socials: Social[] = [
   {
     icon: (
-      <svg role="img" viewBox="0 0 24 24" height={24} width={24} className="inline-block" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        height={24}
+        width={24}
+        className="inline-block"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <title>Instagram</title>
         <path
           fill="#C13584"
@@ -11,11 +18,18 @@ const socials: Social[] = [
         />
       </svg>
     ),
-    link: 'https://www.instagram.com/stemist_education/',
+    link: "https://www.instagram.com/stemist_education/",
   },
   {
     icon: (
-      <svg role="img" viewBox="0 0 24 24" height={24} width={24} className="inline-block" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        height={24}
+        width={24}
+        className="inline-block"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <title>YouTube</title>
         <path
           fill="#FF0000"
@@ -23,11 +37,18 @@ const socials: Social[] = [
         />
       </svg>
     ),
-    link: 'https://www.youtube.com/channel/UCp-9KJgj_clivoncmg459dg',
+    link: "https://bit.ly/stemistyt",
   },
   {
     icon: (
-      <svg role="img" viewBox="0 0 24 24" height={24} width={24} className="inline-block" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        height={24}
+        width={24}
+        className="inline-block"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <title>Facebook</title>
         <path
           fill="#1877F2"
@@ -35,11 +56,18 @@ const socials: Social[] = [
         />
       </svg>
     ),
-    link: 'https://facebook.com',
+    link: "https://facebook.com",
   },
   {
     icon: (
-      <svg role="img" viewBox="0 0 24 24" height={24} width={24} className="inline-block" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        height={24}
+        width={24}
+        className="inline-block"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <title>LinkedIn</title>
         <path
           fill="#00A0DC"
@@ -47,7 +75,7 @@ const socials: Social[] = [
         />
       </svg>
     ),
-    link: 'https://www.linkedin.com/company/stemist-education/',
+    link: "https://www.linkedin.com/company/stemist-education/",
   },
 ];
 

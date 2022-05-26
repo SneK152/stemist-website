@@ -41,7 +41,7 @@ export default function Banner({
           </button>
         </Transition>
       </div>
-      <CTABanner />
+      <CTABanner full={full} />
       <div
         className={`${
           full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
@@ -56,18 +56,26 @@ export default function Banner({
           priority
         />
         <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute" />
-        <div className="flex h-full w-full items-center justify-center">
+        <div
+          className={`flex h-full w-full items-center ${
+            full ? "justify-center" : "justify-start"
+          }`}
+        >
           <div
-            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-center text-white z-20 -mt-0 short:-mt-20 ${
+            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 short:-mt-20 ${
               full
-                ? "min-h-full w-full bg-transparent"
-                : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56"
+                ? "min-h-full w-full bg-transparent text-center"
+                : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56 translate-y-5 pl-2 sm:pl-6 lg:pl-6"
             }`}
           >
             {children}
             {full && (
               <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-20">
-                <button className="animate-bounce" onClick={scrollTo(href)} aria-label="Learn More">
+                <button
+                  className="animate-bounce"
+                  onClick={scrollTo(href)}
+                  aria-label="Learn More"
+                >
                   <ChevronDownIcon className="h-12" />
                 </button>
               </div>

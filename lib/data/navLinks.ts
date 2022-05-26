@@ -37,55 +37,27 @@ export const navLinks: NavLink[] = [
     important: true,
   },
   {
-    name: "Get Involved",
-    link: "/get-involved",
-    dropdown: true,
-    dropdownItems: [
-      {
-        name: "Team Applications",
-        link: "http://bit.ly/stemistapplication",
-        customProps: {
-          target: "_blank",
-        },
-      },
-      // {
-      //   name: "Workshop Signups",
-      //   link: "/signup",
-      //   customProps: {
-      //     target: "_blank",
-      //   },
-      // },
-      // {
-      //   name: "Donations",
-      //   link: "/get-involved/donate",
-      // },
-    ],
+    name: "Team Applications",
+    link: "https://bit.ly/stemistapplication",
+    customProps: {
+      target: "_blank",
+    },
   },
   {
     name: "STEMist Hacks",
     link: "/hacks",
   },
-  // {
-  //   name: "WEBS",
-  //   link: "/webs",
-  // },
   {
-    name: "Curriculum",
-    link: "/curriculum",
+    name: "Workshop Recap",
+    link: "/workshops",
+  },
+  {
+    name: "Summer Classes",
+    link: "/programs",
     customProps: {
       main: true,
       color: "white",
       textColor: "black",
-    },
-  },
-  {
-    name: "Sign Up",
-    link: "/signup",
-    customProps: {
-      main: true,
-      color: "blue-500",
-      textColor: "white",
-      target: "_blank",
     },
   },
 ];

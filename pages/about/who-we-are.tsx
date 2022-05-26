@@ -14,11 +14,11 @@ export default function About() {
           caption="Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin, Sriman. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil."
         >
           STEMist Education is a student-led nonprofit that focuses on bringing
-          free STEM education to children of ages 7 to 14. We have a variety of
-          qualified instructors whom are skilled in areas such as Algebra,
-          Computer Science, Biology, Chemistry, Physics, and much more. STEMist
-          has been teaching kids STEM since 2020 and hopes to continue for much
-          longer.
+          exceptional and unparalleled STEM education to children of ages 7 to
+          14. We have a variety of qualified instructors whom are skilled in
+          areas such as Algebra, Computer Science, Biology, Chemistry, Physics,
+          and much more. STEMist has been teaching kids STEM since 2020 and
+          hopes to continue for much longer.
         </Section>
         <Section
           quote_num={1}

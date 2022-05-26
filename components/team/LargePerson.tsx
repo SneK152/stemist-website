@@ -29,7 +29,7 @@ export default function LargePerson(props: PersonProps) {
           <div className="font-writing flex flex-wrap gap-1">
             {props.person.positions.map(
               (pos, index) =>
-                !props.person.positions.includes(pos + " Lead") && (
+                !props.person.positions.includes("Head of " + pos) && (
                   <span
                     className="m-0.5 w-min whitespace-nowrap rounded-3xl bg-gray-200 py-1 px-2 text-sm"
                     key={index}

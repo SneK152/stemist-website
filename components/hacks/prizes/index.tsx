@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import prizes from "./prizes";
 import Section from "@/components/hacks/layout/Section";
 import Prize from "./prize";
-import useWindowSize from "@/lib/hooks/useWindowSize";
 import Counter from "@/components/pages/Counter";
 
 export default function PrizesSection() {
@@ -13,7 +12,7 @@ export default function PrizesSection() {
         <PrizeSection title="Popular Vote" filter="everyone" />
         <PrizeSection title="Raffle" filter="raffle" />
         <Counter
-          number={20000}
+          number={35000}
           className="!text-4xl"
           text="worth in prizes"
           symbol="+"
