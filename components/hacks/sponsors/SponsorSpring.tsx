@@ -36,17 +36,19 @@ export default function SpringSponsor({
       onMouseOver={() => setHovered(true)}
       onMouseOut={() => setHovered(false)}
     >
-      {icon ? <img
-        alt={name}
-        src={`/sponsors/${name.toLowerCase()}_logo.png`}
-        className={`${baseClassName} h-28 m-auto`}
-      /> : null}
-      <Image
+      {icon ? (
+        <img
+          alt={name}
+          src={`/sponsors/${name.toLowerCase()}_logo.png`}
+          className={`${baseClassName} h-28 m-auto`}
+        />
+      ) : null}
+      <img
         src={`/sponsors/${name.toLowerCase()}_text.png`}
         width={300}
         height={60}
         alt="Sponsor image"
-        layout="raw"
+        loading="eager"
         className={`w-full h-auto aspect-auto ${textClassName}`}
       />
     </animated.a>
