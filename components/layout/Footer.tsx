@@ -70,7 +70,7 @@ export default function Footer() {
                 STEMist Education
               </span>
             </div>
-            <div>A registered 501(c)3 organization.</div>
+            <div>A registered 501(c)3 organization. EIN: 88-1192628</div>
           </div>
         </div>
       </div>

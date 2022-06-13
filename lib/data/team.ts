@@ -399,6 +399,17 @@ const people: ExtendedPerson[] = [
     curriculumRoles: {
       cs: ["Python"],
     },
+    qualifications: ["Multiple Time Hackathon Winner"],
+  },
+  {
+    name: "Abhiram Manuguri",
+    description:
+      "Abhiram Manuguri is known best for being passionate about astronomy, spends his free time researching random stars and noting down interesting objects, and is currently drafting a research paper on a double star system.",
+    image: resolveTeamImage("Abhiram Manuguri"),
+    teacherRoles: ["Physical Science"],
+    curriculumRoles: {
+      phys: ["Astronomy"],
+    },
   },
 ];
 export default people;
