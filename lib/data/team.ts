@@ -259,10 +259,6 @@ const people: ExtendedPerson[] = [
   {
     name: "Sarvesh Madullapalli",
     teamRoles: ["Intern", "Technology", "Events"],
-    teacherRoles: ["Computer Science", "Intern"],
-    curriculumRoles: {
-      cs: ["Intern", "Python"],
-    },
     image: resolveTeamImage("Sarvesh Madullapalli"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
