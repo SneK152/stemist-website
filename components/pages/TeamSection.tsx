@@ -12,12 +12,14 @@ interface TeamSectionProps {
 }
 
 export default function TeamSection(props: TeamSectionProps) {
-  const { width } = useWindowSize();
   return (
     <div className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
-      <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+      <h1 className="font-display mb-1 text-center text-5xl font-bold text-white">
         {props.title}
       </h1>
+      <h2 className="text-white text-center mb-3 text-xl font-writing">
+        (Tip: hover over someone to learn more about them)
+      </h2>
       <div
         className={`grid gap-3 pb-10 ${
           props.large

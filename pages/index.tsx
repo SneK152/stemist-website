@@ -67,17 +67,17 @@ export default function Index() {
               Learn More
             </Button>
             <Button
-              href="https://bit.ly/stemistapps"
+              href="/programs"
               backgroundColor="bg-blue-500"
               textColor="text-white"
-              target="_blank"
             >
-              Join Our Organization
+              Summer Classes
             </Button>
             <Button
-              href="/hacks"
+              href="https://stemist-hacks.devpost.com"
               backgroundColor="bg-green bg-opacity-80"
               textColor="text-white"
+              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
