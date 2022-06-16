@@ -9,7 +9,7 @@ type Person<T = string> = {
     math?: string[];
     bio?: string[];
     phys?: string[];
-  } & { [key: string]: any };
+  };
 };
 
 export interface ExtendedPerson {
