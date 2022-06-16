@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
       <div className="mx-6 py-10 pt-5 text-center md:text-left">
         <div className="grid lg:grid-cols-12 grid-cols-1 gap-8">
-          <div className="lg:col-span-2 hidden md:block">
+          <div className="lg:col-span-2 hidden md:block m-auto">
             <Link href="/">
               <a>
                 <Image
@@ -61,7 +61,7 @@ export default function Footer() {
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
           </div> */}
-          <div className="text-center lg:col-span-3 items-center justify-center flex flex-col">
+          <div className="text-center lg:col-span-3 items-start justify-center flex flex-col">
             <div>
               <span>
                 © <time dateTime="2022">2022</time> Copyright{" "}
@@ -70,7 +70,8 @@ export default function Footer() {
                 STEMist Education
               </span>
             </div>
-            <div>A registered 501(c)3 organization. EIN: 88-1192628</div>
+            <div>A registered 501(c)3 organization.</div>
+            <div>EIN: 88-1192628</div>
           </div>
         </div>
       </div>
