@@ -287,9 +287,9 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teacherRoles: ["Physical Science", "Intern"],
+    teacherRoles: ["Biology", "Intern"],
     curriculumRoles: {
-      phys: ["Intern", "Basic Chemistry"],
+      bio: ["Intern", "Anatomy and Physiology"],
     },
     image: resolveTeamImage("Chaas Kandregula"),
     description:
