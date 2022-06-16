@@ -323,23 +323,6 @@ const people: ExtendedPerson[] = [
     ],
   },
   {
-    name: "Kiara Ha",
-    teacherRoles: ["Physical Science", "Biology"],
-    curriculumRoles: {
-      phys: ["Acids and Bases"],
-      bio: ["Anatomy and Physiology"],
-    },
-    image: resolveTeamImage("Kiara Ha"),
-    description:
-      "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
-    qualifications: [
-      "Won and Competed in many math competitions in Asia and the US",
-      "AP Stats Freshman Student",
-      "AP Environmental Science Freshman Student",
-      "Biology and Physical Science Intern Experience",
-    ],
-  },
-  {
     name: "Kasturi Kirubaharan",
     teacherRoles: ["Biology"],
     curriculumRoles: {
@@ -406,6 +389,16 @@ const people: ExtendedPerson[] = [
     curriculumRoles: {
       phys: ["Astronomy"],
     },
+  },
+  {
+    name: "Rohil Gupta",
+    teacherRoles: ["Intern", "Biology"],
+    description:
+      "Rohil Gupta is a biology enthusiast, inspired by his mom, who is a doctor, and his brother, who worked on research for cancer treatment. In his free time, he loves to play many instruments, and his dog, Bruno.",
+    curriculumRoles: {
+      bio: ["Intern"],
+    },
+    image: resolveTeamImage("Rohil Gupta"),
   },
 ];
 export default people;
