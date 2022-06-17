@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import teachers from "@/lib/data/team/teachers";
 import Person from "../team/Person";
+import type person from "@/lib/types/Person";
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
   .sort((a, b) =>
@@ -40,7 +41,12 @@ const bioTeachers = [...teachers]
   );
 
 export default function TabPage() {
-  let [categories] = useState([
+  let [categories] = useState<{
+    name: 'cs' | 'phys' | 'math' | 'bio',
+    title: string,
+    description: string,
+    teachers: person[]
+  }[]>([
     {
       name: "cs",
       title: "Computer Science",
