@@ -1,6 +1,7 @@
 import InputFieldProps from "@/lib/types/InputFieldProps";
 
 export default function InputField({
+  secure = true,
   labelName,
   name,
   type = "text",
@@ -9,6 +10,7 @@ export default function InputField({
   formik,
   errorClass,
   as: Elem = "input",
+  value,
   ...rest
 }: InputFieldProps) {
   return (
@@ -22,6 +24,7 @@ export default function InputField({
         autoComplete="off"
         {...formik.getFieldProps(name)}
         {...rest}
+        value={value}
       />
       <label
         htmlFor={name}

@@ -8,4 +8,6 @@ export default interface InputFieldProps
   formik: any;
   errorClass?: string;
   as?: "input" | "textarea";
+  secure?: boolean
+  value?: string
 }
