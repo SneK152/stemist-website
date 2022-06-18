@@ -13,17 +13,17 @@ export default function Curriculum() {
   return (
     <Container title="Workshop Recap">
       <PartialBanner title="Workshop Recap" />
-      <h1 className="text-center font-display font-bold text-3xl">
+      <h1 className="text-center font-display font-bold text-5xl mb-5">
         Recordings
       </h1>
-      <div className="flex justify-center gap-3 sm:flex-row flex-col w-full px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="flex justify-center gap-5 sm:flex-row flex-col flex-wrap w-full px-2 sm:px-6 lg:px-6 mx-auto">
         <iframe
           src="https://www.youtube.com/embed/xM73rqNecig"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-96"
+          className="flex-basis-[523px] h-[224px] flex-grow"
         ></iframe>
         <iframe
           src="https://www.youtube.com/embed/nhyKvVnXGCQ"
@@ -31,7 +31,7 @@ export default function Curriculum() {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-96"
+          className="flex-basis-[523px] h-[224px] flex-grow"
         ></iframe>
         <iframe
           src="https://www.youtube.com/embed/CDrld7EdTb4"
@@ -39,14 +39,14 @@ export default function Curriculum() {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-96"
+          className="flex-basis-[523px] h-[224px] flex-grow"
         ></iframe>
       </div>
       <br />
-      <h1 className="text-center font-display font-bold text-3xl">
+      <h1 className="text-center font-display font-bold text-5xl mb-5">
         Class Descriptions
       </h1>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto auto-rows-[1fr] items-start">
         <CurriculumCard
           title="Full Stack Web Development"
           subtitle="Monday, April 18th"

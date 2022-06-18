@@ -14,7 +14,7 @@ export default function Index() {
       <div>
         <Banner image="/homepage2.jpg" full>
           <h1
-            className="text-left font-display text-3xl sm:text-4xl font-bold md:text-5xl lg:text-7xl xl:text-7xl px-5 sm:px-10 md:px-20"
+            className="text-left font-display text-3xl sm:text-4xl font-bold md:text-5xl lg:text-7xl w-1/2 px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
@@ -67,17 +67,17 @@ export default function Index() {
               Learn More
             </Button>
             <Button
-              href="https://bit.ly/stemistapps"
+              href="/programs"
               backgroundColor="bg-blue-500"
               textColor="text-white"
-              target="_blank"
             >
-              Join Our Organization
+              Summer Classes
             </Button>
             <Button
-              href="/hacks"
+              href="https://stemist-hacks.devpost.com"
               backgroundColor="bg-green bg-opacity-80"
               textColor="text-white"
+              target="_blank"
             >
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />

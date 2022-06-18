@@ -47,7 +47,7 @@ export default function Hero() {
           <br />
           <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
-            {width! > 640 ? (
+            {width! >= 640 ? (
               <ArrowRightIcon className="h-4 w-4 inline-block" />
             ) : (
               <ArrowDownIcon className="h-4 w-4 inline-block" />

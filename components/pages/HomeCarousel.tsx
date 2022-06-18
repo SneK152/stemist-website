@@ -25,7 +25,8 @@ export default function HomeCarousel() {
             loading="eager"
             quality={100}
             objectFit="cover"
-            className="select-none h-full w-full"
+            objectPosition="top left"
+            className="select-none"
             draggable={false}
           />
         ),

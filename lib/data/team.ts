@@ -259,10 +259,6 @@ const people: ExtendedPerson[] = [
   {
     name: "Sarvesh Madullapalli",
     teamRoles: ["Intern", "Technology", "Events"],
-    teacherRoles: ["Computer Science", "Intern"],
-    curriculumRoles: {
-      cs: ["Intern", "Python"],
-    },
     image: resolveTeamImage("Sarvesh Madullapalli"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
@@ -291,9 +287,9 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Chaas Kandregula",
-    teacherRoles: ["Physical Science", "Intern"],
+    teacherRoles: ["Biology", "Intern"],
     curriculumRoles: {
-      phys: ["Intern", "Basic Chemistry"],
+      bio: ["Intern", "Anatomy and Physiology"],
     },
     image: resolveTeamImage("Chaas Kandregula"),
     description:
@@ -324,23 +320,6 @@ const people: ExtendedPerson[] = [
     qualifications: [
       "4 Time Science Olympiad Champion",
       "Second Place State Competition Science Olympiad",
-    ],
-  },
-  {
-    name: "Kiara Ha",
-    teacherRoles: ["Physical Science", "Biology"],
-    curriculumRoles: {
-      phys: ["Acids and Bases"],
-      bio: ["Anatomy and Physiology"],
-    },
-    image: resolveTeamImage("Kiara Ha"),
-    description:
-      "Kiara is an AI enthusiast. In her free time, she enjoys tutoring chemistry, solving math problems and crying through physics questions. She is always down to chat!",
-    qualifications: [
-      "Won and Competed in many math competitions in Asia and the US",
-      "AP Stats Freshman Student",
-      "AP Environmental Science Freshman Student",
-      "Biology and Physical Science Intern Experience",
     ],
   },
   {
@@ -399,6 +378,27 @@ const people: ExtendedPerson[] = [
     curriculumRoles: {
       cs: ["Python"],
     },
+    qualifications: ["Multiple Time Hackathon Winner"],
+  },
+  {
+    name: "Abhiram Manuguri",
+    description:
+      "Abhiram Manuguri is known best for being passionate about astronomy, spends his free time researching random stars and noting down interesting objects, and is currently drafting a research paper on a double star system.",
+    image: resolveTeamImage("Abhiram Manuguri"),
+    teacherRoles: ["Physical Science"],
+    curriculumRoles: {
+      phys: ["Astronomy"],
+    },
+  },
+  {
+    name: "Rohil Gupta",
+    teacherRoles: ["Intern", "Biology"],
+    description:
+      "Rohil Gupta is a biology enthusiast, inspired by his mom, who is a doctor, and his brother, who worked on research for cancer treatment. In his free time, he loves to play many instruments, and his dog, Bruno.",
+    curriculumRoles: {
+      bio: ["Intern"],
+    },
+    image: resolveTeamImage("Rohil Gupta"),
   },
 ];
 export default people;
