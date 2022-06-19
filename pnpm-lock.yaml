@@ -12,6 +12,7 @@ specifiers:
   '@types/smoothscroll-polyfill': ^0.3.1
   aos: ^2.3.4
   autoprefixer: ^10.4.1
+  caniuse-lite: ^1.0.30001356
   eslint: ^8.9.0
   eslint-config-next: 12.0.10
   firebase: ^9.8.3
@@ -27,9 +28,9 @@ specifiers:
   react-firebase-hooks: ^5.0.3
   react-spring: ^9.4.3
   react-spring-carousel: ^2.0.12
-  sharp: ^0.30.6
+  sharp: ^0.30.1
   smoothscroll-polyfill: ^0.4.4
-  tailwindcss: ^3.1.3
+  tailwindcss: ^3.0.8
   typed.js: ^2.0.12
   typescript: ^4.5.4
   use-count-up: ^3.0.1
@@ -41,6 +42,7 @@ dependencies:
   '@heroicons/react': 1.0.6_react@17.0.2
   '@types/smoothscroll-polyfill': 0.3.1
   aos: 2.3.4
+  caniuse-lite: 1.0.30001356
   firebase: 9.8.3
   firebase-admin: 10.0.2
   formik: 2.2.9_react@17.0.2
@@ -1528,6 +1530,10 @@ packages:
 
   /caniuse-lite/1.0.30001340:
     resolution: {integrity: sha512-jUNz+a9blQTQVu4uFcn17uAD8IDizPzQkIKh3LCJfg9BkyIqExYYdyc/ZSlWUSKb8iYiXxKsxbv4zYSvkqjrxw==}
+    dev: false
+
+  /caniuse-lite/1.0.30001356:
+    resolution: {integrity: sha512-/30854bktMLhxtjieIxsrJBfs2gTM1pel6MXKF3K+RdIVJZcsn2A2QdhsuR4/p9+R204fZw0zCBBhktX8xWuyQ==}
     dev: false
 
   /chalk/4.1.2:
