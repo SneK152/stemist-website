@@ -5,17 +5,18 @@ import getFirebase from "@/lib/hooks/getFirebase";
 import { memo } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
-import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import * as Yup from "yup";
+import { addDoc, getFirestore } from "firebase/firestore";
+import { addData } from "@/lib/auth/user";
 
 interface SignUpForm {
   email: string;
   password: string;
 }
 
+const MInputField = memo(InputField);
+
 export default function SignUp() {
-  const [localEmail, setEmail] = useLocalStorage("contactEmailUsage", null);
-  const MInputField = memo(InputField);
   const formik = useFormik<SignUpForm>({
     initialValues: {
       email: "",
@@ -25,11 +26,21 @@ export default function SignUp() {
       { email, password },
       { resetForm, setSubmitting, setErrors }
     ) => {
-      resetForm();
-      await createUserWithEmailAndPassword(
+      console.log("submitted!");
+      //   resetForm();
+      const { user } = await createUserWithEmailAndPassword(
         getAuth(getFirebase()),
         email,
         password
+      );
+      console.log(user);
+      // TODO: Add name and pfp uploads
+      await addData(
+        {
+          name: "<name>",
+          profileUrl: "<pfpdefault>",
+        },
+        user.uid
       );
     },
     validationSchema: Yup.object({
@@ -58,11 +69,10 @@ export default function SignUp() {
             <div className="w-full space-y-3 rounded-lg p-4">
               <MInputField
                 labelName="Email address"
-                name="contactEmail"
+                name="email"
                 type="email"
                 formik={formik}
               />
-
               <MInputField
                 labelName="Password"
                 type="password"
@@ -70,8 +80,11 @@ export default function SignUp() {
                 name="password"
               />
               <button
-                type="submit"
                 className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
+                type="submit"
+                onClick={() => {
+                  console.log(formik.values);
+                }}
               >
                 Submit
               </button>

@@ -25,6 +25,7 @@ specifiers:
   prettier: ^2.5.1
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-firebase-hooks: ^5.0.3
   react-spring: ^9.4.3
   react-spring-carousel: ^2.0.12
   sharp: ^0.30.6
@@ -48,6 +49,7 @@ dependencies:
   next: 12.1.6_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-firebase-hooks: 5.0.3_firebase@9.8.3+react@17.0.2
   react-spring: 9.4.3_react-dom@17.0.2+react@17.0.2
   react-spring-carousel: 2.0.12_c0a81359237ba411aa6fff46fc362b78
   sharp: 0.30.6
@@ -3590,6 +3592,16 @@ packages:
 
   /react-fast-compare/2.0.4:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
+    dev: false
+
+  /react-firebase-hooks/5.0.3_firebase@9.8.3+react@17.0.2:
+    resolution: {integrity: sha512-0+V2XwInZJNjW8B2cm+U21Hlv4xnp/1tJqIoDg2rjyWzKTQ9VoLPQ9PAt+fMqPumjLz5uCIREY7YqGSSjc439Q==}
+    peerDependencies:
+      firebase: '>= 9.0.0'
+      react: '>= 16.8.0'
+    dependencies:
+      firebase: 9.8.3
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:
