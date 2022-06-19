@@ -17,11 +17,11 @@ const config = {
       },
     ];
   },
-  experimental: {
-    images: {
-      layoutRaw: true,
-    },
-  },
+  // experimental: {
+  //   images: {
+  //     layoutRaw: true,
+  //   },
+  // },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
