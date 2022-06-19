@@ -357,7 +357,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Yash Singh",
-    teamRoles: ["Technology", "Intern"],
+    teamRoles: ["Technology", "Website", "Intern"],
     description:
       "Yash Singh is a computer science and math fanatic who codes in his free time and can often be found in hackathons. He likes to go on hikes and play basketball when he is not studying.",
     image: resolveTeamImage("Yash Singh"),

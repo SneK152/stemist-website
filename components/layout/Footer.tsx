@@ -61,7 +61,7 @@ export default function Footer() {
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
           </div> */}
-          <div className="text-center lg:col-span-3 items-start justify-center flex flex-col">
+          <div className="text-left lg:col-span-3 items-start justify-start flex flex-col">
             <div>
               <span>
                 © <time dateTime="2022">2022</time> Copyright{" "}
