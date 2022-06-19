@@ -26,14 +26,12 @@ export default function SignUp() {
       { email, password },
       { resetForm, setSubmitting, setErrors }
     ) => {
-      console.log("submitted!");
-      //   resetForm();
+      setSubmitting(true);
       const { user } = await createUserWithEmailAndPassword(
         getAuth(getFirebase()),
         email,
         password
       );
-      console.log(user);
       // TODO: Add name and pfp uploads
       await addData(
         {
@@ -42,6 +40,7 @@ export default function SignUp() {
         },
         user.uid
       );
+      setSubmitting(false);
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -82,9 +81,6 @@ export default function SignUp() {
               <button
                 className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
                 type="submit"
-                onClick={() => {
-                  console.log(formik.values);
-                }}
               >
                 Submit
               </button>

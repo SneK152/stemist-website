@@ -13,10 +13,5 @@ export const addData = async (
   data: StudentData,
   uid: string
 ): Promise<void> => {
-  console.log("inside adddata");
-  try {
-    await setDoc(doc(db, "users", uid), data);
-  } catch (e) {
-    console.log(e);
-  }
+  await setDoc(doc(db, "users", uid), data);
 };
