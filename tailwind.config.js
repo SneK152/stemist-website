@@ -26,7 +26,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Raleway", "sans"],
-      display: ["Exo", "sans"],
+      display: ["Open Sans", "sans"],
       writing: ["Open Sans", "sans"],
     },
     screens: {

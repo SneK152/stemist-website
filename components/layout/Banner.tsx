@@ -52,7 +52,7 @@ export default function Banner({
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover brightness-75"
+          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover brightness-[.60]"
           priority
         />
         <div className="h-full w-full -z-20 bg-black absolute" />

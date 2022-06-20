@@ -1,5 +1,6 @@
 import HomeColumn from "./HomeColumn";
 import Counter from "./Counter";
+import HomeSection from "../layout/HomeSection";
 
 export default function Homepage() {
   return (
@@ -8,7 +9,7 @@ export default function Homepage() {
         className="flex scroll-mt-24 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
         id="hero"
       >
-        <h1 className="text-center font-display text-4xl font-bold">
+        {/* <h1 className="text-center font-display text-4xl font-bold">
           What We Do
         </h1>
         <p className="text-lg text-center px-3">
@@ -19,10 +20,39 @@ export default function Homepage() {
           during school breaks such as Spring and Winter break. In the summer,
           we opt for a comprehensive curriculum that delves more in-depth into
           STEM topics.{" "}
-        </p>
+        </p> */}
+        <HomeSection
+          title="Democratization of Education"
+          image="/home/demoedu.jpeg"
+          side="left"
+        >
+          We strive to empower students with foundational concepts that will be
+          vital to unlocking success in their lives. We{"'"}re committed to
+          provide education for everyone, regardless of race, gender, age,
+          income with free to ultralow cost classes online and in person.
+        </HomeSection>
+        <HomeSection
+          title="Reshaping the Learning Curve"
+          image="/home/reshape.jpeg"
+          side="right"
+        >
+          Our Summer 2022 STEM Course provides an intensive 5-week course that
+          accelerates the internalization of concepts taught during class.
+          Learning is reinforced with kahoots that promote note-taking and long
+          term memory recall.
+        </HomeSection>
+        <HomeSection
+          title="Putting Skills to Work"
+          image="/home/hacks.jpeg"
+          side="left"
+        >
+          STEMist Hacks encourages students to put their programming skills to
+          work, with riveting speaker talks by real life professionals and tens
+          of thousands of dollars in prizes.
+        </HomeSection>
       </div>
-      <br />
-      <div>
+      {/* <br /> */}
+      {/* <div>
         <h1 className="text-center mb-2 sm:mb-0 text-4xl font-display font-bold">
           By the Numbers
         </h1>
@@ -72,8 +102,8 @@ export default function Homepage() {
           buttonText="Meet our Instructors"
           buttonLink="/about/team"
         />
-      </div>
-      <br />
+      </div> */}
+      {/* <br /> */}
     </>
   );
 }

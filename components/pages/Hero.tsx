@@ -1,45 +1,60 @@
-import { useEffect, useRef } from "react";
-import Typed, { TypedOptions } from "typed.js";
-import useOnScreen from "@/lib/hooks/useOnScreen";
-import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
-import useWindowSize from "@/lib/hooks/useWindowSize";
-import HomeCarousel from "./HomeCarousel";
+// import { useEffect, useRef } from "react";
+// import Typed, { TypedOptions } from "typed.js";
+// import useOnScreen from "@/lib/hooks/useOnScreen";
+// import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
+// import useWindowSize from "@/lib/hooks/useWindowSize";
+// import HomeCarousel from "./HomeCarousel";
+import Counter from "./Counter";
+
+const HomeCounter = (props: {
+  number: number;
+  symbol: string;
+  text: string;
+}) => (
+  <div className="border border-white h-full w-full">
+    <Counter {...props} />
+  </div>
+);
 
 export default function Hero() {
-  const el = useRef<HTMLDivElement>(null);
-  const typed = useRef<any>(null);
-  const heroDiv = useRef<HTMLDivElement>(null);
-  const video = useRef<HTMLVideoElement>(null);
-  const isVisible = useOnScreen(heroDiv);
+  //   const el = useRef<HTMLDivElement>(null);
+  //   const typed = useRef<any>(null);
+  //   const heroDiv = useRef<HTMLDivElement>(null);
+  //   const video = useRef<HTMLVideoElement>(null);
+  //   const isVisible = useOnScreen(heroDiv);
 
-  useEffect(() => {
-    if (video.current) {
-      for (let i = 0; i < video.current.textTracks.length; i++) {
-        video.current.textTracks[i].mode = "hidden";
-      }
-    }
-  }, [video]);
+  //   useEffect(() => {
+  //     if (video.current) {
+  //       for (let i = 0; i < video.current.textTracks.length; i++) {
+  //         video.current.textTracks[i].mode = "hidden";
+  //       }
+  //     }
+  //   }, [video]);
 
-  useEffect(() => {
-    const options: TypedOptions = {
-      strings: ["engaging", "interactive", "growth", "the class for you!"],
-      typeSpeed: 80,
-      backSpeed: 40,
-    };
-    if (isVisible) {
-      typed.current = new Typed(el.current!, options);
-      return () => typed.current.destroy();
-    }
-  }, [isVisible]);
-
-  const { width } = useWindowSize();
+  //   useEffect(() => {
+  //     const options: TypedOptions = {
+  //       strings: ["engaging", "interactive", "growth", "the class for you!"],
+  //       typeSpeed: 80,
+  //       backSpeed: 40,
+  //     };
+  //     if (isVisible) {
+  //       typed.current = new Typed(el.current!, options);
+  //       return () => typed.current.destroy();
+  //     }
+  //   }, [isVisible]);
 
   return (
-    <div
-      className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto sm:flex-row my-5 scroll-mt-24"
-      ref={heroDiv}
-    >
-      <div className="w-full grid place-items-center">
+    <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] py-10 px-24 m-auto place-items-center sm:min-h-[6rem] min-h-[20rem] grid scroll-mt-24 bg-black">
+      <HomeCounter
+        number={2}
+        symbol="+"
+        text="Years of experience teaching kids"
+      />
+      <HomeCounter number={1.2} symbol="k" text="Dollars raised for charity" />
+      <HomeCounter number={30} symbol="+" text="Highly qualified instructors" />
+      <HomeCounter number={250} symbol="+" text="Students taught worldwide" />
+    </div>
+    /* <div className="w-full grid place-items-center">
         <div className="w-full text-center">
           <h1 className="lg:text-5xl sm:text-3xl text-2xl font-bold">
             STEMist is <span ref={el}></span>
@@ -57,7 +72,7 @@ export default function Hero() {
       </div>
       <div className="w-full">
         <HomeCarousel />
-        {/* <video
+        <video
           poster="/logo.svg"
           preload="none"
           controls
@@ -80,8 +95,6 @@ export default function Hero() {
             default
           />
           <source src="/homepage.mp4" type="video/mp4" />
-        </video> */}
-      </div>
-    </div>
+        </video> */
   );
 }
