@@ -44,7 +44,7 @@ export default function Banner({
       <CTABanner full={full} />
       <div
         className={`${
-          full ? "h-screen" : "sm:h-[70vh] h-[50vh] mb-10"
+          full ? "h-screen" : "sm:h-[70vh] h-[50vh] mb-5"
         } object-cover relative`}
         ref={titleDiv}
       >
