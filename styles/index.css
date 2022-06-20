@@ -10,6 +10,7 @@
 
 html {
   scrollbar-color: #454a4d #202324;
+  @apply !overflow-auto !pr-0;
 }
 
 body {

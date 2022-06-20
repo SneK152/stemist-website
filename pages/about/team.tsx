@@ -11,6 +11,7 @@ import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 import { Tab } from "@headlessui/react";
+import TeamHeader from "@/components/team/TeamHeader";
 
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
@@ -115,12 +116,20 @@ export default function Team(props: TeamProps) {
             </Tab>
           </Tab.List>
           <Tab.Panels className="max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
-            <Tab.Panel>
+            <Tab.Panel className="focus:outline-none">
               <div>
+                <TeamHeader
+                  title="Weekly Mentor Spotlight"
+                  subheader="Get to know the best of the best"
+                />
                 <Carousel data={props.data} />
               </div>
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="focus:outline-none">
+              <TeamHeader
+                title="Officer Team"
+                subheader="The talent and commitment of our leads is the inspiration that keeps us going"
+              />
               <TeamSection
                 component={MemoedLargePerson}
                 title="Officers"
@@ -128,7 +137,8 @@ export default function Team(props: TeamProps) {
                 large
               />
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="focus:outline-none">
+              <TeamHeader title="Instructors" subheader="Our LOREM IPSUM" />
               <div className="text-black py-3">
                 <div className="m-auto flex justify-center">
                   <div className="inline-block pb-3">
@@ -154,7 +164,8 @@ export default function Team(props: TeamProps) {
                 </div>
               </div>
             </Tab.Panel>
-            <Tab.Panel>
+            <Tab.Panel className="focus:outline-none">
+              <TeamHeader title="Other Volunteers" subheader="LOREM IPSUM" />
               <TeamSection
                 component={MemoedPerson}
                 people={staff}
