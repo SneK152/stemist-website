@@ -1,6 +1,10 @@
 import HomeColumn from "./HomeColumn";
 import Counter from "./Counter";
 import HomeSection from "../layout/HomeSection";
+import { FC } from "react";
+import Link from "next/link";
+
+const E: FC = ({ children }) => <span className="text-red">{children}</span>;
 
 export default function Homepage() {
   return (
@@ -22,33 +26,45 @@ export default function Homepage() {
           STEM topics.{" "}
         </p> */}
         <HomeSection
-          title="Democratization of Education"
+          title="Democratization of education"
           image="/home/demoedu.jpeg"
           side="left"
         >
-          We strive to empower students with foundational concepts that will be
-          vital to unlocking success in their lives. We{"'"}re committed to
-          provide education for everyone, regardless of race, gender, age,
-          income with free to ultralow cost classes online and in person.
+          We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
+          that will be vital to unlocking success in their lives. We{"'"}re
+          committed to provide <E>education for everyone</E>, regardless of
+          race, gender, age, income with free to ultralow cost classes online
+          and in person.
         </HomeSection>
         <HomeSection
-          title="Reshaping the Learning Curve"
+          title="Reshaping the learning curve"
           image="/home/reshape.jpeg"
           side="right"
         >
-          Our Summer 2022 STEM Course provides an intensive 5-week course that
-          accelerates the internalization of concepts taught during class.
-          Learning is reinforced with kahoots that promote note-taking and long
-          term memory recall.
+          Our{" "}
+          <Link href="/programs">
+            <a className="underline decoration-red underline-offset-1">
+              <E>Summer 2022 STEM Course</E>
+            </a>
+          </Link>{" "}
+          provides an intensive 5-week course that <E>accelerates</E> the
+          internalization of concepts taught during class. Learning is
+          reinforced with kahoots that promote note-taking and long term memory
+          recall.
         </HomeSection>
         <HomeSection
-          title="Putting Skills to Work"
+          title="Putting skills to work"
           image="/home/hacks.jpeg"
           side="left"
         >
-          STEMist Hacks encourages students to put their programming skills to
-          work, with riveting speaker talks by real life professionals and tens
-          of thousands of dollars in prizes.
+          <Link href="/hacks">
+            <a className="underline decoration-red underline-offset-1">
+              <E>STEMist Hacks</E>
+            </a>
+          </Link>{" "}
+          encourages students to put their programming skills to work, with
+          <E>riveting speaker talks</E> by real life professionals and tens of
+          thousands of dollars in prizes.
         </HomeSection>
       </div>
       {/* <br /> */}

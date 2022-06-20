@@ -19,7 +19,7 @@ export default function HomeSection({
           side === "left" ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        <h1 className="text-4xl font-medium py-2">{title}</h1>
+        <h1 className="text-4xl font-medium py-4">{title}</h1>
         <p className="text-xl font-sans font-light text-clip">{children}</p>
       </div>
       <figure
