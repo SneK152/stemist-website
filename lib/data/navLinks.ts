@@ -20,11 +20,6 @@ export const navLinks: NavLink[] = [
     dropdown: true,
     dropdownItems: [
       {
-        name: "Who We Are",
-        link: "/about/who-we-are",
-        class: "about",
-      },
-      {
         name: "Meet the Team",
         link: "/about/team",
         class: "about",
@@ -40,6 +35,11 @@ export const navLinks: NavLink[] = [
         customProps: {
           target: "_blank",
         },
+      },
+      {
+        name: "Gallery",
+        link: "/about/gallery",
+        class: "about",
       },
     ],
   },

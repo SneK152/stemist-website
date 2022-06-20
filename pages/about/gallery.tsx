@@ -1,13 +1,49 @@
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
-import Section from "@/components/layout/AboutSection";
+// import Section from "@/components/layout/AboutSection";
+import Gallery from "react-photo-gallery";
+import { useCallback } from "react";
+import Image from "next/image";
+import { GetStaticProps } from "next";
 
-export default function About() {
+export default function About({
+  photos,
+}: {
+  photos: {
+    src: string;
+    srcSet?: string | string[] | undefined;
+    sizes?: string | string[] | undefined;
+    width: number;
+    height: number;
+    alt?: string | undefined;
+    key?: string | undefined;
+  }[];
+}) {
+  const imageRenderer = useCallback(
+    ({ photo }) => (
+      <div className="m-1">
+        <Image
+          alt={photo.title}
+          src={photo.src}
+          objectFit="cover"
+          width={photo.width}
+          height={photo.height}
+        />
+      </div>
+    ),
+    []
+  );
   return (
-    <Container title="Who We Are">
-      <PartialBanner title="Who We Are" />
-      <div className="m-3 p-4 text-white space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
-        <Section
+    <Container title="Gallery">
+      <PartialBanner title="Gallery" />
+      <div className="m-3 p-4 space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+        <Gallery
+          photos={photos}
+          renderImage={imageRenderer}
+          targetRowHeight={300}
+          margin={4}
+        />
+        {/* <Section
           quote_num={0}
           title="About our Organization"
           image="/about/teamphoto.jpg"
@@ -50,8 +86,34 @@ export default function About() {
           classes will be more curriculum-based, with different topics, ranging
           from Biology to CS to Math and more that students can learn over a
           one-week intensive period.
-        </Section>
+        </Section> */}
       </div>
     </Container>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const photos: {
+    src: string;
+    srcSet?: string | string[] | undefined;
+    sizes?: string | string[] | undefined;
+    width: number;
+    height: number;
+    alt?: string | undefined;
+    key?: string | undefined;
+  }[] = [
+    { src: "/about/teamphoto.jpg", width: 2, height: 1 },
+    { src: "/about/carousel2.png", width: 3, height: 2 },
+    { src: "/about/carousel5.png", width: 3, height: 2 },
+    { src: "/about/carousel1.png", width: 3, height: 2 },
+    { src: "/about/carousel4.png", width: 4, height: 2 },
+    { src: "/about/carousel3.png", width: 2, height: 1 },
+    { src: "/about/carousel6.png", width: 1, height: 1 },
+  ];
+
+  return {
+    props: {
+      photos,
+    },
+  };
+};
