@@ -27,13 +27,27 @@ export default function Navbar({
   hacks?: boolean;
 }) {
   const router = useRouter();
+  const [bgVisible, setBgVisible] = useState(false);
+  useEffect(() => {
+    const callback = () => {
+      if (window.scrollY >= 80) {
+        setBgVisible(true);
+      } else {
+        setBgVisible(false);
+      }
+    };
+    window.addEventListener("scroll", callback);
+    return () => window.removeEventListener("scroll", callback);
+  }, []);
   return (
     <>
       <div id="top"></div>
       <Disclosure as={Fragment}>
         {({ open }) => (
           <nav
-            className={`fixed z-50 w-full bg-black px-2 sm:px-6 lg:px-6 shadow-md shadow-black/50`}
+            className={`fixed z-50 w-full ${
+              bgVisible ? "bg-black" : "bg-transparent"
+            } px-2 sm:px-6 lg:px-6 transition-colors duration-500`}
           >
             <div className="flex justify-between py-3 font-writing">
               <div className="flex items-center gap-1">
@@ -68,7 +82,7 @@ export default function Navbar({
                   <MenuIcon className="block h-6 w-6 text-white" />
                 )}
               </Disclosure.Button>
-              {noNav  && (
+              {noNav && (
                 <div className="mt-auto mb-auto hidden lg:flex">
                   <ul className="inline-flex gap-4">
                     {customNav.map((navLink, index) => (
@@ -80,16 +94,18 @@ export default function Navbar({
                         {navLink.name}
                       </NavLink>
                     ))}
-                    {!hacks && <NavLink
-                      main
-                      href="/"
-                      color="blue-500 bg-opacity-80 hover:bg-opacity-90"
-                      textColor="white"
-                      className="flex items-center gap-1"
-                    >
-                      <ArrowLeftIcon className="h-5 w-5 inline-block" />
-                      Back to STEMist
-                    </NavLink> }
+                    {!hacks && (
+                      <NavLink
+                        main
+                        href="/"
+                        color="blue-500 bg-opacity-80 hover:bg-opacity-90"
+                        textColor="white"
+                        className="flex items-center gap-1"
+                      >
+                        <ArrowLeftIcon className="h-5 w-5 inline-block" />
+                        Back to STEMist
+                      </NavLink>
+                    )}
                   </ul>
                 </div>
               )}

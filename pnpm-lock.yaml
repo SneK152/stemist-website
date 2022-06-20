@@ -12,7 +12,7 @@ specifiers:
   '@types/react-dom': ^17.0.17
   '@types/smoothscroll-polyfill': ^0.3.1
   aos: ^2.3.4
-  autoprefixer: ^10.4.7
+  autoprefixer: 10.4.5
   caniuse-lite: ^1.0.30001356
   eslint: ^8.18.0
   eslint-config-next: 12.0.10
@@ -68,7 +68,7 @@ devDependencies:
   '@types/node': 17.0.45
   '@types/react': 17.0.47
   '@types/react-dom': 17.0.17
-  autoprefixer: 10.4.7_postcss@8.4.14
+  autoprefixer: 10.4.5_postcss@8.4.14
   eslint: 8.18.0
   eslint-config-next: 12.0.10_699d05d0e897151f4a13b9a6b74b579c
   next-sitemap: 2.5.28_next@12.1.6
@@ -1394,8 +1394,8 @@ packages:
     dev: false
     optional: true
 
-  /autoprefixer/10.4.7_postcss@8.4.14:
-    resolution: {integrity: sha512-ypHju4Y2Oav95SipEcCcI5J7CGPuvz8oat7sUtYj3ClK44bldfvtvcxK6IEK++7rqB7YchDGzweZIBG+SD0ZAA==}
+  /autoprefixer/10.4.5_postcss@8.4.14:
+    resolution: {integrity: sha512-Fvd8yCoA7lNX/OUllvS+aS1I7WRBclGXsepbvT8ZaPgrH24rgXpZzF0/6Hh3ZEkwg+0AES/Osd196VZmYoEFtw==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:

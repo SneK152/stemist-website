@@ -5,7 +5,7 @@ export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-20 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
+        className="flex scroll-mt-24 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
         id="hero"
       >
         <h1 className="text-center font-display text-4xl font-bold">
@@ -55,7 +55,7 @@ export default function Homepage() {
       </div>
       <br />
       <div
-        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
+        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-24"
         id="learnmore"
       >
         <HomeColumn

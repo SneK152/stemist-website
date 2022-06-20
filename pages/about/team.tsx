@@ -81,7 +81,7 @@ export default function Team(props: TeamProps) {
         people={officers}
         large
       />
-      <div className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
+      <div className="scroll-mt-24 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
         <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
           Instructors
         </h1>

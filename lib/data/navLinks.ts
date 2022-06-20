@@ -29,20 +29,31 @@ export const navLinks: NavLink[] = [
         name: "Meet the Team",
         link: "/about/team",
       },
+      {
+        name: "Contact Us",
+        link: "/about/contact",
+      },
+      {
+        name: "Team Applications",
+        link: "https://bit.ly/stemistapplication",
+        customProps: {
+          target: "_blank",
+        },
+      },
     ],
   },
-  {
-    name: "Contact Us",
-    link: "/contact",
-    important: true,
-  },
-  {
-    name: "Team Applications",
-    link: "https://bit.ly/stemistapplication",
-    customProps: {
-      target: "_blank",
-    },
-  },
+  // {
+  //   name: "Contact Us",
+  //   link: "/contact",
+  //   important: true,
+  // },
+  // {
+  //   name: "Team Applications",
+  //   link: "https://bit.ly/stemistapplication",
+  //   customProps: {
+  //     target: "_blank",
+  //   },
+  // },
   {
     name: "STEMist Hacks",
     link: "/hacks",

@@ -13,7 +13,7 @@ interface TeamSectionProps {
 
 export default function TeamSection(props: TeamSectionProps) {
   return (
-    <div className="scroll-mt-20 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
+    <div className="scroll-mt-24 m-auto max-w-[100rem] py-5 px-2 sm:px-6 lg:px-6 text-black">
       <h1 className="font-display mb-1 text-center text-5xl font-bold text-white">
         {props.title}
       </h1>

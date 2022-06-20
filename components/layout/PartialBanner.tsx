@@ -8,7 +8,7 @@ interface PartialBannerProps {
 
 export default function PartialBanner({ title, children }: PartialBannerProps) {
   return (
-    <Banner image="/homepage2.jpg">
+    <Banner image="/homepage2.jpeg">
       <div className={`${children ? "py-6" : ""}`}>
         <h1 className="text-center w-screen justify-center font-display text-4xl font-bold md:text-5xl lg:text-7xl">
           {title}

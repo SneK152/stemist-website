@@ -45,24 +45,24 @@ export default function Banner({
       <div
         className={`${
           full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
-        } object-cover relative mt-20`}
+        } object-cover relative`}
         ref={titleDiv}
       >
         <Image
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 pointer-events-none blur-[2px] h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
+          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover brightness-75"
           priority
         />
-        <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute" />
+        <div className="h-full w-full -z-20 bg-black absolute" />
         <div
           className={`flex h-full w-full items-center ${
             full ? "justify-center" : "justify-start"
           }`}
         >
           <div
-            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 short:-mt-20 ${
+            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
                 : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56 translate-y-5 pl-2 sm:pl-6 lg:pl-6"
