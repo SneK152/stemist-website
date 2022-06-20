@@ -46,8 +46,10 @@ export default function Navbar({
         {({ open }) => (
           <nav
             className={`fixed z-50 w-full ${
-              bgVisible ? "bg-black" : "bg-transparent"
-            } px-2 sm:px-6 lg:px-6 transition-colors duration-500`}
+              bgVisible
+                ? "bg-black backdrop-blur-sm bg-opacity-90"
+                : "bg-transparent bg-opacity-100"
+            } px-2 sm:px-6 lg:px-6 transition-all duration-500`}
           >
             <div className="flex justify-between py-3 font-writing">
               <div className="flex items-center gap-1">
