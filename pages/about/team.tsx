@@ -10,7 +10,6 @@ import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
-import useWindowSize from "@/lib/hooks/useWindowSize";
 
 const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
 const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
@@ -62,7 +61,10 @@ export default function Team(props: TeamProps) {
 
   return (
     <Container title="Our Team">
-      <PartialBanner title="Meet the Team" />
+      <PartialBanner
+        title="Meet the Team"
+        subheader="The dedicated and innovative people that make us who we are"
+      />
       <h1 className="font-display mb-8 text-center text-4xl  md:text-5xl lg:text-7xl font-bold text-white">
         Weekly Mentor Spotlight
       </h1>

@@ -44,7 +44,7 @@ export default function Banner({
       <CTABanner full={full} />
       <div
         className={`${
-          full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
+          full ? "h-screen" : "sm:h-[70vh] h-[50vh] mb-10"
         } object-cover relative`}
         ref={titleDiv}
       >
@@ -54,6 +54,7 @@ export default function Banner({
           layout="fill"
           className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover brightness-[.60]"
           priority
+          objectPosition="bottom center"
         />
         <div className="h-full w-full -z-20 bg-black absolute" />
         <div
@@ -65,7 +66,7 @@ export default function Banner({
             className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
-                : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56 translate-y-5 pl-2 sm:pl-6 lg:pl-6"
+                : "bg-transparent h-auto sm:h-56 self-end translate-y-5 pl-2 sm:pl-6 lg:pl-6"
             }`}
           >
             {children}
