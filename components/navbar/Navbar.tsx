@@ -47,7 +47,7 @@ export default function Navbar({
           <nav
             className={`fixed z-50 w-full ${
               bgVisible
-                ? "bg-black backdrop-blur-sm bg-opacity-90"
+                ? "bg-black bg-opacity-100"
                 : "bg-transparent bg-opacity-100"
             } px-2 sm:px-6 lg:px-6 transition-all duration-500`}
           >
@@ -153,7 +153,13 @@ export default function Navbar({
             </div>
             <Disclosure.Panel className="lg:hidden">
               {() => (
-                <div className="absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 bg-black bg-opacity-100 object-cover px-2 pt-2 pb-3">
+                <div
+                  className={`absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${
+                    bgVisible
+                      ? "bg-black bg-opacity-100"
+                      : "bg-transparent bg-opacity-100"
+                  }`}
+                >
                   <ul>
                     {(customNav.length ? customNav : navLinks).map(
                       (navLink, i) => (
@@ -181,7 +187,7 @@ export default function Navbar({
                           ) : (
                             <Disclosure key={i}>
                               <Disclosure.Button
-                                className={`block font-writing text-lg underline-offset-1 whitespace-nowrap ${
+                                className={`block font-writing text-lg underline-offset-1 whitespace-nowrap text-white ${
                                   navLink.dropdownItems!.some(
                                     (dropDownItem) =>
                                       dropDownItem.link === router.pathname
@@ -201,7 +207,7 @@ export default function Navbar({
                                   (item: any, i: any) => (
                                     <Link key={i} href={item.link}>
                                       <a
-                                        className={`block ml-3 font-writing ${
+                                        className={`block ml-3 font-writing text-white ${
                                           router.pathname === item.link
                                             ? "font-extrabold"
                                             : "font-normal"
