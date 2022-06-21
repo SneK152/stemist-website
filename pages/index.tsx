@@ -14,14 +14,14 @@ export default function Index() {
       <div>
         <Banner image="/homepage2.jpeg" full>
           <h1
-            className="text-left font-light font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl px-5 sm:px-10 md:px-20"
+            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 sm:px-10 md:px-20"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
             data-aos-anchor="#top"
           >
-            Accelerating education with{" "}
-            <span className="underline decoration-blue underline-offset-4">
+            Accelerating education with <br />
+            <span className="underline decoration-blue underline-offset-8">
               engaging
             </span>{" "}
             workshops
@@ -33,8 +33,7 @@ export default function Index() {
               data-aos-duration={600}
               data-aos-anchor="#top"
             >
-              Welcome to STEMist Education, a 501(c)3 nonprofit focused on
-              various formats of education, interactivity, and skill development
+              Welcome to STEMist Education, a 501(c)3 nonprofit
             </div>
           </span>
           {/* <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
