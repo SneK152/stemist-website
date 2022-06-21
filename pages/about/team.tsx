@@ -120,7 +120,7 @@ export default function Team(props: TeamProps) {
               <div>
                 <TeamHeader
                   title="Weekly Mentor Spotlight"
-                  subheader="Get to know the best of the best"
+                  // subheader="Get to know the best of the best"
                 />
                 <Carousel data={props.data} />
               </div>
@@ -128,7 +128,7 @@ export default function Team(props: TeamProps) {
             <Tab.Panel className="focus:outline-none">
               <TeamHeader
                 title="Officer Team"
-                subheader="The talent and commitment of our leads is the inspiration that keeps us going"
+                // subheader="The talent and commitment of our leads is the inspiration that keeps us going"
               />
               <TeamSection
                 component={MemoedLargePerson}
@@ -138,7 +138,9 @@ export default function Team(props: TeamProps) {
               />
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader title="Instructors" subheader="Our LOREM IPSUM" />
+              <TeamHeader
+                title="Instructors" /* subheader="Our LOREM IPSUM"*/
+              />
               <div className="text-black py-3">
                 <div className="m-auto flex justify-center">
                   <div className="inline-block pb-3">
@@ -165,7 +167,9 @@ export default function Team(props: TeamProps) {
               </div>
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader title="Other Volunteers" subheader="LOREM IPSUM" />
+              <TeamHeader
+                title="Other Volunteers" /*subheader="LOREM IPSUM"*/
+              />
               <TeamSection
                 component={MemoedPerson}
                 people={staff}
