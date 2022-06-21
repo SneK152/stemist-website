@@ -14,14 +14,14 @@ export default function Index() {
       <div>
         <Banner image="/homepage2.jpeg" full>
           <h1
-            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 sm:px-10 md:px-20"
+            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 sm:px-10 md:px-20 mb-5 max-w-[28ch]"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
             data-aos-anchor="#top"
           >
-            Accelerating education with <br />
-            <span className="underline decoration-blue underline-offset-8">
+            Accelerating education with{" "}
+            <span className="underline decoration-blue underline-offset-[11px]">
               engaging
             </span>{" "}
             workshops

@@ -107,7 +107,7 @@ export default function Footer() {
               <div className="flex flex-col text-base">
                 {aboutLinks.map((link) => (
                   <Link href={link.link} key={link.name}>
-                    <a {...link.customProps}>{link.name}</a>
+                    <a target={link.customProps?.target}>{link.name}</a>
                   </Link>
                 ))}
               </div>
