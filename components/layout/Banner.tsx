@@ -66,7 +66,7 @@ export default function Banner({
             className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
-                : "bg-transparent h-auto sm:h-56 self-end translate-y-5 pl-2 sm:pl-6 lg:pl-6"
+                : "bg-transparent h-auto sm:h-56 self-end pl-4 sm:pl-6 sm:translate-y-10 lg:translate-y-0 lg:pl-10"
             }`}
           >
             {children}

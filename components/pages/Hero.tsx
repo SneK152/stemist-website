@@ -44,7 +44,7 @@ export default function Hero() {
   //   }, [isVisible]);
 
   return (
-    <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] py-10 px-24 m-auto place-items-center sm:min-h-[6rem] min-h-[20rem] grid scroll-mt-24 bg-black">
+    <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] py-10 px-24 m-auto place-items-center sm:min-h-[6rem] min-h-[20rem] grid scroll-mt-24 bg-black my-5">
       <HomeCounter
         number={2}
         symbol="+"
