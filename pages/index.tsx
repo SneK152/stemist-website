@@ -21,7 +21,7 @@ export default function Index() {
             data-aos-anchor="#top"
           >
             Accelerating education with{" "}
-            <span className="bg-[linear-gradient(0deg,#CCE5FF_3px,transparent_4px);]">
+            <span className="bg-[linear-gradient(0deg,#CCE5FF_6px,transparent_7px);]">
               engaging
             </span>{" "}
             workshops
