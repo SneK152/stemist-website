@@ -53,7 +53,7 @@ export default function Sponsors() {
           className="grid content-center"
         />
         <AnimatedSponsor
-          color={"#ffffff"}
+          color={"#2d363e"}
           url="https://artofproblemsolving.com/"
           name="AOPS"
           textClassName="mx-auto w-3/4"

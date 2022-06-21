@@ -21,7 +21,7 @@ export default function Event({
       (timeStartDate.getHours() < 12 && timeEndDate.getHours() >= 12)
     : true;
   return (
-    <div className={`text-white p-3 h-auto`}>
+    <div className={`p-3 h-auto`}>
       <div className="grid grid-cols-9">
         <div className="text-start col-span-3 font-semibold">
           <time dateTime={timeStart}>
@@ -43,7 +43,7 @@ export default function Event({
         <div className="col-span-6 font-bold">{name}</div>
       </div>
       <div className="border-t-[0.05px] border-opacity-30 border-white pt-2 mt-1" />
-      <p className={`text-white opacity-100 justify-center max-w-sm`}>
+      <p className={`opacity-100 justify-center max-w-sm`}>
         {description}
       </p>
     </div>

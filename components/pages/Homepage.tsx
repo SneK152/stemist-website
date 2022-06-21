@@ -58,7 +58,7 @@ export default function Homepage() {
           side="left"
         >
           <Link href="/hacks">
-            <a className="underline decoration-red underline-offset-1">
+            <a className="underline decoration-red underline-offset-1 text">
               <E>STEMist Hacks</E>
             </a>
           </Link>{" "}
