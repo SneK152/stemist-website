@@ -21,7 +21,7 @@ export default function Index() {
             data-aos-anchor="#top"
           >
             Accelerating education with{" "}
-            <span className="underline decoration-blue underline-offset-[11px]">
+            <span className="bg-[linear-gradient(0deg,#CCE5FF_3px,transparent_4px);]">
               engaging
             </span>{" "}
             workshops
