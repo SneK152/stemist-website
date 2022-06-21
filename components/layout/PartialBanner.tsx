@@ -15,7 +15,7 @@ export default function PartialBanner({
   return (
     <Banner image="/homepage.jpg">
       <div className={`${children ? "py-6" : ""}`}>
-        <h1 className="text-left w-screen font-bold font-display text-4xl md:text-5xl lg:text-7xl">
+        <h1 className="text-left w-screen font-normal font-display text-4xl md:text-5xl lg:text-7xl">
           {title}
         </h1>
         {subheader && (

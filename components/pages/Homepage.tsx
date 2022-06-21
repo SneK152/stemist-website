@@ -62,7 +62,7 @@ export default function Homepage() {
               <E>STEMist Hacks</E>
             </a>
           </Link>{" "}
-          encourages students to put their programming skills to work, with
+          encourages students to put their programming skills to work, with{" "}
           <E>riveting speaker talks</E> by real life professionals and tens of
           thousands of dollars in prizes.
         </HomeSection>
