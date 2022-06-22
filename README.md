@@ -7,10 +7,13 @@ Welcome to the official repository for [STEMist Education](https://joinstemist.o
 
 ## Contributors
 
-Snehil Kakani - Director of Technology and Website Developer (@snek152)
-Rohan Fernandes - Website Developer and Tech Specialist (@proballstar)
-Yash Singh - Website Developer and Tech Specialist (@Yash-Singh1)
-Sarvesh Madullapalli - Tech Specialist (@EpicCodeWizard)
+Snehil Kakani - Director of Technology and Website Developer ([@snek152](https://github.com/snek152))
+
+Rohan Fernandes - Website Developer and Tech Specialist ([@proballstar](https://github.com/proballstar))
+
+Yash Singh - Website Developer and Tech Specialist ([@Yash-Singh1](https://github.com/Yash-Singh1))
+
+Sarvesh Madullapalli - Tech Specialist ([@EpicCodeWizard](https://github.com/EpicCodeWizard))
 
 ## What is STEMist?
 
