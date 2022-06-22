@@ -28,6 +28,7 @@ export default function About({
           objectFit="cover"
           width={photo.width}
           height={photo.height}
+          className="hover:scale-110 transition-transform duration-300"
         />
       </div>
     ),
