@@ -13,7 +13,7 @@ export default function HomeSection({
   side: "left" | "right";
 }) {
   return (
-    <section className="justify-center grid grid-cols-9 w-11/13 min-h-[20rem] font-display sm:px-6 px-4 text-elipsis py-3 gap-6">
+    <section className="justify-center grid grid-cols-9 w-11/13 min-h-[20rem] font-display text-elipsis py-3 gap-6">
       <div
         className={`lg:col-span-5 col-span-9 my-auto order-1 ${
           side === "left" ? "lg:order-1" : "lg:order-2"

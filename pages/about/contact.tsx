@@ -74,9 +74,12 @@ export default function Contact() {
   });
   return (
     <Container title="Contact">
-      <PartialBanner title="Contact Us" />
+      <PartialBanner
+        title="Contact Us"
+        subheader="Free free to fill out the form to contact us, provide a testimonial, or give feedback on one of our sessions"
+      />
       <div>
-        <div className="mx-auto py-3 flex-col flex gap-5 sm:px-6 lg:px-8 max-w-[100rem] px-2">
+        <div className="py-3 flex-col flex gap-5 padded-section">
           <h1 className="font-sans text-xl text-center max-w-[80ch] m-auto">
             Fill out this form if you would like to contact us, if you have
             feedback on one of our recent sessions, or if you would like to

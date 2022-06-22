@@ -10,7 +10,7 @@ export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-24 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
+        className="flex scroll-mt-24 my-10 flex-col padded-section m-auto"
         id="hero"
       >
         {/* <h1 className="text-center font-display text-4xl font-bold">
@@ -72,7 +72,7 @@ export default function Homepage() {
         <h1 className="text-center mb-2 sm:mb-0 text-4xl font-display font-bold">
           By the Numbers
         </h1>
-        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] padded-section m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
           <Counter
             number={45}
             symbol="+"
@@ -101,7 +101,7 @@ export default function Homepage() {
       </div>
       <br />
       <div
-        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-24"
+        className="flex sm:flex-row max-w-[100rem] padded-section m-auto flex-col gap-3 scroll-mt-24"
         id="learnmore"
       >
         <HomeColumn

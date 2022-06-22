@@ -7,6 +7,9 @@
     aspect-ratio: auto !important;
   }
 }
+.padded-section {
+  @apply px-2 sm:px-6 lg:px-6;
+}
 
 html {
   scrollbar-color: #454a4d #202324;

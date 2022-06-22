@@ -24,7 +24,7 @@ export default function App() {
       customNav={hackathonNavLinks}
     >
       <Header image="/homepage.png" />
-      <div className="max-w-[100rem] m-auto">
+      <div className="">
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
@@ -33,9 +33,9 @@ export default function App() {
             <div className="mx-5">
               Welcome to STEMist Hacks! Join other hackers in creating a project
               to impress judges, and to win prizes. There will be workshops
-              provided from our gracious sponsors, volunteers, and guest speakers
-              to aid in your process. Or, you can start hacking the moment STEMist
-              Hacks is open!
+              provided from our gracious sponsors, volunteers, and guest
+              speakers to aid in your process. Or, you can start hacking the
+              moment STEMist Hacks is open!
               <div className="flex flex-wrap gap-5 pt-4">
                 <a
                   href={HACKATHON_INFO.signup_form}
@@ -81,10 +81,10 @@ export default function App() {
         <Section name="Requirements to Attend" inverted>
           <div className="text-lg py-5 rounded-lg shadow-md bg-[#eee]">
             <div className="mx-5">
-              Due to restrictions from DevPost, if you are above 13 years old you
-              can come. However if you are younger, you will need parent
-              permission especially parent supervision while filing out the forms.
-              Thanks in advance for complying with this rule.
+              Due to restrictions from DevPost, if you are above 13 years old
+              you can come. However if you are younger, you will need parent
+              permission especially parent supervision while filing out the
+              forms. Thanks in advance for complying with this rule.
             </div>
           </div>
         </Section>

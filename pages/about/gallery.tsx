@@ -36,7 +36,7 @@ export default function About({
   return (
     <Container title="Gallery">
       <PartialBanner title="Gallery" />
-      <div className="m-3 p-4 space-y-5 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="m-3 p-4 space-y-5 padded-section mx-auto">
         <Gallery
           photos={photos}
           renderImage={imageRenderer}

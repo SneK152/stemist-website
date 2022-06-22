@@ -41,12 +41,14 @@ const bioTeachers = [...teachers]
   );
 
 export default function TabPage() {
-  let [categories] = useState<{
-    name: 'cs' | 'phys' | 'math' | 'bio',
-    title: string,
-    description: string,
-    teachers: person[]
-  }[]>([
+  let [categories] = useState<
+    {
+      name: "cs" | "phys" | "math" | "bio";
+      title: string;
+      description: string;
+      teachers: person[];
+    }[]
+  >([
     {
       name: "cs",
       title: "Computer Science",
@@ -79,7 +81,7 @@ export default function TabPage() {
   ]);
 
   return (
-    <div className="w-full max-w-[100rem] mx-auto px-2 sm:px-0">
+    <div className="w-full padded-section">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-white bg-opacity-[.15] p-1">
           {categories.map((category) => (

@@ -16,7 +16,7 @@ export default function Curriculum() {
       <h1 className="text-center font-display font-bold text-5xl mb-5">
         Recordings
       </h1>
-      <div className="flex justify-center gap-5 sm:flex-row flex-col flex-wrap w-full px-2 sm:px-6 lg:px-6 mx-auto">
+      <div className="flex justify-center gap-5 sm:flex-row flex-col flex-wrap w-full padded-section mx-auto">
         <iframe
           src="https://www.youtube.com/embed/xM73rqNecig"
           title="YouTube video player"
@@ -46,7 +46,7 @@ export default function Curriculum() {
       <h1 className="text-center font-display font-bold text-5xl mb-5">
         Class Descriptions
       </h1>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto auto-rows-[1fr] items-start">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 padded-section mx-auto auto-rows-[1fr] items-start">
         <CurriculumCard
           title="Full Stack Web Development"
           subtitle="Monday, April 18th"

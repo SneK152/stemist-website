@@ -115,7 +115,7 @@ export default function Team(props: TeamProps) {
               Other Volunteers
             </Tab>
           </Tab.List>
-          <Tab.Panels className="max-w-[100rem] px-2 sm:px-6 lg:px-6 mx-auto">
+          <Tab.Panels className="padded-section mx-auto">
             <Tab.Panel className="focus:outline-none">
               <div>
                 <TeamHeader

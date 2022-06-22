@@ -15,7 +15,7 @@ export default function LinkPage({
     <div
       className={`grid place-items-center gap-3 h-full items-center ${
         columns === 3 ? "md:grid-cols-3" : "md:grid-cols-2"
-      } grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto mb-10`}
+      } grid-cols-1 padded-section m-auto mb-10`}
     >
       {links.map((link, i) => (
         <Link href={link.external ? link.url : `${base}${link.url}`} key={i}>
