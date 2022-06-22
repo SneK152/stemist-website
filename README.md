@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# STEMist Education - Official Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![STEMist Education Logo](https://stemist.vercel.app/logo-dark.png#gh-light-mode-only)
+![STEMist Education Logo](https://stemist.vercel.app/logo-white.png#gh-dark-mode-only)
 
-## Available Scripts
+Welcome to the official repository for [STEMist Education](https://joinstemist.org)
 
-In the project directory, you can run:
+## Contributors
 
-### `npm start`
+Snehil Kakani - Director of Technology and Website Developer (@snek152)
+Rohan Fernandes - Website Developer and Tech Specialist (@proballstar)
+Yash Singh - Website Developer and Tech Specialist (@Yash-Singh1)
+Sarvesh Madullapalli - Tech Specialist (@EpicCodeWizard)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What is STEMist?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+STEMist is a 501(c)3 nonprofit based at Lynbrook High School. Founded in the summer of 2020, its goal of teaching kids STEM is supported by over 30 volunteers who teach classes and manage the organization. In addition to teaching classes, it also supports STEM education in many other ways such as hosting a Youtube channel and organizing a hackathon. Over the summer of 2022, STEMist raised over $1,200 for charity and taught over 30 hour-long classes. Please direct all questions and concerns to [contact@joinstemist.org](mailto://contact@joinstemist.org).
 
-### `npm test`
+## How can I join?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The interview process is separated into three layers.
 
-### `npm run build`
+1. Application Form: ![bit.ly/stemistapplication](https://bit.ly/stemistapplication)
+2. Screening Interview - Done by our HR team
+3. Secondary Interview - Done by the lead(s) of the committee(s) that you’re interested in joining
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can find more information about the committees and application process at ![bit.ly/stemistappsdoc](https://bit.ly/stemistappsdoc).

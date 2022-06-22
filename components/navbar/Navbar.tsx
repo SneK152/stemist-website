@@ -56,12 +56,12 @@ export default function Navbar({
                     <h1 className="font-display text-2xl font-bold">
                       <div className="flex items-center gap-1">
                         <Image
-                          src="/logo.svg"
+                          src="/logo-white.png"
                           alt="STEMist Education"
                           priority
                           height={55.3}
                           width={166.6}
-                          className="filter invert select-none"
+                          className="select-none"
                         />
                       </div>
                     </h1>

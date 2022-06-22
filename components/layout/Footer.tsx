@@ -138,12 +138,12 @@ export default function Footer() {
         <hr className="border-[1.5px]" />
         <div className="flex justify-between">
           <Image
-            src="/logo.svg"
+            src="/logo-white.png"
             alt="STEMist Education"
             priority
             height={55.3}
             width={166.6}
-            className="filter invert select-none"
+            className="select-none"
           />
           <ul className="flex gap-3 items-center justify-start mb-2">
             {socials.map((social, index) => (
