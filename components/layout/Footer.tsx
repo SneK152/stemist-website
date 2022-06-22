@@ -105,6 +105,12 @@ export default function Footer() {
               hour-long classes. Please direct all questions and concerns to
               contact@joinstemist.org.
             </p>
+            <p className="text-lg font-light block lg:hidden">
+              STEMist Education is a 501(c)3 nonprofit based at Lynbrook High
+              School. Founded in the summer of 2020, its goal of teaching kids
+              STEM is supported by over 30 volunteers who teach classes and
+              manage the organization.
+            </p>
           </div>
           <div className="flex w-full col-span-2">
             <div className="w-full">

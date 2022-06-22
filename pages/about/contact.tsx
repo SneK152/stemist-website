@@ -80,13 +80,8 @@ export default function Contact() {
       />
       <div>
         <div className="py-3 flex-col flex gap-5 padded-section">
-          <h1 className="font-sans text-xl text-center max-w-[80ch] m-auto">
-            Fill out this form if you would like to contact us, if you have
-            feedback on one of our recent sessions, or if you would like to
-            provide a testimonial. We will reach out to you within 2-5 days.
-          </h1>
-          <form onSubmit={formik.handleSubmit} className="w-full p-5">
-            <div className="w-full space-y-3 rounded-lg p-4">
+          <form onSubmit={formik.handleSubmit} className="w-full">
+            <div className="w-full space-y-3 rounded-lg">
               <MemoedInputField
                 labelName="Email address"
                 name="contactEmail"
