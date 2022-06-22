@@ -23,8 +23,8 @@ STEMist is a 501(c)3 nonprofit based at Lynbrook High School. Founded in the sum
 
 The interview process is separated into three layers.
 
-1. Application Form: ![bit.ly/stemistapplication](https://bit.ly/stemistapplication)
+1. Application Form: [bit.ly/stemistapplication](https://bit.ly/stemistapplication)
 2. Screening Interview - Done by our HR team
 3. Secondary Interview - Done by the lead(s) of the committee(s) that you’re interested in joining
 
-You can find more information about the committees and application process at ![bit.ly/stemistappsdoc](https://bit.ly/stemistappsdoc).
+You can find more information about the committees and application process at [bit.ly/stemistappsdoc](https://bit.ly/stemistappsdoc).
