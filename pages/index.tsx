@@ -14,7 +14,7 @@ export default function Index() {
       <div>
         <Banner image="/homepage2.jpeg" full>
           <h1
-            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl padded-section mb-5 max-w-[28ch]"
+            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-5 max-w-[28ch]"
             data-aos="fade-right"
             data-aos-delay={0}
             data-aos-duration={600}
@@ -26,7 +26,7 @@ export default function Index() {
             </span>{" "}
             workshops
           </h1>
-          <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl padded-section">
+          <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl">
             <div
               data-aos="fade-up"
               data-aos-delay={400}

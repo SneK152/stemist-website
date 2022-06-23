@@ -8,7 +8,7 @@
   }
 }
 .padded-section {
-  @apply px-2 sm:px-6 lg:px-6;
+  @apply px-2 sm:px-6 lg:px-6 max-w-[100rem] mx-auto w-full;
 }
 
 html {

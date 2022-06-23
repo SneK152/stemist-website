@@ -69,7 +69,7 @@ export default function Team(props: TeamProps) {
       />
       <div>
         <Tab.Group>
-          <Tab.List className="flex gap-4 pt-1 pb-[0.5px] px-3 mx-5 border-y border-black">
+          <Tab.List className="flex gap-4 pt-1 pb-[0.5px] px-3 mx-5 border-y border-black padded-section">
             <Tab
               className={({ selected }) =>
                 `text-xl font-display py-1 border-b-4 focus:outline-none ${

@@ -58,16 +58,16 @@ export default function Banner({
         />
         <div className="h-full w-full -z-20 bg-black absolute" />
         <div
-          className={`flex h-full w-full items-center ${
+          className={`flex h-full w-full items-end ${
             full ? "justify-center" : "justify-start"
           }`}
         >
           <div
-            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
+            className={` py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
-                : "bg-transparent h-auto sm:h-56 self-end pl-4 sm:pl-6 sm:translate-y-10 lg:translate-y-0 lg:pl-10"
-            }`}
+                : "bg-transparent h-auto sm:h-56 self-end sm:translate-y-10 lg:translate-y-0"
+            } padded-section`}
           >
             {children}
             {full && (

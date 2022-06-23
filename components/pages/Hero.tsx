@@ -44,15 +44,25 @@ export default function Hero() {
   //   }, [isVisible]);
 
   return (
-    <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 py-10 px-24 m-auto place-items-center sm:min-h-[18rem] min-h-[30rem] grid scroll-mt-24 bg-black my-5">
-      <HomeCounter
-        number={2}
-        symbol="+"
-        text="Years of experience teaching kids"
-      />
-      <HomeCounter number={1.2} symbol="k" text="Dollars raised for charity" />
-      <HomeCounter number={30} symbol="+" text="Highly qualified instructors" />
-      <HomeCounter number={250} symbol="+" text="Students taught worldwide" />
+    <div className="bg-black my-5">
+      <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 py-10 px-24 m-auto place-items-center sm:min-h-[18rem] min-h-[30rem] grid scroll-mt-24 padded-section">
+        <HomeCounter
+          number={2}
+          symbol="+"
+          text="Years of experience teaching kids"
+        />
+        <HomeCounter
+          number={1.2}
+          symbol="k"
+          text="Dollars raised for charity"
+        />
+        <HomeCounter
+          number={30}
+          symbol="+"
+          text="Highly qualified instructors"
+        />
+        <HomeCounter number={250} symbol="+" text="Students taught worldwide" />
+      </div>
     </div>
     /* <div className="w-full grid place-items-center">
         <div className="w-full text-center">
