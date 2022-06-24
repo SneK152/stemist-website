@@ -1,6 +1,5 @@
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
-// import Section from "@/components/layout/AboutSection";
 import Gallery from "react-photo-gallery";
 import { useCallback } from "react";
 import Image from "next/image";

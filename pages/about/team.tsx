@@ -4,7 +4,6 @@ import teachers from "@/lib/data/team/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
-// import directors from "@/lib/data/team/directors";
 import officers from "@/lib/data/team/officers";
 import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
@@ -118,18 +117,12 @@ export default function Team(props: TeamProps) {
           <Tab.Panels className="padded-section mx-auto">
             <Tab.Panel className="focus:outline-none">
               <div>
-                <TeamHeader
-                  title="Weekly Mentor Spotlight"
-                  // subheader="Get to know the best of the best"
-                />
+                <TeamHeader title="Weekly Mentor Spotlight" />
                 <Carousel data={props.data} />
               </div>
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader
-                title="Officer Team"
-                // subheader="The talent and commitment of our leads is the inspiration that keeps us going"
-              />
+              <TeamHeader title="Officer Team" />
               <TeamSection
                 component={MemoedLargePerson}
                 title="Officers"

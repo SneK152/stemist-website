@@ -43,18 +43,6 @@ export const navLinks: NavLink[] = [
       },
     ],
   },
-  // {
-  //   name: "Contact Us",
-  //   link: "/contact",
-  //   important: true,
-  // },
-  // {
-  //   name: "Team Applications",
-  //   link: "https://bit.ly/stemistapplication",
-  //   customProps: {
-  //     target: "_blank",
-  //   },
-  // },
   {
     name: "STEMist Hacks",
     link: "/hacks",

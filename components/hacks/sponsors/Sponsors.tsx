@@ -1,13 +1,9 @@
 import AnimatedSponsor from "./SponsorSpring";
-import useAos from "@/components/useAos";
 
 export default function Sponsors() {
   return (
     <div className="p-4">
-      <div
-        {...useAos()}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <AnimatedSponsor
           color={"#000000"}
           url="https://www.taskade.com/"

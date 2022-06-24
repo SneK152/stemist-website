@@ -1,9 +1,3 @@
-// import { useEffect, useRef } from "react";
-// import Typed, { TypedOptions } from "typed.js";
-// import useOnScreen from "@/lib/hooks/useOnScreen";
-// import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
-// import useWindowSize from "@/lib/hooks/useWindowSize";
-// import HomeCarousel from "./HomeCarousel";
 import Counter from "./Counter";
 
 const HomeCounter = (props: {
@@ -17,32 +11,6 @@ const HomeCounter = (props: {
 );
 
 export default function Hero() {
-  //   const el = useRef<HTMLDivElement>(null);
-  //   const typed = useRef<any>(null);
-  //   const heroDiv = useRef<HTMLDivElement>(null);
-  //   const video = useRef<HTMLVideoElement>(null);
-  //   const isVisible = useOnScreen(heroDiv);
-
-  //   useEffect(() => {
-  //     if (video.current) {
-  //       for (let i = 0; i < video.current.textTracks.length; i++) {
-  //         video.current.textTracks[i].mode = "hidden";
-  //       }
-  //     }
-  //   }, [video]);
-
-  //   useEffect(() => {
-  //     const options: TypedOptions = {
-  //       strings: ["engaging", "interactive", "growth", "the class for you!"],
-  //       typeSpeed: 80,
-  //       backSpeed: 40,
-  //     };
-  //     if (isVisible) {
-  //       typed.current = new Typed(el.current!, options);
-  //       return () => typed.current.destroy();
-  //     }
-  //   }, [isVisible]);
-
   return (
     <div className="bg-black my-5">
       <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 py-10 px-24 m-auto place-items-center sm:min-h-[18rem] min-h-[30rem] grid scroll-mt-24 padded-section">
