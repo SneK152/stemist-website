@@ -69,12 +69,12 @@ export default function Team(props: TeamProps) {
       />
       <div>
         <Tab.Group>
-          <Tab.List className="flex gap-4 pt-1 pb-[0.5px] px-3 mx-5 border-y border-black padded-section">
+          <Tab.List className="flex gap-4 pt-1 pb-[0.5px] px-3 mx-5 border-y border-purple padded-section">
             <Tab
               className={({ selected }) =>
                 `text-xl font-display py-1 border-b-4 focus:outline-none ${
                   selected
-                    ? "font-light border-black"
+                    ? "font-light border-red"
                     : "font-light border-transparent"
                 }`
               }
@@ -195,8 +195,8 @@ function FilterButton({
   return (
     <button
       className={`${
-        active ? "bg-blue-200" : "bg-gray-200"
-      } font-writing m-1 rounded-lg py-1 px-3 text-lg shadow-lg shadow-white/20 text-black`}
+        active ? "bg-red text-white" : "bg-gray-200 text-black"
+      } font-writing m-1 rounded-lg py-1 px-3 text-lg`}
       onClick={onClick}
     >
       {name}
