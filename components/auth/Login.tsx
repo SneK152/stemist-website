@@ -30,6 +30,11 @@ export default function Login() {
     },
   });
 
+  async function handleGoogleClick() {
+    let GoogleProvider = new GoogleAuthProvider()
+    await signInWithPopup(getAuth(getFirebase()), GoogleProvider)
+  }
+
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
@@ -41,6 +46,9 @@ export default function Login() {
           name={"password"}
         />
         <button type="submit">Submit</button>
+        <button onClick={handleGoogleClick}>
+          or login with google
+        </button>
       </form>
     </div>
   );
