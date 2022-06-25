@@ -33,10 +33,3 @@ export const updateData = async (
 export const deleteData = async (uid: string): Promise<void> => {
   await db.collection("users").doc(uid).delete();
 };
-
-export const uploadProfilePic = async (image: File, user: StudentData) => {
-  const storageRef = ref(getStorage(getFirebase()), `images/${user.name}`);
-  await uploadBytes(storageRef, image);
-  const url = await getDownloadURL(storageRef);
-  return url;
-};

@@ -31,8 +31,8 @@ export default function Login() {
   });
 
   async function handleGoogleClick() {
-    let GoogleProvider = new GoogleAuthProvider()
-    await signInWithPopup(getAuth(getFirebase()), GoogleProvider)
+    let GoogleProvider = new GoogleAuthProvider();
+    await signInWithPopup(getAuth(getFirebase()), GoogleProvider);
   }
 
   return (
@@ -46,9 +46,7 @@ export default function Login() {
           name={"password"}
         />
         <button type="submit">Submit</button>
-        <button onClick={handleGoogleClick}>
-          or login with google
-        </button>
+        <button onClick={handleGoogleClick}>or login with google</button>
       </form>
     </div>
   );
