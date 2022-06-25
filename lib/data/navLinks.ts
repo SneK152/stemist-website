@@ -65,10 +65,14 @@ export const navLinks: NavLink[] = [
     name: "Summer Classes",
     link: "/programs",
     class: "projects",
+  },
+  {
+    name: "Dashboard",
+    link: "/dashboard",
     customProps: {
       main: true,
-      color: "white",
-      textColor: "black",
+      color: "red",
+      textColor: "white",
     },
   },
 ];

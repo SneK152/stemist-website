@@ -1,13 +1,12 @@
 import { useFormik } from "formik";
 import InputField from "../forms/InputField";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import getFirebase from "@/lib/hooks/getFirebase";
 import { memo } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import * as Yup from "yup";
-import { addDoc, getFirestore } from "firebase/firestore";
-import { addData } from "@/lib/auth/user";
+import { fetchUser } from "@/lib/auth/fetch";
+import getFirebase from "@/lib/hooks/getFirebase";
 
 interface SignUpForm {
   email: string;
@@ -33,13 +32,10 @@ export default function SignUp() {
         password
       );
       // TODO: Add name and pfp uploads
-      await addData(
-        {
-          name: "<name>",
-          profileUrl: "<pfpdefault>",
-        },
-        user.uid
-      );
+      await fetchUser("POST", user.uid, {
+        name: "<name>",
+        profileUrl: "<pfpUrl>",
+      });
       setSubmitting(false);
     },
     validationSchema: Yup.object({
