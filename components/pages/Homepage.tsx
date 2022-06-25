@@ -1,14 +1,19 @@
 import HomeColumn from "./HomeColumn";
 import Counter from "./Counter";
+import HomeSection from "../layout/HomeSection";
+import { FC } from "react";
+import Link from "next/link";
+
+const E: FC = ({ children }) => <span className="text-red">{children}</span>;
 
 export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-20 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
+        className="flex scroll-mt-24 my-10 flex-col padded-section m-auto"
         id="hero"
       >
-        <h1 className="text-center font-display text-4xl font-bold">
+        {/* <h1 className="text-center font-display text-4xl font-bold">
           What We Do
         </h1>
         <p className="text-lg text-center px-3">
@@ -19,14 +24,55 @@ export default function Homepage() {
           during school breaks such as Spring and Winter break. In the summer,
           we opt for a comprehensive curriculum that delves more in-depth into
           STEM topics.{" "}
-        </p>
+        </p> */}
+        <HomeSection
+          title="Democratization of education"
+          image="/home/demoedu.jpeg"
+          side="left"
+        >
+          We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
+          that will be vital to unlocking success in their lives. We{"'"}re
+          committed to provide <E>education for everyone</E>, regardless of
+          race, gender, age, income with free to ultralow cost classes online
+          and in person.
+        </HomeSection>
+        <HomeSection
+          title="Reshaping the learning curve"
+          image="/home/reshape.jpeg"
+          side="right"
+        >
+          Our{" "}
+          <Link href="/programs">
+            <a className="underline decoration-red underline-offset-1">
+              <E>Summer 2022 STEM Course</E>
+            </a>
+          </Link>{" "}
+          provides an intensive 5-week course that <E>accelerates</E> the
+          internalization of concepts taught during class. Learning is
+          reinforced with kahoots that promote note-taking and long term memory
+          recall.
+        </HomeSection>
+        <HomeSection
+          title="Putting skills to work"
+          image="/home/hacks.jpeg"
+          side="left"
+        >
+          <Link href="/hacks">
+            <a className="underline decoration-red underline-offset-1 text">
+              <E>STEMist Hacks</E>
+            </a>
+          </Link>{" "}
+          encourages students to put their programming skills to work, with{" "}
+          <E>riveting speaker talks</E> by real life professionals and tens of
+          thousands of dollars in prizes.
+        </HomeSection>
       </div>
-      <br />
-      <div>
+      {/* <br /> */}
+      {/* <div>
         <h1 className="text-center mb-2 sm:mb-0 text-4xl font-display font-bold">
           By the Numbers
         </h1>
-        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] padded-section m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
           <Counter
             number={45}
             symbol="+"
@@ -55,7 +101,7 @@ export default function Homepage() {
       </div>
       <br />
       <div
-        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
+        className="flex sm:flex-row max-w-[100rem] padded-section m-auto flex-col gap-3 scroll-mt-24"
         id="learnmore"
       >
         <HomeColumn
@@ -72,8 +118,8 @@ export default function Homepage() {
           buttonText="Meet our Instructors"
           buttonLink="/about/team"
         />
-      </div>
-      <br />
+      </div> */}
+      {/* <br /> */}
     </>
   );
 }

@@ -12,7 +12,7 @@ export default function Programs() {
       <h1 className="text-center font-display text-4xl font-bold mb-5">
         Course Description
       </h1>
-      <div className="grid grid-cols-8">
+      <div className="grid grid-cols-8 padded-section">
         <div className="col-span-2">
           <Image
             src="/summer-flyer.png"
@@ -44,7 +44,7 @@ export default function Programs() {
       <h1 className="text-center font-display text-4xl font-bold mb-5">
         What We Teach
       </h1>
-      <div className="max-w-[100rem] px-5">
+      <div className="">
         <TabPage />
       </div>
     </Container>

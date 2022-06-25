@@ -109,6 +109,7 @@ const people: ExtendedPerson[] = [
       "Fifth Place Science Bowl Nationals",
       "First Place Science Bowl Regionals",
       "Second and Third Place Science Olympiad",
+      "Top 50 USABO",
     ],
   },
   {

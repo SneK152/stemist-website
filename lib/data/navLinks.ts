@@ -4,7 +4,7 @@ export type NavLink = {
   dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
-  important?: boolean;
+  class?: "about" | "projects";
 };
 
 export type NavLinks = NavLink[];
@@ -13,47 +13,58 @@ export const navLinks: NavLink[] = [
   {
     name: "Home",
     link: "/",
-    important: true,
   },
   {
     name: "About Us",
     link: "/about",
-    important: true,
     dropdown: true,
     dropdownItems: [
       {
-        name: "Who We Are",
-        link: "/about/who-we-are",
-      },
-      {
         name: "Meet the Team",
         link: "/about/team",
+        class: "about",
+      },
+      {
+        name: "Contact Us",
+        link: "/about/contact",
+      },
+      {
+        name: "Team Applications",
+        link: "https://bit.ly/stemistapplication",
+        class: "about",
+        customProps: {
+          target: "_blank",
+        },
+      },
+      {
+        name: "Gallery",
+        link: "/about/gallery",
+        class: "about",
       },
     ],
   },
   {
-    name: "Contact Us",
-    link: "/contact",
-    important: true,
+    name: "STEMist Hacks",
+    link: "/hacks",
+    class: "projects",
   },
   {
-    name: "Team Applications",
-    link: "https://bit.ly/stemistapplication",
+    name: "Prior Workshops",
+    link: "/workshops",
+    class: "about",
+  },
+  {
+    name: "WEBS Studio",
+    link: "/webs",
     customProps: {
       target: "_blank",
     },
-  },
-  {
-    name: "STEMist Hacks",
-    link: "/hacks",
-  },
-  {
-    name: "Workshop Recap",
-    link: "/workshops",
+    class: "projects",
   },
   {
     name: "Summer Classes",
     link: "/programs",
+    class: "projects",
     customProps: {
       main: true,
       color: "white",
