@@ -1,5 +1,4 @@
 import Question from "./Question";
-import useAos from "../../useAos";
 import { ReactNode } from "react";
 
 const questions: {
@@ -79,13 +78,13 @@ const questions: {
 export default function FAQ() {
   return (
     <>
-      <div {...useAos()} className="grid lg:grid-cols-3 sm:grid-cols-2 gap-3">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-3">
         {questions.map((question, idx) => (
           <Question key={idx} {...question} />
         ))}
       </div>
       <br />
-      <h1 className="text-xl text-center font-writing">
+      <h1 className="text-xl text-center font-writing mb-5">
         Email{" "}
         <a
           className="text-blue-500"

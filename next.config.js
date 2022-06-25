@@ -15,13 +15,13 @@ const config = {
           "https://docs.google.com/forms/d/e/1FAIpQLSdPbxLj32YvUdPLnmtlYhhRXFiGwPCPuHK7Vf7e89DMAFsdew/viewform",
         permanent: true,
       },
+      {
+        source: "/webs",
+        destination: "https://www.youtube.com/channel/UCp-9KJgj_clivoncmg459dg",
+        permanent: true,
+      },
     ];
   },
-  // experimental: {
-  //   images: {
-  //     layoutRaw: true,
-  //   },
-  // },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",

@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import InputField from "../forms/InputField";
-import { updateProfile, getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, UserCredential, User } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, UserCredential, User } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
 import { memo, useState, ReactNode, useRef } from 'react';
 import Container from "../layout/Container";
@@ -9,8 +9,8 @@ import * as Yup from "yup";
 import { addData } from "@/lib/auth/user";
 import Image from 'next/image'
 import { ref, uploadBytes, getDownloadURL, getStorage } from 'firebase/storage'
-import { Bytes } from "firebase/firestore";
 import FileInput from "../layout/FileInput";
+import { fetchUser } from "@/lib/auth/fetch";
 
 const GoogleLogo = require('./Google.png')
 
@@ -27,7 +27,7 @@ export default function SignUp() {
 
   const [message, setMessage] = useState<ReactNode>(<></>)
   const [image, setImage] = useState<any>()
-  const profileImageRef = useRef <File | Bytes | null | any>()
+  const profileImageRef = useRef <File | null | any>()
 
   async function handleGoogleClick() {
     let GoogleProvider = new GoogleAuthProvider()
@@ -71,7 +71,6 @@ export default function SignUp() {
         .then(snap => {
           getDownloadURL(firebaseStorage)
             .then(async url => {
-              updateProfile(user, { photoURL: url })
 
               await addData(
                 {
@@ -83,6 +82,11 @@ export default function SignUp() {
             })
         })
 
+      // TODO: Add name and pfp uploads
+      await fetchUser("POST", user.uid, {
+        name: "<name>",
+        profileUrl: "<pfpUrl>",
+      });
       setSubmitting(false);
     },
     validationSchema: Yup.object({

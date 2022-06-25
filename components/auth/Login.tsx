@@ -13,9 +13,9 @@ interface LoginFormik {
   email: string;
   password: string;
 }
+const MInputField = memo(InputField);
 
 export default function Login() {
-  const MInputField = memo(InputField);
   const formik = useFormik<LoginFormik>({
     initialValues: {
       email: "",
