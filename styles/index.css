@@ -24,6 +24,10 @@ body {
   flex-basis: calc(33.333333% - 2.5rem);
 }
 
+.hacks > section:nth-last-child(1) {
+  @apply mb-5;
+}
+
 ::-webkit-scrollbar {
   background-color: #202324;
   color: #aba499;
