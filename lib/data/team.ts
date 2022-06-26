@@ -24,7 +24,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Secretary", "Director of Events", "WEBS"],
+    officerRoles: ["Secretary", "Director of Events"],
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
       cs: ["C++"],
@@ -40,12 +40,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Isaac Sun",
-    officerRoles: [
-      "Treasurer",
-      "Director of PR and Outreach",
-      "WEBS",
-      "Events",
-    ],
+    officerRoles: ["Treasurer", "Director of Outreach"],
     teacherRoles: ["Math"],
     curriculumRoles: {
       math: ["Advanced Algebra"],
@@ -77,7 +72,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Snehil Kakani",
-    officerRoles: ["Director of Technology", "Website", "WEBS", "Events"],
+    officerRoles: ["Director of Technology"],
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
       cs: ["Javascript", "Python"],
@@ -114,7 +109,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Anish Bhethanabotla",
-    officerRoles: ["Curriculum Director", "HR"],
+    officerRoles: ["Curriculum Director"],
     teacherRoles: ["Head of Physical Science", "Physical Science"],
     curriculumRoles: {
       phys: ["Head", "Electricity and Magnetism", "Stellar Evolution"],
@@ -238,7 +233,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sriman Ratnapu",
-    officerRoles: ["Director of HR", "Outreach", "Events", "WEBS"],
+    officerRoles: ["Director of HR"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
@@ -310,7 +305,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Aryan Patnaik",
-    officerRoles: ["WEBS Lead"],
+    officerRoles: ["Director of WEBS Studio"],
     teacherRoles: ["Biology"],
     curriculumRoles: {
       bio: ["Ecology"],
