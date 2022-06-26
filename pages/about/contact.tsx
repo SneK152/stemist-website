@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 
-const Spinner = dynamic(() => import("@/components/Spinner"));
+import Spinner from "@/components/Spinner";
 
 const MemoedInputField = memo(InputField);
 
