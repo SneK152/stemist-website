@@ -3,7 +3,6 @@ import PersonProps from "@/lib/types/PersonProps";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Qualifications from "./Qualifications";
-import { TeacherSubject } from "@/lib/types/Person";
 
 export default function Person(props: PersonProps) {
   const [open, setOpen] = useState(false);
@@ -50,7 +49,7 @@ export default function Person(props: PersonProps) {
               className="mt-1 bg-red  px-3 py-1 text-black font-writing text-xs block m-0.5 w-min whitespace-nowrap rounded-lg bg-opacity-40"
               onClick={() => setOpen(true)}
             >
-              {props.person.qualifications ? "Qualifications" : "About"}
+              {props.person.qualifications ? "Experience" : "About"}
             </button>
           )}
         </span>
