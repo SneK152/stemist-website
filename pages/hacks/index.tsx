@@ -24,12 +24,12 @@ export default function App() {
       customNav={hackathonNavLinks}
     >
       <Header image="/homepage.png" />
-      <div className="">
+      <div className="hacks">
         <Section name="Our Sponsors">
           <Sponsors />
         </Section>
         <Section name="About our Hackathon" id="about" inverted>
-          <div className="text-lg py-5 rounded-lg shadow-md bg-[#eee]">
+          <div className="text-lg py-5 rounded-lg">
             <div className="mx-5">
               Welcome to STEMist Hacks! Join other hackers in creating a project
               to impress judges, and to win prizes. There will be workshops
@@ -79,7 +79,7 @@ export default function App() {
           </div>
         </Section>
         <Section name="Requirements to Attend" inverted>
-          <div className="text-lg py-5 rounded-lg shadow-md bg-[#eee]">
+          <div className="text-lg py-5 rounded-lg">
             <div className="mx-5">
               Due to restrictions from DevPost, if you are above 13 years old
               you can come. However if you are younger, you will need parent
@@ -95,7 +95,7 @@ export default function App() {
         <Section name="Partners">
           <Partners />
         </Section>
-        <Section name="Frequently Asked Questions">
+        <Section name="Frequently Asked Questions" inverted>
           <FAQ />
         </Section>
       </div>

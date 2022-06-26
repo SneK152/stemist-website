@@ -13,7 +13,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <section
-      className={`px-5 scroll-mt-24 mt-5 ${
+      className={`px-5 py-8 scroll-mt-24 mt-5 ${
         inverted ? "text-white bg-[#1d263b]" : ""
       }`}
       {...(id ? { id: id } : {})}
