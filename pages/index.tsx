@@ -21,10 +21,7 @@ export default function Index() {
             data-aos-anchor="#top"
           >
             Accelerating education with{" "}
-            <span className="bg-[linear-gradient(0deg,#AD5E5C_6px,transparent_7px);]">
-              engaging
-            </span>{" "}
-            workshops
+            <span className="text-blue">engaging</span> workshops
           </h1>
           <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl">
             <div
