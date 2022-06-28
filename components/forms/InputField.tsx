@@ -17,7 +17,7 @@ export default function InputField({
         id={name}
         name={name}
         type={type}
-        className={`${className} relative block w-full appearance-none rounded-lg border border-gray-500 px-3 py-2 text-black focus:z-10 focus:border-gray-600 bg-white focus:outline-none focus:ring-black sm:text-sm peer placeholder-transparent transition-[background-color] duration-[10000000s]`}
+        className={`${className} relative block w-full appearance-none rounded-none px-3 py-2 text-black focus:z-10 focus:border-gray-600 bg-white focus:outline-none focus:ring-black sm:text-sm peer placeholder-transparent transition-[background-color] duration-[10000000s] border-2 border-opacity-10 border-black `}
         placeholder={labelName}
         autoComplete="off"
         {...formik.getFieldProps(name)}

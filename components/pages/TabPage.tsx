@@ -88,7 +88,7 @@ export default function TabPage() {
             <Tab
               key={category.title}
               className={({ selected }) =>
-                `w-full rounded-lg p-2 shadow-lg flex flex-col justify-center items-center font-writing text-xl text-center transition-colors ${
+                `w-full rounded-lg p-2 shadow-lg flex flex-col justify-center items-center font-display text-xl text-center transition-colors ${
                   selected ? "bg-black shadow" : "hover:bg-white/[0.1]"
                 }`
               }

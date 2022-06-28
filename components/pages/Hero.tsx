@@ -42,7 +42,7 @@ export default function Hero() {
             STEMist is <span ref={el}></span>
           </h1>
           <br />
-          <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
+          <p className="font-display text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
             {width! >= 640 ? (
               <ArrowRightIcon className="h-4 w-4 inline-block" />

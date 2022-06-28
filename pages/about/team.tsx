@@ -187,7 +187,7 @@ function FilterButton({
     <button
       className={`${
         active ? "bg-red text-white" : "bg-gray-200 text-black"
-      } font-writing m-1 rounded-lg py-1 px-3 text-lg`}
+      } font-display m-1 rounded-lg py-1 px-3 text-lg`}
       onClick={onClick}
     >
       {name}

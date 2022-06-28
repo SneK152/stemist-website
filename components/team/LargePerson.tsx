@@ -23,7 +23,7 @@ export default function LargePerson(props: PersonProps) {
           >
             {props.person.name}
             <br />
-            <div className="font-writing flex flex-wrap gap-1">
+            <div className="font-display flex flex-wrap gap-1">
               {props.person.positions.map(
                 (pos, index) =>
                   !props.person.positions.includes("Head of " + pos) && (
@@ -40,7 +40,7 @@ export default function LargePerson(props: PersonProps) {
         </h1>
       </div>
       {props.person.description && (
-        <p className="max-w-[40ch] font-writing text-lg transition-all group-hover:block mx-auto">
+        <p className="max-w-[40ch] font-display text-lg transition-all group-hover:block mx-auto">
           {props.person.description}
         </p>
       )}

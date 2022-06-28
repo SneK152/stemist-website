@@ -50,7 +50,7 @@ export default function Navbar({
             } transition-all duration-500`}
           >
             <div className="padded-section">
-              <div className="flex justify-between py-3 font-writing">
+              <div className="flex justify-between py-3 font-display">
                 <div className="flex items-center gap-1">
                   <Link href="/">
                     <a>
@@ -188,7 +188,7 @@ export default function Navbar({
                             ) : (
                               <Disclosure key={i}>
                                 <Disclosure.Button
-                                  className={`block font-writing text-lg underline-offset-1 whitespace-nowrap text-white ${
+                                  className={`block font-display text-lg underline-offset-1 whitespace-nowrap text-white ${
                                     navLink.dropdownItems!.some(
                                       (dropDownItem) =>
                                         dropDownItem.link === router.pathname
@@ -208,7 +208,7 @@ export default function Navbar({
                                     (item: any, i: any) => (
                                       <Link key={i} href={item.link}>
                                         <a
-                                          className={`block ml-3 font-writing text-white ${
+                                          className={`block ml-3 font-display text-white ${
                                             router.pathname === item.link
                                               ? "font-extrabold"
                                               : "font-normal"
