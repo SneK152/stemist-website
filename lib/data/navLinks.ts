@@ -67,8 +67,8 @@ export const navLinks: NavLink[] = [
     class: "projects",
     customProps: {
       main: true,
-      color: "white",
-      textColor: "black",
+      color: "transparent",
+      textColor: "white",
     },
   },
 ];
