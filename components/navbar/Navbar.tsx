@@ -13,7 +13,7 @@ import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
 import { NavLinks, navLinks } from "@/lib/data/navLinks";
 import { useRouter } from "next/router";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 
 export default function Navbar({
   noNav,

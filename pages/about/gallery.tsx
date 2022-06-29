@@ -15,16 +15,51 @@ interface Photo {
   alt?: string | undefined;
   key?: string | undefined;
   scale?: boolean;
-};
+}
 
 const photos: Photo[] = [
-  { src: "/about/teamphoto.jpg", width: 2, height: 1 },
-  { src: "/about/carousel2.png", width: 3, height: 2 },
-  { src: "/about/carousel5.png", width: 3, height: 2 },
-  { src: "/about/carousel1.png", width: 3, height: 2 },
-  { src: "/about/carousel4.png", width: 4, height: 2 },
-  { src: "/about/carousel3.png", width: 2, height: 1 },
-  { src: "/about/carousel6.png", width: 1, height: 1 },
+  {
+    src: "/about/teamphoto.jpg",
+    width: 2,
+    height: 1,
+    alt: "Our amazing officer team. Front row left to right: Selena, Aryan, Steve, Justin, Sriman. Back row left to right: Sanya, Shanker, Anish, Isaac, Snehil.",
+  },
+  {
+    src: "/about/carousel2.png",
+    width: 3,
+    height: 2,
+    alt: "Selena teaches students about DNA Analysis in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/carousel5.png",
+    width: 3,
+    height: 2,
+    alt: "Steve talks about the basics of waves in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/carousel1.png",
+    width: 3,
+    height: 2,
+    alt: "Snehil discusses the difference between backend and frontend web development in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/carousel4.png",
+    width: 4,
+    height: 2,
+    alt: "Selena introduces the concept of DNA cloning using bacteria in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/carousel3.png",
+    width: 2,
+    height: 1,
+    alt: "Snehil goes over the varies methods of how to get started with backend programming in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/carousel6.png",
+    width: 1,
+    height: 1,
+    alt: "Steve congratulates the top 5 participants in his Waves kahoot in the Intro to STEM workshop of April 2022.",
+  },
 ];
 export default function About() {
   const [open, setOpen] = useState<boolean>(false);
@@ -43,7 +78,9 @@ export default function About() {
             setOpen(true);
             setCurrentPhoto(photo);
           }}
-          className={`${photo.scale === false ? '' : 'hover:scale-110'} transition-transform duration-300 cursor-pointer`}
+          className={`${
+            photo.scale === false ? "" : "hover:scale-110"
+          } transition-transform duration-300 cursor-pointer`}
         />
       </div>
     ),
@@ -95,7 +132,15 @@ export default function About() {
             >
               <div className="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                 <div>
-                  {imageRenderer({ photo: { ...currentPhoto!, width: currentPhoto!.width * 2, height: currentPhoto!.height * 2, scale: false } })}
+                  <div className="m-1 relative h-80">
+                    <Image
+                      alt={currentPhoto!.alt}
+                      src={currentPhoto!.src}
+                      objectFit="cover"
+                      layout="fill"
+                    />
+                  </div>
+                  {currentPhoto!.alt || ""}
                 </div>
                 <div className="mt-1">
                   <button
