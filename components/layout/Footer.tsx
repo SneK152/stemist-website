@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
           </div>
           <hr className="border-[1.5px]" />
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center gap-3">
             <Image
               src="/logo-white.png"
               alt="STEMist Education"
@@ -75,6 +75,9 @@ export default function Footer() {
               width={166.6}
               className="select-none"
             />
+            <h1 className="mr-auto font-display text-xs sm:text-sm lg:text-base">
+              Copyright © 2022 STEMist Education. All Rights Reserved.
+            </h1>
             <ul className="flex gap-3 items-center justify-start mb-2">
               {socials.map((social, index) => (
                 <li key={index}>
