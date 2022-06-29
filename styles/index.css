@@ -28,6 +28,10 @@ body {
   @apply mb-5;
 }
 
+.grid-cols-14 {
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+}
+
 ::-webkit-scrollbar {
   background-color: #202324;
   color: #aba499;

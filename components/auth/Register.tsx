@@ -43,11 +43,11 @@ export default function SignUp() {
   const profileImageRef = useRef<any>();
   const [image, setImage] = useState<string>("");
 
-  const handleError = useCallback((e: FirebaseError) => {
+  const handleError = (e: FirebaseError) => {
     let code = e.code.substring(5).replace(/-/g, " ");
     code = code.charAt(0).toUpperCase() + code.slice(1);
     setMessage(code);
-  }, []);
+  };
 
   async function handleGoogleClick() {
     let GoogleProvider = new GoogleAuthProvider();
@@ -67,6 +67,7 @@ export default function SignUp() {
       handleError(error as FirebaseError);
     }
   }
+
   const formik = useFormik<SignUpForm>({
     initialValues: {
       email: "",
@@ -119,7 +120,7 @@ export default function SignUp() {
     <Container title="Auth | Register">
       <PartialBanner title="Register" />
       <div>
-        <div className="py-3 flex-col flex gap-5 padded-section">
+        <div className="py-3 my-3 flex-col flex gap-5 padded-section">
           <form onSubmit={formik.handleSubmit} className="w-full">
             <div className="w-full space-y-3 rounded-lg">
               <MInputField
@@ -149,19 +150,22 @@ export default function SignUp() {
               <div className="relative m-auto flex w-full gap-5 sm:w-1/2">
                 <button
                   type="submit"
-                  className="relative block w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  className="relative block w-full rounded-none border border-transparent bg-black bg-opacity-10 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Submit
                 </button>
                 <button
-                  className="relative w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 flex items-center gap-2 justify-center"
+                  className="relative w-full rounded-none border border-transparent bg-black bg-opacity-10 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 flex items-center gap-2 justify-center"
                   onClick={handleGoogleClick}
                 >
                   <Image src={Google} alt="Google Logo" />
                   Login with Google
                 </button>
-                <div className="text-red">{message}</div>
               </div>
+              <div
+                className="text-red-800 text-center border-2 rounded-md bg-green-200 border-slate-400 mx-auto w-1/2"
+                style={{ marginTop: '1.5rem', display: message ? '' : 'hidden' }}
+              >{message}</div>
             </div>
           </form>
         </div>

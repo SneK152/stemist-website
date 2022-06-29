@@ -125,7 +125,7 @@ function CurriculumCard(props: CurriculumCardProps) {
       <h1 className="font-display mt-3">Presented By</h1>
       <div className="grid text-left">
         <div
-          className={`h-32 w-full overflow-hidden rounded-lg text-black p-3`}
+          className={`h-40 w-full overflow-hidden rounded-lg text-black p-3`}
         >
           <Person person={{ ...props.person, positions: [] }} />
         </div>

@@ -36,8 +36,8 @@ export default forwardRef(function FileInput(
               />
             </svg>
           </span>
-          <p className="ml-2 inline-block h-full text-base">
-            {image || "Profile Picture"}
+          <p className="ml-2 inline-block h-full text-lg">
+            {image || <>Profile Picture <sub>(optional)</sub></>}
           </p>
         </label>
         <input

@@ -53,7 +53,7 @@ export default function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="text-right">
+              <div className="text-left">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (

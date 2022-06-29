@@ -111,7 +111,7 @@ export default function TabPage() {
                 {c.teachers.map((t, index) => (
                   <div
                     key={index}
-                    className={`h-32 w-full overflow-hidden border-2 border-opacity-10 border-black p-3`}
+                    className={`h-40 w-full overflow-hidden border-2 border-opacity-10 border-black p-3`}
                   >
                     <Person
                       person={t}
