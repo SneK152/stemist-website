@@ -5,7 +5,7 @@ const HomeCounter = (props: {
   symbol: string;
   text: string;
 }) => (
-  <div className="border border-white h-full w-full">
+  <div className="border border-white p-5 h-full w-full">
     <Counter {...props} />
   </div>
 );
