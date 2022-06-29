@@ -174,7 +174,6 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Jianyu Wang",
-    teamRoles: ["HR"],
     image: resolveTeamImage("Jianyu Wang"),
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
@@ -182,7 +181,6 @@ const people: ExtendedPerson[] = [
 
   {
     name: "Harold Wang",
-    teamRoles: ["HR"],
     teacherRoles: ["Biology"],
     curriculumRoles: {
       bio: ["Botany"],
