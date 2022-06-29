@@ -81,7 +81,7 @@ export default function Team(props: TeamProps) {
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
-                    ? "font-light border-black"
+                    ? "font-light border-red"
                     : "font-light border-transparent"
                 }`
               }
@@ -92,7 +92,7 @@ export default function Team(props: TeamProps) {
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
-                    ? "font-light border-black"
+                    ? "font-light border-red"
                     : "font-light border-transparent"
                 }`
               }
@@ -103,7 +103,7 @@ export default function Team(props: TeamProps) {
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
-                    ? "font-light border-black"
+                    ? "font-light border-red"
                     : "font-light border-transparent"
                 }`
               }
