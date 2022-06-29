@@ -12,7 +12,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Steve Yang"),
     description:
-      "Steve Yang is a freshman at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
+      "Steve Yang is a sophomore at Lynbrook High who focuses on Earth Science and Chemistry.  When not reading textbooks, he likes to conduct synthesis reactions, run five miles a day, and talk with friends.",
     qualifications: [
       "Four Year Science Olympiad Competitor",
       "Fifteen+ Science Olympiad Medals, Including 2nd at States",
@@ -49,7 +49,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Isaac Sun"),
     description:
-      "Isaac Sun is a freshman at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
+      "Isaac Sun is a sophomore at Lynbrook High School who enjoys doing math, especially algebra and combinatorics. Outside of school-related work, he also likes to play chess and read novels.",
     qualifications: [
       "AIME Qualifier",
       "Berkeley Math Tournament Honorable Mentions",
@@ -65,7 +65,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Johnathan Kao"),
     description:
-      "Johnathan Kao is a freshman at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
+      "Johnathan Kao is a sophomore at Lynbrook High School who specializes in astronomy and oceanography. He likes to read and play videogames in his free time, as well as preparing for the next competition whatever it may be.",
     qualifications: [
       "Science Bowl 5th Nationals",
       "Biology Bowl 2nd Nationals",
@@ -82,7 +82,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Snehil Kakani"),
     description:
-      "Snehil Kakani is a freshman at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
+      "Snehil Kakani is a sophomore at Lynbrook High who loves web development. He enjoys working on user interfaces and backend APIs. He's also a graphic designer, drummer, actor, and more!",
     qualifications: [
       "Full Stack Web Developer",
       "Honorable Mention Synopsys Science Fair",
@@ -101,7 +101,7 @@ const people: ExtendedPerson[] = [
       bio: ["Head", "Molecular and Cell Biology", "Genetics"],
     },
     description:
-      "Selena is a freshman at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
+      "Selena is a sophomore at Lynbrook who enjoys reading biology, especially oncology. Aside from going down wiki rabbit holes, she also draws unnecessarily detailed diagrams, plays the piano, and struggles through math problems.",
     qualifications: [
       "Two Time AIME Qualifier",
       "Two Time Semifinalist USABO",
@@ -121,7 +121,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Anish Bhethanabotla"),
     description:
-      "Anish is a freshman at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
+      "Anish is a sophomore at Lynbrook High School who specializes in Physics and Computer Science. He enjoys listening to music.",
     qualifications: [
       "Two time First Place Synopsys Science Fair",
       "USAAAO Semifinalist",
@@ -142,7 +142,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Sanya Badhe"),
     description:
-      "Sanya Badhe is a freshman at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
+      "Sanya Badhe is a sophomore at Lynbrook who focuses on Physics and Math. Outside of school, you can find her playing basketball (for fun), painting, or playing with her friends' dogs.",
     qualifications: [
       "46 Medals in Science Olympiad",
       "1st Place Regionals Science Olympiad",
@@ -168,7 +168,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Shanker Ram"),
     description:
-      "Freshman at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
+      "Sophomore at Lynbrook High School, Specializes in Math, Computer Science, and Data Science, Likes watching the NBA, in specific the Warriors",
     qualifications: [
       "USACO Silver",
       "Knows Python, Java, C++",
@@ -194,7 +194,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Harold Wang"),
     description:
-      "Harold Wang is a freshman at Lynbrook High school who likes science. In his free time he plays games.",
+      "Harold Wang is a sophomore at Lynbrook High school who likes science. In his free time he plays games.",
     qualifications: ["USABO Semifinalist"],
   },
   {
@@ -202,14 +202,14 @@ const people: ExtendedPerson[] = [
     teamRoles: ["Events"],
     image: resolveTeamImage("Joshua Li"),
     description:
-      "Joshua is a freshman at Lynbrook who enjoys all behind the curtain roles. He also likes exercising and gaming in his free time.",
+      "Joshua is a sophomore at Lynbrook who enjoys all behind the curtain roles. He also likes exercising and gaming in his free time.",
   },
   {
     name: "Nathan Ye",
     teamRoles: ["Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Nathan Ye"),
     description:
-      "Nathan is a high school freshman that loves coding and football.",
+      "Nathan is a high school sophomore that loves coding and football.",
   },
   {
     name: "Rohan Fernandes",
@@ -234,14 +234,14 @@ const people: ExtendedPerson[] = [
     teamRoles: ["Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Sophie Mak"),
     description:
-      "Sophie Mak is a freshman at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
+      "Sophie Mak is a sophomore at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
   },
   {
     name: "Sriman Ratnapu",
     officerRoles: ["Director of HR"],
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
-      "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
+      "Sriman is a sophomore at Lynbrook High School likes to play video games and read books.",
     email: "srimanratnapu@joinstemist.org",
   },
   {
@@ -249,14 +249,14 @@ const people: ExtendedPerson[] = [
     teamRoles: ["Graphic Design", "Outreach", "Events"],
     image: resolveTeamImage("Annie Li"),
     description:
-      "Annie Li is a Lynbrook freshman who either makes digital art in her free time or is watching analysis videos on horror series.",
+      "Annie Li is a Lynbrook sophomore who either makes digital art in her free time or is watching analysis videos on horror series.",
   },
   {
     name: "Valerie Shu",
     teamRoles: ["Graphic Design", "Outreach", "Events", "WEBS"],
     image: resolveTeamImage("Valerie Shu"),
     description:
-      "Valerie is a freshman at Lynbrook High who enjoys teaching and the outdoors. She reads avidly, writes intermittently, draws digitally, and owns 2 rabbits.",
+      "Valerie is a sophomore at Lynbrook High who enjoys teaching and the outdoors. She reads avidly, writes intermittently, draws digitally, and owns 2 rabbits.",
   },
   {
     name: "Sarvesh Madullapalli",
@@ -279,7 +279,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Vyaas Baskar"),
     description:
-      "Vyaas Baskar is an 8th grader at Miller Middle school, who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
+      "Vyaas Baskar is a rising freshman who enjoys physics, chemistry, math, and programming. He has also been part of a robotics team for over four years. For fun, he creates games in Unity, and plays basketball with friends.",
     qualifications: [
       "Third Year Science Olympiad",
       "Consistent Science Olympiad Medal Winner",
@@ -295,7 +295,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Chaas Kandregula"),
     description:
-      "Chaas is an 8th grader at Miller Middle School. He loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
+      "Chaas is a rising freshman who loves chemistry and is very interested in math and science. Currently, he's on the Miller Science Bowl Team 1 and the Science Olympiad Black Team.",
   },
   {
     name: "Daniel Kim",
@@ -306,7 +306,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Daniel Kim"),
     description:
-      "Daniel Kim is a freshman at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
+      "Daniel Kim is a sophomore at Lynbrook who enjoys studying math, computer science, and physics. When he is not studying or doing homework, he likes to swim and talk to friends.",
     qualifications: ["USACO Gold Competitor", "AIME Qualifier"],
   },
   {
@@ -333,7 +333,7 @@ const people: ExtendedPerson[] = [
     },
     image: resolveTeamImage("Kasturi Kirubaharan"),
     description:
-      "Kasturi Kirubaharan is a freshman at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
+      "Kasturi Kirubaharan is a sophomore at Lynbrook High School who focuses on genetics and cell biology. During her free time she likes to read and spend time with her friends.",
     qualifications: [
       "Algebra and Arithmetic Tutor",
       "Algebra 2 Trig Student",
@@ -356,7 +356,7 @@ const people: ExtendedPerson[] = [
     teamRoles: ["Outreach", "HR"],
     image: resolveTeamImage("Sarthak Ratan"),
     description:
-      "Sarthak Ratan is a freshman at Lynbrook high who enjoys science, designing, and business. When he isn’t working he loves swimming, playing the guitar, or talking to friends.",
+      "Sarthak Ratan is a sophomore at Lynbrook high who enjoys science, designing, and business. When he isn’t working he loves swimming, playing the guitar, or talking to friends.",
   },
   {
     name: "Yash Singh",
@@ -375,7 +375,7 @@ const people: ExtendedPerson[] = [
   {
     name: "Aadharsh Rajkumar",
     description:
-      "Aadharsh Rajkumar is a freshman at Lynbrook High School, and is very passionate about computer science. In his free time you can find him reading or playing the drums or guitar.",
+      "Aadharsh Rajkumar is a sophomore at Lynbrook High School, and is very passionate about computer science. In his free time you can find him reading or playing the drums or guitar.",
     image: resolveTeamImage("Aadharsh Rajkumar"),
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
