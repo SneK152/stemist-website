@@ -27,27 +27,25 @@ export default function Navbar({
   hacks?: boolean;
 }) {
   const router = useRouter();
-  const [bgVisible, setBgVisible] = useState(false);
-  useEffect(() => {
-    const callback = () => {
-      if (window.scrollY >= 80) {
-        setBgVisible(true);
-      } else {
-        setBgVisible(false);
-      }
-    };
-    window.addEventListener("scroll", callback);
-    return () => window.removeEventListener("scroll", callback);
-  }, []);
+  // const [bgVisible, setBgVisible] = useState(false);
+  // useEffect(() => {
+  //   const callback = () => {
+  //     if (window.scrollY >= 80) {
+  //       setBgVisible(true);
+  //     } else {
+  //       setBgVisible(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", callback);
+  //   return () => window.removeEventListener("scroll", callback);
+  // }, []);
   return (
     <>
       <div id="top"></div>
       <Disclosure as={Fragment}>
         {({ open }) => (
           <nav
-            className={`fixed z-50 w-full ${
-              bgVisible ? "bg-black bg-opacity-100" : "bg-transparent"
-            } transition-all duration-500`}
+            className={`fixed z-50 w-full ${"bg-black bg-opacity-100"} transition-all duration-500`}
           >
             <div className="padded-section">
               <div className="flex justify-between py-3 font-display">
@@ -155,11 +153,7 @@ export default function Navbar({
               <Disclosure.Panel className="lg:hidden">
                 {() => (
                   <div
-                    className={`absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${
-                      bgVisible
-                        ? "bg-black bg-opacity-100"
-                        : "bg-transparent bg-opacity-100"
-                    }`}
+                    className={`absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${"bg-black bg-opacity-100"}`}
                   >
                     <ul>
                       {(customNav.length ? customNav : navLinks).map(
