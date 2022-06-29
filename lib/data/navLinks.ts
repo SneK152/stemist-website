@@ -91,19 +91,6 @@ export const navLinks: NavLink[] = [
     },
     via: "link",
   },
-  {
-    name: "Logout",
-    func: async () => {
-      const auth = getAuth();
-      await signOut(auth);
-    },
-    customProps: {
-      main: true,
-      color: "red",
-      textColor: "white",
-    },
-    via: "function",
-  },
 ];
 
 export const hackathonNavLinks: NavLink[] = [

@@ -1,11 +1,33 @@
 import Dashboard from "@/components/auth/Dashboard";
-import Login from "@/components/auth/Login";
-import useAuth from "@/lib/hooks/useAuth";
+import { useData } from "@/lib/hooks/useData";
+import StudentData from "@/lib/types/StudentData";
+import { GetServerSideProps } from "next";
+import cookies from "next-cookies";
 
-export default function Dash() {
-  const [user, loading] = useAuth();
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  return user === null || user === undefined ? <Login /> : <Dashboard />;
+interface DashboardProps {
+  user: StudentData;
 }
+
+export default function Dash(props: DashboardProps) {
+  const user = useData(props.user!);
+  return <Dashboard user={user} />;
+}
+
+export const getServerSideProps: GetServerSideProps<DashboardProps> = async (
+  ctx
+) => {
+  const cookie = cookies(ctx).user! as Object;
+  if (cookie === undefined) {
+    return {
+      redirect: {
+        destination: "/auth/login",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {
+      user: cookie as StudentData,
+    },
+  };
+};

@@ -97,7 +97,7 @@ export default function Navbar({
                       ))}
                       {!hacks && (
                         <NavLink
-                          via={'link'}
+                          via={"link"}
                           main
                           href="/"
                           color="blue-500 bg-opacity-80 hover:bg-opacity-90"
@@ -236,7 +236,7 @@ export default function Navbar({
                         <>
                           <div className="h-2"></div>
                           <NavLink
-                            via={'link'}
+                            via={"link"}
                             main
                             href="/"
                             color="blue-500 bg-opacity-80 hover:bg-opacity-90"

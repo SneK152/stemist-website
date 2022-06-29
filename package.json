@@ -10,8 +10,10 @@
     "firebase": "^9.8.3",
     "firebase-admin": "^10.3.0",
     "formik": "^2.2.9",
+    "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "next": "^12.1.6",
+    "next-cookies": "^2.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-firebase-hooks": "^5.0.3",
@@ -37,6 +39,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.6",
     "@tailwindcss/forms": "^0.4.1",
+    "@types/js-cookie": "^3.0.2",
     "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.17",
     "@types/react": "^17.0.17",
