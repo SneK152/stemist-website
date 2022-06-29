@@ -37,8 +37,8 @@ export default function Login() {
   });
 
   async function handleGoogleClick() {
-    let GoogleProvider = new GoogleAuthProvider()
-    await signInWithPopup(getAuth(getFirebase()), GoogleProvider)
+    let GoogleProvider = new GoogleAuthProvider();
+    await signInWithPopup(getAuth(getFirebase()), GoogleProvider);
   }
 
   return (

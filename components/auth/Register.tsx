@@ -1,18 +1,23 @@
 import { useFormik } from "formik";
 import InputField from "../forms/InputField";
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, UserCredential, User } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
-import { memo, useState, ReactNode, useRef } from 'react';
+import { memo, useState, ReactNode, useRef } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import * as Yup from "yup";
-import { addData } from "@/lib/auth/user";
-import Image from 'next/image'
-import { ref, uploadBytes, getDownloadURL, getStorage } from 'firebase/storage'
+import { uploadProfilePic } from "@/lib/auth/storage";
+import Image from "next/image";
 import FileInput from "../layout/FileInput";
 import { fetchUser } from "@/lib/auth/fetch";
+import { FirebaseError } from "firebase/app";
 
-const GoogleLogo = require('./Google.png')
+const GoogleLogo = require("./Google.png");
 
 interface SignUpForm {
   email: string;
@@ -24,28 +29,29 @@ interface SignUpForm {
 const MInputField = memo(InputField);
 
 export default function SignUp() {
-
-  const [message, setMessage] = useState<ReactNode>(<></>)
-  const [image, setImage] = useState<any>()
-  const profileImageRef = useRef <File | null | any>()
+  const [message, setMessage] = useState<ReactNode>(<></>);
+  const [image, setImage] = useState<any>();
+  const profileImageRef = useRef<File | null | any>();
 
   async function handleGoogleClick() {
-    let GoogleProvider = new GoogleAuthProvider()
-    await signInWithPopup(getAuth(getFirebase()), GoogleProvider)
-      .then((response: UserCredential) => {
-        const { user } = response
-        let userId = user.uid
-        let name = user.displayName!
-        let profileURL = user.photoURL!
-        addData({
-          name,
-          profileUrl: profileURL
-        }, userId)
-      })
-      .catch((error) => {
-        let parts = error.code.split('/')[0] as string
-        setMessage(<p>{parts[1]}</p>)
-      })
+    let GoogleProvider = new GoogleAuthProvider();
+    try {
+      const response = await signInWithPopup(
+        getAuth(getFirebase()),
+        GoogleProvider
+      );
+      const { user } = response;
+      let userId = user.uid;
+      let name = user.displayName!;
+      let profileURL = user.photoURL!;
+      await fetchUser("POST", user.uid, {
+        name,
+        profileUrl: profileURL,
+      });
+    } catch (error) {
+      let parts = (error as FirebaseError).code.split("/")[0] as string;
+      setMessage(<p>{parts[1]}</p>);
+    }
   }
 
   const formik = useFormik<SignUpForm>({
@@ -65,27 +71,14 @@ export default function SignUp() {
         email,
         password
       );
-
-      const firebaseStorage = ref(getStorage(getFirebase()), `profile/${user.uid}`)
-      uploadBytes(firebaseStorage, profileImageRef.current!.files[0])
-        .then(snap => {
-          getDownloadURL(firebaseStorage)
-            .then(async url => {
-
-              await addData(
-                {
-                  name: name,
-                  profileUrl: url,
-                },
-                user.uid
-              );
-            })
-        })
-
+      const url = await uploadProfilePic(
+        profileImageRef.current!.files[0],
+        user.uid
+      );
       // TODO: Add name and pfp uploads
       await fetchUser("POST", user.uid, {
-        name: "<name>",
-        profileUrl: "<pfpUrl>",
+        name,
+        profileUrl: url,
       });
       setSubmitting(false);
     },
@@ -135,6 +128,7 @@ export default function SignUp() {
                 className=""
                 name="ProfileURL:"
                 setImage={setImage}
+                ref={profileImageRef}
               />
               <button
                 className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
@@ -146,7 +140,7 @@ export default function SignUp() {
                 className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
                 onClick={handleGoogleClick}
               >
-                <Image src={GoogleLogo} alt='Google Logo' />
+                <Image src={GoogleLogo} alt="Google Logo" />
                 Register with Google
               </button>
               {message}

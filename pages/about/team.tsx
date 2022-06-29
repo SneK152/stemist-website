@@ -11,11 +11,10 @@ import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 import { Tab } from "@headlessui/react";
 import TeamHeader from "@/components/team/TeamHeader";
-
-const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
-const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
-const Person = dynamic(() => import("@/components/team/Person"));
-const Carousel = dynamic(() => import("@/components/team/Carousel"));
+import TeamSection from "@/components/pages/TeamSection";
+import LargePerson from "@/components/team/LargePerson";
+import Person from "@/components/team/Person";
+import Carousel from "@/components/team/Carousel";
 
 function getTeachers() {
   let teacherRoles: TeacherSubject[] = [];
