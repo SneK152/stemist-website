@@ -22,8 +22,8 @@ export default function Footer() {
     <footer className="bg-black text-white py-5">
       <div className="padded-section">
         <div className="flex flex-col gap-5">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-            <div className="col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-10">
+            <div className="col-span-3 mb-5">
               <p className="text-base font-light hidden lg:block">
                 STEMist is a 501(c)3 nonprofit based at Lynbrook High School.
                 Founded in the summer of 2020, its goal of teaching kids STEM is
@@ -42,8 +42,8 @@ export default function Footer() {
                 manage the organization.
               </p>
             </div>
-            <div className="flex w-full col-span-2">
-              <div className="w-full">
+            <div className="flex md:hidden lg:flex justify-between lg:justify-end gap-10 w-full col-span-2">
+              <div className="text-left">
                 <h1 className="font-medium text-xl">About Us</h1>
                 <div className="flex flex-col text-base">
                   {aboutLinks.map((link) => (
@@ -53,7 +53,7 @@ export default function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="w-full">
+              <div className="text-right">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (

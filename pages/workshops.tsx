@@ -117,15 +117,15 @@ interface CurriculumCardProps {
 function CurriculumCard(props: CurriculumCardProps) {
   return (
     <Card title={props.title}>
-      <h1 className="text-neutral-100 text-center font-writing text-xl">
+      <h1 className="text-black text-center font-display text-xl">
         {props.subtitle}
       </h1>
       <br />
       <div>{props.children}</div>
-      <br />
+      <h1 className="font-display mt-3">Presented By</h1>
       <div className="grid text-left">
         <div
-          className={`h-32 w-full overflow-hidden rounded-lg bg-white text-black shadow p-3`}
+          className={`h-32 w-full overflow-hidden rounded-lg text-black p-3`}
         >
           <Person person={{ ...props.person, positions: [] }} />
         </div>

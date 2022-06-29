@@ -22,7 +22,7 @@ export default function Section({
         <h1 className="text-4xl font-bold py-2">{title}</h1>
         <p className="text-xl font-sans text-clip">{children}</p>
         <br />
-        <p className="col-span-9 font-writing h-auto text-left">
+        <p className="col-span-9 font-display h-auto text-left">
           <span className="block italic text-sm sm:text-lg">
             &quot;{selectedQuote.quote}&quot;
           </span>
@@ -41,7 +41,7 @@ export default function Section({
             className="rounded-2xl"
           />
         </div>
-        <figcaption className="text-base p-1 font-writing text-gray-200">
+        <figcaption className="text-base p-1 font-display text-gray-200">
           {caption}
         </figcaption>
       </figure>

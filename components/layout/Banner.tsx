@@ -21,7 +21,7 @@ export default function Banner({
   const onScreen = useOnScreen(titleDiv);
   return (
     <>
-      <div className="fixed w-screen z-50 left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
+      {/* <div className="fixed w-screen z-50 left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
         <Transition
           show={!onScreen}
           as={Fragment}
@@ -40,7 +40,7 @@ export default function Banner({
             <ChevronUpIcon className="h-9 w-9" />
           </button>
         </Transition>
-      </div>
+      </div> */}
       <CTABanner full={full} />
       <div
         className={`${

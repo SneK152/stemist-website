@@ -21,10 +21,7 @@ export default function Index() {
             data-aos-anchor="#top"
           >
             Accelerating education with{" "}
-            <span className="bg-[linear-gradient(0deg,#AD5E5C_6px,transparent_7px);]">
-              engaging
-            </span>{" "}
-            workshops
+            <span className="text-blue">engaging</span> workshops
           </h1>
           <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl">
             <div
@@ -39,7 +36,7 @@ export default function Index() {
           {/* <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
             {events.map((e) => (
               <div className="flex flex-col" key={e}>
-                <h2 className="uppercase font-writing text-xs sm:text-sm text-left">
+                <h2 className="uppercase font-display text-xs sm:text-sm text-left">
                   upcoming event
                 </h2>
                 <h1 className="font-sans sm:text-xl text-left">{e}</h1>
