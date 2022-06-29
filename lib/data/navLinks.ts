@@ -62,7 +62,7 @@ export const navLinks: NavLink[] = [
     class: "projects",
   },
   {
-    name: "Summer Classes",
+    name: "Summer Registration",
     link: "/programs",
     class: "projects",
     customProps: {
