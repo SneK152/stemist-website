@@ -1,5 +1,3 @@
-import { getAuth, signOut } from "firebase/auth";
-
 export type NavLink = {
   name: string;
   link?: string;
@@ -9,6 +7,7 @@ export type NavLink = {
   dropdown?: boolean;
   customProps?: { [key: string]: any };
   class?: "about" | "projects";
+  image?: string;
 };
 
 export type NavLinks = NavLink[];

@@ -90,6 +90,7 @@ export default function Navbar({
                           href={navLink.link}
                           via={navLink.via}
                           link={navLink.func}
+                          image={navLink.image}
                           {...navLink.customProps}
                         >
                           {navLink.name}

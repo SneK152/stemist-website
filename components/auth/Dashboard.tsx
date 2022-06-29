@@ -1,6 +1,4 @@
 import { NavLinks } from "@/lib/data/navLinks";
-import useAuth from "@/lib/hooks/useAuth";
-import { useData } from "@/lib/hooks/useData";
 import StudentData from "@/lib/types/StudentData";
 import { getAuth, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
@@ -11,7 +9,7 @@ import PartialBanner from "../layout/PartialBanner";
 
 export default function Dashboard(props: { user: StudentData }) {
   const router = useRouter();
-  const dashboardNav: NavLinks = useMemo(
+  const dashboardNav = useMemo<NavLinks>(
     () =>
       props.user === null || props.user === undefined
         ? [
@@ -34,6 +32,7 @@ export default function Dashboard(props: { user: StudentData }) {
               customProps: {
                 className: "cursor-auto",
               },
+              image: props.user.profileUrl,
             },
             {
               name: "Logout",

@@ -7,7 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
-import { memo, useState, ReactNode, useRef, useEffect } from "react";
+import { memo, useState, useRef, useEffect, useCallback } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import * as Yup from "yup";
@@ -39,9 +39,15 @@ export default function SignUp() {
     }
   }, [user, router]);
 
-  const [message, setMessage] = useState<ReactNode>(<></>);
-  const profileImageRef = useRef<File | null | any>();
+  const [message, setMessage] = useState<string>("");
+  const profileImageRef = useRef<any>();
   const [image, setImage] = useState<string>("");
+
+  const handleError = useCallback((e: FirebaseError) => {
+    let code = e.code.substring(5).replace(/-/g, " ");
+    code = code.charAt(0).toUpperCase() + code.slice(1);
+    setMessage(code);
+  }, []);
 
   async function handleGoogleClick() {
     let GoogleProvider = new GoogleAuthProvider();
@@ -51,7 +57,6 @@ export default function SignUp() {
         GoogleProvider
       );
       const { user } = response;
-      let userId = user.uid;
       let name = user.displayName!;
       let profileURL = user.photoURL!;
       await fetchUser("POST", user.uid, {
@@ -59,11 +64,9 @@ export default function SignUp() {
         profileUrl: profileURL,
       });
     } catch (error) {
-      let parts = (error as FirebaseError).code.split("/")[0] as string;
-      setMessage(<p>{parts[1]}</p>);
+      handleError(error as FirebaseError);
     }
   }
-
   const formik = useFormik<SignUpForm>({
     initialValues: {
       email: "",
@@ -75,21 +78,32 @@ export default function SignUp() {
       { email, password, name },
       { resetForm, setSubmitting, setErrors }
     ) => {
-      setSubmitting(true);
-      const { user } = await createUserWithEmailAndPassword(
-        getAuth(getFirebase()),
-        email,
-        password
-      );
-      const url = await uploadProfilePic(
-        profileImageRef.current!.files[0],
-        user.uid
-      );
-      await fetchUser("POST", user.uid, {
-        name,
-        profileUrl: url,
-      });
-      setSubmitting(false);
+      try {
+        // setSubmitting(true);
+        const { user } = await createUserWithEmailAndPassword(
+          getAuth(getFirebase()),
+          email,
+          password
+        );
+        if (profileImageRef.current!.files.length === 0) {
+          await fetchUser("POST", user.uid, {
+            name,
+            profileUrl: "/avatar.svg",
+          });
+          // setSubmitting(false);
+        }
+        const url = await uploadProfilePic(
+          profileImageRef.current!.files[0],
+          user.uid
+        );
+        await fetchUser("POST", user.uid, {
+          name,
+          profileUrl: url,
+        });
+        // setSubmitting(false);
+      } catch (error) {
+        handleError(error as FirebaseError);
+      }
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -146,7 +160,7 @@ export default function SignUp() {
                   <Image src={Google} alt="Google Logo" />
                   Login with Google
                 </button>
-                {message}
+                <div className="text-red">{message}</div>
               </div>
             </div>
           </form>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import NavLinkProps from "@/lib/types/NavLinkProps";
 import { useMemo } from "react";
+import Image from "next/image";
+import { useData } from "@/lib/hooks/useData";
 
 export default function NavLink({
   children,
@@ -13,6 +15,7 @@ export default function NavLink({
   color = "white",
   textColor = "black",
   target = "_self",
+  image,
 }: NavLinkProps) {
   const router = useRouter();
   const classes = useMemo(
@@ -34,7 +37,18 @@ export default function NavLink({
         </Link>
       )}
       {via === "function" && (
-        <button onClick={link!} className={`${className || ""} `}>
+        <button
+          onClick={link!}
+          className={`${className || ""} flex items-center gap-1`}
+        >
+          {image && (
+            <Image
+              src={image}
+              alt="User profile picture"
+              height={32}
+              width={32}
+            />
+          )}
           <li className={classes}>{children}</li>
         </button>
       )}
