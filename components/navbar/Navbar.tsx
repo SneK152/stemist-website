@@ -90,6 +90,8 @@ export default function Navbar({
                         <NavLink
                           key={index}
                           href={navLink.link}
+                          via={navLink.via}
+                          link={navLink.func}
                           {...navLink.customProps}
                         >
                           {navLink.name}
@@ -97,6 +99,7 @@ export default function Navbar({
                       ))}
                       {!hacks && (
                         <NavLink
+                          via={'link'}
                           main
                           href="/"
                           color="blue-500 bg-opacity-80 hover:bg-opacity-90"
@@ -116,8 +119,10 @@ export default function Navbar({
                       {navLinks.map((navLink, index) =>
                         !navLink.dropdown ? (
                           <NavLink
+                            via={navLink.via}
                             key={index}
                             href={navLink.link}
+                            link={navLink.func}
                             {...(navLink.customProps
                               ? navLink.customProps
                               : {})}
@@ -135,7 +140,7 @@ export default function Navbar({
                           >
                             {navLink.dropdownItems?.map((item, i) => (
                               <DropdownButton
-                                href={item.link}
+                                href={item.link!}
                                 key={i}
                                 target={item.customProps?.target || "_self"}
                               >
@@ -174,7 +179,9 @@ export default function Navbar({
                             {!navLink.dropdown ? (
                               <Disclosure.Button key={i} className="block">
                                 <NavLink
+                                  via={navLink.via}
                                   href={navLink.link}
+                                  link={navLink.func}
                                   {...(navLink.customProps
                                     ? navLink.customProps
                                     : {})}
@@ -235,6 +242,7 @@ export default function Navbar({
                         <>
                           <div className="h-2"></div>
                           <NavLink
+                            via={'link'}
                             main
                             href="/"
                             color="blue-500 bg-opacity-80 hover:bg-opacity-90"

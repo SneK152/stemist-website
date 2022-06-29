@@ -4,7 +4,9 @@ import NavLinkProps from "@/lib/types/NavLinkProps";
 
 export default function NavLink({
   children,
-  href,
+  href ="#",
+  link = () => alert(`Click for function`),
+  via,
   className,
   main = false,
   color = "white",
@@ -20,11 +22,15 @@ export default function NavLink({
           : `text-white`
       } ${router.pathname === href ? "font-bold" : "font-normal"}`}
     >
-      <Link href={href}>
+
+      {via === 'link' && <Link href={href!}>
         <a className={`${className || ""}`} target={target}>
           {children}
         </a>
-      </Link>
+      </Link>}
+      {via === 'function' && <button onClick={link!} className={`${className || ""} `}>
+        {children}
+      </button>}
     </li>
   );
 }

@@ -8,6 +8,9 @@ import {
 } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
 import { memo } from "react";
+import Container from '@/components/layout/Container';
+import PartialBanner from '@/components/layout/PartialBanner';
+import Image from 'next/image'
 
 interface LoginFormik {
   email: string;
@@ -16,6 +19,9 @@ interface LoginFormik {
 const MInputField = memo(InputField);
 
 export default function Login() {
+
+  const GoogleLogo = require('./Google.png')
+
   const formik = useFormik<LoginFormik>({
     initialValues: {
       email: "",
@@ -36,20 +42,39 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={formik.handleSubmit}>
-        <MInputField formik={formik} labelName={"Email:"} name={"email"} />
-        <MInputField
-          type="password"
-          formik={formik}
-          labelName={"Password:"}
-          name={"password"}
-        />
-        <button type="submit">Submit</button>
-        <button onClick={handleGoogleClick}>
-          or login with google
-        </button>
+    <Container title="Auth | Login">
+      <PartialBanner title="Login" />
+      <form
+        onSubmit={formik.handleSubmit}
+        className="w-full space-y-3 bg-opacity-90 rounded-3xl bg-slate-800 p-5"
+      >
+        <div className="w-full space-y-3 rounded-lg p-4">
+          <MInputField
+            formik={formik}
+            labelName={"Email:"}
+            name={"email"}
+          />
+          <MInputField
+            type="password"
+            formik={formik}
+            labelName={"Password:"}
+            name={"password"}
+          />
+          <button type="submit">
+            Submit
+          </button>
+          <button
+            className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
+            onClick={handleGoogleClick}
+          >
+            <Image
+              src={GoogleLogo}
+              alt='Google Logo'
+            />
+            Register with Google
+          </button>
+        </div>
       </form>
-    </div>
+    </Container>
   );
 }
