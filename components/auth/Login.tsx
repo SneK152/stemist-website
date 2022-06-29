@@ -13,8 +13,7 @@ import PartialBanner from "@/components/layout/PartialBanner";
 import Image from "next/image";
 import { useData } from "@/lib/hooks/useData";
 import { useRouter } from "next/router";
-import { GetServerSideProps } from "next";
-import cookies from "next-cookies";
+import Google from "@/public/google.svg";
 
 interface LoginFormik {
   email: string;
@@ -23,7 +22,6 @@ interface LoginFormik {
 const MInputField = memo(InputField);
 
 export default function Login() {
-  const GoogleLogo = require("./Google.png");
   const user = useData();
   const router = useRouter();
 
@@ -53,30 +51,42 @@ export default function Login() {
   }
 
   return (
-    <Container title="Auth | Login">
-      <PartialBanner title="Login" />
-      <form
-        onSubmit={formik.handleSubmit}
-        className="w-full space-y-3 bg-opacity-90 rounded-3xl bg-slate-800 p-5"
-      >
-        <div className="w-full space-y-3 rounded-lg p-4">
-          <MInputField formik={formik} labelName={"Email:"} name={"email"} />
-          <MInputField
-            type="password"
-            formik={formik}
-            labelName={"Password:"}
-            name={"password"}
-          />
-          <button type="submit">Submit</button>
-          <button
-            className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
-            onClick={handleGoogleClick}
-          >
-            <Image src={GoogleLogo} alt="Google Logo" />
-            Register with Google
-          </button>
+    <Container title="Dashboard Login">
+      <PartialBanner title="Dashboard Login" />
+      <div>
+        <div className="py-3 flex-col flex gap-5 padded-section">
+          <form onSubmit={formik.handleSubmit} className="w-full">
+            <div className="w-full space-y-3 rounded-lg">
+              <MInputField
+                labelName="Email address"
+                name="email"
+                type="email"
+                formik={formik}
+              />
+              <MInputField
+                labelName="Password"
+                formik={formik}
+                name="password"
+              />
+              <div className="relative m-auto flex w-full gap-5 sm:w-1/2">
+                <button
+                  type="submit"
+                  className="relative block w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                >
+                  Submit
+                </button>
+                <button
+                  className="relative w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 flex items-center gap-2 justify-center"
+                  onClick={handleGoogleClick}
+                >
+                  <Image src={Google} alt="Google Logo" />
+                  Login with Google
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </Container>
   );
 }

@@ -7,7 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
-import { memo, useState, ReactNode, useRef } from "react";
+import { memo, useState, ReactNode, useRef, useEffect } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import * as Yup from "yup";
@@ -16,8 +16,9 @@ import Image from "next/image";
 import FileInput from "../layout/FileInput";
 import { fetchUser } from "@/lib/auth/fetch";
 import { FirebaseError } from "firebase/app";
-
-const GoogleLogo = require("./Google.png");
+import Google from "@/public/google.svg";
+import { useData } from "@/lib/hooks/useData";
+import { useRouter } from "next/router";
 
 interface SignUpForm {
   email: string;
@@ -29,9 +30,18 @@ interface SignUpForm {
 const MInputField = memo(InputField);
 
 export default function SignUp() {
+  const user = useData();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user !== null && user.name !== "") {
+      router.push("/dashboard");
+    }
+  }, [user, router]);
+
   const [message, setMessage] = useState<ReactNode>(<></>);
-  const [image, setImage] = useState<any>();
   const profileImageRef = useRef<File | null | any>();
+  const [image, setImage] = useState<string>("");
 
   async function handleGoogleClick() {
     let GoogleProvider = new GoogleAuthProvider();
@@ -75,7 +85,6 @@ export default function SignUp() {
         profileImageRef.current!.files[0],
         user.uid
       );
-      // TODO: Add name and pfp uploads
       await fetchUser("POST", user.uid, {
         name,
         profileUrl: url,
@@ -88,6 +97,7 @@ export default function SignUp() {
         .min(3, "Must be more than 3 characters")
         .max(500, "Cannot be longer than 500 characters")
         .required("Required"),
+      name: Yup.string().required("Required"),
     }),
   });
 
@@ -95,17 +105,9 @@ export default function SignUp() {
     <Container title="Auth | Register">
       <PartialBanner title="Register" />
       <div>
-        <div className="mx-auto py-3 flex-col flex gap-5 sm:px-6 lg:px-8 max-w-[100rem] px-2">
-          <h1 className="font-sans text-xl text-center max-w-[80ch] m-auto">
-            Fill out this form if you would like to contact us, if you have
-            feedback on one of our recent sessions, or if you would like to
-            provide a testimonial. We will reach out to you within 2-5 days.
-          </h1>
-          <form
-            onSubmit={formik.handleSubmit}
-            className="w-full space-y-3 bg-opacity-90 rounded-3xl bg-slate-800 p-5"
-          >
-            <div className="w-full space-y-3 rounded-lg p-4">
+        <div className="py-3 flex-col flex gap-5 padded-section">
+          <form onSubmit={formik.handleSubmit} className="w-full">
+            <div className="w-full space-y-3 rounded-lg">
               <MInputField
                 labelName="Email address"
                 name="email"
@@ -114,7 +116,6 @@ export default function SignUp() {
               />
               <MInputField
                 labelName="Password"
-                type="password"
                 formik={formik}
                 name="password"
               />
@@ -127,23 +128,26 @@ export default function SignUp() {
               <FileInput
                 className=""
                 name="ProfileURL:"
-                setImage={setImage}
                 ref={profileImageRef}
+                setImage={setImage}
+                image={image}
               />
-              <button
-                className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
-                type="submit"
-              >
-                Submit
-              </button>
-              <button
-                className="relative m-auto block w-full rounded-md border border-transparent bg-white bg-opacity-5 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
-                onClick={handleGoogleClick}
-              >
-                <Image src={GoogleLogo} alt="Google Logo" />
-                Register with Google
-              </button>
-              {message}
+              <div className="relative m-auto flex w-full gap-5 sm:w-1/2">
+                <button
+                  type="submit"
+                  className="relative block w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                >
+                  Submit
+                </button>
+                <button
+                  className="relative w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 flex items-center gap-2 justify-center"
+                  onClick={handleGoogleClick}
+                >
+                  <Image src={Google} alt="Google Logo" />
+                  Login with Google
+                </button>
+                {message}
+              </div>
             </div>
           </form>
         </div>

@@ -1,10 +1,8 @@
 import _Login from "@/components/auth/Login";
-import { useData } from "@/lib/hooks/useData";
 import { GetServerSideProps } from "next";
 import cookies from "next-cookies";
 
 export default function Login() {
-  const user = useData();
   return <_Login />;
 }
 
