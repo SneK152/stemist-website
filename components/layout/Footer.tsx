@@ -47,7 +47,7 @@ export default function Footer() {
                 <h1 className="font-medium text-xl">About Us</h1>
                 <div className="flex flex-col text-base">
                   {aboutLinks.map((link) => (
-                    <Link href={link.link} key={link.name}>
+                    <Link href={link.link!} key={link.name}>
                       <a target={link.customProps?.target}>{link.name}</a>
                     </Link>
                   ))}
@@ -57,7 +57,7 @@ export default function Footer() {
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (
-                    <Link href={link.link} key={link.name}>
+                    <Link href={link.link!} key={link.name}>
                       <a target={link.customProps?.target}>{link.name}</a>
                     </Link>
                   ))}
