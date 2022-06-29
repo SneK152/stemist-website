@@ -13,16 +13,19 @@ export default function Dashboard() {
             {
               name: "Login",
               link: "/auth/login",
+              via: "link",
             },
             {
               name: "Register",
               link: "/auth/register",
+              via: "link",
             },
           ]
         : [
             {
               name: "Logged in as" + user.displayName,
               link: "/dashboard",
+              via: "link",
             },
           ],
     [user]
