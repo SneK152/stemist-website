@@ -21,6 +21,7 @@ const people: ExtendedPerson[] = [
       "Two Year Science Bowl Competitor",
       "Over Two Years of Teaching Experience",
     ],
+    email: "steveyang@joinstemist.org",
   },
   {
     name: "Justin Zhang",
@@ -37,6 +38,7 @@ const people: ExtendedPerson[] = [
       "First place winner in many CA Hackathons",
       "Two Year Coder",
     ],
+    email: "justinzhang20711@gmail.com",
   },
   {
     name: "Isaac Sun",
@@ -53,6 +55,7 @@ const people: ExtendedPerson[] = [
       "Berkeley Math Tournament Honorable Mentions",
       "AP Calculus BC Freshman Student",
     ],
+    email: "isaacsun@joinstemist.org",
   },
   {
     name: "Johnathan Kao",
@@ -86,6 +89,7 @@ const people: ExtendedPerson[] = [
       "Advanced Javascript and React Developer",
       "Skilled with Python and Node.js",
     ],
+    email: "snehilkakani@joinstemist.org",
   },
   {
     name: "Selena Yang",
@@ -106,6 +110,7 @@ const people: ExtendedPerson[] = [
       "Second and Third Place Science Olympiad",
       "Top 50 USABO",
     ],
+    email: "syang.yy@gmail.com",
   },
   {
     name: "Anish Bhethanabotla",
@@ -126,6 +131,7 @@ const people: ExtendedPerson[] = [
       "Science Olympiad Team C Astronomy",
       "Multiple time Hackathon winner",
     ],
+    email: "abhethan631@gmail.com",
   },
   {
     name: "Sanya Badhe",
@@ -151,6 +157,7 @@ const people: ExtendedPerson[] = [
       "Distinguished Honor Roll Berkeley Math Tournament",
       "USACO Silver Competitor",
     ],
+    email: "sanyabadhe@joinstemist.org",
   },
   {
     name: "Shanker Ram",
@@ -171,6 +178,7 @@ const people: ExtendedPerson[] = [
       "Multiple time Hackathon winner",
       "Experience with Information Theory",
     ],
+    email: "shankerram@joinstemist.org",
   },
   {
     name: "Jianyu Wang",
@@ -178,7 +186,6 @@ const people: ExtendedPerson[] = [
     description:
       "Jianyu Wang is a chemistry fan and a random-facts-rookie who enjoys Wikipedia and harnessing the limitless potential of unnecessary stress.",
   },
-
   {
     name: "Harold Wang",
     teacherRoles: ["Biology"],
@@ -235,6 +242,7 @@ const people: ExtendedPerson[] = [
     image: resolveTeamImage("Sriman Ratnapu"),
     description:
       "Sriman is a freshman at Lynbrook High School likes to play video games and read books.",
+    email: "srimanratnapu@joinstemist.org",
   },
   {
     name: "Annie Li",
@@ -315,6 +323,7 @@ const people: ExtendedPerson[] = [
       "4 Time Science Olympiad Champion",
       "Second Place State Competition Science Olympiad",
     ],
+    email: "aryanpatnaik@joinstemist.org",
   },
   {
     name: "Kasturi Kirubaharan",
