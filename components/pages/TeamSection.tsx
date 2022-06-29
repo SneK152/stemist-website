@@ -1,7 +1,6 @@
 import Person from "@/lib/types/Person";
 import { FC, ReactNode } from "react";
 import PersonProps from "@/lib/types/PersonProps";
-import useWindowSize from "@/lib/hooks/useWindowSize";
 
 interface TeamSectionProps {
   people: Person[];

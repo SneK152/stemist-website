@@ -9,7 +9,6 @@ import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 import { Tab } from "@headlessui/react";
-import TeamHeader from "@/components/team/TeamHeader";
 import TeamSection from "@/components/pages/TeamSection";
 import LargePerson from "@/components/team/LargePerson";
 import Person from "@/components/team/Person";
@@ -66,10 +65,10 @@ export default function Team(props: TeamProps) {
       />
       <div>
         <Tab.Group>
-          <Tab.List className="flex gap-4 pt-1 pb-[0.5px] px-3 mx-5 border-y border-purple padded-section">
+          <Tab.List className="flex gap-4 pt-1 pb-[5px] px-2 mx-5 border-y border-purple padded-section">
             <Tab
               className={({ selected }) =>
-                `text-xl font-display py-1 border-b-4 focus:outline-none ${
+                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
                     ? "font-light border-red"
                     : "font-light border-transparent"
@@ -80,18 +79,18 @@ export default function Team(props: TeamProps) {
             </Tab>
             <Tab
               className={({ selected }) =>
-                `text-xl font-display py-1 border-b-4 focus:outline-none ${
+                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
                     ? "font-light border-black"
                     : "font-light border-transparent"
                 }`
               }
             >
-              Officer Team
+              Officers
             </Tab>
             <Tab
               className={({ selected }) =>
-                `text-xl font-display py-1 border-b-4 focus:outline-none ${
+                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
                     ? "font-light border-black"
                     : "font-light border-transparent"
@@ -102,7 +101,7 @@ export default function Team(props: TeamProps) {
             </Tab>
             <Tab
               className={({ selected }) =>
-                `text-xl font-display py-1 border-b-4 focus:outline-none ${
+                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
                   selected
                     ? "font-light border-black"
                     : "font-light border-transparent"
@@ -115,12 +114,10 @@ export default function Team(props: TeamProps) {
           <Tab.Panels className="padded-section mx-auto">
             <Tab.Panel className="focus:outline-none">
               <div>
-                <TeamHeader title="Weekly Mentor Spotlight" />
                 <Carousel data={props.data} />
               </div>
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader title="Officer Team" />
               <TeamSection
                 component={MemoedLargePerson}
                 title="Officers"
@@ -129,9 +126,6 @@ export default function Team(props: TeamProps) {
               />
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader
-                title="Instructors" /* subheader="Our LOREM IPSUM"*/
-              />
               <div className="text-black py-3">
                 <div className="m-auto flex justify-center">
                   <div className="inline-block pb-3">
@@ -158,9 +152,6 @@ export default function Team(props: TeamProps) {
               </div>
             </Tab.Panel>
             <Tab.Panel className="focus:outline-none">
-              <TeamHeader
-                title="Other Volunteers" /*subheader="LOREM IPSUM"*/
-              />
               <TeamSection
                 component={MemoedPerson}
                 people={staff}

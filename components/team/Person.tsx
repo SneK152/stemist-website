@@ -46,7 +46,7 @@ export default function Person(props: PersonProps) {
           </div>
           {(props.person.qualifications || props.person.description) && (
             <button
-              className="mt-1 bg-red  px-3 py-1 text-black font-display text-xs block m-0.5 w-min whitespace-nowrap rounded-lg bg-opacity-40"
+              className="mt-1 bg-red px-3 py-1 text-white font-display text-xs block m-0.5 w-min whitespace-nowrap rounded-md bg-opacity-50 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none"
               onClick={() => setOpen(true)}
             >
               {props.person.qualifications ? "Experience" : "About"}
@@ -114,7 +114,7 @@ export default function Person(props: PersonProps) {
                 </div>
                 <div className="mt-1">
                   <button
-                    className="m-auto bg-red bg-opacity-40 px-3 py-1 shadow-md rounded-lg text-black font-display text-sm"
+                    className="m-auto bg-red px-3 py-1 rounded-md bg-opacity-50 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none text-white font-display text-sm"
                     onClick={() => setOpen(false)}
                   >
                     Back
