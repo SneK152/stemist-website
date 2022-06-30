@@ -53,13 +53,13 @@ export default function Navbar({
                   <Link href="/">
                     <a>
                       <h1 className="font-display text-2xl font-bold">
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 p-1">
                           <Image
                             src="/logo-white.png"
                             alt="STEMist Education"
                             priority
-                            height={55.3}
-                            width={166.6}
+                            height={47.005}
+                            width={141.61}
                             className="select-none"
                           />
                         </div>
@@ -159,7 +159,7 @@ export default function Navbar({
               <Disclosure.Panel className="lg:hidden">
                 {() => (
                   <div
-                    className={`absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${"bg-black bg-opacity-100"}`}
+                    className={`absolute w-full -translate-x-4 sm:-translate-x-8 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${"bg-black bg-opacity-100"}`}
                   >
                     <ul>
                       {(customNav.length ? customNav : navLinks).map(

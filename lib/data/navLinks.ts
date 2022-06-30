@@ -70,7 +70,7 @@ export const navLinks: NavLink[] = [
     via: "link",
   },
   {
-    name: "Summer Registration",
+    name: "Class Registration",
     link: "/programs",
     class: "projects",
     via: "link",

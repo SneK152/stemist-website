@@ -7,8 +7,11 @@ import Image from "next/image";
 
 export default function Programs() {
   return (
-    <Container title="Summer Classes">
-      <PartialBanner title="Summer Classes" />
+    <Container title="Class Registration">
+      <PartialBanner
+        title="Summer Class Registration"
+        subheader="Join in on the interactive STEM learning experience"
+      />
       <h1 className="text-center font-display text-4xl font-bold mb-8">
         Course Description
       </h1>

@@ -88,7 +88,10 @@ export default function About() {
   );
   return (
     <Container title="Gallery">
-      <PartialBanner title="Gallery" />
+      <PartialBanner
+        title="Gallery"
+        subheader="A collection of some of our most memorable moments"
+      />
       <div className="m-3 p-4 space-y-5 padded-section mx-auto">
         <Gallery
           photos={photos}

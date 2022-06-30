@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PersonProps from "@/lib/types/PersonProps";
+import { MailIcon } from "@heroicons/react/outline";
 
 export default function LargePerson(props: PersonProps) {
   return (
@@ -36,6 +37,20 @@ export default function LargePerson(props: PersonProps) {
                   )
               )}
             </div>
+            <a
+              href={
+                "mailto:" +
+                props.person.email! +
+                "?body=" +
+                encodeURI(
+                  "\n\n\n\n\n\nSent from the official website of STEMist Education - joinstemist.org"
+                )
+              }
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <MailIcon className="h-6 w-6 ml-1 inline-block" />
+            </a>
           </span>
         </h1>
       </div>

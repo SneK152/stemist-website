@@ -1,8 +1,8 @@
-import useLocalStorage from "@/lib/hooks/useLocalStorage";
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
+import { useState } from "react";
 
 export default function CTABanner({ full = false }: { full?: boolean }) {
-  const [show, setShow] = useLocalStorage("showBanner", true);
+  const [show, setShow] = useState(true);
   return show ? (
     <div
       className={`bg-blue-600 absolute w-full z-30 ${

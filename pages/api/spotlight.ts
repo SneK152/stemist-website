@@ -26,5 +26,10 @@ export default async function handler(
   await db.collection("spotlight").doc("spotlight").set({
     spotlight: file,
   });
-  res.status(200).json({});
+  try {
+    await res.revalidate("/about/team");
+    return res.status(200).json({});
+  } catch {
+    return res.status(500).send("error revalidating");
+  }
 }

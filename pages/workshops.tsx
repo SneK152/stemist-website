@@ -11,8 +11,11 @@ export default function Curriculum() {
     return teachers.find((person) => person.name === name)!;
   }, []);
   return (
-    <Container title="Workshop Recap">
-      <PartialBanner title="Workshop Recap" />
+    <Container title="Prior Workshops">
+      <PartialBanner
+        title="Prior Workshops"
+        subheader="Our interactive session details and recordings spanning the last several years"
+      />
       <h1 className="text-center font-display font-bold text-5xl mb-5">
         Recordings
       </h1>
