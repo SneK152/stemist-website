@@ -1,4 +1,5 @@
 import admin from "firebase-admin";
+import { getFirestore } from "firebase-admin/firestore";
 import { App, getApp, getApps } from "firebase-admin/app";
 let app: App;
 
@@ -10,7 +11,7 @@ app = getApps().length
       ),
     });
 
-const db = admin.firestore(app);
+const db = getFirestore(app);
 
 try {
   db.settings({

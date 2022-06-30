@@ -15,7 +15,3 @@ export default async function handler(
     res.status(500).send("error revalidating");
   }
 }
-
-export const config = {
-  runtime: "experimental-edge",
-};
