@@ -54,7 +54,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="text-right">
-                <h1 className="font-medium text-xl hidden">STEMist Projects</h1>
+                <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (
                     <Link href={link.link} key={link.name}>
