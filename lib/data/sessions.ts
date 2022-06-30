@@ -309,7 +309,7 @@ export const sessionData: Session[] = [
         date: "Monday, November 23rd, 2020",
       },
       {
-        teacher: "yours truly",
+        teacher: "Steve Yang",
         title: "EPD",
         date: "Tuesday, November 24th, 2020",
       },
