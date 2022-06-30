@@ -14,12 +14,12 @@ const projectLinks = [
   ...navLinks.filter((l) => l.class === "projects" && !l.dropdown),
 ];
 
-const workshopLinks = [
-  ...navLinks
-    .find((l) => l.dropdown && l.class === "workshops")
-    ?.dropdownItems?.filter((l) => l.class === "workshops")!,
-  ...navLinks.filter((l) => l.class === "workshops" && !l.dropdown),
-];
+// const workshopLinks = [
+//   ...navLinks
+//     .find((l) => l.dropdown && l.class === "workshops")
+//     ?.dropdownItems?.filter((l) => l.class === "workshops")!,
+//   ...navLinks.filter((l) => l.class === "workshops" && !l.dropdown),
+// ];
 
 export default function Footer() {
   return (
@@ -57,7 +57,7 @@ export default function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="text-left">
+              {/* <div className="text-left">
                 <h1 className="font-medium text-xl">Past Events</h1>
                 <div className="flex flex-col text-base">
                   {workshopLinks.map((link) => (
@@ -66,7 +66,7 @@ export default function Footer() {
                     </Link>
                   ))}
                 </div>
-              </div>
+              </div> */}
               <div className="text-right">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
