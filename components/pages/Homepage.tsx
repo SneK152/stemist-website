@@ -5,7 +5,7 @@ import { FC, ReactNode } from "react";
 import Link from "next/link";
 
 const E = ({ children }: { children: ReactNode }) => (
-  <span className="text-red">{children}</span>
+  <span className="text-purple">{children}</span>
 );
 
 export default function Homepage() {
@@ -45,7 +45,7 @@ export default function Homepage() {
         >
           Our{" "}
           <Link href="/programs">
-            <a className="underline decoration-red underline-offset-1">
+            <a className="underline decoration-purple underline-offset-1">
               <E>Summer 2022 STEM Course</E>
             </a>
           </Link>{" "}
@@ -60,7 +60,7 @@ export default function Homepage() {
           side="left"
         >
           <Link href="/hacks">
-            <a className="underline decoration-red underline-offset-1 text">
+            <a className="underline decoration-purple underline-offset-1 text">
               <E>STEMist Hacks</E>
             </a>
           </Link>{" "}
