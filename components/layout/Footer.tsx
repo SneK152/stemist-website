@@ -75,7 +75,7 @@ export default function Footer() {
               width={166.6}
               className="select-none"
             />
-            <h1 className="mr-auto font-display text-xs sm:text-sm lg:text-base">
+            <h1 className="mr-auto font-display text-xs sm:text-sm lg:text-base hidden md:block">
               Copyright © 2022 STEMist Education. All Rights Reserved.
             </h1>
             <ul className="flex gap-3 items-center justify-start mb-2">
@@ -92,6 +92,9 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          <h1 className="mr-auto font-display text-xs sm:text-sm lg:text-base md:hidden block">
+            Copyright © 2022 STEMist Education. All Rights Reserved.
+          </h1>
         </div>
       </div>
     </footer>
