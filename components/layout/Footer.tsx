@@ -3,8 +3,6 @@ import socials from "@/lib/data/socials";
 import Image from "next/image";
 import Link from "next/link";
 
-console.log([...navLinks].find((l) => l.dropdown && l.class === "about")!);
-
 const aboutLinks = [
   ...navLinks
     .find((l) => l.dropdown && l.class === "about")
