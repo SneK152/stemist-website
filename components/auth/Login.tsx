@@ -7,13 +7,15 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
-import { memo, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Image from "next/image";
 import { useData } from "@/lib/hooks/useData";
 import { useRouter } from "next/router";
 import Google from "@/public/google.svg";
+import { FirebaseError } from "firebase/app";
+import * as Yup from "yup";
 
 interface LoginFormik {
   email: string;
@@ -24,6 +26,13 @@ const MInputField = memo(InputField);
 export default function Login() {
   const user = useData();
   const router = useRouter();
+  const [message, setMessage] = useState("");
+
+  const handleError = (e: FirebaseError) => {
+    let code = e.code.substring(5).replace(/-/g, " ");
+    code = code.charAt(0).toUpperCase() + code.slice(1);
+    setMessage(code);
+  };
 
   useEffect(() => {
     if (user !== null && user.name !== "") {
@@ -40,14 +49,33 @@ export default function Login() {
       { email, password },
       { resetForm, setSubmitting, setErrors }
     ) => {
-      resetForm();
-      await signInWithEmailAndPassword(getAuth(getFirebase()), email, password);
+      try {
+        resetForm();
+        await signInWithEmailAndPassword(
+          getAuth(getFirebase()),
+          email,
+          password
+        );
+      } catch (e) {
+        handleError(e as FirebaseError);
+      }
     },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Invalid email address").required("Required"),
+      password: Yup.string()
+        .min(3, "Must be more than 3 characters")
+        .max(500, "Cannot be longer than 500 characters")
+        .required("Required"),
+    }),
   });
 
   async function handleGoogleClick() {
-    let GoogleProvider = new GoogleAuthProvider();
-    await signInWithPopup(getAuth(getFirebase()), GoogleProvider);
+    try {
+      let GoogleProvider = new GoogleAuthProvider();
+      await signInWithPopup(getAuth(getFirebase()), GoogleProvider);
+    } catch (e) {
+      handleError(e as FirebaseError);
+    }
   }
 
   return (
@@ -67,7 +95,16 @@ export default function Login() {
                 labelName="Password"
                 formik={formik}
                 name="password"
+                type="password"
               />
+              <div
+                className="text-red text-center mx-auto w-1/2"
+                style={{
+                  display: message ? "" : "none",
+                }}
+              >
+                {message}
+              </div>
               <div className="relative m-auto flex w-full gap-5 sm:w-1/2">
                 <button
                   type="submit"

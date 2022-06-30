@@ -7,7 +7,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import getFirebase from "@/lib/hooks/getFirebase";
-import { memo, useState, useRef, useEffect, useCallback } from "react";
+import { memo, useState, useRef, useEffect } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
 import * as Yup from "yup";
@@ -117,8 +117,8 @@ export default function SignUp() {
   });
 
   return (
-    <Container title="Auth | Register">
-      <PartialBanner title="Register" />
+    <Container title="Dashboard Register">
+      <PartialBanner title="Dashboard Register" />
       <div>
         <div className="py-3 my-3 flex-col flex gap-5 padded-section">
           <form onSubmit={formik.handleSubmit} className="w-full">
@@ -133,6 +133,7 @@ export default function SignUp() {
                 labelName="Password"
                 formik={formik}
                 name="password"
+                type="password"
               />
               <MInputField
                 labelName="Name"
@@ -147,6 +148,14 @@ export default function SignUp() {
                 setImage={setImage}
                 image={image}
               />
+              <div
+                className="text-red text-center mx-auto w-1/2"
+                style={{
+                  display: message ? "" : "none",
+                }}
+              >
+                {message}
+              </div>
               <div className="relative m-auto flex w-full gap-5 sm:w-1/2">
                 <button
                   type="submit"
@@ -162,10 +171,6 @@ export default function SignUp() {
                   Login with Google
                 </button>
               </div>
-              <div
-                className="text-red-800 text-center border-2 rounded-md bg-green-200 border-slate-400 mx-auto w-1/2"
-                style={{ marginTop: '1.5rem', display: message ? '' : 'hidden' }}
-              >{message}</div>
             </div>
           </form>
         </div>
