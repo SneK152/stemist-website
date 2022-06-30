@@ -3,18 +3,24 @@ import socials from "@/lib/data/socials";
 import Image from "next/image";
 import Link from "next/link";
 
+console.log([...navLinks].find((l) => l.dropdown && l.class === "about")!);
+
 const aboutLinks = [
   ...navLinks
-    .find((l) => l.dropdown)
+    .find((l) => l.dropdown && l.class === "about")
     ?.dropdownItems?.filter((l) => l.class === "about")!,
-  ...navLinks.filter((l) => l.class === "about"),
+  ...navLinks.filter((l) => l.class === "about" && !l.dropdown),
 ];
 
 const projectLinks = [
+  ...navLinks.filter((l) => l.class === "projects" && !l.dropdown),
+];
+
+const workshopLinks = [
   ...navLinks
-    .find((l) => l.dropdown)
-    ?.dropdownItems?.filter((l) => l.class === "projects")!,
-  ...navLinks.filter((l) => l.class === "projects"),
+    .find((l) => l.dropdown && l.class === "workshops")
+    ?.dropdownItems?.filter((l) => l.class === "workshops")!,
+  ...navLinks.filter((l) => l.class === "workshops" && !l.dropdown),
 ];
 
 export default function Footer() {
@@ -47,6 +53,16 @@ export default function Footer() {
                 <h1 className="font-medium text-xl">About Us</h1>
                 <div className="flex flex-col text-base">
                   {aboutLinks.map((link) => (
+                    <Link href={link.link} key={link.name}>
+                      <a target={link.customProps?.target}>{link.name}</a>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className="text-left">
+                <h1 className="font-medium text-xl">Past Events</h1>
+                <div className="flex flex-col text-base">
+                  {workshopLinks.map((link) => (
                     <Link href={link.link} key={link.name}>
                       <a target={link.customProps?.target}>{link.name}</a>
                     </Link>
