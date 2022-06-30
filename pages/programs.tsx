@@ -7,13 +7,17 @@ import Image from "next/image";
 
 export default function Programs() {
   return (
-    <Container title="Summer Classes">
-      <PartialBanner title="Summer Classes" />
-      <h1 className="text-center font-display text-4xl font-bold mb-5">
+    <Container title="Class Registration">
+      <PartialBanner
+        title="Summer Class Registration"
+        subheader="Join in on the interactive STEM learning experience"
+      />
+      <h1 className="text-center font-display text-4xl font-bold mb-8">
         Course Description
       </h1>
-      <div className="grid grid-cols-8 padded-section">
-        <div className="col-span-2">
+      <div className="grid grid-cols-14 mx-[12.5%] gap-3 padded-section">
+        <div className="col-span-1"></div>
+        <div className="col-span-4">
           <Image
             src="/summer-flyer.png"
             alt="Flyer for STEMist Summer Class 2022"
@@ -22,7 +26,7 @@ export default function Programs() {
             layout="responsive"
           />
         </div>
-        <div className="col-span-6 flex justify-center gap-3 flex-col items-center px-5">
+        <div className="col-span-8 flex justify-center gap-3 flex-col items-center px-5">
           <p className="text-3xl">
             STEMist is proud to announce our Summer 2022 Course from 6/13 to
             7/24. Classes are 1 to 1.5 hours long and four unique classes are

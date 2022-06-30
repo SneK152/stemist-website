@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PersonProps from "@/lib/types/PersonProps";
+import { MailIcon } from "@heroicons/react/outline";
 
 export default function LargePerson(props: PersonProps) {
   return (
@@ -23,7 +24,7 @@ export default function LargePerson(props: PersonProps) {
           >
             {props.person.name}
             <br />
-            <div className="font-writing flex flex-wrap gap-1">
+            <div className="font-display flex flex-wrap gap-1">
               {props.person.positions.map(
                 (pos, index) =>
                   !props.person.positions.includes("Head of " + pos) && (
@@ -36,11 +37,25 @@ export default function LargePerson(props: PersonProps) {
                   )
               )}
             </div>
+            <a
+              href={
+                "mailto:" +
+                props.person.email! +
+                "?body=" +
+                encodeURI(
+                  "\n\n\n\n\n\nSent from the official website of STEMist Education - joinstemist.org"
+                )
+              }
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <MailIcon className="h-6 w-6 ml-1 inline-block" />
+            </a>
           </span>
         </h1>
       </div>
       {props.person.description && (
-        <p className="max-w-[40ch] font-writing text-lg transition-all group-hover:block mx-auto">
+        <p className="max-w-[40ch] font-display text-lg transition-all group-hover:block mx-auto">
           {props.person.description}
         </p>
       )}

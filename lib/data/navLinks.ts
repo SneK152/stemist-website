@@ -1,14 +1,13 @@
-import { getAuth, signOut } from "firebase/auth";
-
 export type NavLink = {
   name: string;
   link?: string;
   func?: any;
-  via: 'function' | 'link';
+  via: "function" | "link";
   dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems" | "via">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
   class?: "about" | "projects";
+  image?: string;
 };
 
 export type NavLinks = NavLink[];
@@ -17,22 +16,22 @@ export const navLinks: NavLink[] = [
   {
     name: "Home",
     link: "/",
-    via: 'link'
+    via: "link",
   },
   {
     name: "About Us",
     link: "/about",
     dropdown: true,
-    via: 'link',
+    via: "link",
     dropdownItems: [
       {
         name: "Meet the Team",
         link: "/about/team",
-        class: "about"
+        class: "about",
       },
       {
         name: "Contact Us",
-        link: "/about/contact"
+        link: "/about/contact",
       },
       {
         name: "Team Applications",
@@ -40,12 +39,12 @@ export const navLinks: NavLink[] = [
         class: "about",
         customProps: {
           target: "_blank",
-        }
+        },
       },
       {
         name: "Gallery",
         link: "/about/gallery",
-        class: "about"
+        class: "about",
       },
     ],
   },
@@ -53,13 +52,13 @@ export const navLinks: NavLink[] = [
     name: "STEMist Hacks",
     link: "/hacks",
     class: "projects",
-    via: 'link'
+    via: "link",
   },
   {
     name: "Prior Workshops",
     link: "/workshops",
     class: "about",
-    via: 'link'
+    via: "link",
   },
   {
     name: "WEBS Studio",
@@ -68,13 +67,18 @@ export const navLinks: NavLink[] = [
       target: "_blank",
     },
     class: "projects",
-    via: 'link'
+    via: "link",
   },
   {
-    name: "Summer Classes",
+    name: "Class Registration",
     link: "/programs",
     class: "projects",
-    via: 'link'
+    via: "link",
+    customProps: {
+      main: true,
+      color: "transparent",
+      textColor: "white",
+    },
   },
   {
     name: "Dashboard",
@@ -82,30 +86,17 @@ export const navLinks: NavLink[] = [
     customProps: {
       main: true,
       color: "red",
-      textColor: "white"
+      textColor: "white",
     },
-    via: 'link'
+    via: "link",
   },
-  {
-    name: "Logout",
-    func: async () => {
-      const auth = getAuth()
-      await signOut(auth)
-    },
-    customProps: {
-      main: true,
-      color: "red",
-      textColor: "white"
-    },
-    via: 'function'
-  }
 ];
 
 export const hackathonNavLinks: NavLink[] = [
   {
     name: "Home",
     link: "/hacks",
-    via: 'link'
+    via: "link",
   },
   {
     name: "Sign Up",
@@ -113,6 +104,6 @@ export const hackathonNavLinks: NavLink[] = [
     customProps: {
       target: "_blank",
     },
-    via: 'link'
+    via: "link",
   },
 ];

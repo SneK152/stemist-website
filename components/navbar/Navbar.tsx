@@ -13,7 +13,7 @@ import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
 import { NavLinks, navLinks } from "@/lib/data/navLinks";
 import { useRouter } from "next/router";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 
 export default function Navbar({
   noNav,
@@ -27,41 +27,39 @@ export default function Navbar({
   hacks?: boolean;
 }) {
   const router = useRouter();
-  const [bgVisible, setBgVisible] = useState(false);
-  useEffect(() => {
-    const callback = () => {
-      if (window.scrollY >= 80) {
-        setBgVisible(true);
-      } else {
-        setBgVisible(false);
-      }
-    };
-    window.addEventListener("scroll", callback);
-    return () => window.removeEventListener("scroll", callback);
-  }, []);
+  // const [bgVisible, setBgVisible] = useState(false);
+  // useEffect(() => {
+  //   const callback = () => {
+  //     if (window.scrollY >= 80) {
+  //       setBgVisible(true);
+  //     } else {
+  //       setBgVisible(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", callback);
+  //   return () => window.removeEventListener("scroll", callback);
+  // }, []);
   return (
     <>
       <div id="top"></div>
       <Disclosure as={Fragment}>
         {({ open }) => (
           <nav
-            className={`fixed z-50 w-full ${
-              bgVisible ? "bg-black bg-opacity-100" : "bg-transparent"
-            } transition-all duration-500`}
+            className={`fixed z-50 w-full ${"bg-black bg-opacity-100"} transition-all duration-500`}
           >
             <div className="padded-section">
-              <div className="flex justify-between py-3 font-writing">
+              <div className="flex justify-between py-3 font-display">
                 <div className="flex items-center gap-1">
                   <Link href="/">
                     <a>
                       <h1 className="font-display text-2xl font-bold">
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 p-1">
                           <Image
                             src="/logo-white.png"
                             alt="STEMist Education"
                             priority
-                            height={55.3}
-                            width={166.6}
+                            height={47.005}
+                            width={141.61}
                             className="select-none"
                           />
                         </div>
@@ -92,6 +90,7 @@ export default function Navbar({
                           href={navLink.link}
                           via={navLink.via}
                           link={navLink.func}
+                          image={navLink.image}
                           {...navLink.customProps}
                         >
                           {navLink.name}
@@ -99,7 +98,7 @@ export default function Navbar({
                       ))}
                       {!hacks && (
                         <NavLink
-                          via={'link'}
+                          via={"link"}
                           main
                           href="/"
                           color="blue-500 bg-opacity-80 hover:bg-opacity-90"
@@ -160,11 +159,7 @@ export default function Navbar({
               <Disclosure.Panel className="lg:hidden">
                 {() => (
                   <div
-                    className={`absolute w-full -translate-x-2 sm:-translate-x-6 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${
-                      bgVisible
-                        ? "bg-black bg-opacity-100"
-                        : "bg-transparent bg-opacity-100"
-                    }`}
+                    className={`absolute w-full -translate-x-4 sm:-translate-x-8 space-y-1 object-cover px-2 pt-2 pb-3 transition-all duration-500 ${"bg-black bg-opacity-100"}`}
                   >
                     <ul>
                       {(customNav.length ? customNav : navLinks).map(
@@ -195,7 +190,7 @@ export default function Navbar({
                             ) : (
                               <Disclosure key={i}>
                                 <Disclosure.Button
-                                  className={`block font-writing text-lg underline-offset-1 whitespace-nowrap text-white ${
+                                  className={`block font-display text-lg underline-offset-1 whitespace-nowrap text-white ${
                                     navLink.dropdownItems!.some(
                                       (dropDownItem) =>
                                         dropDownItem.link === router.pathname
@@ -215,7 +210,7 @@ export default function Navbar({
                                     (item: any, i: any) => (
                                       <Link key={i} href={item.link}>
                                         <a
-                                          className={`block ml-3 font-writing text-white ${
+                                          className={`block ml-3 font-display text-white ${
                                             router.pathname === item.link
                                               ? "font-extrabold"
                                               : "font-normal"
@@ -242,7 +237,7 @@ export default function Navbar({
                         <>
                           <div className="h-2"></div>
                           <NavLink
-                            via={'link'}
+                            via={"link"}
                             main
                             href="/"
                             color="blue-500 bg-opacity-80 hover:bg-opacity-90"

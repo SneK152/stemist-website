@@ -7,7 +7,7 @@ import Qualifications from "./Qualifications";
 export default function Person(props: PersonProps) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="group flex w-72 h-full flex-row mx-auto items-center gap-5">
+    <div className="group flex w-80 h-full flex-row mx-auto items-center gap-5">
       <div
         className={`${
           props.person.description || props.person.qualifications ? "" : ""
@@ -31,7 +31,7 @@ export default function Person(props: PersonProps) {
         >
           {props.person.name}
           <br />
-          <div className="font-writing flex flex-wrap gap-1">
+          <div className="font-display flex flex-wrap gap-1">
             {(props.roles ? props.roles : props.person.positions).map(
               (pos, index) =>
                 !props.person.positions.includes("Head of " + pos) && (
@@ -46,7 +46,7 @@ export default function Person(props: PersonProps) {
           </div>
           {(props.person.qualifications || props.person.description) && (
             <button
-              className="mt-1 bg-red  px-3 py-1 text-black font-writing text-xs block m-0.5 w-min whitespace-nowrap rounded-lg bg-opacity-40"
+              className="mt-1 bg-red px-3 py-1 text-white font-display text-xs block m-0.5 w-min whitespace-nowrap rounded-md bg-opacity-70 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none outline-none"
               onClick={() => setOpen(true)}
             >
               {props.person.qualifications ? "Experience" : "About"}
@@ -55,7 +55,7 @@ export default function Person(props: PersonProps) {
         </span>
         {/* {props.person.description && (
           <p
-            className={`hidden max-w-[40ch] font-writing ${
+            className={`hidden max-w-[40ch] font-display ${
               props.person.qualifications ? "text-xs" : "text-sm"
             } transition-all group-hover:block mx-auto`}
           >
@@ -114,7 +114,7 @@ export default function Person(props: PersonProps) {
                 </div>
                 <div className="mt-1">
                   <button
-                    className="m-auto bg-red bg-opacity-40 px-3 py-1 shadow-md rounded-lg text-black font-writing text-sm"
+                    className="m-auto bg-red px-3 py-1 rounded-md bg-opacity-70 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none text-white font-display text-sm outline-none"
                     onClick={() => setOpen(false)}
                   >
                     Back

@@ -22,8 +22,8 @@ export default function Footer() {
     <footer className="bg-black text-white py-5">
       <div className="padded-section">
         <div className="flex flex-col gap-5">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-            <div className="col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-10">
+            <div className="col-span-3 mb-5">
               <p className="text-base font-light hidden lg:block">
                 STEMist is a 501(c)3 nonprofit based at Lynbrook High School.
                 Founded in the summer of 2020, its goal of teaching kids STEM is
@@ -42,22 +42,22 @@ export default function Footer() {
                 manage the organization.
               </p>
             </div>
-            <div className="flex w-full col-span-2">
-              <div className="w-full">
+            <div className="flex md:hidden lg:flex justify-between lg:justify-end gap-10 w-full col-span-2">
+              <div className="text-left">
                 <h1 className="font-medium text-xl">About Us</h1>
                 <div className="flex flex-col text-base">
                   {aboutLinks.map((link) => (
-                    <Link href={link.link} key={link.name}>
+                    <Link href={link.link!} key={link.name}>
                       <a target={link.customProps?.target}>{link.name}</a>
                     </Link>
                   ))}
                 </div>
               </div>
-              <div className="w-full">
+              <div className="text-left">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (
-                    <Link href={link.link} key={link.name}>
+                    <Link href={link.link!} key={link.name}>
                       <a target={link.customProps?.target}>{link.name}</a>
                     </Link>
                   ))}
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
           </div>
           <hr className="border-[1.5px]" />
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center gap-3">
             <Image
               src="/logo-white.png"
               alt="STEMist Education"
@@ -75,6 +75,9 @@ export default function Footer() {
               width={166.6}
               className="select-none"
             />
+            <h1 className="mr-auto font-display text-xs sm:text-sm lg:text-base">
+              Copyright © 2022 STEMist Education. All Rights Reserved.
+            </h1>
             <ul className="flex gap-3 items-center justify-start mb-2">
               {socials.map((social, index) => (
                 <li key={index}>

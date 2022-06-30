@@ -29,7 +29,7 @@ export default function Counter(props: {
   return (
     <div className="flex flex-col gap-2 h-full text-white p-5 justify-center">
       <span
-        className={`text-6xl font-display font-light w-full text-center ${
+        className={`text-7xl font-display font-light w-full text-center ${
           props.className || ""
         }`}
       >
@@ -37,7 +37,7 @@ export default function Counter(props: {
         <span ref={countUpRef}>{value}</span>
         {props.symbol && <span>{props.symbol}</span>}
       </span>
-      <div className="text-center text-lg font-light">{props.text}</div>
+      <div className="text-center text-xl font-light">{props.text}</div>
     </div>
   );
 }

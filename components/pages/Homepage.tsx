@@ -1,10 +1,12 @@
 import HomeColumn from "./HomeColumn";
 import Counter from "./Counter";
 import HomeSection from "../layout/HomeSection";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Link from "next/link";
 
-const E: FC = ({ children }) => <span className="text-red">{children}</span>;
+const E = ({ children }: { children: ReactNode }) => (
+  <span className="text-red">{children}</span>
+);
 
 export default function Homepage() {
   return (

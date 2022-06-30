@@ -13,33 +13,17 @@ export default function Index() {
     <Container title="Home">
       <div>
         <Banner image="/homepage2.jpeg" full>
-          <h1
-            className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-5 max-w-[28ch]"
-            data-aos="fade-right"
-            data-aos-delay={0}
-            data-aos-duration={600}
-            data-aos-anchor="#top"
-          >
+          <h1 className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mb-5 max-w-[28ch]">
             Accelerating education with{" "}
-            <span className="bg-[linear-gradient(0deg,#AD5E5C_6px,transparent_7px);]">
-              engaging
-            </span>{" "}
-            workshops
+            <span className="text-blue">engaging</span> workshops
           </h1>
           <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl">
-            <div
-              data-aos="fade-up"
-              data-aos-delay={400}
-              data-aos-duration={600}
-              data-aos-anchor="#top"
-            >
-              Welcome to STEMist Education, a 501(c)3 nonprofit
-            </div>
+            <div>Welcome to STEMist Education, a 501(c)3 nonprofit</div>
           </span>
           {/* <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
             {events.map((e) => (
               <div className="flex flex-col" key={e}>
-                <h2 className="uppercase font-writing text-xs sm:text-sm text-left">
+                <h2 className="uppercase font-display text-xs sm:text-sm text-left">
                   upcoming event
                 </h2>
                 <h1 className="font-sans sm:text-xl text-left">{e}</h1>

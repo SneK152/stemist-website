@@ -8,7 +8,7 @@
   }
 }
 .padded-section {
-  @apply px-2 sm:px-6 lg:px-6 max-w-[100rem] mx-auto w-full;
+  @apply px-4 sm:px-8 lg:px-10 max-w-[100rem] mx-auto w-full;
 }
 
 html {
@@ -26,6 +26,10 @@ body {
 
 .hacks > section:nth-last-child(1) {
   @apply mb-5;
+}
+
+.grid-cols-14 {
+  grid-template-columns: repeat(14, minmax(0, 1fr));
 }
 
 ::-webkit-scrollbar {

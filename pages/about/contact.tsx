@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import { CheckIcon, XIcon } from "@heroicons/react/outline";
 import { useFormik } from "formik";
 import InputField from "@/components/forms/InputField";
-import dynamic from "next/dynamic";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
 
@@ -101,7 +100,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="relative m-auto block w-full rounded-md border border-transparent bg-black bg-opacity-25 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
+                className="relative m-auto block w-full rounded-none border border-transparent bg-black bg-opacity-25 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:w-1/2"
               >
                 {submit}
               </button>

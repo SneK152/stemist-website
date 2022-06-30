@@ -84,7 +84,7 @@ export default function FAQ() {
         ))}
       </div>
       <br />
-      <h1 className="text-xl text-center font-writing">
+      <h1 className="text-xl text-center font-display">
         Email{" "}
         <a
           className="text-blue-500"
