@@ -1,13 +1,21 @@
+import { useSpringCarousel } from "react-spring-carousel";
 import CarouselPerson from "./CarouselPerson";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import TeamProps from "@/lib/types/TeamProps";
 
 export default function Carousel(props: TeamProps) {
+  const { carouselFragment, slideToPrevItem, slideToNextItem } =
+    useSpringCarousel({
+      withLoop: true,
+      disableGestures: true,
+      items: props.data.map((person) => ({
+        id: person.name,
+        renderItem: <CarouselPerson person={person} />,
+      })),
+    });
   return (
-    <div className="relative overflow-hidden text-black">
-      {props.data.map((person) => (
-        <CarouselPerson person={person} key={person.name} />
-      ))}
-      {/* <button
+    <div className="relative bg-white rounded-lg mb-10 overflow-hidden text-black">
+      <button
         className="absolute h-full top-0 bottom-0 left-0 z-[1] flex items-center justify-center sm:w-[5%] w-[10%] p-0 text-black text-center bg-none border-0"
         onClick={slideToPrevItem}
       >
@@ -19,7 +27,7 @@ export default function Carousel(props: TeamProps) {
         onClick={slideToNextItem}
       >
         <ChevronRightIcon className="w-9 h-9 bg-gray-500 bg-opacity-25 rounded-lg shadow-lg p-1" />
-      </button> */}
+      </button>
     </div>
   );
 }

@@ -10,7 +10,6 @@ type Person<T = string> = {
     bio?: string[];
     phys?: string[];
   };
-  email?: string;
 };
 
 export interface ExtendedPerson {
@@ -27,7 +26,6 @@ export interface ExtendedPerson {
     bio?: string[];
     phys?: string[];
   };
-  email?: string;
 }
 
 export type TeacherSubject =

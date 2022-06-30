@@ -14,11 +14,6 @@ const aboutLinks: PageLinks[] = [
     description: "If you would like to learn about our team, go here!",
     url: "/team",
   },
-  {
-    name: "Contact Us",
-    description: "If you would like to contact us, go here!",
-    url: "/contact",
-  },
 ];
 
 export default function AboutUs() {

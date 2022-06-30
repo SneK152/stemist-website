@@ -37,7 +37,7 @@ export default function Question({
         style={answerSpring}
         className={`rounded-lg pl-2 ${
           open ? "" : "select-none -z-10"
-        } font-display bg-transparent`}
+        } font-writing bg-transparent text-white`}
       >
         {answer}
       </animated.div>

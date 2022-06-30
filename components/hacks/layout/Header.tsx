@@ -53,11 +53,7 @@ function Description() {
   );
 }
 
-export default function Header({
-  image = "/homepage2.jpeg",
-}: {
-  image?: string;
-}) {
+export default function Header({ image = '/homepage2.jpg' }: { image?: string }) {
   return (
     <div className="bg-[#060249] bg-opacity-10">
       <Banner image={image} full href="#about">

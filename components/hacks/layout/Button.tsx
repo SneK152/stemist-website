@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 export default function Button({
-  className = "px-10 py-4 m-5 rounded-lg font-bold",
+  className = "px-10 py-4 m-5 rounded-lg font-bold text-white",
   children,
   start = "#4C514A",
   end = "#6C3B2A",

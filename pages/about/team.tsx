@@ -4,15 +4,18 @@ import teachers from "@/lib/data/team/teachers";
 import { GetStaticProps } from "next";
 import TeamProps from "@/lib/types/TeamProps";
 import db from "@/lib/serverApp";
+// import directors from "@/lib/data/team/directors";
 import officers from "@/lib/data/team/officers";
+import dynamic from "next/dynamic";
 import { TeacherSubject } from "@/lib/types/Person";
 import PartialBanner from "@/components/layout/PartialBanner";
 import Container from "@/components/layout/Container";
-import { Tab } from "@headlessui/react";
-import TeamSection from "@/components/pages/TeamSection";
-import LargePerson from "@/components/team/LargePerson";
-import Person from "@/components/team/Person";
-import Carousel from "@/components/team/Carousel";
+import useWindowSize from "@/lib/hooks/useWindowSize";
+
+const TeamSection = dynamic(() => import("@/components/pages/TeamSection"));
+const LargePerson = dynamic(() => import("@/components/team/LargePerson"));
+const Person = dynamic(() => import("@/components/team/Person"));
+const Carousel = dynamic(() => import("@/components/team/Carousel"));
 
 function getTeachers() {
   let teacherRoles: TeacherSubject[] = [];
@@ -59,108 +62,53 @@ export default function Team(props: TeamProps) {
 
   return (
     <Container title="Our Team">
-      <PartialBanner
-        title="Meet the Team"
-        subheader="The dedicated and innovative people that make us who we are"
-      />
-      <div>
-        <Tab.Group>
-          <Tab.List className="flex gap-1 sm:gap-4 sm:pt-1 sm:pb-[5px] px-2 mx-5 border-y border-purple padded-section flex-wrap sm:flex-nowrap">
-            <Tab
-              className={({ selected }) =>
-                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
-                }`
-              }
-            >
-              Weekly Mentor Spotlight
-            </Tab>
-            <Tab
-              className={({ selected }) =>
-                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
-                }`
-              }
-            >
-              Officers
-            </Tab>
-            <Tab
-              className={({ selected }) =>
-                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
-                }`
-              }
-            >
-              Instructors
-            </Tab>
-            <Tab
-              className={({ selected }) =>
-                `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
-                }`
-              }
-            >
-              Other Volunteers
-            </Tab>
-          </Tab.List>
-          <Tab.Panels className="padded-section mx-auto">
-            <Tab.Panel className="focus:outline-none">
-              <div>
-                <Carousel data={props.data} />
-              </div>
-            </Tab.Panel>
-            <Tab.Panel className="focus:outline-none">
-              <TeamSection
-                component={MemoedLargePerson}
-                title="Officers"
-                people={officers}
-                large
-              />
-            </Tab.Panel>
-            <Tab.Panel className="focus:outline-none">
-              <div className="text-black py-3">
-                <div className="m-auto flex justify-center">
-                  <div className="inline-block pb-3">
-                    {teacherRoles.map((role, index) => (
-                      <FilterButton
-                        key={index}
-                        name={role}
-                        active={activeTeacher === role}
-                        onClick={() => setActiveTeacher(role)}
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {memoedTeachers.map((person, index) => (
-                    <div
-                      key={index}
-                      className="h-36 w-full overflow-hidden border-2 border-opacity-10 border-black p-3"
-                    >
-                      <MemoedPerson person={person} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Tab.Panel>
-            <Tab.Panel className="focus:outline-none">
-              <TeamSection
-                component={MemoedPerson}
-                people={staff}
-                title="Staff"
-              />
-            </Tab.Panel>
-          </Tab.Panels>
-        </Tab.Group>
+      <PartialBanner title="Meet the Team" />
+      <h1 className="font-display mb-8 text-center text-4xl  md:text-5xl lg:text-7xl font-bold text-white">
+        Weekly Mentor Spotlight
+      </h1>
+      <div className="max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto">
+        <Carousel data={props.data} />
       </div>
+      {/* <TeamSection
+        component={MemoedLargePerson}
+        title="Board of Directors"
+        people={directors}
+        large
+      /> */}
+      <TeamSection
+        component={MemoedLargePerson}
+        title="Officers"
+        people={officers}
+        large
+      />
+      <div className="scroll-mt-20 m-auto max-w-[100rem] px-2 py-5 sm:px-6 lg:px-6 text-black">
+        <h1 className="font-display mb-3 text-center text-5xl font-bold text-white">
+          Instructors
+        </h1>
+        <div className="m-auto flex justify-center">
+          <div className="inline-block pb-3">
+            {teacherRoles.map((role, index) => (
+              <FilterButton
+                key={index}
+                name={role}
+                active={activeTeacher === role}
+                onClick={() => setActiveTeacher(role)}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="grid gap-2 pb-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {memoedTeachers.map((person, index) => (
+            <div
+              key={index}
+              className="h-36 w-full overflow-hidden rounded-lg bg-white p-3 shadow-lg shadow-black/25"
+            >
+              <MemoedPerson person={person} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <TeamSection component={MemoedPerson} people={staff} title="Staff" />
     </Container>
   );
 }
@@ -177,8 +125,8 @@ function FilterButton({
   return (
     <button
       className={`${
-        active ? "bg-red text-white" : "bg-gray-200 text-black"
-      } font-display m-1 rounded-lg py-1 px-3 text-lg`}
+        active ? "bg-blue-200" : "bg-gray-200"
+      } font-writing m-1 rounded-lg py-1 px-3 text-lg shadow-lg shadow-white/20 text-black`}
       onClick={onClick}
     >
       {name}
@@ -192,5 +140,6 @@ export const getStaticProps: GetStaticProps<TeamProps> = async () => {
     props: {
       data: spotlight.data()!.spotlight,
     },
+    revalidate: 60,
   };
 };

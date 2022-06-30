@@ -11,9 +11,9 @@ export default function Schedule() {
           <time dateTime="2022-06-26 14:00-07:00">2PM Sunday (6/26)</time>
         </h1>
       </div>
-      <div className="grid sm:grid-cols-1 lg:grid-cols-3 rounded-lg">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 bg-black bg-opacity-20 rounded-lg">
         <div className="grid mb-auto">
-          <h1 className="py-3 text-xl font-display font-semibold text-center">
+          <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
             <time dateTime="2022-06-24">Friday, June 24th</time>
           </h1>
           <Event
@@ -53,7 +53,7 @@ export default function Schedule() {
           />
         </div>
         <div className="grid mb-auto">
-          <h1 className="py-3 text-xl font-display font-semibold text-center">
+          <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
             <time dateTime="2022-06-25">Saturday, June 25th</time>
           </h1>
           <Event
@@ -88,7 +88,7 @@ export default function Schedule() {
           />
         </div>
         <div className="grid mb-auto">
-          <h1 className="py-3 text-xl font-display font-semibold text-center">
+          <h1 className="text-white py-3 text-xl font-display font-semibold text-center">
             <time dateTime="2022-06-26">Sunday, June 26th</time>
           </h1>
           <Event

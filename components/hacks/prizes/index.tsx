@@ -4,10 +4,10 @@ import Section from "@/components/hacks/layout/Section";
 import Prize from "./prize";
 import Counter from "@/components/pages/Counter";
 
-export default function PrizesSection({ inverted = false }: { inverted?: boolean }) {
+export default function PrizesSection() {
   return (
-    <Section name="Prizes" inverted>
-      <div className="rounded-lg w-full">
+    <Section name="Prizes">
+      <div className="text-white rounded-lg w-full">
         <PrizeSection title="Winners" filter="winners" />
         <PrizeSection title="Popular Vote" filter="everyone" />
         <PrizeSection title="Raffle" filter="raffle" />

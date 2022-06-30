@@ -8,7 +8,6 @@ const staff: Person[] = people
     positions: person.officerRoles!,
     description: person.description,
     image: person.image,
-    email: person.email!,
   }));
 
 export default staff;

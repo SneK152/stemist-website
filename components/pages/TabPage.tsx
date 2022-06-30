@@ -3,7 +3,6 @@ import { Tab } from "@headlessui/react";
 import teachers from "@/lib/data/team/teachers";
 import Person from "../team/Person";
 import type person from "@/lib/types/Person";
-
 const csTeachers = [...teachers]
   .filter((person) => person.positions.includes("Computer Science"))
   .sort((a, b) =>
@@ -42,14 +41,12 @@ const bioTeachers = [...teachers]
   );
 
 export default function TabPage() {
-  let [categories] = useState<
-    {
-      name: "cs" | "phys" | "math" | "bio";
-      title: string;
-      description: string;
-      teachers: person[];
-    }[]
-  >([
+  let [categories] = useState<{
+    name: 'cs' | 'phys' | 'math' | 'bio',
+    title: string,
+    description: string,
+    teachers: person[]
+  }[]>([
     {
       name: "cs",
       title: "Computer Science",
@@ -69,6 +66,7 @@ export default function TabPage() {
       title: "Math",
       description:
         "Welcome to the math branch of STEMist! Here, you'll dive into the fundamentals of competition math. Our curriculum has been carefully designed to cover the 4 main topics that appear in math contests: Algebra, Combinatorics, Geometry, and Number Theory. Whilst in classes, students can not only expect to be taught necessary skills, but also be taught to apply these skills through challenging and rewarding problems. Our instructors are tremendously qualified, having won many high-level awards in contests like the AMC 8/10/12 and Math Kangaroo, and have qualified for the AIME numerous amount of times. They have more than a year of teaching experience and are always open to answering any difficult questions that may come with the twists and turns of mathematics.",
+
       teachers: mathTeachers,
     },
     {
@@ -81,17 +79,15 @@ export default function TabPage() {
   ]);
 
   return (
-    <div className="w-full padded-section">
+    <div className="w-full max-w-[100rem] mx-auto px-2 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 p-1">
+        <Tab.List className="flex space-x-1 rounded-xl bg-white bg-opacity-[.15] p-1">
           {categories.map((category) => (
             <Tab
               key={category.title}
               className={({ selected }) =>
-                `w-full p-2 flex flex-col justify-center items-center font-display text-xl text-center transition-colors focus:outline-none ${
-                  selected
-                    ? "font-semibold bg-black bg-opacity-10 border-2 border-opacity-10 border-black"
-                    : "border-2 border-opacity-10 border-black"
+                `w-full rounded-lg p-2 shadow-lg flex flex-col justify-center items-center font-writing text-xl text-center transition-colors ${
+                  selected ? "bg-black shadow" : "hover:bg-white/[0.1]"
                 }`
               }
             >
@@ -107,11 +103,11 @@ export default function TabPage() {
             >
               <div>{c.description}</div>
               <br />
-              <div className="grid text-left gap-3 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+              <div className="grid text-left gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {c.teachers.map((t, index) => (
                   <div
                     key={index}
-                    className={`h-32 w-full overflow-hidden border-2 border-opacity-10 border-black p-3`}
+                    className={`h-32 w-full overflow-hidden rounded-lg bg-white text-black shadow p-3`}
                   >
                     <Person
                       person={t}

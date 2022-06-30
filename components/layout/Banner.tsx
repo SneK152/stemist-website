@@ -21,7 +21,7 @@ export default function Banner({
   const onScreen = useOnScreen(titleDiv);
   return (
     <>
-      {/* <div className="fixed w-screen z-50 left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
+      <div className="fixed w-screen z-50 left-0 top-0 h-screen flex justify-end items-end pointer-events-none">
         <Transition
           show={!onScreen}
           as={Fragment}
@@ -33,47 +33,44 @@ export default function Banner({
           leaveTo="opacity-50 scale-50"
         >
           <button
-            className="z-50 pointer-events-auto bg-purple rounded-full p-3 m-5"
+            className="z-50 pointer-events-auto bg-green bg-opacity-80 backdrop-blur-sm rounded-full p-2 m-5"
             onClick={scrollTo("#top")}
             tabIndex={-1}
           >
-            <ChevronUpIcon className="h-9 w-9" />
+            <ChevronUpIcon className="h-8 w-8" />
           </button>
         </Transition>
-      </div> */}
+      </div>
       <CTABanner full={full} />
       <div
         className={`${
-          full
-            ? "h-[100vh] short:h-[70vh] sm:h-screen"
-            : "sm:h-[70vh] h-[50vh] mb-5"
-        } object-cover relative`}
+          full ? "h-screen" : "sm:h-[50vh] h-[30vh] mb-10"
+        } object-cover relative mt-20`}
         ref={titleDiv}
       >
         <Image
           src={image}
           alt="Background for page"
           layout="fill"
-          className="-z-10 pointer-events-none h-full w-full select-none absolute object-cover brightness-[.60]"
+          className="-z-10 pointer-events-none blur-[2px] h-full w-full select-none absolute object-cover [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0));]"
           priority
-          objectPosition="bottom center"
         />
-        <div className="h-full w-full -z-20 bg-black absolute" />
+        <div className="h-full w-full [-webkit-mask-image:-webkit-gradient(linear,left_top,left_bottom,from(rgba(0,0,0,1)),to(rgba(0,0,0,0.3)));] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0.3));] -z-20 bg-black absolute" />
         <div
-          className={`flex h-full w-full items-end ${
+          className={`flex h-full w-full items-center ${
             full ? "justify-center" : "justify-start"
           }`}
         >
           <div
-            className={`py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
+            className={`absolute py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 short:-mt-20 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
-                : "bg-transparent h-auto sm:h-56 self-end sm:translate-y-10 lg:translate-y-0"
-            } padded-section`}
+                : "bg-transparent h-auto w-3/4 sm:w-3/4 sm:h-56 translate-y-5 pl-2 sm:pl-6 lg:pl-6"
+            }`}
           >
             {children}
             {full && (
-              <div className="absolute h-[90%] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] sm:-mt-20">
+              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-20">
                 <button
                   className="animate-bounce"
                   onClick={scrollTo(href)}

@@ -7,13 +7,13 @@
     aspect-ratio: auto !important;
   }
 }
-.padded-section {
-  @apply px-4 sm:px-8 lg:px-10 max-w-[100rem] mx-auto w-full;
-}
 
 html {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/loop.jpg");
+  background-size: 50%;
   scrollbar-color: #454a4d #202324;
-  @apply !overflow-auto !pr-0;
+  @apply text-white bg-black;
 }
 
 body {
@@ -22,10 +22,6 @@ body {
 
 .footer-value {
   flex-basis: calc(33.333333% - 2.5rem);
-}
-
-.hacks > section:nth-last-child(1) {
-  @apply mb-5;
 }
 
 ::-webkit-scrollbar {
