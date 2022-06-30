@@ -1,6 +1,6 @@
 const colors = require("tailwindcss/colors");
 
-// /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./components/**/*.{js,jsx,ts,tsx}",
@@ -12,15 +12,21 @@ module.exports = {
         neutral: colors.neutral,
         gray: colors.gray,
         white: "#FFFCFF",
-        black: "#0c001c",
-        green: {
-          DEFAULT: "#09C39E",
+        black: "#1D263B",
+        red: {
+          DEFAULT: "#AD5E5C",
+        },
+        purple: {
+          DEFAULT: "#a484b0",
+        },
+        blue: {
+          DEFAULT: "#CCE5FF",
         },
       },
     },
     fontFamily: {
       sans: ["Raleway", "sans"],
-      display: ["Exo", "sans"],
+      display: ["Open Sans", "sans"],
       writing: ["Open Sans", "sans"],
     },
     screens: {

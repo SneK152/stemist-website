@@ -1,51 +1,48 @@
-import { useEffect, useRef } from "react";
-import Typed, { TypedOptions } from "typed.js";
-import useOnScreen from "@/lib/hooks/useOnScreen";
-import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/outline";
-import useWindowSize from "@/lib/hooks/useWindowSize";
-import HomeCarousel from "./HomeCarousel";
+import Counter from "./Counter";
+
+const HomeCounter = (props: {
+  number: number;
+  symbol: string;
+  text: string;
+}) => (
+  <div className="border border-white p-5 h-full w-full">
+    <Counter {...props} />
+  </div>
+);
 
 export default function Hero() {
-  const el = useRef<HTMLDivElement>(null);
-  const typed = useRef<any>(null);
-  const heroDiv = useRef<HTMLDivElement>(null);
-  const video = useRef<HTMLVideoElement>(null);
-  const isVisible = useOnScreen(heroDiv);
-
-  useEffect(() => {
-    if (video.current) {
-      for (let i = 0; i < video.current.textTracks.length; i++) {
-        video.current.textTracks[i].mode = "hidden";
-      }
-    }
-  }, [video]);
-
-  useEffect(() => {
-    const options: TypedOptions = {
-      strings: ["engaging", "interactive", "growth", "the class for you!"],
-      typeSpeed: 80,
-      backSpeed: 40,
-    };
-    if (isVisible) {
-      typed.current = new Typed(el.current!, options);
-      return () => typed.current.destroy();
-    }
-  }, [isVisible]);
-
-  const { width } = useWindowSize();
-
   return (
-    <div
-      className="flex flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto sm:flex-row my-5 scroll-mt-20"
-      ref={heroDiv}
-    >
-      <div className="w-full grid place-items-center">
+    <div className="bg-purple my-5">
+      <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 py-10 px-24 m-auto place-items-center sm:min-h-[18rem] min-h-[30rem] grid scroll-mt-24 padded-section">
+        <HomeCounter
+          number={100}
+          symbol="+"
+          text="Interactive presentations created"
+        />
+        <HomeCounter
+          number={1.2}
+          symbol="k"
+          text="Dollars raised for charity"
+        />
+        <HomeCounter
+          number={30}
+          symbol="+"
+          text="Highly qualified instructors"
+        />
+        <HomeCounter
+          number={250}
+          symbol="+"
+          text="Students taught nationwide"
+        />
+      </div>
+    </div>
+    /* <div className="w-full grid place-items-center">
         <div className="w-full text-center">
           <h1 className="lg:text-5xl sm:text-3xl text-2xl font-bold">
             STEMist is <span ref={el}></span>
           </h1>
           <br />
-          <p className="font-writing text-xl mb-5 max-w-[40ch] m-auto">
+          <p className="font-display text-xl mb-5 max-w-[40ch] m-auto">
             Watch our video to learn more{" "}
             {width! >= 640 ? (
               <ArrowRightIcon className="h-4 w-4 inline-block" />
@@ -57,7 +54,7 @@ export default function Hero() {
       </div>
       <div className="w-full">
         <HomeCarousel />
-        {/* <video
+        <video
           poster="/logo.svg"
           preload="none"
           controls
@@ -80,8 +77,6 @@ export default function Hero() {
             default
           />
           <source src="/homepage.mp4" type="video/mp4" />
-        </video> */}
-      </div>
-    </div>
+        </video> */
   );
 }

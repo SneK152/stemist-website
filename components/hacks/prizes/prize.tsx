@@ -34,7 +34,7 @@ export default function Prize({ name, prizes, presented_by }: PrizeProps) {
       className="grid grid-cols-12 items-center group py-1 transition-all px-5 hover:bg-black hover:bg-opacity-10"
       {...hoverOptions}
     >
-      <div className="col-span-6 font-semibold font-writing">
+      <div className="col-span-6 font-semibold font-display">
         $<span ref={countUpRef}>{value}</span>
       </div>
       <div className="col-span-6">{status}</div>

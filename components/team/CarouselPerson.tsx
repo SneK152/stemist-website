@@ -10,7 +10,7 @@ export default function CarouselPerson({ person }: { person: Person }) {
     [person.name]
   );
   return (
-    <div className="flex flex-col sm:flex-row sm:px-10 items-center justify-center">
+    <div className="flex flex-col sm:flex-row sm:px-10 py-5 items-center justify-center">
       <div className="sm:h-full relative p-3 mx-auto grid sm:p-5 items-center">
         <Image
           src={person.image}

@@ -12,46 +12,18 @@ export default function Index() {
   return (
     <Container title="Home">
       <div>
-        <Banner image="/homepage2.jpg" full>
-          <h1
-            className="text-left font-display text-3xl sm:text-4xl font-bold md:text-5xl lg:text-7xl px-5 sm:px-10 md:px-20"
-            data-aos="fade-right"
-            data-aos-delay={0}
-            data-aos-duration={600}
-            data-aos-anchor="#top"
-          >
-            The Leading STEM Education Initiative
+        <Banner image="/homepage2.jpeg" full>
+          <h1 className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mb-5 max-w-[28ch]">
+            Accelerating education with{" "}
+            <span className="text-blue">engaging</span> workshops
           </h1>
-          <span className="block sm:mb-4 font-sans text-base text-left sm:text-2xl px-5 sm:px-10 md:px-20">
-            <div
-              data-aos="fade-up"
-              data-aos-delay={400}
-              data-aos-duration={600}
-              data-aos-anchor="#top"
-            >
-              Learn STEM in an interactive way.
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={600}
-              data-aos-duration={600}
-              data-aos-anchor="#top"
-            >
-              Engage with fellow students.
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={800}
-              data-aos-duration={600}
-              data-aos-anchor="#top"
-            >
-              Achieve your goals!
-            </div>
+          <span className="block sm:mb-4 text-lg font-light text-left sm:text-3xl">
+            <div>Welcome to STEMist Education, a 501(c)3 nonprofit</div>
           </span>
-          <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
+          {/* <div className="flex sm:flex-row flex-col px-5 gap-2 sm:px-10 md:px-20 sm:gap-10">
             {events.map((e) => (
               <div className="flex flex-col" key={e}>
-                <h2 className="uppercase font-writing text-xs sm:text-sm text-left">
+                <h2 className="uppercase font-display text-xs sm:text-sm text-left">
                   upcoming event
                 </h2>
                 <h1 className="font-sans sm:text-xl text-left">{e}</h1>
@@ -82,7 +54,7 @@ export default function Index() {
               Hackathon{" "}
               <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
             </Button>
-          </div>
+          </div> */}
         </Banner>
         <Homepage />
         <Hero />
