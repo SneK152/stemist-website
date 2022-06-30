@@ -11,7 +11,7 @@ export default function CTABanner({ full = false }: { full?: boolean }) {
     >
       <div className="mx-auto py-0 sm:py-1 px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between flex-wrap">
-          <div className="w-0 flex-1 flex items-center">
+          <div className="w-0 flex-1 flex items-center xl:px-52">
             <span className="flex sm:p-2 p-1 rounded-lg bg-blue-800">
               <SpeakerphoneIcon
                 className="sm:h-4 sm:w-4 w-4 h-4 text-white"
