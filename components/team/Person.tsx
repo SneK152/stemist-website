@@ -7,7 +7,7 @@ import Qualifications from "./Qualifications";
 export default function Person(props: PersonProps) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="group flex w-80 h-full flex-row mx-auto items-center gap-5">
+    <div className="group flex max-w-[20rem] h-full flex-row mx-auto items-center gap-5">
       <div
         className={`${
           props.person.description || props.person.qualifications ? "" : ""

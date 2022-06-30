@@ -1,26 +1,30 @@
 import Image from "next/image";
 import PersonProps from "@/lib/types/PersonProps";
 import { MailIcon } from "@heroicons/react/outline";
+import useWindowSize from "@/lib/hooks/useWindowSize";
 
 export default function LargePerson(props: PersonProps) {
+  const { width } = useWindowSize();
   return (
     <>
-      <div className="group flex w-96 flex-row mx-auto items-center gap-5">
+      <div className="group flex max-w-[24rem] flex-row mx-auto items-center gap-5">
         <div className={`${props.person.description ? "" : ""}`}>
           <Image
             src={props.person.image}
-            height={140}
-            width={140}
+            height={width! > 768 ? 140 : 100}
+            width={width! > 768 ? 140 : 100}
             layout="fixed"
-            className={`max-w-none rounded-full object-cover`}
+            className={`max-w-none rounded-full object-cover h-5 w-5 sm:h-auto sm:w-auto`}
             alt="User profile"
             quality={100}
             priority
           />
         </div>
-        <h1 className="font-display justify-self-center space-y-1 text-3xl font-normal">
+        <h1 className="font-display w-full justify-self-center space-y-1 text-3xl font-normal">
           <span
-            className={`${props.person.description ? "" : ""} transition-all`}
+            className={`${
+              props.person.description ? "" : ""
+            } text-2xl md:text-3xl transition-all`}
           >
             {props.person.name}
             <br />
@@ -29,7 +33,7 @@ export default function LargePerson(props: PersonProps) {
                 (pos, index) =>
                   !props.person.positions.includes("Head of " + pos) && (
                     <span
-                      className="m-0.5 w-min whitespace-nowrap rounded-3xl bg-gray-200 py-1 px-2 text-sm"
+                      className="m-0.5 w-min whitespace-nowrap rounded-3xl bg-gray-200 py-1 px-2 text-xs md:text-sm"
                       key={index}
                     >
                       {pos}
@@ -49,7 +53,7 @@ export default function LargePerson(props: PersonProps) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <MailIcon className="h-6 w-6 ml-1 inline-block" />
+              <MailIcon className="h-5 m-5 md:h-6 md:w-6 ml-1 my-0 mr-0" />
             </a>
           </span>
         </h1>
