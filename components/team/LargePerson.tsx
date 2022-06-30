@@ -49,7 +49,7 @@ export default function LargePerson(props: PersonProps) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <MailIcon className="h-6 w-6 ml-1" />
+              <MailIcon className="h-6 w-6 ml-1 inline-block" />
             </a>
           </span>
         </h1>

@@ -192,6 +192,5 @@ export const getStaticProps: GetStaticProps<TeamProps> = async () => {
     props: {
       data: spotlight.data()!.spotlight,
     },
-    revalidate: 60,
   };
 };
