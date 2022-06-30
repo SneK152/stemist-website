@@ -12,7 +12,7 @@ function Dropdown({ children, title, mobile, navLink }: DropdownLinkProps) {
         <Menu.Button
           className={`w-full rounded-md text-white text-lg flex items-center  ${
             navLink.dropdownItems!.some(
-              (dropDownItem) => dropDownItem.link === router.pathname
+              (dropDownItem) => dropDownItem.link === router.asPath
             )
               ? "font-bold"
               : "font-normal"

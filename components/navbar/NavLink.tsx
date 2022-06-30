@@ -20,7 +20,7 @@ export default function NavLink({
             main
               ? `bg-${color} py-1 px-3 hover:border-opacity-40 transition-all duration-300 text-${textColor} border-2 border-opacity-20 border-white`
               : `text-white`
-          } ${router.pathname === href ? "font-bold" : "font-normal"}`}
+          } ${router.asPath === href ? "font-bold" : "font-normal"}`}
         >
           {children}
         </li>

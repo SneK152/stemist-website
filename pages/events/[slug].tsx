@@ -7,6 +7,7 @@ import P from "@/lib/types/Person";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ReactNode, useCallback } from "react";
 import { Session, sessionData } from "@/lib/data/sessions";
+import { resolveTeamImage } from "@/lib/imageHelpers";
 
 interface CurriculumProps {
   data: Session;
@@ -42,7 +43,13 @@ export default function Curriculum({ data }: CurriculumProps) {
           <CurriculumCard
             title={c.title}
             subtitle={c.date}
-            person={personByName(c.teacher)}
+            person={
+              personByName(c.teacher) || {
+                name: c.teacher,
+                image: require("@/public/avatar.svg").default.src,
+                description: "",
+              }
+            }
             key={c.title}
           >
             {c.description}
@@ -56,7 +63,7 @@ export default function Curriculum({ data }: CurriculumProps) {
 interface CurriculumCardProps {
   title: string;
   person: P;
-  children: ReactNode;
+  children?: ReactNode;
   subtitle: string;
 }
 
@@ -66,8 +73,9 @@ function CurriculumCard(props: CurriculumCardProps) {
       <h1 className="text-black text-center font-display text-xl">
         {props.subtitle}
       </h1>
-      <br />
-      <div>{props.children}</div>
+      {props.children !== undefined && (
+        <div className="mt-5">{props.children}</div>
+      )}
       <h1 className="font-display mt-3">Presented By</h1>
       <div className="grid text-left">
         <div
