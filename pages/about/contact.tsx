@@ -12,7 +12,6 @@ import Spinner from "@/components/Spinner";
 const MemoedInputField = memo(InputField);
 
 export default function Contact() {
-  const [localEmail, setEmail] = useLocalStorage("contactEmailUsage", null);
   const [submit, setSubmit] = useState<ReactElement>(<h1>Submit</h1>);
   useEffect(() => {
     return clearTimeout;
@@ -26,39 +25,28 @@ export default function Contact() {
     },
     onSubmit: async (values, helpers) => {
       setSubmit(<Spinner color="white" className="m-auto h-5 w-5" />);
-      if (localEmail !== values.contactEmail) {
-        const formdata = new URLSearchParams();
-        formdata.append("entry.1380619326", values.contactName);
-        formdata.append("entry.1953937821", values.contactEmail);
-        formdata.append("entry.1040798066", values.message);
-        setEmail(values.contactEmail);
-        await fetch(
-          "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeSa7soAmbGkNmhtXMdOUz2pD1puP_wL8SosKm_IackdbHiPA/formResponse",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            mode: "no-cors",
-            body: formdata.toString(),
-          }
-        );
+      const formdata = new URLSearchParams();
+      formdata.append("entry.1380619326", values.contactName);
+      formdata.append("entry.1953937821", values.contactEmail);
+      formdata.append("entry.1040798066", values.message);
+      await fetch(
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeSa7soAmbGkNmhtXMdOUz2pD1puP_wL8SosKm_IackdbHiPA/formResponse",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          mode: "no-cors",
+          body: formdata.toString(),
+        }
+      );
+      setTimeout(() => {
+        setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
         setTimeout(() => {
-          setSubmit(<CheckIcon height={20} width={20} className="m-auto" />);
-          setTimeout(() => {
-            setSubmit(<h1>Submit</h1>);
-            helpers.resetForm();
-          }, 1200);
-        }, 500);
-      } else {
-        setSubmit(
-          <div className="flex items-center justify-center gap-1">
-            <XIcon height={20} width={20} />
-            <p>Duplicate user.</p>
-          </div>
-        );
-        setTimeout(() => setSubmit(<h1>Submit</h1>), 2000);
-      }
+          setSubmit(<h1>Submit</h1>);
+          helpers.resetForm();
+        }, 1200);
+      }, 500);
     },
     validationSchema: Yup.object({
       contactName: Yup.string().required("Required"),

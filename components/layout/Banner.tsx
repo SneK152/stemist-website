@@ -44,7 +44,9 @@ export default function Banner({
       <CTABanner full={full} />
       <div
         className={`${
-          full ? "h-screen" : "sm:h-[70vh] h-[50vh] mb-5"
+          full
+            ? "h-[100vh] short:h-[70vh] sm:h-screen"
+            : "sm:h-[70vh] h-[50vh] mb-5"
         } object-cover relative`}
         ref={titleDiv}
       >
@@ -63,7 +65,7 @@ export default function Banner({
           }`}
         >
           <div
-            className={` py-8 flex flex-col justify-start short:justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
+            className={`py-8 flex flex-col justify-center gap-3 overflow-hidden break-words rounded-xl p-4 text-white z-20 -mt-0 ${
               full
                 ? "min-h-full w-full bg-transparent text-center"
                 : "bg-transparent h-auto sm:h-56 self-end sm:translate-y-10 lg:translate-y-0"
@@ -71,7 +73,7 @@ export default function Banner({
           >
             {children}
             {full && (
-              <div className="absolute h-[90vh] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] -mt-20">
+              <div className="absolute h-[90%] -translate-x-4 sm:h-full w-full flex justify-center items-end -z-[1] sm:-mt-20">
                 <button
                   className="animate-bounce"
                   onClick={scrollTo(href)}
