@@ -44,11 +44,22 @@ export default function Curriculum({ data }: CurriculumProps) {
             title={c.title}
             subtitle={c.date}
             person={
-              personByName(c.teacher) || {
-                name: c.teacher,
-                image: require("@/public/avatar.svg").default.src,
-                description: "",
-              }
+              typeof c.teacher === "string"
+                ? [
+                    personByName(c.teacher) || {
+                      name: c.teacher,
+                      image: require("@/public/avatar.svg").default.src,
+                      description: "",
+                    },
+                  ]
+                : c.teacher.map(
+                    (p) =>
+                      personByName(p) || {
+                        name: p,
+                        image: require("@/public/avatar.svg").default.src,
+                        description: "",
+                      }
+                  )
             }
             key={c.title}
           >
@@ -62,7 +73,7 @@ export default function Curriculum({ data }: CurriculumProps) {
 
 interface CurriculumCardProps {
   title: string;
-  person: P;
+  person: P[];
   children?: ReactNode;
   subtitle: string;
 }
@@ -77,12 +88,19 @@ function CurriculumCard(props: CurriculumCardProps) {
         <div className="mt-5">{props.children}</div>
       )}
       <h1 className="font-display mt-3">Presented By</h1>
-      <div className="grid text-left">
-        <div
-          className={`h-32 w-full overflow-hidden rounded-lg text-black p-3`}
-        >
-          <Person person={{ ...props.person, positions: [] }} />
-        </div>
+      <div
+        className={`grid ${
+          props.person.length > 1 ? "grid-cols-2" : "grid-cols-1"
+        } text-left`}
+      >
+        {props.person.map((p) => (
+          <div
+            className={`h-32 w-full overflow-hidden rounded-lg text-black p-3`}
+            key={p.name}
+          >
+            <Person person={{ ...p, positions: [] }} />
+          </div>
+        ))}
       </div>
     </Card>
   );

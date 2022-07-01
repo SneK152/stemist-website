@@ -3,7 +3,7 @@ export type Session = {
   title: string;
   media?: string;
   classes: {
-    teacher: string;
+    teacher: string | string[];
     title: string;
     date: string;
     description?: string;
@@ -157,7 +157,7 @@ export const sessionData: Session[] = [
         date: "Friday, June 25th, 2021",
       },
       {
-        teacher: "Rohan & Arnav",
+        teacher: ["Rohan Fernandes", "Aarav Jani"],
         title: "Python",
         date: "Friday, June 25th, 2021",
       },
@@ -172,12 +172,12 @@ export const sessionData: Session[] = [
         date: "Friday, July 2nd, 2021",
       },
       {
-        teacher: "Sanya",
+        teacher: "Sanya Badhe",
         title: "Combinatorics",
         date: "Friday, July 9th, 2021",
       },
       {
-        teacher: "Daphne Zhu & Meghana Babu",
+        teacher: ["Daphne Zhu", "Meghana Babu"],
         title: "Ornithology",
         date: "Friday, July 9th, 2021",
       },
@@ -212,7 +212,7 @@ export const sessionData: Session[] = [
         date: "Friday, August 6th, 2021",
       },
       {
-        teacher: "Aarav",
+        teacher: "Aarav Jani",
         title: "Python",
         date: "Friday, August 6th, 2021",
       },
@@ -290,12 +290,12 @@ export const sessionData: Session[] = [
       {
         teacher: "Selena Yang",
         title: "Cancer",
-        date: "Sunday, January 3rd, 2022"
-      }
+        date: "Sunday, January 3rd, 2022",
+      },
     ],
   },
   {
-    slug: "2020-thanksgiving",
+    slug: "2020-fall",
     title: "2020 Thanksgiving Workshop",
     classes: [
       {
@@ -319,7 +319,7 @@ export const sessionData: Session[] = [
         date: "Tuesday, November 24th, 2020",
       },
       {
-        teacher: "Aryan Patnaik & Sanya Badhe",
+        teacher: ["Aryan Patnaik", "Sanya Badhe"],
         title: "Cryptography",
         date: "Wednesday, November 25th, 2020",
       },
@@ -368,6 +368,6 @@ export const sessionData: Session[] = [
         title: "Forces",
         date: "Sunday, November 29th, 2020",
       },
-    ]
-  }
+    ],
+  },
 ];
