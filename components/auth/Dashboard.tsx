@@ -59,6 +59,11 @@ export default function Dashboard(props: { user: StudentData }) {
       customNav={dashboardNav}
     >
       <PartialBanner title="Student Dashboard" />
+      <div className="p-5">
+        <h1 className="text-5xl">
+          Welcome back {props.user.name}!
+        </h1>
+      </div>
     </Container>
   );
 }
