@@ -25,7 +25,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Justin Zhang",
-    officerRoles: ["Secretary", "Director of Events"],
+    officerRoles: ["Secretary", "Director of Hackathon"],
     teacherRoles: ["Computer Science"],
     curriculumRoles: {
       cs: ["C++"],
@@ -199,21 +199,21 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Joshua Li",
-    teamRoles: ["Events"],
+    teamRoles: ["Hackathon"],
     image: resolveTeamImage("Joshua Li"),
     description:
       "Joshua is a sophomore at Lynbrook who enjoys all behind the curtain roles. He also likes exercising and gaming in his free time.",
   },
   {
     name: "Nathan Ye",
-    teamRoles: ["Outreach", "Events", "WEBS"],
+    teamRoles: ["Outreach", "Hackathon", "WEBS"],
     image: resolveTeamImage("Nathan Ye"),
     description:
       "Nathan is a high school sophomore that loves coding and football.",
   },
   {
     name: "Rohan Fernandes",
-    teamRoles: ["Intern", "Technology", "Website", "Events"],
+    teamRoles: ["Intern", "Technology", "Website", "Hackathon"],
     teacherRoles: ["Computer Science", "Intern"],
     curriculumRoles: {
       cs: ["Intern", "Python", "Javascript"],
@@ -231,7 +231,7 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Sophie Mak",
-    teamRoles: ["Outreach", "Events", "WEBS"],
+    teamRoles: ["Outreach", "Hackathon", "WEBS"],
     image: resolveTeamImage("Sophie Mak"),
     description:
       "Sophie Mak is a sophomore at Lynbrook High School that enjoys writing and networking.  In her spare time, she bakes and binge-reads webtoons.",
@@ -246,21 +246,21 @@ const people: ExtendedPerson[] = [
   },
   {
     name: "Annie Li",
-    teamRoles: ["Graphic Design", "Outreach", "Events"],
+    teamRoles: ["Graphic Design", "Outreach"],
     image: resolveTeamImage("Annie Li"),
     description:
       "Annie Li is a Lynbrook sophomore who either makes digital art in her free time or is watching analysis videos on horror series.",
   },
   {
     name: "Valerie Shu",
-    teamRoles: ["Graphic Design", "Outreach", "Events", "WEBS"],
+    teamRoles: ["Graphic Design", "Outreach", "Hackathon", "WEBS"],
     image: resolveTeamImage("Valerie Shu"),
     description:
       "Valerie is a sophomore at Lynbrook High who enjoys teaching and the outdoors. She reads avidly, writes intermittently, draws digitally, and owns 2 rabbits.",
   },
   {
     name: "Sarvesh Madullapalli",
-    teamRoles: ["Intern", "Technology", "Events"],
+    teamRoles: ["Intern", "Technology", "Hackathon"],
     image: resolveTeamImage("Sarvesh Madullapalli"),
     description:
       "Sarvesh knows Python, Java, web development, and some C++. He has won 4 hackathons and is a very good team leader. He knows and contributes to almost all popular libraries, specializing in Python. ",
