@@ -50,7 +50,7 @@ export type TeamRole =
   | "Operations"
   | "Technology"
   | "Website"
-  | "Events"
+  | "Hackathon"
   | "WEBS";
 
 export default Person;

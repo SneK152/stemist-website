@@ -81,7 +81,7 @@ export default function Container({
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
-        <title>STEMist Education | {title}</title>
+        <title>{`STEMist Education | ${title}`}</title>
         <meta name="title" content={`STEMist Education | ${title}`} />
         <meta
           name="keywords"

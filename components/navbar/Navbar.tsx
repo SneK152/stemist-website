@@ -193,7 +193,7 @@ export default function Navbar({
                                   className={`block font-display text-lg underline-offset-1 whitespace-nowrap text-white ${
                                     navLink.dropdownItems!.some(
                                       (dropDownItem) =>
-                                        dropDownItem.link === router.pathname
+                                        dropDownItem.link === router.asPath
                                     )
                                       ? "font-bold"
                                       : "font-normal"
@@ -211,7 +211,7 @@ export default function Navbar({
                                       <Link key={i} href={item.link}>
                                         <a
                                           className={`block ml-3 font-display text-white ${
-                                            router.pathname === item.link
+                                            router.asPath === item.link
                                               ? "font-extrabold"
                                               : "font-normal"
                                           }`}

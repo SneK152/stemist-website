@@ -6,8 +6,8 @@ export type NavLink = {
   dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems" | "via">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
-  class?: "about" | "projects";
   image?: string;
+  class?: "about" | "projects" | "workshops";
 };
 
 export type NavLinks = NavLink[];
@@ -23,6 +23,7 @@ export const navLinks: NavLink[] = [
     link: "/about",
     dropdown: true,
     via: "link",
+    class: "about",
     dropdownItems: [
       {
         name: "Meet the Team",
@@ -49,16 +50,43 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    name: "STEMist Hacks",
-    link: "/hacks",
-    class: "projects",
+    name: "Prior Events",
+    link: "/events",
+    dropdown: true,
+    class: "workshops",
     via: "link",
-  },
-  {
-    name: "Prior Workshops",
-    link: "/workshops",
-    class: "about",
-    via: "link",
+    dropdownItems: [
+      {
+        name: "STEMist Hacks",
+        link: "/hacks",
+        class: "workshops",
+      },
+      {
+        name: "Intro to STEM Spring Workshop",
+        link: "/events/intro-to-stem",
+        class: "workshops",
+      },
+      {
+        name: "2021 Winter Workshop",
+        link: "/events/2021-winter",
+        class: "workshops",
+      },
+      {
+        name: "2021 Summer Workshop",
+        link: "/events/2021-summer",
+        class: "workshops",
+      },
+      {
+        name: "2020 Winter Workshop",
+        link: "/events/2020-winter",
+        class: "workshops",
+      },
+      {
+        name: "2020 Fall Workshop",
+        link: "/events/2020-fall",
+        class: "workshops",
+      },
+    ],
   },
   {
     name: "WEBS Studio",
