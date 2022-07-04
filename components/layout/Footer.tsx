@@ -23,7 +23,7 @@ const projectLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-5">
+    <footer className="bg-black text-white py-5 mt-5">
       <div className="padded-section">
         <div className="flex flex-col gap-5">
           <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-10">

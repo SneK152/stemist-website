@@ -12,7 +12,7 @@ const HomeCounter = (props: {
 
 export default function Hero() {
   return (
-    <div className="bg-purple my-5">
+    <div className="bg-black mt-5">
       <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 py-10 px-24 m-auto place-items-center sm:min-h-[18rem] min-h-[30rem] grid scroll-mt-24 padded-section">
         <HomeCounter
           number={100}
