@@ -7,6 +7,7 @@ specifiers:
   '@tailwindcss/forms': ^0.5.2
   '@types/lodash': ^4.14.182
   '@types/node': ^18.0.0
+  '@types/nprogress': ^0.2.0
   '@types/react': ^18.0.14
   '@types/react-dom': ^18.0.5
   '@types/smoothscroll-polyfill': ^0.3.1
@@ -20,6 +21,7 @@ specifiers:
   lodash: ^4.17.21
   next: ^12.2.0
   next-sitemap: ^3.1.7
+  nprogress: ^0.2.0
   postcss: ^8.4.14
   prettier: ^2.7.1
   react: ^18.2.0
@@ -46,6 +48,7 @@ dependencies:
   formik: 2.2.9_react@18.2.0
   lodash: 4.17.21
   next: 12.2.0_beenoklgwfttvph5dgxj7na7aq
+  nprogress: 0.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-photo-gallery: 8.0.0_biqbaboplfbrettd7655fr4n2y
@@ -64,6 +67,7 @@ devDependencies:
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.4
   '@types/lodash': 4.14.182
   '@types/node': 18.0.0
+  '@types/nprogress': 0.2.0
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -2719,6 +2723,10 @@ packages:
 
   /@types/node/18.0.0:
     resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -6403,6 +6411,10 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       path-key: 2.0.1
+    dev: false
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
     dev: false
 
   /nullthrows/1.1.1:
