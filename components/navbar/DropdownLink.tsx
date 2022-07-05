@@ -10,9 +10,9 @@ function Dropdown({ children, title, mobile, navLink }: DropdownLinkProps) {
     <Menu as="div" className="relative inline-block text-left">
       <div className="flex h-full">
         <Menu.Button
-          className={`w-full rounded-md text-lg flex items-center  ${
+          className={`w-full rounded-md text-white text-lg flex items-center  ${
             navLink.dropdownItems!.some(
-              (dropDownItem) => dropDownItem.link === router.pathname
+              (dropDownItem) => dropDownItem.link === router.asPath
             )
               ? "font-bold"
               : "font-normal"

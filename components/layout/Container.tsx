@@ -27,33 +27,44 @@ export default function Container({
         <link rel="icon" href="/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
+
         <meta
           name="description"
-          content="Our goal is not only to teach kids STEM. We hope to empower students with foundational concepts through interactive workshops and curriculums."
+          content="Accelerating education with engaging workshops. STEMist Education is a nonprofit that teaches STEM."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo-dark.png" />
-        <meta property="og:image:alt" content="Stemist Education Logo" />
+        <meta itemProp="name" content={`STEMist Education | ${title}`} />
         <meta
-          name="og:title"
-          property="og:title"
-          content={`STEMist Education | ${title}`}
+          itemProp="description"
+          content="Accelerating education with engaging workshops. STEMist Education is a nonprofit that teaches STEM."
         />
-        <meta
-          name="og:description"
-          property="og:description"
-          content="Exceptional and Unparalleled STEM Education for kids"
-        />
+        <meta itemProp="image" content="/meta.png" />
+
         <meta
           property="og:site_name"
           content={`STEMist Education | ${title}`}
         />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:url" content="https://joinstemist.org" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`STEMist Education | ${title}`} />
+        <meta
+          property="og:description"
+          content="Accelerating education with engaging workshops. STEMist Education is a nonprofit that teaches STEM."
+        />
+        <meta property="og:image" content="/meta.png" />
+        <meta property="og:image:alt" content="STEMist Education" />
+
         <meta name="twitter:title" content={`STEMist Education | ${title}`} />
         <meta
           name="twitter:description"
           content="Exceptional and Unparalleled STEM Education for kids"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:description"
+          content="Accelerating education with engaging workshops. STEMist Education is a nonprofit that teaches STEM."
+        />
+        <meta name="twitter:image" content="/meta.png" />
+
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="application-name"
@@ -70,7 +81,7 @@ export default function Container({
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
-        <title>STEMist Education | {title}</title>
+        <title>{`STEMist Education | ${title}`}</title>
         <meta name="title" content={`STEMist Education | ${title}`} />
         <meta
           name="keywords"
@@ -82,7 +93,7 @@ export default function Container({
       </Head>
       <Navbar {...{ noNav, navTitle, customNav, hacks }} />
       <div className="mx-auto h-full">
-        <div className="mx-auto overflow-hidden min-h-screen">{children}</div>
+        <div className="mx-auto overflow-hidden">{children}</div>
       </div>
       <Footer />
     </>
