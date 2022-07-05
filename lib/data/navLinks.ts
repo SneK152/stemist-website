@@ -94,6 +94,7 @@ export const navLinks: NavLink[] = [
     hidden: true,
     link: "/hacks",
     class: "projects",
+    via: "link",
   },
   {
     name: "WEBS Studio",
