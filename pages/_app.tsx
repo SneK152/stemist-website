@@ -3,7 +3,7 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import NProgress from "nprogress";
-import "nprogress/nprogress.css";
+// import "nprogress/nprogress.css";
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {

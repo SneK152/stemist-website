@@ -29,6 +29,11 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({

@@ -6,11 +6,13 @@ export default function HomeSection({
   title,
   image,
   side,
+  position,
 }: {
   children: ReactNode;
   title: string;
   image: string;
   side: "left" | "right";
+  position: string;
 }) {
   return (
     <section className="justify-center grid grid-cols-9 w-11/13 min-h-[20rem] font-display text-elipsis py-3 gap-6">
@@ -33,7 +35,7 @@ export default function HomeSection({
             alt="Placeholder Image"
             layout="fill"
             objectFit="cover"
-            objectPosition="top left"
+            objectPosition={position}
           />
         </div>
       </figure>

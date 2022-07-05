@@ -8,6 +8,7 @@ export type NavLink = {
   customProps?: { [key: string]: any };
   image?: string;
   class?: "about" | "projects" | "workshops";
+  hidden?: boolean;
 };
 
 export type NavLinks = NavLink[];
@@ -87,6 +88,12 @@ export const navLinks: NavLink[] = [
         class: "workshops",
       },
     ],
+  },
+  {
+    name: "STEMist Hacks (ENDED)",
+    hidden: true,
+    link: "/hacks",
+    class: "projects",
   },
   {
     name: "WEBS Studio",
