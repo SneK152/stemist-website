@@ -5,6 +5,7 @@ export type NavLink = {
   dropdown?: boolean;
   customProps?: { [key: string]: any };
   class?: "about" | "projects" | "workshops";
+  hidden?: boolean;
 };
 
 export type NavLinks = NavLink[];
@@ -81,6 +82,12 @@ export const navLinks: NavLink[] = [
         class: "workshops",
       },
     ],
+  },
+  {
+    name: "STEMist Hacks (ENDED)",
+    hidden: true,
+    link: "/hacks",
+    class: "projects",
   },
   {
     name: "WEBS Studio",
