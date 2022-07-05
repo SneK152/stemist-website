@@ -7,7 +7,7 @@ export default function LargePerson(props: PersonProps) {
   const { width } = useWindowSize();
   return (
     <>
-      <div className="group flex max-w-[24rem] flex-row mx-auto items-center gap-5">
+      <div className="group flex flex-row mx-auto items-center gap-5 p-2 pb-0">
         <div className={`${props.person.description ? "" : ""}`}>
           <Image
             src={props.person.image}
@@ -59,7 +59,7 @@ export default function LargePerson(props: PersonProps) {
         </h1>
       </div>
       {props.person.description && (
-        <p className="max-w-[40ch] font-display text-lg transition-all group-hover:block mx-auto">
+        <p className="font-display p-2 text-lg mx-auto">
           {props.person.description}
         </p>
       )}

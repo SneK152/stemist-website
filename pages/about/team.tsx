@@ -69,9 +69,7 @@ export default function Team(props: TeamProps) {
             <Tab
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
+                  selected ? "border-red" : " border-transparent"
                 }`
               }
             >
@@ -80,9 +78,7 @@ export default function Team(props: TeamProps) {
             <Tab
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
+                  selected ? "border-red" : " border-transparent"
                 }`
               }
             >
@@ -91,9 +87,7 @@ export default function Team(props: TeamProps) {
             <Tab
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
+                  selected ? "border-red" : " border-transparent"
                 }`
               }
             >
@@ -102,9 +96,7 @@ export default function Team(props: TeamProps) {
             <Tab
               className={({ selected }) =>
                 `text-xl font-display pt-1 px-[3px] border-b-4 focus:outline-none ${
-                  selected
-                    ? "font-light border-red"
-                    : "font-light border-transparent"
+                  selected ? "border-red" : " border-transparent"
                 }`
               }
             >

@@ -26,10 +26,22 @@ const photos: Photo[] = [
     alt: "Selena teaches students about DNA Analysis in the Intro to STEM workshop of April 2022.",
   },
   {
+    src: "/about/gettingstartedrepljs.png",
+    width: 3,
+    height: 2,
+    alt: "Snehil helps students get set up with their coding environment in the 2022 Summer Course.",
+  },
+  {
     src: "/about/carousel5.png",
     width: 2,
     height: 1,
     alt: "Steve talks about the basics of waves in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/bioday4.png",
+    width: 3,
+    height: 2,
+    alt: "Chaas introduces the human body's circulatory system in the 2022 Summer Course.",
   },
   {
     src: "/about/strings.png",
@@ -42,6 +54,12 @@ const photos: Photo[] = [
     width: 4,
     height: 3,
     alt: "Snehil discusses the difference between backend and frontend web development in the Intro to STEM workshop of April 2022.",
+  },
+  {
+    src: "/about/cppmore.png",
+    width: 4,
+    height: 3,
+    alt: "Daniel works through a Codeforces programming problem using C++ in the 2022 Summer Course.",
   },
   {
     src: "/about/yes yes.png",
@@ -62,6 +80,12 @@ const photos: Photo[] = [
     alt: "Shanker introduces binary numbers and how they go hand in hand with programming in the 2022 Summer Course.",
   },
   {
+    src: "/about/day 4 js.png",
+    width: 3,
+    height: 2,
+    alt: "Snehil helps students out as they build their final Javascript project in the 2022 Summer Course.",
+  },
+  {
     src: "/about/cat class.png",
     width: 4,
     height: 3,
@@ -72,6 +96,12 @@ const photos: Photo[] = [
     width: 1,
     height: 2,
     alt: "Justin gives students a review problem to make a C++ calculator in the 2022 Summer Course.",
+  },
+  {
+    src: "/about/ecologyend.png",
+    width: 3,
+    height: 4,
+    alt: "Selena congratulates the winners of the Ecology kahoot in the 2022 Summer Course.",
   },
   {
     src: "/about/carousel3.png",
@@ -86,10 +116,22 @@ const photos: Photo[] = [
     alt: "Shanker talks about advanced machine learning concepts in the 2022 Summer Course.",
   },
   {
+    src: "/about/day6botany.png",
+    width: 4,
+    height: 3,
+    alt: "Harold introduces the concept of botany in the 2022 Summer Course.",
+  },
+  {
     src: "/about/python day 5.png",
     width: 4,
     height: 3,
     alt: "Shanker explains the concept of neural networks in the 2022 Summer Course.",
+  },
+  {
+    src: "/about/day2biop2.png",
+    width: 3,
+    height: 2,
+    alt: "Selena prepares students for the challenging topic of metabolism in the 2022 Summer Course.",
   },
   {
     src: "/about/python day 6.png",
