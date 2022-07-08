@@ -6,30 +6,26 @@ export default function HomeSection({
   title,
   image,
   side,
-  className,
-  position
+  position,
 }: {
   children: ReactNode;
   title: string;
   image: string;
   side: "left" | "right";
-  className: string
   position: string;
 }) {
   return (
-    <section 
-        className={`
-          w-screen lg:col-span-5 col-span-9 my-auto order-1 
-          ${className}
-          ${side === "left" ? "lg:order-1" : "lg:order-2"}
-        `}
-    >
-      <div>
+    <section className="justify-center grid grid-cols-9 w-11/13 min-h-[20rem] font-display text-elipsis py-3 gap-6">
+      <div
+        className={`lg:col-span-5 col-span-9 my-auto order-1 ${
+          side === "left" ? "lg:order-1" : "lg:order-2"
+        }`}
+      >
         <h1 className="text-4xl font-medium py-4">{title}</h1>
         <p className="text-xl font-sans font-light text-clip">{children}</p>
       </div>
       <figure
-        className={`${className} h-56 sm:h-80 w-full lg:col-span-4 col-span-9 relative gap-3 flex flex-col order-2 ${
+        className={`lg:col-span-4 col-span-9 relative gap-1 flex flex-col order-2 ${
           side === "right" ? "lg:order-1" : "lg:order-2"
         }`}
       >

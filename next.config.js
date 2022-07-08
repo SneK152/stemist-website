@@ -2,6 +2,9 @@
 const config = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    ANALYTICS_ID: process.env.ANALYTICS_ID,
+  },
   async redirects() {
     return [
       {

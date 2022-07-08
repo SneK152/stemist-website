@@ -36,49 +36,5 @@ export default function Hero() {
         />
       </div>
     </div>
-  
   );
 }
-
-  {/* <div className="w-full grid place-items-center">
-        <div className="w-full text-center">
-          <h1 className="lg:text-5xl sm:text-3xl text-2xl font-bold">
-            STEMist is <span ref={el}></span>
-          </h1>
-          <br />
-          <p className="font-display text-xl mb-5 max-w-[40ch] m-auto">
-            Watch our video to learn more{" "}
-            {width! >= 640 ? (
-              <ArrowRightIcon className="h-4 w-4 inline-block" />
-            ) : (
-              <ArrowDownIcon className="h-4 w-4 inline-block" />
-            )}
-          </p>
-        </div>
-      </div>
-      <div className="w-full">
-        <HomeCarousel />
-        <video
-          poster="/logo.svg"
-          preload="none"
-          controls
-          playsInline
-          ref={video}
-          className="bg-white aspect-video h-full w-full"
-        >
-          <track
-            src="/homepage-subtitles.vtt"
-            label="English"
-            kind="subtitles"
-            srcLang="en"
-            default
-          />
-          <track
-            src="/homepage-captions.vtt"
-            label="English"
-            kind="captions"
-            srcLang="en"
-            default
-          />
-          <source src="/homepage.mp4" type="video/mp4" />
-            </video> */}
