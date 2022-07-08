@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
 import Footer from "./Footer";
 import Navbar from "../navbar/Navbar";

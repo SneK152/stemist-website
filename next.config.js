@@ -5,6 +5,9 @@ const config = {
   images: {
     domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
   },
+  env: {
+    ANALYTICS_ID: process.env.ANALYTICS_ID,
+  },
   async redirects() {
     return [
       {

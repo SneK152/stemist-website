@@ -3,12 +3,24 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import NProgress from "nprogress";
+import ReactGA from "react-ga";
 // import "nprogress/nprogress.css";
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     smoothscroll.polyfill();
   }, []);
+
+  useEffect(() => {
+    if (
+      process.env.ANALYTICS_ID &&
+      process.env.NODE_ENV === "production" &&
+      window.location.hostname === "www.joinstemist.org"
+    ) {
+      ReactGA.initialize(process.env.ANALYTICS_ID);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  });
 
   useEffect(() => {
     router.events.on("routeChangeStart", NProgress.start);

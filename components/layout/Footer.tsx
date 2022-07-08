@@ -57,16 +57,6 @@ export default function Footer() {
                   ))}
                 </div>
               </div>
-              {/* <div className="text-left">
-                <h1 className="font-medium text-xl">Past Events</h1>
-                <div className="flex flex-col text-base">
-                  {workshopLinks.map((link) => (
-                    <Link href={link.link} key={link.name}>
-                      <a target={link.customProps?.target}>{link.name}</a>
-                    </Link>
-                  ))}
-                </div>
-              </div> */}
               <div className="text-right">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">

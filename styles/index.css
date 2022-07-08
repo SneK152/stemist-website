@@ -7,7 +7,7 @@
     aspect-ratio: auto !important;
   }
   .padded-section {
-    @apply px-4 sm:px-8 lg:px-10 max-w-[100rem] mx-auto w-full;
+    @apply px-4 sm:px-8 lg:px-10 max-w-[120rem] mx-auto w-full;
   }
 }
 
