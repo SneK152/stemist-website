@@ -1,11 +1,13 @@
 import HomeColumn from "./HomeColumn";
+import HomeSection from "../layout/HomeSection";
 import Counter from "./Counter";
+import Link from 'next/link'
 
 export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-20 my-10 flex-col max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto"
+        className="flex scroll-mt-24 flex-col m-auto"
         id="hero"
       >
         <h1 className="text-center font-display text-4xl font-bold">
@@ -19,7 +21,57 @@ export default function Homepage() {
           during school breaks such as Spring and Winter break. In the summer,
           we opt for a comprehensive curriculum that delves more in-depth into
           STEM topics.{" "}
-        </p>
+        </p> 
+        <HomeSection
+          title="Democratization of education"
+          image="/home/demoedu.jpeg"
+          side="left"
+          className="py-2 text-white bg-black" 
+        >
+          We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
+          that will be vital to unlocking success in their lives. We{"'"}re
+          committed to provide <E>education for everyone</E>, regardless of
+          race, gender, age, income with free to ultralow cost classes online
+          and in person.
+        </HomeSection>
+        {/* <div className="px-2 w-screen justify-center min-h-[4rem] font-display text-elipsis gap-2 bg-gradient-to-b from-blue-800 to-white">
+
+        </div> */}
+        <HomeSection
+          title="Reshaping the learning curve"
+          image="/home/reshape.jpeg"
+          side="right"
+          className="py-2 text-black bg-white"
+        >
+          Our{" "}
+          <Link href="/programs">
+            <a className="underline decoration-purple underline-offset-1">
+              <E>Summer 2022 STEM Course</E>
+            </a>
+          </Link>{" "}
+          provides an intensive 5-week course that <E>accelerates</E> the
+          internalization of concepts taught during class. Learning is
+          reinforced with kahoots that promote note-taking and long term memory
+          recall.
+        </HomeSection>
+        {/* <div className="px-2 w-screen justify-center min-h-[2rem] font-display text-elipsis bg-gradient-to-b from-white to-black">
+
+        </div> */}
+        <HomeSection
+          title="Putting skills to work"
+          image="/home/hacks.jpeg"
+          side="left"
+          className="text-white bg-black"
+        >
+          <Link href="/hacks">
+            <a className="underline decoration-purple underline-offset-1 text">
+              <h1>STEMist Hacks</h1>
+            </a>
+          </Link>{" "}
+          encourages students to put their programming skills to work, with{" "}
+          <E>riveting speaker talks</E> by real life professionals and tens of
+          thousands of dollars in prizes.
+        </HomeSection>
       </div>
       <br />
       <div>
