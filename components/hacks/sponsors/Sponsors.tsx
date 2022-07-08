@@ -1,13 +1,9 @@
 import AnimatedSponsor from "./SponsorSpring";
-import useAos from "@/components/useAos";
 
 export default function Sponsors() {
   return (
     <div className="p-4">
-      <div
-        {...useAos()}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <AnimatedSponsor
           color={"#000000"}
           url="https://www.taskade.com/"
@@ -53,10 +49,23 @@ export default function Sponsors() {
           className="grid content-center"
         />
         <AnimatedSponsor
-          color={"#ffffff"}
+          color={"#eee"}
           url="https://artofproblemsolving.com/"
           name="AOPS"
           textClassName="mx-auto w-3/4"
+        />
+        <AnimatedSponsor
+          color={"#e6e6e6"}
+          url="https://tinyurl.com/1PasswordLink"
+          name="1Password"
+          icon={false}
+          className="grid content-center"
+        />
+        <AnimatedSponsor
+          color={"#601f03"}
+          url="https://www.stickermule.com/"
+          name="stickermule"
+          textClassName="mt-2 mx-auto w-3/4"
         />
       </div>
     </div>

@@ -13,18 +13,18 @@ export default function NavLink({
 }: NavLinkProps) {
   const router = useRouter();
   return (
-    <li
-      className={`font-writing m-auto text-lg underline-offset-1 whitespace-nowrap ${
-        main
-          ? `bg-${color} py-1 px-3 shadow-md rounded-lg hover:rounded-xl hover:shadow-lg transition-all duration-300 text-${textColor}`
-          : `text-white`
-      } ${router.pathname === href ? "font-bold" : "font-normal"}`}
-    >
-      <Link href={href}>
-        <a className={`${className || ""}`} target={target}>
+    <Link href={href}>
+      <a className={`${className || ""} m-auto`} target={target}>
+        <li
+          className={`font-display m-auto text-lg underline-offset-1 whitespace-nowrap ${
+            main
+              ? `bg-${color} py-1 px-3 hover:border-opacity-40 transition-all duration-300 text-${textColor} border-2 border-opacity-20 border-white`
+              : `text-white`
+          } ${router.asPath === href ? "font-bold" : "font-normal"}`}
+        >
           {children}
-        </a>
-      </Link>
-    </li>
+        </li>
+      </a>
+    </Link>
   );
 }

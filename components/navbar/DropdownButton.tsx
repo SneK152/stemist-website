@@ -19,7 +19,7 @@ export default function DropdownButton({
         <Link href={href}>
           <a
             className={`${
-              router.pathname === href
+              router.asPath === href
                 ? "bg-neutral-200 font-semibold"
                 : "hover:bg-neutral-100"
             } block px-4 py-2 text-base font-medium text-black z-50`}

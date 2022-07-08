@@ -3,6 +3,7 @@ import teachers from "@/lib/data/team/teachers";
 import { sample } from "lodash";
 import type Person from "@/lib/types/Person";
 import db from "@/lib/serverApp";
+import { TeacherSubject } from "@/lib/types/Person";
 
 export default async function handler(
   req: NextApiRequest,
@@ -10,12 +11,13 @@ export default async function handler(
 ) {
   const file: Person[] = [];
   for (let i = 0; i < 4; i++) {
-    let samp: Person = sample(teachers)!;
-    while (samp.qualifications && samp.qualifications.length < 4) {
-      samp = sample(teachers)!;
-    }
+    let samp: Person<TeacherSubject> = sample(teachers)!;
     let isFound = file.some((element) => element.name === samp.name);
-    while (isFound) {
+    while (
+      samp.qualifications === undefined ||
+      samp.qualifications.length < 4 ||
+      isFound
+    ) {
       samp = sample(teachers)!;
       isFound = file.some((element) => element.name === samp.name);
     }
@@ -24,5 +26,10 @@ export default async function handler(
   await db.collection("spotlight").doc("spotlight").set({
     spotlight: file,
   });
-  res.status(200).json({});
+  try {
+    await res.revalidate("/about/team");
+    return res.status(200).json({});
+  } catch {
+    return res.status(500).send("error revalidating");
+  }
 }

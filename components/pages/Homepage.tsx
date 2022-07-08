@@ -1,16 +1,21 @@
 import HomeColumn from "./HomeColumn";
 import HomeSection from "../layout/HomeSection";
 import Counter from "./Counter";
-import Link from 'next/link'
+import { FC, ReactNode } from "react";
+import Link from "next/link";
+
+const E = ({ children }: { children: ReactNode }) => (
+  <span className="text-purple">{children}</span>
+);
 
 export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-24 flex-col m-auto"
+        className="flex scroll-mt-24 my-10 flex-col padded-section m-auto"
         id="hero"
       >
-        <h1 className="text-center font-display text-4xl font-bold">
+        {/* <h1 className="text-center font-display text-4xl font-bold">
           What We Do
         </h1>
         <p className="text-lg text-center px-3">
@@ -21,11 +26,12 @@ export default function Homepage() {
           during school breaks such as Spring and Winter break. In the summer,
           we opt for a comprehensive curriculum that delves more in-depth into
           STEM topics.{" "}
-        </p> 
+        </p> */}
         <HomeSection
           title="Democratization of education"
-          image="/home/demoedu.jpeg"
+          image="/home/demoedu.jpg"
           side="left"
+          position="50% 50%"
           className="py-2 text-white bg-black" 
         >
           We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
@@ -34,13 +40,11 @@ export default function Homepage() {
           race, gender, age, income with free to ultralow cost classes online
           and in person.
         </HomeSection>
-        {/* <div className="px-2 w-screen justify-center min-h-[4rem] font-display text-elipsis gap-2 bg-gradient-to-b from-blue-800 to-white">
-
-        </div> */}
         <HomeSection
           title="Reshaping the learning curve"
-          image="/home/reshape.jpeg"
+          image="/home/reshape.png"
           side="right"
+          position="top center"
           className="py-2 text-black bg-white"
         >
           Our{" "}
@@ -54,18 +58,16 @@ export default function Homepage() {
           reinforced with kahoots that promote note-taking and long term memory
           recall.
         </HomeSection>
-        {/* <div className="px-2 w-screen justify-center min-h-[2rem] font-display text-elipsis bg-gradient-to-b from-white to-black">
-
-        </div> */}
         <HomeSection
           title="Putting skills to work"
           image="/home/hacks.jpeg"
           side="left"
+          position="top left"
           className="text-white bg-black"
         >
           <Link href="/hacks">
             <a className="underline decoration-purple underline-offset-1 text">
-              <h1>STEMist Hacks</h1>
+              <E>STEMist Hacks</E>
             </a>
           </Link>{" "}
           encourages students to put their programming skills to work, with{" "}
@@ -73,12 +75,12 @@ export default function Homepage() {
           thousands of dollars in prizes.
         </HomeSection>
       </div>
-      <br />
-      <div>
+      {/* <br /> */}
+      {/* <div>
         <h1 className="text-center mb-2 sm:mb-0 text-4xl font-display font-bold">
           By the Numbers
         </h1>
-        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
+        <div className="sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-cols-1 max-w-[100rem] padded-section m-auto place-items-center sm:min-h-[12rem] min-h-[20rem] grid">
           <Counter
             number={45}
             symbol="+"
@@ -107,7 +109,7 @@ export default function Homepage() {
       </div>
       <br />
       <div
-        className="flex sm:flex-row max-w-[100rem] px-2 sm:px-6 lg:px-6 m-auto flex-col gap-3 scroll-mt-20"
+        className="flex sm:flex-row max-w-[100rem] padded-section m-auto flex-col gap-3 scroll-mt-24"
         id="learnmore"
       >
         <HomeColumn
@@ -124,8 +126,9 @@ export default function Homepage() {
           buttonText="Meet our Instructors"
           buttonLink="/about/team"
         />
-      </div>
-      <br />
+      </div> */}
+      {/* <br /> */}
     </>
   );
 }
+

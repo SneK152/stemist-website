@@ -4,7 +4,8 @@ export type NavLink = {
   dropdownItems?: Omit<NavLink, "dropdown" | "dropdownItems">[];
   dropdown?: boolean;
   customProps?: { [key: string]: any };
-  important?: boolean;
+  class?: "about" | "projects" | "workshops";
+  hidden?: boolean;
 };
 
 export type NavLinks = NavLink[];
@@ -13,51 +14,97 @@ export const navLinks: NavLink[] = [
   {
     name: "Home",
     link: "/",
-    important: true,
   },
   {
     name: "About Us",
     link: "/about",
-    important: true,
     dropdown: true,
+    class: "about",
     dropdownItems: [
-      {
-        name: "Who We Are",
-        link: "/about/who-we-are",
-      },
       {
         name: "Meet the Team",
         link: "/about/team",
+        class: "about",
+      },
+      {
+        name: "Contact Us",
+        link: "/about/contact",
+      },
+      {
+        name: "Team Applications",
+        link: "https://bit.ly/stemistapplication",
+        class: "about",
+        customProps: {
+          target: "_blank",
+        },
+      },
+      {
+        name: "Gallery",
+        link: "/about/gallery",
+        class: "about",
       },
     ],
   },
   {
-    name: "Contact Us",
-    link: "/contact",
-    important: true,
+    name: "Prior Events",
+    link: "/events",
+    dropdown: true,
+    class: "workshops",
+    dropdownItems: [
+      {
+        name: "STEMist Hacks",
+        link: "/hacks",
+        class: "workshops",
+      },
+      {
+        name: "Intro to STEM Spring Workshop",
+        link: "/events/intro-to-stem",
+        class: "workshops",
+      },
+      {
+        name: "2021 Winter Workshop",
+        link: "/events/2021-winter",
+        class: "workshops",
+      },
+      {
+        name: "2021 Summer Workshop",
+        link: "/events/2021-summer",
+        class: "workshops",
+      },
+      {
+        name: "2020 Winter Workshop",
+        link: "/events/2020-winter",
+        class: "workshops",
+      },
+      {
+        name: "2020 Fall Workshop",
+        link: "/events/2020-fall",
+        class: "workshops",
+      },
+    ],
   },
   {
-    name: "Team Applications",
-    link: "https://bit.ly/stemistapplication",
+    name: "STEMist Hacks (ENDED)",
+    hidden: true,
+    link: "/hacks",
+    class: "projects",
+  },
+  {
+    name: "WEBS Studio",
+    link: "/webs",
     customProps: {
       target: "_blank",
     },
+    class: "projects",
   },
   {
-    name: "STEMist Hacks",
-    link: "/hacks",
-  },
-  {
-    name: "Workshop Recap",
-    link: "/workshops",
-  },
-  {
-    name: "Summer Classes",
+    name: "Class Registration",
     link: "/programs",
+    class: "projects",
     customProps: {
       main: true,
-      color: "white",
-      textColor: "black",
+      color: "transparent",
+      textColor: "white",
     },
   },
 ];

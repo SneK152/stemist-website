@@ -7,12 +7,10 @@ import Qualifications from "./Qualifications";
 export default function Person(props: PersonProps) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="group flex w-72 h-full flex-row mx-auto items-center gap-5">
+    <div className="group flex max-w-[20rem] h-full flex-row mx-auto items-center gap-5">
       <div
         className={`${
-          props.person.description || props.person.qualifications
-            ? "group-hover:hidden"
-            : ""
+          props.person.description || props.person.qualifications ? "" : ""
         }`}
       >
         <Image
@@ -28,14 +26,12 @@ export default function Person(props: PersonProps) {
       <h1 className="font-display justify-self-center w-full space-y-1 text-lg font-normal">
         <span
           className={`${
-            props.person.description || props.person.qualifications
-              ? "group-hover:hidden"
-              : ""
+            props.person.description || props.person.qualifications ? "" : ""
           } transition-all`}
         >
           {props.person.name}
           <br />
-          <div className="font-writing flex flex-wrap gap-1">
+          <div className="font-display flex flex-wrap gap-1">
             {(props.roles ? props.roles : props.person.positions).map(
               (pos, index) =>
                 !props.person.positions.includes("Head of " + pos) && (
@@ -48,24 +44,24 @@ export default function Person(props: PersonProps) {
                 )
             )}
           </div>
+          {(props.person.qualifications || props.person.description) && (
+            <button
+              className="mt-1 bg-red px-3 py-1 text-white font-display text-xs block m-0.5 w-min whitespace-nowrap rounded-md bg-opacity-70 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none outline-none"
+              onClick={() => setOpen(true)}
+            >
+              {props.person.qualifications ? "Experience" : "About"}
+            </button>
+          )}
         </span>
-        {props.person.description && (
+        {/* {props.person.description && (
           <p
-            className={`hidden max-w-[40ch] font-writing ${
+            className={`hidden max-w-[40ch] font-display ${
               props.person.qualifications ? "text-xs" : "text-sm"
             } transition-all group-hover:block mx-auto`}
           >
             {props.person.description}
           </p>
-        )}
-        {props.person.qualifications && (
-          <button
-            className="hidden m-auto bg-blue-500 px-2 py-1 shadow-md rounded-lg text-white font-sans text-xs transition-all group-hover:block"
-            onClick={() => setOpen(true)}
-          >
-            Qualifications
-          </button>
-        )}
+        )} */}
       </h1>
       <Transition appear show={open} as={Fragment}>
         <Dialog
@@ -105,9 +101,10 @@ export default function Person(props: PersonProps) {
                   as="h1"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                  {props.person.name.split(" ")[0]}&apos;s Qualifications
+                  About {props.person.name.split(" ")[0]}
                 </Dialog.Title>
                 <div className="mt-2">
+                  <p className={`text-sm`}>{props.person.description}</p>
                   <div className="text-sm text-black">
                     <Qualifications
                       quals={props.person.qualifications}
@@ -117,7 +114,7 @@ export default function Person(props: PersonProps) {
                 </div>
                 <div className="mt-1">
                   <button
-                    className="m-auto bg-blue-500 px-3 py-1 shadow-md rounded-lg text-white font-sans text-sm"
+                    className="m-auto bg-red px-3 py-1 rounded-md bg-opacity-70 shadow-sm shadow-slate-900 relative active:top-[2px] active:shadow-none text-white font-display text-sm outline-none"
                     onClick={() => setOpen(false)}
                   >
                     Back
