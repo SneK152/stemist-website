@@ -19,7 +19,7 @@ export default function HomeSection({
   return (
     <section 
         className={`
-          lg:col-span-5 col-span-9 my-auto order-1 
+          w-screen lg:col-span-5 col-span-9 my-auto order-1 
           ${className}
           ${side === "left" ? "lg:order-1" : "lg:order-2"}
         `}
@@ -29,7 +29,7 @@ export default function HomeSection({
         <p className="text-xl font-sans font-light text-clip">{children}</p>
       </div>
       <figure
-        className={`${className} w-full lg:col-span-4 col-span-9 relative gap-1 flex flex-col order-2 ${
+        className={`${className} h-56 sm:h-80 w-full lg:col-span-4 col-span-9 relative gap-3 flex flex-col order-2 ${
           side === "right" ? "lg:order-1" : "lg:order-2"
         }`}
       >

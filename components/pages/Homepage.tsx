@@ -12,7 +12,7 @@ export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-24 my-10 flex-col padded-section m-auto"
+        className="flex scroll-mt-24 my-10 flex-col m-auto"
         id="hero"
       >
         {/* <h1 className="text-center font-display text-4xl font-bold">
