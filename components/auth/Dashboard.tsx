@@ -1,9 +1,10 @@
 import { NavLinks } from "@/lib/data/navLinks";
+import type Class from "@/lib/types/Class";
 import StudentData from "@/lib/types/StudentData";
 import { getAuth, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "../layout/PartialBanner";
 
@@ -51,6 +52,18 @@ export default function Dashboard(props: { user: StudentData }) {
           ],
     [props.user, router]
   );
+
+  const [classrooms, setClassrooms] = React.useState<Class[]>([]);
+  useEffect(() => {
+    props.user.classes.forEach((class_id) => {
+      fetch(`/api/class?class_id=${class_id}`).then((res) => {
+        return res.json();
+      }).then((json) => {
+        setClassrooms([...classrooms, json]);
+      });
+    });
+  }, []);
+
   return (
     <Container
       title="Dashboard"
@@ -63,6 +76,15 @@ export default function Dashboard(props: { user: StudentData }) {
         <h1 className="text-5xl">
           Welcome back {props.user.name}!
         </h1>
+        <div>
+          {classrooms.map((classroom, index) => {
+            return (
+              <div key={props.user.classes[index]}>
+                {classroom.name}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Container>
   );

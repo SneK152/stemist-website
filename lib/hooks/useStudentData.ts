@@ -8,7 +8,8 @@ export default function useStudentData() {
   const [user] = useAuth();
   const [data, setData] = useState<StudentData>({
     name: "",
-    profileUrl: "",
+    profileUrl: "/avatar.svg",
+    classes: [],
   });
   if (user) {
     getDoc(doc(getFirestore(getFirebase()), "users", user.uid)).then((d) => {
