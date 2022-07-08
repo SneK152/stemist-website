@@ -4,7 +4,7 @@ import StudentData from "@/lib/types/StudentData";
 import { getAuth, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import React, { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Container from "../layout/Container";
 import PartialBanner from "../layout/PartialBanner";
 
@@ -53,16 +53,18 @@ export default function Dashboard(props: { user: StudentData }) {
     [props.user, router]
   );
 
-  const [classrooms, setClassrooms] = React.useState<Class[]>([]);
+  const [classrooms, setClassrooms] = useState<Class[]>([]);
   useEffect(() => {
     props.user.classes.forEach((class_id) => {
-      fetch(`/api/class?class_id=${class_id}`).then((res) => {
-        return res.json();
-      }).then((json) => {
-        setClassrooms([...classrooms, json]);
-      });
+      fetch(`/api/class?class_id=${class_id}`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((json) => {
+          setClassrooms((c) => [...c, json]);
+        });
     });
-  }, []);
+  }, [props.user.classes]);
 
   return (
     <Container
@@ -73,16 +75,10 @@ export default function Dashboard(props: { user: StudentData }) {
     >
       <PartialBanner title="Student Dashboard" />
       <div className="p-5">
-        <h1 className="text-5xl">
-          Welcome back {props.user.name}!
-        </h1>
+        <h1 className="text-5xl">Welcome back {props.user.name}!</h1>
         <div>
           {classrooms.map((classroom, index) => {
-            return (
-              <div key={props.user.classes[index]}>
-                {classroom.name}
-              </div>
-            );
+            return <div key={props.user.classes[index]}>{classroom.name}</div>;
           })}
         </div>
       </div>

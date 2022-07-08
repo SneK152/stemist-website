@@ -10,6 +10,8 @@ export const useData = (defaultUser?: StudentData) => {
       name: "",
       profileUrl: "/avatar.svg",
       classes: [],
+      uid: "",
+      role: "student",
     }
   );
   const [authUser, loading] = useAuth();

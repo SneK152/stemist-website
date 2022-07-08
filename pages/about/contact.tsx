@@ -68,7 +68,7 @@ export default function Contact() {
       <div>
         <div className="py-3 flex-col flex gap-5 padded-section">
           <form onSubmit={formik.handleSubmit} className="w-full">
-            <div className="w-full space-y-3 rounded-lg">
+            <div className="w-full space-y-4 rounded-lg">
               <MemoedInputField
                 labelName="Email address"
                 name="contactEmail"
