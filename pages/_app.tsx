@@ -4,7 +4,10 @@ import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import NProgress from "nprogress";
 import ReactGA from "react-ga";
+import { QueryClient, QueryClientProvider } from "react-query";
 // import "nprogress/nprogress.css";
+
+const queryClient = new QueryClient();
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
@@ -33,7 +36,11 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  );
 };
 
 export default MyApp;

@@ -62,6 +62,8 @@ export default function SignUp() {
       await fetchUser("POST", user.uid, {
         name,
         profileUrl: profileURL,
+        classes: [],
+        role: "student",
       });
     } catch (error) {
       handleError(error as FirebaseError);
@@ -90,6 +92,8 @@ export default function SignUp() {
           await fetchUser("POST", user.uid, {
             name,
             profileUrl: "/avatar.svg",
+            classes: [],
+            role: "student",
           });
           // setSubmitting(false);
         }
