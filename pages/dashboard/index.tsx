@@ -1,4 +1,4 @@
-import Dashboard from "@/components/auth/Dashboard";
+import Dashboard from "@/components/auth/Dashboard/Index";
 import { useData } from "@/lib/hooks/useData";
 import StudentData from "@/lib/types/StudentData";
 import { GetServerSideProps } from "next";
