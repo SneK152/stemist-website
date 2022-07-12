@@ -15,8 +15,8 @@ export default function CarouselPerson({ person }: { person: Person }) {
         <Image
           src={person.image}
           alt="Mentor spotlight"
-          width={300}
-          height={300}
+          width={350}
+          height={350}
           layout="fixed"
           loading="eager"
           className="rounded-full object-cover"

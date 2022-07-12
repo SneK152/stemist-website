@@ -116,7 +116,7 @@ export default function Navbar({
                   <div className="mt-auto mb-auto hidden lg:block">
                     <ul className="inline-flex gap-4">
                       {navLinks.map((navLink, index) =>
-                        !navLink.dropdown ? (
+                        navLink.hidden ? null : !navLink.dropdown ? (
                           <NavLink
                             via={navLink.via}
                             key={index}
@@ -165,70 +165,70 @@ export default function Navbar({
                       {(customNav.length ? customNav : navLinks).map(
                         (navLink, i) => (
                           <Fragment key={i}>
-                            {navLink.customProps?.main && (
-                              <div
-                                className="h-2"
-                                key={`${navLink.name}${i}`}
-                              ></div>
-                            )}
-                            {!navLink.dropdown ? (
-                              <Disclosure.Button key={i} className="block">
-                                <NavLink
-                                  via={navLink.via}
-                                  href={navLink.link}
-                                  link={navLink.func}
-                                  {...(navLink.customProps
-                                    ? navLink.customProps
-                                    : {})}
-                                >
-                                  {navLink.name}{" "}
-                                  {navLink.customProps?.target && (
-                                    <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
-                                  )}
-                                </NavLink>
-                              </Disclosure.Button>
-                            ) : (
-                              <Disclosure key={i}>
-                                <Disclosure.Button
-                                  className={`block font-display text-lg underline-offset-1 whitespace-nowrap text-white ${
-                                    navLink.dropdownItems!.some(
-                                      (dropDownItem) =>
-                                        dropDownItem.link === router.pathname
-                                    )
-                                      ? "font-bold"
-                                      : "font-normal"
-                                  }`}
-                                >
-                                  {navLink.name}{" "}
-                                  <ChevronDownIcon
-                                    className="w-4 h-4 inline-block"
-                                    aria-hidden="true"
-                                  />
-                                </Disclosure.Button>
-                                <Disclosure.Panel>
-                                  {navLink.dropdownItems?.map(
-                                    (item: any, i: any) => (
-                                      <Link key={i} href={item.link}>
-                                        <a
-                                          className={`block ml-3 font-display text-white ${
-                                            router.pathname === item.link
-                                              ? "font-extrabold"
-                                              : "font-normal"
-                                          }`}
-                                          target={
-                                            item.customProps?.target || ""
-                                          }
-                                        >
-                                          {item.name}{" "}
-                                          {item.customProps?.target && (
-                                            <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
-                                          )}
-                                        </a>
-                                      </Link>
-                                    )
-                                  )}
-                                </Disclosure.Panel>
-                              </Disclosure>
+                            {navLink.hidden ? null : (
+                              <>
+                                {navLink.customProps?.main && (
+                                  <div className="h-2"></div>
+                                )}
+                                {!navLink.dropdown ? (
+                                  <Disclosure.Button className="block">
+                                    <NavLink
+                                      href={navLink.link}
+                                      via={navLink.via}
+                                      {...(navLink.customProps
+                                        ? navLink.customProps
+                                        : {})}
+                                    >
+                                      {navLink.name}{" "}
+                                      {navLink.customProps?.target && (
+                                        <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                                      )}
+                                    </NavLink>
+                                  </Disclosure.Button>
+                                ) : (
+                                  <Disclosure key={i}>
+                                    <Disclosure.Button
+                                      className={`block font-display text-lg underline-offset-1 whitespace-nowrap text-white ${
+                                        navLink.dropdownItems!.some(
+                                          (dropDownItem) =>
+                                            dropDownItem.link === router.asPath
+                                        )
+                                          ? "font-bold"
+                                          : "font-normal"
+                                      }`}
+                                    >
+                                      {navLink.name}{" "}
+                                      <ChevronDownIcon
+                                        className="w-4 h-4 inline-block"
+                                        aria-hidden="true"
+                                      />
+                                    </Disclosure.Button>
+                                    <Disclosure.Panel>
+                                      {navLink.dropdownItems?.map(
+                                        (item: any, i: any) => (
+                                          <Link key={i} href={item.link}>
+                                            <a
+                                              className={`block ml-3 font-display text-white ${
+                                                router.asPath === item.link
+                                                  ? "font-bold"
+                                                  : "font-normal"
+                                              }`}
+                                              target={
+                                                item.customProps?.target || ""
+                                              }
+                                            >
+                                              {item.name}{" "}
+                                              {item.customProps?.target && (
+                                                <ArrowRightIcon className="h-4 w-4 inline-block transform -rotate-45" />
+                                              )}
+                                            </a>
+                                          </Link>
+                                        )
+                                      )}
+                                    </Disclosure.Panel>
+                                  </Disclosure>
+                                )}
+                              </>
                             )}
                           </Fragment>
                         )

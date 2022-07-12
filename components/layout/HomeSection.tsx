@@ -7,15 +7,17 @@ export default function HomeSection({
   image,
   side,
   className
+  position,
 }: {
   children: ReactNode;
   title: string;
   image: string;
   side: "left" | "right";
-  className?: string
+    className?: string
+    position: string;
 }) {
   return (
-    <section className={`${className} px-2 h-full w-screen justify-center grid grid-cols-9 min-h-[20rem] font-display text-elipsis py-5 gap-6`}>
+    <section className="justify-center grid grid-cols-9 w-11/13 min-h-[25rem] font-display text-elipsis py-3 gap-6">
       <div
         className={`lg:col-span-5 col-span-9 my-auto order-1 ${className} ${
           side === "left" ? "lg:order-1" : "lg:order-2"
@@ -35,7 +37,7 @@ export default function HomeSection({
             alt="Placeholder Image"
             layout="fill"
             objectFit="cover"
-            objectPosition="top left"
+            objectPosition={position}
           />
         </div>
       </figure>

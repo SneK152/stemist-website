@@ -31,6 +31,7 @@ export default function Homepage() {
           title="Democratization of education"
           image="/home/demoedu.jpg"
           side="left"
+          position="50% 50%"
         >
           We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
           that will be vital to unlocking success in their lives. We{"'"}re
@@ -42,6 +43,7 @@ export default function Homepage() {
           title="Reshaping the learning curve"
           image="/home/reshape.png"
           side="right"
+          position="top center"
         >
           Our{" "}
           <Link href="/programs">
@@ -58,6 +60,7 @@ export default function Homepage() {
           title="Putting skills to work"
           image="/home/hacks.jpeg"
           side="left"
+          position="top left"
         >
           <Link href="/hacks">
             <a className="underline decoration-purple underline-offset-1 text">

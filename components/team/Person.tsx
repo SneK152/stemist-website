@@ -53,15 +53,6 @@ export default function Person(props: PersonProps) {
             </button>
           )}
         </span>
-        {/* {props.person.description && (
-          <p
-            className={`hidden max-w-[40ch] font-display ${
-              props.person.qualifications ? "text-xs" : "text-sm"
-            } transition-all group-hover:block mx-auto`}
-          >
-            {props.person.description}
-          </p>
-        )} */}
       </h1>
       <Transition appear show={open} as={Fragment}>
         <Dialog

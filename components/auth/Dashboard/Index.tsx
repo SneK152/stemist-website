@@ -1,13 +1,14 @@
 import { NavLinks } from "@/lib/data/navLinks";
+import type Class from "@/lib/types/Class";
 import StudentData from "@/lib/types/StudentData";
 import { getAuth, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
-import React, { useMemo } from "react";
-import Container from "../../layout/Container";
-import PartialBanner from "../../layout/PartialBanner";
-import { useRouter, NextRouter } from 'next/router'
-import { useEffect, useState } from 'react';
+import { useRouter, NextRouter } from "next/router";
+import { useEffect, useMemo, useState } from "react";
+import { useQueries, useQuery, UseQueryResult } from "react-query";
 import { getClasses } from "../Classes";
+import Container from "@/components/layout/Container";
+import PartialBanner from "@/components/layout/PartialBanner";
 
 export default function Dashboard(props: { user: StudentData }) {
 
@@ -61,6 +62,17 @@ export default function Dashboard(props: { user: StudentData }) {
           ],
     [props.user, router]
   );
+
+  const queries: UseQueryResult<Class, unknown>[] = useQueries(
+    props.user.classes.map((id) => ({
+      queryKey: ["user", id],
+      queryFn: async () => {
+        const res = await fetch("/api/class/?class_id=" + id);
+        return res.json();
+      },
+    }))
+  );
+
   return (
     <Container
       title="Dashboard"
@@ -74,6 +86,13 @@ export default function Dashboard(props: { user: StudentData }) {
           Welcome back {props.user.name}!
         </h1>
         <div>
+        {queries.map((query, index) => {
+            return (
+              query.isSuccess && (
+                <div key={props.user.classes[index]}>{query.data.name}</div>
+              )
+            );
+        })}
           {classes.map((values: any, index: number) => {
             return (
               <div key={`class-${index}`} >

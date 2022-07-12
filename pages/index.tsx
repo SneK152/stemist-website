@@ -13,7 +13,7 @@ export default function Index() {
     <Container title="Home">
       <div>
         <Banner image="/homepage2.jpeg" full>
-          <h1 className="text-left font-light font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mb-5 max-w-[28ch]">
+          <h1 className="text-left font-normal font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:mb-5 max-w-[28ch]">
             Accelerating education with{" "}
             <span className="text-blue">engaging</span> workshops
           </h1>

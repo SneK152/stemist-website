@@ -58,6 +58,9 @@ export default function Login() {
         );
       } catch (e) {
         handleError(e as FirebaseError);
+        console.log(formik.resetForm());
+        setSubmitting(false);
+        resetForm();
       }
     },
     validationSchema: Yup.object({
@@ -84,7 +87,7 @@ export default function Login() {
       <div>
         <div className="py-3 my-3 flex-col flex gap-5 padded-section">
           <form onSubmit={formik.handleSubmit} className="w-full">
-            <div className="w-full space-y-3 rounded-lg">
+            <div className="w-full space-y-4 rounded-lg">
               <MInputField
                 labelName="Email address"
                 name="email"
@@ -115,6 +118,7 @@ export default function Login() {
                 <button
                   className="relative w-full rounded-none border border-transparent bg-black bg-opacity-10 py-2 px-2 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 flex items-center gap-2 justify-center"
                   onClick={handleGoogleClick}
+                  type="button"
                 >
                   <Image src={Google} alt="Google Logo" />
                   Login with Google

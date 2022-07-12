@@ -1,8 +1,11 @@
 import Dashboard from "@/components/auth/Dashboard/Index";
 import { useData } from "@/lib/hooks/useData";
+import db from "@/lib/serverApp";
 import StudentData from "@/lib/types/StudentData";
+import { setCookie } from "cookies-next";
 import { GetServerSideProps } from "next";
 import cookies from "next-cookies";
+import { v4 as uuidv4 } from 'uuid';
 
 interface DashboardProps {
   user: StudentData;
@@ -24,6 +27,10 @@ export const getServerSideProps: GetServerSideProps<DashboardProps> = async (
         permanent: false,
       },
     };
+  } else {
+    const id = uuidv4();
+    await db.collection("ids").doc(id).set({});
+    setCookie("id", id, ctx);
   }
   return {
     props: {

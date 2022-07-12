@@ -5,21 +5,25 @@ import Link from "next/link";
 
 const aboutLinks = [
   ...navLinks
-    .find((l) => l.dropdown)
+    .find((l) => l.dropdown && l.class === "about")
     ?.dropdownItems?.filter((l) => l.class === "about")!,
-  ...navLinks.filter((l) => l.class === "about"),
+  ...navLinks.filter((l) => l.class === "about" && !l.dropdown),
 ];
 
 const projectLinks = [
-  ...navLinks
-    .find((l) => l.dropdown)
-    ?.dropdownItems?.filter((l) => l.class === "projects")!,
-  ...navLinks.filter((l) => l.class === "projects"),
+  ...navLinks.filter((l) => l.class === "projects" && !l.dropdown),
 ];
+
+// const workshopLinks = [
+//   ...navLinks
+//     .find((l) => l.dropdown && l.class === "workshops")
+//     ?.dropdownItems?.filter((l) => l.class === "workshops")!,
+//   ...navLinks.filter((l) => l.class === "workshops" && !l.dropdown),
+// ];
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-5">
+    <footer className="bg-black text-white py-5 mt-5">
       <div className="padded-section">
         <div className="flex flex-col gap-5">
           <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-10">
@@ -53,7 +57,7 @@ export default function Footer() {
                   ))}
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-right">
                 <h1 className="font-medium text-xl">STEMist Projects</h1>
                 <div className="flex flex-col text-base">
                   {projectLinks.map((link) => (
