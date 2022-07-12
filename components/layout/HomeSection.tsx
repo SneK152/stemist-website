@@ -6,14 +6,14 @@ export default function HomeSection({
   title,
   image,
   side,
-  className
+  className,
   position,
 }: {
   children: ReactNode;
   title: string;
   image: string;
   side: "left" | "right";
-    className?: string
+    className?: string;
     position: string;
 }) {
   return (

@@ -64,7 +64,7 @@ export default function Dashboard(props: { user: StudentData }) {
   );
 
   const queries: UseQueryResult<Class, unknown>[] = useQueries(
-    props.user.classes.map((id) => ({
+    (typeof props.user.classes != "object" ? [] : props.user.classes).map((id) => ({
       queryKey: ["user", id],
       queryFn: async () => {
         const res = await fetch("/api/class/?class_id=" + id);
