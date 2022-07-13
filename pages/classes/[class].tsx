@@ -30,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },
     };
   }
-  console.log(cookie);
   const user = cookie as StudentData;
   await updateData(
     { ...user, classes: FieldValue.arrayUnion(cl) },

@@ -1,9 +1,12 @@
+import StudentData from "./StudentData";
+
 interface Class {
   posts: {
-    teacher: string;
-    value: string;
+    title: string;
+    desc: string;
   }[];
   name: string;
+  teacher: string;
 }
 
 export default Class;

@@ -4,21 +4,24 @@ import StudentData from "@/lib/types/StudentData";
 import { getAuth, signOut } from "firebase/auth";
 import Cookies from "js-cookie";
 import { useRouter, NextRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useQueries, useQuery, UseQueryResult } from "react-query";
-import { getClasses } from "../Classes";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
+import { useData } from "@/lib/hooks/useData";
+import { GetServerSideProps } from "next";
+import cookies from "next-cookies";
+import { v4 as uuidv4 } from "uuid";
+import db from "@/lib/serverApp";
+import { setCookie } from "cookies-next";
 
-export default function Dashboard(props: { user: StudentData }) {
+interface DashboardClassProps {
+  user: StudentData;
+  class: string;
+}
 
-  const [classes, setClasses] = useState<any[]>([])
-
-  useEffect(() => {
-    const _class = getClasses()
-    setClasses(_class)
-  }, [])
-
+export default function DashboardClasses(props: DashboardClassProps) {
+  const user = useData(props.user!);
   const router: NextRouter = useRouter();
   const dashboardNav = useMemo<NavLinks>(
     () =>
@@ -63,14 +66,12 @@ export default function Dashboard(props: { user: StudentData }) {
     [props.user, router]
   );
 
-  const queries: UseQueryResult<Class, unknown>[] = useQueries(
-    (typeof props.user.classes != "object" ? [] : props.user.classes).map((id) => ({
-      queryKey: ["user", id],
-      queryFn: async () => {
-        const res = await fetch("/api/class/?class_id=" + id);
-        return res.json();
-      },
-    }))
+  const { data, isSuccess }: UseQueryResult<Class, unknown> = useQuery(
+    ["user", props.class],
+    async () => {
+      const res = await fetch("/api/class/?class_id=" + props.class);
+      return res.json();
+    }
   );
 
   return (
@@ -82,41 +83,48 @@ export default function Dashboard(props: { user: StudentData }) {
     >
       <PartialBanner title="Student Dashboard" />
       <div className="p-5">
-        <h1 className="text-5xl">
-          Welcome back {props.user.name}!
-        </h1>
-        <div>
-        {queries.map((query, index) => {
-            return (
-              query.isSuccess && (
-                <div key={props.user.classes[index]}>{query.data.name}</div>
-              )
-            );
-        })}
-          {classes.map((values: any, index: number) => {
-            return (
-              <div key={`class-${index}`} >
-                <div className='p-4'>
-                  <h1>
-                    {values.name} by {values.teacher}
-                  </h1>
-                  <div>
-                    Zoom Link: {values.zoom}
-                  </div>
-                </div>
-                {values.video.map((_: any, indexer: number) => {
-                  return (
-                    <button key={`Video-Button-${indexer}`} onClick={() => router.push({ pathname: `/dashboard/classes`, query: { class: index, video: indexer }})} className="px-4 py-2 shadow-md bg-black text-white rounded-md">
-                      {`Video ${indexer + 1}`}
-                    </button>
-      
-                  )
-                })}
-              </div>
-            )
-          })}
-        </div>
+        <h1 className="text-5xl">Welcome back {props.user.name}!</h1>
+        <button>Back to Dashboard</button>
+        {isSuccess && (
+          <div>
+            <h2>Class: {data.name}</h2>
+            <p>Taught By{data.teacher}</p>
+          </div>
+        )}
       </div>
     </Container>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<
+  DashboardClassProps
+> = async (ctx) => {
+  const cookie = cookies(ctx).user! as Object;
+  const cl = ctx.params!.classes as string;
+  if (cookie === undefined) {
+    return {
+      redirect: {
+        destination: "/auth/login",
+        permanent: false,
+      },
+    };
+  }
+  const user = cookie as StudentData;
+  if (!user.classes.includes(cl)) {
+    return {
+      redirect: {
+        destination: "/dashboard",
+        permanent: false,
+      },
+    };
+  }
+  const id = uuidv4();
+  await db.collection("ids").doc(id).set({});
+  setCookie("id", id, ctx);
+  return {
+    props: {
+      user: cookie as StudentData,
+      class: cl,
+    },
+  };
+};

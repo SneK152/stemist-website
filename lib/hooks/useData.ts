@@ -24,5 +24,5 @@ export const useData = (defaultUser?: StudentData) => {
       },
     }
   );
-  return data;
+  return data!;
 };
