@@ -8,6 +8,7 @@ import { useMemo } from "react";
 import { useQueries, UseQueryResult } from "react-query";
 import Container from "@/components/layout/Container";
 import PartialBanner from "@/components/layout/PartialBanner";
+import Link from "next/link";
 
 export default function Dashboard(props: { user: StudentData }) {
   const router: NextRouter = useRouter();
@@ -76,11 +77,26 @@ export default function Dashboard(props: { user: StudentData }) {
       <PartialBanner title="Student Dashboard" />
       <div className="p-5">
         <h1 className="text-5xl">Welcome back {props.user.name}!</h1>
-        <div>
+        <div className="mt-10">
           {queries.map(({ isSuccess, data }, index) => {
             return (
               isSuccess && (
-                <div key={props.user.classes[index]}>{data.name}</div>
+                <div
+                  key={props.user.classes[index]}
+                  className=
+                    "block p-4 max-w-[12rem] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                >
+                  <Link href={`/classes/${props.user.classes[index]}`}>
+                    <h5
+                      className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white w-max hover:underline cursor-pointer"
+                    >
+                      {data.name}
+                    </h5>
+                  </Link>
+                  <p className="font-normal text-gray-700 dark:text-gray-400">
+                    {data.teacher}
+                  </p>
+                </div>
               )
             );
           })}

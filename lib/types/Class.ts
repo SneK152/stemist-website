@@ -1,5 +1,3 @@
-import StudentData from "./StudentData";
-
 interface Class {
   posts: {
     title: string;
