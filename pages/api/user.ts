@@ -1,6 +1,5 @@
 import {
   addData,
-  deleteData,
   getData,
   updateData,
 } from "@/lib/auth/collection";
@@ -49,14 +48,6 @@ const handler: NextApiHandler = async (req, res) => {
         body.uid,
         "users"
       );
-      return res.json({});
-    } catch {
-      res.status(500).send("Internal Server Error");
-    }
-  } else if (req.method === "DELETE") {
-    try {
-      const body = JSON.parse(req.body);
-      await deleteData(body.uid, "users");
       return res.json({});
     } catch {
       res.status(500).send("Internal Server Error");

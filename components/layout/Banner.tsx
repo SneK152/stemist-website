@@ -3,7 +3,8 @@ import { scrollTo } from "@/lib/scroll";
 import { Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import { Fragment, ReactNode, useRef } from "react";
+import { ReactNode, useRef } from "react";
+import Announcement from "./Announcement";
 import CTABanner from "./CTABanner";
 
 export default function Banner({
@@ -11,10 +12,12 @@ export default function Banner({
   children,
   full,
   href = "#hero",
+  banner = true,
 }: {
   image: string;
   children: ReactNode;
   full?: boolean;
+  banner?: boolean;
   href?: string;
 }) {
   const titleDiv = useRef<HTMLDivElement>(null);
@@ -41,7 +44,9 @@ export default function Banner({
           </button>
         </Transition>
       </div> */}
-      <CTABanner full={full} />
+      {banner ? <CTABanner full={full}>
+        <Announcement />
+      </CTABanner> : null}
       <div
         className={`${
           full

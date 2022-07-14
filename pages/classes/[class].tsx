@@ -1,20 +1,22 @@
-import Banner from "@/components/layout/Banner";
 import Container from "@/components/layout/Container";
+import CTABanner from "@/components/layout/CTABanner";
 import PartialBanner from "@/components/layout/PartialBanner";
-import { updateData } from "@/lib/auth/collection";
+import { getData, updateData } from "@/lib/auth/collection";
+import type Class from "@/lib/types/Class";
 import StudentData from "@/lib/types/StudentData";
 import { FieldValue } from "firebase-admin/firestore";
 import { GetServerSideProps } from "next";
 import cookies from "next-cookies";
 
-interface ClassProps {
-  class: string;
-}
-
-export default function Class() {
+export default function Class(classData: Class & { included: boolean }) {
   return (
-    <Container title="Class Joined">
-      <PartialBanner title="Class Joined" />
+    <Container title={classData.name}>
+      {classData.included ? null : <CTABanner full mic={false}>
+        <span className="text-left">
+          Class Joined
+        </span>
+      </CTABanner>}
+      <PartialBanner banner={false} title={classData.name} />
     </Container>
   );
 }
@@ -31,12 +33,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     };
   }
   const user = cookie as StudentData;
-  await updateData(
-    { ...user, classes: FieldValue.arrayUnion(cl) },
-    user.uid,
-    "users"
-  );
+  let included = true;
+  if (!user.classes.includes(cl)) {
+    await updateData(
+      { ...user, classes: FieldValue.arrayUnion(cl) },
+      user.uid,
+      "users"
+    );
+    included = false;  
+  }
+  const props = await getData<Class>(cl, "classes");
   return {
-    props: {},
+    props: { ...props, included },
   };
 };

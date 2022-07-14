@@ -1,7 +1,7 @@
 import StudentData from "../types/StudentData";
 
 export const fetchUser = async (
-  method: "GET" | "POST" | "PUT" | "DELETE",
+  method: "GET" | "POST" | "PUT",
   uid: string,
   inputBody?: Partial<StudentData>
 ): Promise<StudentData | {}> => {
@@ -31,14 +31,7 @@ export const fetchUser = async (
       });
       const json = await res.json();
       return json;
-    } else {
-      const res = await fetch(`/api/user`, {
-        method,
-      });
-      const json = await res.json();
-      return json;
     }
-  } catch {
-    return {};
-  }
+  } catch {}
+  return {};
 };

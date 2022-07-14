@@ -7,7 +7,6 @@ import P from "@/lib/types/Person";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ReactNode, useCallback } from "react";
 import { Session, sessionData } from "@/lib/data/sessions";
-import { resolveTeamImage } from "@/lib/imageHelpers";
 
 interface CurriculumProps {
   data: Session;
