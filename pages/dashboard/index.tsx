@@ -30,7 +30,7 @@ export const getServerSideProps: GetServerSideProps<DashboardProps> = async (
   } else {
     const id = uuidv4();
     await db.collection("ids").doc(id).set({});
-    setCookie("id", id, ctx);
+    setCookie("id", id, { ...ctx, httpOnly: true });
   }
   return {
     props: {
