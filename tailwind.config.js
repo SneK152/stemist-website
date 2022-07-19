@@ -17,12 +17,19 @@ module.exports = {
           DEFAULT: "#AD5E5C",
         },
         purple: {
-          DEFAULT: "#a484b0",
+          DEFAULT: "#9881BF",
         },
         blue: {
           DEFAULT: "#CCE5FF",
+          light: "2081C3",
+          sky: "#A8E2EC"
         },
-      },
+        orange: {
+          DEFAULT: "#D3896E"
+        },
+        green: {
+          DEFAULT: "#87D3AC"
+        }
     },
     fontFamily: {
       sans: ["Raleway", "sans"],
