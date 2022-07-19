@@ -29,7 +29,8 @@ module.exports = {
         },
         green: {
           DEFAULT: "#87D3AC"
-        }
+        },
+      },
     },
     fontFamily: {
       sans: ["Raleway", "sans"],
