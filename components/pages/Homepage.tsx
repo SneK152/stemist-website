@@ -28,7 +28,7 @@ export default function Homepage() {
           STEM topics.{" "}
         </p> */}
         <HomeSection
-          title="Democratization of education"
+          title="Our Mission: Education For All"
           image="/home/demoedu.jpg"
           side="left"
           position="50% 50%"
@@ -40,9 +40,21 @@ export default function Homepage() {
           and in person.
         </HomeSection>
         <HomeSection
-          title="Reshaping the learning curve"
-          image="/home/reshape.png"
+          title={`What We${"'"}ve Done`}
+          image="/home/demoedu.jpg"
           side="right"
+          position="50% 50%"
+        >
+          We strive to <E>empower</E> students with <E>foundational concepts</E>{" "}
+          that will be vital to unlocking success in their lives. We{"'"}re
+          committed to provide <E>education for everyone</E>, regardless of
+          race, gender, age, income with free to ultralow cost classes online
+          and in person.
+        </HomeSection>
+        <HomeSection
+          title="STEMist  Classes Reshaping the learning curve"
+          image="/home/reshape.png"
+          side="left"
           position="top center"
         >
           Our{" "}
@@ -57,7 +69,22 @@ export default function Homepage() {
           recall.
         </HomeSection>
         <HomeSection
-          title="Putting skills to work"
+          title="STEMist Hacks: Putting skills to work"
+          image="/home/hacks.jpeg"
+          side="right"
+          position="top left"
+        >
+          <Link href="/hacks">
+            <a className="underline decoration-purple underline-offset-1 text">
+              <E>STEMist Hacks</E>
+            </a>
+          </Link>{" "}
+          encourages students to put their programming skills to work, with{" "}
+          <E>riveting speaker talks</E> by real life professionals and tens of
+          thousands of dollars in prizes.
+        </HomeSection>
+        <HomeSection
+          title="Web Studio: {...}"
           image="/home/hacks.jpeg"
           side="left"
           position="top left"
