@@ -5,8 +5,10 @@ const HomeCounter = (props: {
   symbol: string;
   text: string;
 }) => (
-  <div className="border border-white p-5 h-full w-full">
-    <Counter {...props} />
+  <div className="rounded-xl w-52 h-64 mx-auto  mt-10 bg-gradient-to-r p-[6px] from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
+    <div className="flex flex-col justify-between h-full bg-steve-dark text-white rounded-lg p-4">
+      <Counter {...props} />
+    </div>
   </div>
 );
 
