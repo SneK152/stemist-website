@@ -12,7 +12,7 @@ export default function Homepage() {
   return (
     <>
       <div
-        className="flex scroll-mt-24 my-10 flex-col padded-section m-auto"
+        className="flex scroll-mt-24 flex-col m-auto"
         id="hero"
       >
         {/* <h1 className="text-center font-display text-4xl font-bold">
@@ -28,6 +28,7 @@ export default function Homepage() {
           STEM topics.{" "}
         </p> */}
         <HomeSection
+          bgtheme={"white"}
           title="Our Mission: Education For All"
           image="/home/demoedu.jpg"
           side="left"
@@ -40,6 +41,7 @@ export default function Homepage() {
           and in person.
         </HomeSection>
         <HomeSection
+          bgtheme={"black"}
           title={`What We${"'"}ve Done`}
           image="/home/demoedu.jpg"
           side="right"
@@ -52,6 +54,7 @@ export default function Homepage() {
           and in person.
         </HomeSection>
         <HomeSection
+          bgtheme={"white"}
           title="STEMist  Classes Reshaping the learning curve"
           image="/home/reshape.png"
           side="left"
@@ -69,6 +72,7 @@ export default function Homepage() {
           recall.
         </HomeSection>
         <HomeSection
+          bgtheme={"black"}
           title="STEMist Hacks: Putting skills to work"
           image="/home/hacks.jpeg"
           side="right"
@@ -84,6 +88,7 @@ export default function Homepage() {
           thousands of dollars in prizes.
         </HomeSection>
         <HomeSection
+          bgtheme={"white"}
           title="Web Studio: {...}"
           image="/home/hacks.jpeg"
           side="left"

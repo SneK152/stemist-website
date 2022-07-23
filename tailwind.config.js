@@ -23,11 +23,10 @@ module.exports = {
           DEFAULT: "#CCE5FF",
         },
         steve: {
-          red: "#FF4242",
-          purple: "#8155FF",
           dark: "#1D263B",
-          green: "#5D9600",
-          orange: "#E17331"
+          light: "#FDFFFC",
+          red: "#F90B0B",
+          purple: "#8400FF",
         }
       },
     },
