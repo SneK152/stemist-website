@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--magic-number: 0.09719; /* tan(11°)/2 */
+	--content-width: 100vw;
+	--skew-padding: calc(var(--content-width) * var(--magic-number));
+}
+
+@media screen and (min-width: 42em) {
+	:root {
+		--content-width: 42em;
+	}
+}
+
 @layer utilities {
   .aspect-auto {
     aspect-ratio: auto !important;
@@ -11,42 +23,43 @@
   }
 
   .cropped {
-    box-sizing: border-box;
-    height: 40vh;
-    width: 100%;
+    max-width: 50em;
+    margin: 0 auto; 
+    transform: skewY(3deg);
     position: relative;
-    @apply py-3 my-2;
-    clip-path: polygon(0% 0%, 100% 20%, 100% 85%, 0 100%);
-  -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 85%, 0 100%);
-    }
-    
-    .cropped:before {
-    content: "";
-    height: 40px;
-    transform: skewY(2deg);
+  }
+
+  .diagonal-box-dark {
+    background-image: linear-gradient(45deg, #6303B1, #ff0099);
+	  transform: skewY(-3deg);
+    position: relative;
+  } 
+
+  .diagonal-box-dark:before {
     position: absolute;
-    left: 0;
+    top: 0;
     right: 0;
-    z-index: -1;
-    }
-    
-    .cropped:after {
-    content: "";
-    height: 40px;
-    transform: skewY(1deg);
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, #654ea3, #eaafc8); 	
+    transform: skewY(-11deg);
+  }
+
+  .diagonal-box-light {
+    background-image: linear-gradient(45deg, #4E65FF , #92EFFD);
+	  transform: skewY(-3deg);
+    position: relative;
+  } 
+
+  .diagonal-box-light:before {
     position: absolute;
-    left: 0;
+    top: 0;
     right: 0;
-    z-index: -1;
-    }
-    
-    .cropped:before{    
-    top: -20px;    
-    }
-    
-    .cropped:after {
-    bottom: -30px;
-    }
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, #93A5CF , #E4EfE9); 	
+    transform: skewY(-11deg);
+  }
 }
 
 html {

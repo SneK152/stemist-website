@@ -17,7 +17,8 @@ export default function HomeSection({
   bgtheme: "black" | "white"
 }) {
   return (
-    <section className={`${bgtheme === "black" ? "bg-steve-dark": "bg-steve-light"} cropped padded-section justify-center grid grid-cols-9 w-11/13 min-h-[25rem] font-display text-elipsis py-3 gap-6`}>
+    <div className={`${bgtheme === "black" ? "diagonal-box-dark" : "diagonal-box-light"}`}>
+      <section className={`cropped padded-section justify-center grid grid-cols-9 w-11/13 min-h-[25rem] font-display text-elipsis py-3 gap-6`}>
       <div
         className={`lg:col-span-5 col-span-9 my-auto order-1 ${
           side === "left" ? "lg:order-1" : "lg:order-2"
@@ -41,6 +42,7 @@ export default function HomeSection({
           />
         </div>
       </figure>
-    </section>
+      </section>
+    </div>
   );
 }
