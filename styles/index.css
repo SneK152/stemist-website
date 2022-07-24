@@ -7,8 +7,46 @@
     aspect-ratio: auto !important;
   }
   .padded-section {
-    @apply px-4 sm:px-8 lg:px-10 mx-auto w-full;
+    @apply px-4 py-2 sm:px-8 lg:px-10 mx-auto w-full;
   }
+
+  .cropped {
+    box-sizing: border-box;
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    @apply py-3 my-2;
+    clip-path: polygon(0% 0%, 100% 20%, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 85%, 0 100%);
+    }
+    
+    .cropped:before {
+    content: "";
+    height: 40px;
+    transform: skewY(2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    }
+    
+    .cropped:after {
+    content: "";
+    height: 40px;
+    transform: skewY(1deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    }
+    
+    .cropped:before{    
+    top: -20px;    
+    }
+    
+    .cropped:after {
+    bottom: -30px;
+    }
 }
 
 html {

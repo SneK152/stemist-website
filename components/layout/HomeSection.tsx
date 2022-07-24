@@ -31,7 +31,7 @@ export default function HomeSection({
           side === "right" ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        <div className="sm:h-80 h-56 lg:h-full w-full relative">
+        <div className="sm:h-80 py-3 h-56 lg:h-full w-full relative">
           <Image
             src={image}
             alt="Placeholder Image"
